@@ -1,12 +1,13 @@
 package:
   format-version: "1.0.0"
-  name: "replaceme"
+  name: "core_apps_sama7d65"
+  version: "v3.0.0"
   type: "application"
-  status: "beta"
+  status: "production"
   required: false
   version: "1.0.0"
 
   dependencies:
-    - name: "csp"
+    - name: "core"
       type: "package"
-      version: "3.14.0"
+      version: "v3.14.0"
