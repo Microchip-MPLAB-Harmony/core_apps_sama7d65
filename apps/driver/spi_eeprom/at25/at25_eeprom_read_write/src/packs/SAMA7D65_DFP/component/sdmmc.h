@@ -25,8 +25,8 @@
 /*   SOFTWARE API DEFINITION FOR SDMMC                                        */
 /* ************************************************************************** */
 
-/* -------- SDMMC_SSAR : (SDMMC Offset: 0x00) (R/W 32) SDMA System Address/Argument 2 Register -------- */
-#define SDMMC_SSAR_RESETVALUE                 _UINT32_(0x00)                                       /*  (SDMMC_SSAR) SDMA System Address/Argument 2 Register  Reset Value */
+/* -------- SDMMC_SSAR : (SDMMC Offset: 0x00) (R/W 32) SDMA System Address / Argument 2 Register -------- */
+#define SDMMC_SSAR_RESETVALUE                 _UINT32_(0x00)                                       /*  (SDMMC_SSAR) SDMA System Address / Argument 2 Register  Reset Value */
 
 #define SDMMC_SSAR_ADDR_Pos                   _UINT32_(0)                                          /* (SDMMC_SSAR) SDMA System Address Position */
 #define SDMMC_SSAR_ADDR_Msk                   (_UINT32_(0xFFFFFFFF) << SDMMC_SSAR_ADDR_Pos)        /* (SDMMC_SSAR) SDMA System Address Mask */
@@ -55,7 +55,7 @@
 #define   SDMMC_BSR_BOUNDARY_32K_Val          _UINT16_(0x3)                                        /* (SDMMC_BSR) 32-Kbyte boundary  */
 #define   SDMMC_BSR_BOUNDARY_64K_Val          _UINT16_(0x4)                                        /* (SDMMC_BSR) 64-Kbyte boundary  */
 #define   SDMMC_BSR_BOUNDARY_128K_Val         _UINT16_(0x5)                                        /* (SDMMC_BSR) 128-Kbyte boundary  */
-#define   SDMMC_BSR_BOUNDARY_256k_Val         _UINT16_(0x6)                                        /* (SDMMC_BSR) 256-Kbyte boundary  */
+#define   SDMMC_BSR_BOUNDARY_256K_Val         _UINT16_(0x6)                                        /* (SDMMC_BSR) 256-Kbyte boundary  */
 #define   SDMMC_BSR_BOUNDARY_512K_Val         _UINT16_(0x7)                                        /* (SDMMC_BSR) 512-Kbyte boundary  */
 #define SDMMC_BSR_BOUNDARY_4K                 (SDMMC_BSR_BOUNDARY_4K_Val << SDMMC_BSR_BOUNDARY_Pos) /* (SDMMC_BSR) 4-Kbyte boundary Position  */
 #define SDMMC_BSR_BOUNDARY_8K                 (SDMMC_BSR_BOUNDARY_8K_Val << SDMMC_BSR_BOUNDARY_Pos) /* (SDMMC_BSR) 8-Kbyte boundary Position  */
@@ -63,7 +63,7 @@
 #define SDMMC_BSR_BOUNDARY_32K                (SDMMC_BSR_BOUNDARY_32K_Val << SDMMC_BSR_BOUNDARY_Pos) /* (SDMMC_BSR) 32-Kbyte boundary Position  */
 #define SDMMC_BSR_BOUNDARY_64K                (SDMMC_BSR_BOUNDARY_64K_Val << SDMMC_BSR_BOUNDARY_Pos) /* (SDMMC_BSR) 64-Kbyte boundary Position  */
 #define SDMMC_BSR_BOUNDARY_128K               (SDMMC_BSR_BOUNDARY_128K_Val << SDMMC_BSR_BOUNDARY_Pos) /* (SDMMC_BSR) 128-Kbyte boundary Position  */
-#define SDMMC_BSR_BOUNDARY_256k               (SDMMC_BSR_BOUNDARY_256k_Val << SDMMC_BSR_BOUNDARY_Pos) /* (SDMMC_BSR) 256-Kbyte boundary Position  */
+#define SDMMC_BSR_BOUNDARY_256K               (SDMMC_BSR_BOUNDARY_256K_Val << SDMMC_BSR_BOUNDARY_Pos) /* (SDMMC_BSR) 256-Kbyte boundary Position  */
 #define SDMMC_BSR_BOUNDARY_512K               (SDMMC_BSR_BOUNDARY_512K_Val << SDMMC_BSR_BOUNDARY_Pos) /* (SDMMC_BSR) 512-Kbyte boundary Position  */
 #define SDMMC_BSR_Msk                         _UINT16_(0x73FF)                                     /* (SDMMC_BSR) Register Mask  */
 
@@ -557,6 +557,10 @@
 #define SDMMC_NISTR_EMMC_BOOTAR_Pos           _UINT16_(14)                                         /* (SDMMC_NISTR) Boot Acknowledge Received Position */
 #define SDMMC_NISTR_EMMC_BOOTAR_Msk           (_UINT16_(0x1) << SDMMC_NISTR_EMMC_BOOTAR_Pos)       /* (SDMMC_NISTR) Boot Acknowledge Received Mask */
 #define SDMMC_NISTR_EMMC_BOOTAR(value)        (SDMMC_NISTR_EMMC_BOOTAR_Msk & (_UINT16_(value) << SDMMC_NISTR_EMMC_BOOTAR_Pos))
+#define   SDMMC_NISTR_EMMC_BOOTAR_0_Val       _UINT16_(0x0)                                        /* (SDMMC_NISTR) Boot Acknowledge pattern not received.  */
+#define   SDMMC_NISTR_EMMC_BOOTAR_1_Val       _UINT16_(0x1)                                        /* (SDMMC_NISTR) Boot Acknowledge pattern received.  */
+#define SDMMC_NISTR_EMMC_BOOTAR_0             (SDMMC_NISTR_EMMC_BOOTAR_0_Val << SDMMC_NISTR_EMMC_BOOTAR_Pos) /* (SDMMC_NISTR) Boot Acknowledge pattern not received. Position  */
+#define SDMMC_NISTR_EMMC_BOOTAR_1             (SDMMC_NISTR_EMMC_BOOTAR_1_Val << SDMMC_NISTR_EMMC_BOOTAR_Pos) /* (SDMMC_NISTR) Boot Acknowledge pattern received. Position  */
 #define SDMMC_NISTR_EMMC_ERRINT_Pos           _UINT16_(15)                                         /* (SDMMC_NISTR) Error Interrupt Position */
 #define SDMMC_NISTR_EMMC_ERRINT_Msk           (_UINT16_(0x1) << SDMMC_NISTR_EMMC_ERRINT_Pos)       /* (SDMMC_NISTR) Error Interrupt Mask */
 #define SDMMC_NISTR_EMMC_ERRINT(value)        (SDMMC_NISTR_EMMC_ERRINT_Msk & (_UINT16_(value) << SDMMC_NISTR_EMMC_ERRINT_Pos))
@@ -718,6 +722,10 @@
 #define SDMMC_EISTR_EMMC_BOOTAE_Pos           _UINT16_(12)                                         /* (SDMMC_EISTR) Boot Acknowledge Error Position */
 #define SDMMC_EISTR_EMMC_BOOTAE_Msk           (_UINT16_(0x1) << SDMMC_EISTR_EMMC_BOOTAE_Pos)       /* (SDMMC_EISTR) Boot Acknowledge Error Mask */
 #define SDMMC_EISTR_EMMC_BOOTAE(value)        (SDMMC_EISTR_EMMC_BOOTAE_Msk & (_UINT16_(value) << SDMMC_EISTR_EMMC_BOOTAE_Pos))
+#define   SDMMC_EISTR_EMMC_BOOTAE_0_Val       _UINT16_(0x0)                                        /* (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_EMMC_BOOTAE_1_Val       _UINT16_(0x1)                                        /* (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_EMMC_BOOTAE_0             (SDMMC_EISTR_EMMC_BOOTAE_0_Val << SDMMC_EISTR_EMMC_BOOTAE_Pos) /* (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_EMMC_BOOTAE_1             (SDMMC_EISTR_EMMC_BOOTAE_1_Val << SDMMC_EISTR_EMMC_BOOTAE_Pos) /* (SDMMC_EISTR) Error. Position  */
 #define SDMMC_EISTR_EMMC_Msk                  _UINT16_(0x17FF)                                      /* (SDMMC_EISTR_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
@@ -841,7 +849,14 @@
 #define   SDMMC_NISTER_EMMC_BRDRDY_ENABLED_Val _UINT16_(0x1)                                        /* (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is enabled.  */
 #define SDMMC_NISTER_EMMC_BRDRDY_MASKED       (SDMMC_NISTER_EMMC_BRDRDY_MASKED_Val << SDMMC_NISTER_EMMC_BRDRDY_Pos) /* (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is masked. Position  */
 #define SDMMC_NISTER_EMMC_BRDRDY_ENABLED      (SDMMC_NISTER_EMMC_BRDRDY_ENABLED_Val << SDMMC_NISTER_EMMC_BRDRDY_Pos) /* (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is enabled. Position  */
-#define SDMMC_NISTER_EMMC_Msk                 _UINT16_(0x003F)                                      /* (SDMMC_NISTER_EMMC) Register Mask  */
+#define SDMMC_NISTER_EMMC_BOOTAR_Pos          _UINT16_(14)                                         /* (SDMMC_NISTER) Boot Acknowledge Received Status Enable Position */
+#define SDMMC_NISTER_EMMC_BOOTAR_Msk          (_UINT16_(0x1) << SDMMC_NISTER_EMMC_BOOTAR_Pos)      /* (SDMMC_NISTER) Boot Acknowledge Received Status Enable Mask */
+#define SDMMC_NISTER_EMMC_BOOTAR(value)       (SDMMC_NISTER_EMMC_BOOTAR_Msk & (_UINT16_(value) << SDMMC_NISTER_EMMC_BOOTAR_Pos))
+#define   SDMMC_NISTER_EMMC_BOOTAR_MASKED_Val _UINT16_(0x0)                                        /* (SDMMC_NISTER) The BOOTAR status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_EMMC_BOOTAR_ENABLED_Val _UINT16_(0x1)                                        /* (SDMMC_NISTER) The BOOTAR status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_EMMC_BOOTAR_MASKED       (SDMMC_NISTER_EMMC_BOOTAR_MASKED_Val << SDMMC_NISTER_EMMC_BOOTAR_Pos) /* (SDMMC_NISTER) The BOOTAR status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_EMMC_BOOTAR_ENABLED      (SDMMC_NISTER_EMMC_BOOTAR_ENABLED_Val << SDMMC_NISTER_EMMC_BOOTAR_Pos) /* (SDMMC_NISTER) The BOOTAR status flag in SDMMC_NISTR is enabled. Position  */
+#define SDMMC_NISTER_EMMC_Msk                 _UINT16_(0x403F)                                      /* (SDMMC_NISTER_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
 #define SDMMC_NISTER_SD_SDIO_CMDC_Pos         _UINT16_(0)                                          /* (SDMMC_NISTER) Command Complete Status Enable Position */
@@ -993,7 +1008,14 @@
 #define   SDMMC_EISTER_EMMC_TUNING_ENABLED_Val _UINT16_(0x1)                                        /* (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is enabled.  */
 #define SDMMC_EISTER_EMMC_TUNING_MASKED       (SDMMC_EISTER_EMMC_TUNING_MASKED_Val << SDMMC_EISTER_EMMC_TUNING_Pos) /* (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is masked. Position  */
 #define SDMMC_EISTER_EMMC_TUNING_ENABLED      (SDMMC_EISTER_EMMC_TUNING_ENABLED_Val << SDMMC_EISTER_EMMC_TUNING_Pos) /* (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_EMMC_Msk                 _UINT16_(0x07FF)                                      /* (SDMMC_EISTER_EMMC) Register Mask  */
+#define SDMMC_EISTER_EMMC_BOOTAE_Pos          _UINT16_(12)                                         /* (SDMMC_EISTER) Boot Acknowledge Error Status Enable Position */
+#define SDMMC_EISTER_EMMC_BOOTAE_Msk          (_UINT16_(0x1) << SDMMC_EISTER_EMMC_BOOTAE_Pos)      /* (SDMMC_EISTER) Boot Acknowledge Error Status Enable Mask */
+#define SDMMC_EISTER_EMMC_BOOTAE(value)       (SDMMC_EISTER_EMMC_BOOTAE_Msk & (_UINT16_(value) << SDMMC_EISTER_EMMC_BOOTAE_Pos))
+#define   SDMMC_EISTER_EMMC_BOOTAE_MASKED_Val _UINT16_(0x0)                                        /* (SDMMC_EISTER) The BOOTAE status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_EMMC_BOOTAE_ENABLED_Val _UINT16_(0x1)                                        /* (SDMMC_EISTER) The BOOTAE status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_EMMC_BOOTAE_MASKED       (SDMMC_EISTER_EMMC_BOOTAE_MASKED_Val << SDMMC_EISTER_EMMC_BOOTAE_Pos) /* (SDMMC_EISTER) The BOOTAE status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_EMMC_BOOTAE_ENABLED      (SDMMC_EISTER_EMMC_BOOTAE_ENABLED_Val << SDMMC_EISTER_EMMC_BOOTAE_Pos) /* (SDMMC_EISTER) The BOOTAE status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_EMMC_Msk                 _UINT16_(0x17FF)                                      /* (SDMMC_EISTER_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
 #define SDMMC_EISTER_SD_SDIO_CMDTEO_Pos       _UINT16_(0)                                          /* (SDMMC_EISTER) Command Timeout Error Status Enable Position */
@@ -1124,7 +1146,14 @@
 #define   SDMMC_NISIER_EMMC_BRDRDY_ENABLED_Val _UINT16_(0x1)                                        /* (SDMMC_NISIER) An interrupt is generated when the BRDRDY status rises in SDMMC_NISTR.  */
 #define SDMMC_NISIER_EMMC_BRDRDY_MASKED       (SDMMC_NISIER_EMMC_BRDRDY_MASKED_Val << SDMMC_NISIER_EMMC_BRDRDY_Pos) /* (SDMMC_NISIER) No interrupt is generated when the BRDRDY status rises in SDMMC_NISTR. Position  */
 #define SDMMC_NISIER_EMMC_BRDRDY_ENABLED      (SDMMC_NISIER_EMMC_BRDRDY_ENABLED_Val << SDMMC_NISIER_EMMC_BRDRDY_Pos) /* (SDMMC_NISIER) An interrupt is generated when the BRDRDY status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_EMMC_Msk                 _UINT16_(0x003F)                                      /* (SDMMC_NISIER_EMMC) Register Mask  */
+#define SDMMC_NISIER_EMMC_BOOTAR_Pos          _UINT16_(14)                                         /* (SDMMC_NISIER) Boot Acknowledge Received Signal Enable Position */
+#define SDMMC_NISIER_EMMC_BOOTAR_Msk          (_UINT16_(0x1) << SDMMC_NISIER_EMMC_BOOTAR_Pos)      /* (SDMMC_NISIER) Boot Acknowledge Received Signal Enable Mask */
+#define SDMMC_NISIER_EMMC_BOOTAR(value)       (SDMMC_NISIER_EMMC_BOOTAR_Msk & (_UINT16_(value) << SDMMC_NISIER_EMMC_BOOTAR_Pos))
+#define   SDMMC_NISIER_EMMC_BOOTAR_MASKED_Val _UINT16_(0x0)                                        /* (SDMMC_NISIER) No interrupt is generated when the BOOTAR status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_EMMC_BOOTAR_ENABLED_Val _UINT16_(0x1)                                        /* (SDMMC_NISIER) An interrupt is generated when the BOOTAR status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_EMMC_BOOTAR_MASKED       (SDMMC_NISIER_EMMC_BOOTAR_MASKED_Val << SDMMC_NISIER_EMMC_BOOTAR_Pos) /* (SDMMC_NISIER) No interrupt is generated when the BOOTAR status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_BOOTAR_ENABLED      (SDMMC_NISIER_EMMC_BOOTAR_ENABLED_Val << SDMMC_NISIER_EMMC_BOOTAR_Pos) /* (SDMMC_NISIER) An interrupt is generated when the BOOTAR status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_Msk                 _UINT16_(0x403F)                                      /* (SDMMC_NISIER_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
 #define SDMMC_NISIER_SD_SDIO_CMDC_Pos         _UINT16_(0)                                          /* (SDMMC_NISIER) Command Complete Signal Enable Position */
@@ -1276,7 +1305,14 @@
 #define   SDMMC_EISIER_EMMC_TUNING_ENABLED_Val _UINT16_(0x1)                                        /* (SDMMC_EISIER) An interrupt is generated when the TUNING status rises in SDMMC_EISTR.  */
 #define SDMMC_EISIER_EMMC_TUNING_MASKED       (SDMMC_EISIER_EMMC_TUNING_MASKED_Val << SDMMC_EISIER_EMMC_TUNING_Pos) /* (SDMMC_EISIER) No interrupt is generated when the TUNING status rises in SDMMC_EISTR. Position  */
 #define SDMMC_EISIER_EMMC_TUNING_ENABLED      (SDMMC_EISIER_EMMC_TUNING_ENABLED_Val << SDMMC_EISIER_EMMC_TUNING_Pos) /* (SDMMC_EISIER) An interrupt is generated when the TUNING status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_EMMC_Msk                 _UINT16_(0x07FF)                                      /* (SDMMC_EISIER_EMMC) Register Mask  */
+#define SDMMC_EISIER_EMMC_BOOTAE_Pos          _UINT16_(12)                                         /* (SDMMC_EISIER) Boot Acknowledge Error Signal Enable Position */
+#define SDMMC_EISIER_EMMC_BOOTAE_Msk          (_UINT16_(0x1) << SDMMC_EISIER_EMMC_BOOTAE_Pos)      /* (SDMMC_EISIER) Boot Acknowledge Error Signal Enable Mask */
+#define SDMMC_EISIER_EMMC_BOOTAE(value)       (SDMMC_EISIER_EMMC_BOOTAE_Msk & (_UINT16_(value) << SDMMC_EISIER_EMMC_BOOTAE_Pos))
+#define   SDMMC_EISIER_EMMC_BOOTAE_MASKED_Val _UINT16_(0x0)                                        /* (SDMMC_EISIER) No interrupt is generated when the BOOTAE status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_EMMC_BOOTAE_ENABLED_Val _UINT16_(0x1)                                        /* (SDMMC_EISIER) An interrupt is generated when the BOOTAE status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_EMMC_BOOTAE_MASKED       (SDMMC_EISIER_EMMC_BOOTAE_MASKED_Val << SDMMC_EISIER_EMMC_BOOTAE_Pos) /* (SDMMC_EISIER) No interrupt is generated when the BOOTAE status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_BOOTAE_ENABLED      (SDMMC_EISIER_EMMC_BOOTAE_ENABLED_Val << SDMMC_EISIER_EMMC_BOOTAE_Pos) /* (SDMMC_EISIER) An interrupt is generated when the BOOTAE status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_Msk                 _UINT16_(0x17FF)                                      /* (SDMMC_EISIER_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
 #define SDMMC_EISIER_SD_SDIO_CMDTEO_Pos       _UINT16_(0)                                          /* (SDMMC_EISIER) Command Timeout Error Signal Enable Position */
@@ -1521,8 +1557,8 @@
 #define SDMMC_CA0R_BASECLKF_Pos               _UINT32_(8)                                          /* (SDMMC_CA0R) Base Clock Frequency Position */
 #define SDMMC_CA0R_BASECLKF_Msk               (_UINT32_(0xFF) << SDMMC_CA0R_BASECLKF_Pos)          /* (SDMMC_CA0R) Base Clock Frequency Mask */
 #define SDMMC_CA0R_BASECLKF(value)            (SDMMC_CA0R_BASECLKF_Msk & (_UINT32_(value) << SDMMC_CA0R_BASECLKF_Pos)) /* Assigment of value for BASECLKF in the SDMMC_CA0R register */
-#define SDMMC_CA0R_MAXBLKL_Pos                _UINT32_(16)                                         /* (SDMMC_CA0R) Max Block Length (read-only) Position */
-#define SDMMC_CA0R_MAXBLKL_Msk                (_UINT32_(0x3) << SDMMC_CA0R_MAXBLKL_Pos)            /* (SDMMC_CA0R) Max Block Length (read-only) Mask */
+#define SDMMC_CA0R_MAXBLKL_Pos                _UINT32_(16)                                         /* (SDMMC_CA0R) Max Block Length Position */
+#define SDMMC_CA0R_MAXBLKL_Msk                (_UINT32_(0x3) << SDMMC_CA0R_MAXBLKL_Pos)            /* (SDMMC_CA0R) Max Block Length Mask */
 #define SDMMC_CA0R_MAXBLKL(value)             (SDMMC_CA0R_MAXBLKL_Msk & (_UINT32_(value) << SDMMC_CA0R_MAXBLKL_Pos)) /* Assigment of value for MAXBLKL in the SDMMC_CA0R register */
 #define   SDMMC_CA0R_MAXBLKL_512_Val          _UINT32_(0x0)                                        /* (SDMMC_CA0R) 512 bytes  */
 #define   SDMMC_CA0R_MAXBLKL_1024_Val         _UINT32_(0x1)                                        /* (SDMMC_CA0R) 1024 bytes  */
@@ -1530,36 +1566,36 @@
 #define SDMMC_CA0R_MAXBLKL_512                (SDMMC_CA0R_MAXBLKL_512_Val << SDMMC_CA0R_MAXBLKL_Pos) /* (SDMMC_CA0R) 512 bytes Position  */
 #define SDMMC_CA0R_MAXBLKL_1024               (SDMMC_CA0R_MAXBLKL_1024_Val << SDMMC_CA0R_MAXBLKL_Pos) /* (SDMMC_CA0R) 1024 bytes Position  */
 #define SDMMC_CA0R_MAXBLKL_2048               (SDMMC_CA0R_MAXBLKL_2048_Val << SDMMC_CA0R_MAXBLKL_Pos) /* (SDMMC_CA0R) 2048 bytes Position  */
-#define SDMMC_CA0R_ED8SUP_Pos                 _UINT32_(18)                                         /* (SDMMC_CA0R) 8-Bit Support for Embedded Device (read-only) Position */
-#define SDMMC_CA0R_ED8SUP_Msk                 (_UINT32_(0x1) << SDMMC_CA0R_ED8SUP_Pos)             /* (SDMMC_CA0R) 8-Bit Support for Embedded Device (read-only) Mask */
+#define SDMMC_CA0R_ED8SUP_Pos                 _UINT32_(18)                                         /* (SDMMC_CA0R) 8-Bit Support for Embedded Device Position */
+#define SDMMC_CA0R_ED8SUP_Msk                 (_UINT32_(0x1) << SDMMC_CA0R_ED8SUP_Pos)             /* (SDMMC_CA0R) 8-Bit Support for Embedded Device Mask */
 #define SDMMC_CA0R_ED8SUP(value)              (SDMMC_CA0R_ED8SUP_Msk & (_UINT32_(value) << SDMMC_CA0R_ED8SUP_Pos)) /* Assigment of value for ED8SUP in the SDMMC_CA0R register */
 #define   SDMMC_CA0R_ED8SUP_0_Val             _UINT32_(0x0)                                        /* (SDMMC_CA0R) 8-bit bus width not supported.  */
 #define   SDMMC_CA0R_ED8SUP_1_Val             _UINT32_(0x1)                                        /* (SDMMC_CA0R) 8-bit bus width supported.  */
 #define SDMMC_CA0R_ED8SUP_0                   (SDMMC_CA0R_ED8SUP_0_Val << SDMMC_CA0R_ED8SUP_Pos)   /* (SDMMC_CA0R) 8-bit bus width not supported. Position  */
 #define SDMMC_CA0R_ED8SUP_1                   (SDMMC_CA0R_ED8SUP_1_Val << SDMMC_CA0R_ED8SUP_Pos)   /* (SDMMC_CA0R) 8-bit bus width supported. Position  */
-#define SDMMC_CA0R_ADMA2SUP_Pos               _UINT32_(19)                                         /* (SDMMC_CA0R) ADMA2 Support (read-only) Position */
-#define SDMMC_CA0R_ADMA2SUP_Msk               (_UINT32_(0x1) << SDMMC_CA0R_ADMA2SUP_Pos)           /* (SDMMC_CA0R) ADMA2 Support (read-only) Mask */
+#define SDMMC_CA0R_ADMA2SUP_Pos               _UINT32_(19)                                         /* (SDMMC_CA0R) ADMA2 Support Position */
+#define SDMMC_CA0R_ADMA2SUP_Msk               (_UINT32_(0x1) << SDMMC_CA0R_ADMA2SUP_Pos)           /* (SDMMC_CA0R) ADMA2 Support Mask */
 #define SDMMC_CA0R_ADMA2SUP(value)            (SDMMC_CA0R_ADMA2SUP_Msk & (_UINT32_(value) << SDMMC_CA0R_ADMA2SUP_Pos)) /* Assigment of value for ADMA2SUP in the SDMMC_CA0R register */
 #define   SDMMC_CA0R_ADMA2SUP_0_Val           _UINT32_(0x0)                                        /* (SDMMC_CA0R) ADMA2 not supported.  */
 #define   SDMMC_CA0R_ADMA2SUP_1_Val           _UINT32_(0x1)                                        /* (SDMMC_CA0R) ADMA2 supported.  */
 #define SDMMC_CA0R_ADMA2SUP_0                 (SDMMC_CA0R_ADMA2SUP_0_Val << SDMMC_CA0R_ADMA2SUP_Pos) /* (SDMMC_CA0R) ADMA2 not supported. Position  */
 #define SDMMC_CA0R_ADMA2SUP_1                 (SDMMC_CA0R_ADMA2SUP_1_Val << SDMMC_CA0R_ADMA2SUP_Pos) /* (SDMMC_CA0R) ADMA2 supported. Position  */
-#define SDMMC_CA0R_HSSUP_Pos                  _UINT32_(21)                                         /* (SDMMC_CA0R) High Speed Support (read-only) Position */
-#define SDMMC_CA0R_HSSUP_Msk                  (_UINT32_(0x1) << SDMMC_CA0R_HSSUP_Pos)              /* (SDMMC_CA0R) High Speed Support (read-only) Mask */
+#define SDMMC_CA0R_HSSUP_Pos                  _UINT32_(21)                                         /* (SDMMC_CA0R) High Speed Support Position */
+#define SDMMC_CA0R_HSSUP_Msk                  (_UINT32_(0x1) << SDMMC_CA0R_HSSUP_Pos)              /* (SDMMC_CA0R) High Speed Support Mask */
 #define SDMMC_CA0R_HSSUP(value)               (SDMMC_CA0R_HSSUP_Msk & (_UINT32_(value) << SDMMC_CA0R_HSSUP_Pos)) /* Assigment of value for HSSUP in the SDMMC_CA0R register */
 #define   SDMMC_CA0R_HSSUP_0_Val              _UINT32_(0x0)                                        /* (SDMMC_CA0R) High Speed not supported.  */
 #define   SDMMC_CA0R_HSSUP_1_Val              _UINT32_(0x1)                                        /* (SDMMC_CA0R) High Speed supported.  */
 #define SDMMC_CA0R_HSSUP_0                    (SDMMC_CA0R_HSSUP_0_Val << SDMMC_CA0R_HSSUP_Pos)     /* (SDMMC_CA0R) High Speed not supported. Position  */
 #define SDMMC_CA0R_HSSUP_1                    (SDMMC_CA0R_HSSUP_1_Val << SDMMC_CA0R_HSSUP_Pos)     /* (SDMMC_CA0R) High Speed supported. Position  */
-#define SDMMC_CA0R_SDMASUP_Pos                _UINT32_(22)                                         /* (SDMMC_CA0R) SDMA Support (read-only) Position */
-#define SDMMC_CA0R_SDMASUP_Msk                (_UINT32_(0x1) << SDMMC_CA0R_SDMASUP_Pos)            /* (SDMMC_CA0R) SDMA Support (read-only) Mask */
+#define SDMMC_CA0R_SDMASUP_Pos                _UINT32_(22)                                         /* (SDMMC_CA0R) SDMA Support Position */
+#define SDMMC_CA0R_SDMASUP_Msk                (_UINT32_(0x1) << SDMMC_CA0R_SDMASUP_Pos)            /* (SDMMC_CA0R) SDMA Support Mask */
 #define SDMMC_CA0R_SDMASUP(value)             (SDMMC_CA0R_SDMASUP_Msk & (_UINT32_(value) << SDMMC_CA0R_SDMASUP_Pos)) /* Assigment of value for SDMASUP in the SDMMC_CA0R register */
 #define   SDMMC_CA0R_SDMASUP_0_Val            _UINT32_(0x0)                                        /* (SDMMC_CA0R) SDMA not supported.  */
 #define   SDMMC_CA0R_SDMASUP_1_Val            _UINT32_(0x1)                                        /* (SDMMC_CA0R) SDMA supported.  */
 #define SDMMC_CA0R_SDMASUP_0                  (SDMMC_CA0R_SDMASUP_0_Val << SDMMC_CA0R_SDMASUP_Pos) /* (SDMMC_CA0R) SDMA not supported. Position  */
 #define SDMMC_CA0R_SDMASUP_1                  (SDMMC_CA0R_SDMASUP_1_Val << SDMMC_CA0R_SDMASUP_Pos) /* (SDMMC_CA0R) SDMA supported. Position  */
-#define SDMMC_CA0R_SRSUP_Pos                  _UINT32_(23)                                         /* (SDMMC_CA0R) Suspend/Resume Support (read-only) Position */
-#define SDMMC_CA0R_SRSUP_Msk                  (_UINT32_(0x1) << SDMMC_CA0R_SRSUP_Pos)              /* (SDMMC_CA0R) Suspend/Resume Support (read-only) Mask */
+#define SDMMC_CA0R_SRSUP_Pos                  _UINT32_(23)                                         /* (SDMMC_CA0R) Suspend/Resume Support Position */
+#define SDMMC_CA0R_SRSUP_Msk                  (_UINT32_(0x1) << SDMMC_CA0R_SRSUP_Pos)              /* (SDMMC_CA0R) Suspend/Resume Support Mask */
 #define SDMMC_CA0R_SRSUP(value)               (SDMMC_CA0R_SRSUP_Msk & (_UINT32_(value) << SDMMC_CA0R_SRSUP_Pos)) /* Assigment of value for SRSUP in the SDMMC_CA0R register */
 #define   SDMMC_CA0R_SRSUP_0_Val              _UINT32_(0x0)                                        /* (SDMMC_CA0R) Suspend/Resume not supported.  */
 #define   SDMMC_CA0R_SRSUP_1_Val              _UINT32_(0x1)                                        /* (SDMMC_CA0R) Suspend/Resume supported.  */
@@ -1655,11 +1691,33 @@
 #define   SDMMC_CA1R_DRVDSUP_1_Val            _UINT32_(0x1)                                        /* (SDMMC_CA1R) Driver type D is supported.  */
 #define SDMMC_CA1R_DRVDSUP_0                  (SDMMC_CA1R_DRVDSUP_0_Val << SDMMC_CA1R_DRVDSUP_Pos) /* (SDMMC_CA1R) Driver type D is not supported. Position  */
 #define SDMMC_CA1R_DRVDSUP_1                  (SDMMC_CA1R_DRVDSUP_1_Val << SDMMC_CA1R_DRVDSUP_Pos) /* (SDMMC_CA1R) Driver type D is supported. Position  */
+#define SDMMC_CA1R_TCNTRT_Pos                 _UINT32_(8)                                          /* (SDMMC_CA1R) Timer Count For Retuning Position */
+#define SDMMC_CA1R_TCNTRT_Msk                 (_UINT32_(0xF) << SDMMC_CA1R_TCNTRT_Pos)             /* (SDMMC_CA1R) Timer Count For Retuning Mask */
+#define SDMMC_CA1R_TCNTRT(value)              (SDMMC_CA1R_TCNTRT_Msk & (_UINT32_(value) << SDMMC_CA1R_TCNTRT_Pos)) /* Assigment of value for TCNTRT in the SDMMC_CA1R register */
+#define SDMMC_CA1R_TSDR50_Pos                 _UINT32_(13)                                         /* (SDMMC_CA1R) Use Tuning for SDR50 Position */
+#define SDMMC_CA1R_TSDR50_Msk                 (_UINT32_(0x1) << SDMMC_CA1R_TSDR50_Pos)             /* (SDMMC_CA1R) Use Tuning for SDR50 Mask */
+#define SDMMC_CA1R_TSDR50(value)              (SDMMC_CA1R_TSDR50_Msk & (_UINT32_(value) << SDMMC_CA1R_TSDR50_Pos)) /* Assigment of value for TSDR50 in the SDMMC_CA1R register */
+#define   SDMMC_CA1R_TSDR50_0_Val             _UINT32_(0x0)                                        /* (SDMMC_CA1R) SDR50 does not require tuning.  */
+#define   SDMMC_CA1R_TSDR50_1_Val             _UINT32_(0x1)                                        /* (SDMMC_CA1R) SDR50 requires tuning.  */
+#define SDMMC_CA1R_TSDR50_0                   (SDMMC_CA1R_TSDR50_0_Val << SDMMC_CA1R_TSDR50_Pos)   /* (SDMMC_CA1R) SDR50 does not require tuning. Position  */
+#define SDMMC_CA1R_TSDR50_1                   (SDMMC_CA1R_TSDR50_1_Val << SDMMC_CA1R_TSDR50_Pos)   /* (SDMMC_CA1R) SDR50 requires tuning. Position  */
+#define SDMMC_CA1R_RTMOD_Pos                  _UINT32_(14)                                         /* (SDMMC_CA1R) Retuning Modes Position */
+#define SDMMC_CA1R_RTMOD_Msk                  (_UINT32_(0x3) << SDMMC_CA1R_RTMOD_Pos)              /* (SDMMC_CA1R) Retuning Modes Mask */
+#define SDMMC_CA1R_RTMOD(value)               (SDMMC_CA1R_RTMOD_Msk & (_UINT32_(value) << SDMMC_CA1R_RTMOD_Pos)) /* Assigment of value for RTMOD in the SDMMC_CA1R register */
+#define   SDMMC_CA1R_RTMOD_MODE1_Val          _UINT32_(0x0)                                        /* (SDMMC_CA1R) Timer  */
+#define   SDMMC_CA1R_RTMOD_MODE2_Val          _UINT32_(0x1)                                        /* (SDMMC_CA1R) Timer and Retuning Request  */
+#define   SDMMC_CA1R_RTMOD_MODE3_Val          _UINT32_(0x2)                                        /* (SDMMC_CA1R) Auto Retuning (for transfer) Timer and Retuning Request  */
+#define SDMMC_CA1R_RTMOD_MODE1                (SDMMC_CA1R_RTMOD_MODE1_Val << SDMMC_CA1R_RTMOD_Pos) /* (SDMMC_CA1R) Timer Position  */
+#define SDMMC_CA1R_RTMOD_MODE2                (SDMMC_CA1R_RTMOD_MODE2_Val << SDMMC_CA1R_RTMOD_Pos) /* (SDMMC_CA1R) Timer and Retuning Request Position  */
+#define SDMMC_CA1R_RTMOD_MODE3                (SDMMC_CA1R_RTMOD_MODE3_Val << SDMMC_CA1R_RTMOD_Pos) /* (SDMMC_CA1R) Auto Retuning (for transfer) Timer and Retuning Request Position  */
 #define SDMMC_CA1R_CLKMULT_Pos                _UINT32_(16)                                         /* (SDMMC_CA1R) Clock Multiplier Position */
 #define SDMMC_CA1R_CLKMULT_Msk                (_UINT32_(0xFF) << SDMMC_CA1R_CLKMULT_Pos)           /* (SDMMC_CA1R) Clock Multiplier Mask */
 #define SDMMC_CA1R_CLKMULT(value)             (SDMMC_CA1R_CLKMULT_Msk & (_UINT32_(value) << SDMMC_CA1R_CLKMULT_Pos)) /* Assigment of value for CLKMULT in the SDMMC_CA1R register */
-#define SDMMC_CA1R_Msk                        _UINT32_(0x00FF0077)                                 /* (SDMMC_CA1R) Register Mask  */
+#define SDMMC_CA1R_Msk                        _UINT32_(0x00FFEF77)                                 /* (SDMMC_CA1R) Register Mask  */
 
+#define SDMMC_CA1R_TSDR_Pos                   _UINT32_(13)                                         /* (SDMMC_CA1R Position) Use Tuning for SDR5x */
+#define SDMMC_CA1R_TSDR_Msk                   (_UINT32_(0x1) << SDMMC_CA1R_TSDR_Pos)               /* (SDMMC_CA1R Mask) TSDR */
+#define SDMMC_CA1R_TSDR(value)                (SDMMC_CA1R_TSDR_Msk & (_UINT32_(value) << SDMMC_CA1R_TSDR_Pos)) 
 
 /* -------- SDMMC_MCCAR : (SDMMC Offset: 0x48) (R/W 32) Maximum Current Capabilities Register -------- */
 #define SDMMC_MCCAR_RESETVALUE                _UINT32_(0x00)                                       /*  (SDMMC_MCCAR) Maximum Current Capabilities Register  Reset Value */
@@ -1729,7 +1787,10 @@
 #define SDMMC_FEREIS_ADMA_Pos                 _UINT16_(9)                                          /* (SDMMC_FEREIS) Force Event for ADMA Error Position */
 #define SDMMC_FEREIS_ADMA_Msk                 (_UINT16_(0x1) << SDMMC_FEREIS_ADMA_Pos)             /* (SDMMC_FEREIS) Force Event for ADMA Error Mask */
 #define SDMMC_FEREIS_ADMA(value)              (SDMMC_FEREIS_ADMA_Msk & (_UINT16_(value) << SDMMC_FEREIS_ADMA_Pos)) /* Assigment of value for ADMA in the SDMMC_FEREIS register */
-#define SDMMC_FEREIS_Msk                      _UINT16_(0x03FF)                                     /* (SDMMC_FEREIS) Register Mask  */
+#define SDMMC_FEREIS_BOOTAE_Pos               _UINT16_(12)                                         /* (SDMMC_FEREIS) Force Event for Boot Acknowledge Error Position */
+#define SDMMC_FEREIS_BOOTAE_Msk               (_UINT16_(0x1) << SDMMC_FEREIS_BOOTAE_Pos)           /* (SDMMC_FEREIS) Force Event for Boot Acknowledge Error Mask */
+#define SDMMC_FEREIS_BOOTAE(value)            (SDMMC_FEREIS_BOOTAE_Msk & (_UINT16_(value) << SDMMC_FEREIS_BOOTAE_Pos)) /* Assigment of value for BOOTAE in the SDMMC_FEREIS register */
+#define SDMMC_FEREIS_Msk                      _UINT16_(0x13FF)                                     /* (SDMMC_FEREIS) Register Mask  */
 
 
 /* -------- SDMMC_AESR : (SDMMC Offset: 0x54) ( R/ 8) ADMA Error Status Register -------- */
@@ -1767,9 +1828,15 @@
 #define SDMMC_PVR_RESETVALUE                  _UINT16_(0x00)                                       /*  (SDMMC_PVR) Preset Value Register x (for initialization)  Reset Value */
 
 #define SDMMC_PVR_SDCLKFSEL_Pos               _UINT16_(0)                                          /* (SDMMC_PVR) SDCLK Frequency Select Position */
-#define SDMMC_PVR_SDCLKFSEL_Msk               (_UINT16_(0xFF) << SDMMC_PVR_SDCLKFSEL_Pos)          /* (SDMMC_PVR) SDCLK Frequency Select Mask */
+#define SDMMC_PVR_SDCLKFSEL_Msk               (_UINT16_(0x3FF) << SDMMC_PVR_SDCLKFSEL_Pos)         /* (SDMMC_PVR) SDCLK Frequency Select Mask */
 #define SDMMC_PVR_SDCLKFSEL(value)            (SDMMC_PVR_SDCLKFSEL_Msk & (_UINT16_(value) << SDMMC_PVR_SDCLKFSEL_Pos)) /* Assigment of value for SDCLKFSEL in the SDMMC_PVR register */
-#define SDMMC_PVR_Msk                         _UINT16_(0x00FF)                                     /* (SDMMC_PVR) Register Mask  */
+#define SDMMC_PVR_CLKGSEL_Pos                 _UINT16_(10)                                         /* (SDMMC_PVR) Clock Generator Select Position */
+#define SDMMC_PVR_CLKGSEL_Msk                 (_UINT16_(0x1) << SDMMC_PVR_CLKGSEL_Pos)             /* (SDMMC_PVR) Clock Generator Select Mask */
+#define SDMMC_PVR_CLKGSEL(value)              (SDMMC_PVR_CLKGSEL_Msk & (_UINT16_(value) << SDMMC_PVR_CLKGSEL_Pos)) /* Assigment of value for CLKGSEL in the SDMMC_PVR register */
+#define SDMMC_PVR_DRVSEL_Pos                  _UINT16_(14)                                         /* (SDMMC_PVR) Driver Strength Select Position */
+#define SDMMC_PVR_DRVSEL_Msk                  (_UINT16_(0x3) << SDMMC_PVR_DRVSEL_Pos)              /* (SDMMC_PVR) Driver Strength Select Mask */
+#define SDMMC_PVR_DRVSEL(value)               (SDMMC_PVR_DRVSEL_Msk & (_UINT16_(value) << SDMMC_PVR_DRVSEL_Pos)) /* Assigment of value for DRVSEL in the SDMMC_PVR register */
+#define SDMMC_PVR_Msk                         _UINT16_(0xC7FF)                                     /* (SDMMC_PVR) Register Mask  */
 
 
 /* -------- SDMMC_SISR : (SDMMC Offset: 0xFC) ( R/ 16) Slot Interrupt Status Register -------- */
@@ -1779,6 +1846,18 @@
 #define SDMMC_SISR_INTSSL_Msk                 (_UINT16_(0x7) << SDMMC_SISR_INTSSL_Pos)             /* (SDMMC_SISR) Interrupt Signal for Each Slot Mask */
 #define SDMMC_SISR_INTSSL(value)              (SDMMC_SISR_INTSSL_Msk & (_UINT16_(value) << SDMMC_SISR_INTSSL_Pos)) /* Assigment of value for INTSSL in the SDMMC_SISR register */
 #define SDMMC_SISR_Msk                        _UINT16_(0x0007)                                     /* (SDMMC_SISR) Register Mask  */
+
+
+/* -------- SDMMC_HCVR : (SDMMC Offset: 0xFE) ( R/ 16) Host Controller Version Register -------- */
+#define SDMMC_HCVR_RESETVALUE                 _UINT16_(0x3002)                                     /*  (SDMMC_HCVR) Host Controller Version Register  Reset Value */
+
+#define SDMMC_HCVR_SVER_Pos                   _UINT16_(0)                                          /* (SDMMC_HCVR) Specification Version Number Position */
+#define SDMMC_HCVR_SVER_Msk                   (_UINT16_(0xFF) << SDMMC_HCVR_SVER_Pos)              /* (SDMMC_HCVR) Specification Version Number Mask */
+#define SDMMC_HCVR_SVER(value)                (SDMMC_HCVR_SVER_Msk & (_UINT16_(value) << SDMMC_HCVR_SVER_Pos)) /* Assigment of value for SVER in the SDMMC_HCVR register */
+#define SDMMC_HCVR_VVER_Pos                   _UINT16_(8)                                          /* (SDMMC_HCVR) Vendor Version Number Position */
+#define SDMMC_HCVR_VVER_Msk                   (_UINT16_(0xFF) << SDMMC_HCVR_VVER_Pos)              /* (SDMMC_HCVR) Vendor Version Number Mask */
+#define SDMMC_HCVR_VVER(value)                (SDMMC_HCVR_VVER_Msk & (_UINT16_(value) << SDMMC_HCVR_VVER_Pos)) /* Assigment of value for VVER in the SDMMC_HCVR register */
+#define SDMMC_HCVR_Msk                        _UINT16_(0xFFFF)                                     /* (SDMMC_HCVR) Register Mask  */
 
 
 /* -------- SDMMC_APSR : (SDMMC Offset: 0x200) ( R/ 32) Additional Present State Register -------- */
@@ -1799,9 +1878,11 @@
 #define   SDMMC_MC1R_CMDTYP_NORMAL_Val        _UINT8_(0x0)                                         /* (SDMMC_MC1R) The command is not an e.MMC specific command.  */
 #define   SDMMC_MC1R_CMDTYP_WAITIRQ_Val       _UINT8_(0x1)                                         /* (SDMMC_MC1R) This bit must be set to 1 when the e.MMC is in Interrupt mode (CMD40). See "Interrupt Mode" in the Embedded MultiMedia Card (e.MMC) Electrical Standard 4.51.  */
 #define   SDMMC_MC1R_CMDTYP_STREAM_Val        _UINT8_(0x2)                                         /* (SDMMC_MC1R) This bit must be set to 1 in the case of Stream Read(CMD11) or Stream Write (CMD20). Only effective for e.MMC up to revision 4.41.  */
+#define   SDMMC_MC1R_CMDTYP_BOOT_Val          _UINT8_(0x3)                                         /* (SDMMC_MC1R) Starts a Boot Operation mode at the next write to SDMMC_CR. Boot data are read directly from e.MMC device.  */
 #define SDMMC_MC1R_CMDTYP_NORMAL              (SDMMC_MC1R_CMDTYP_NORMAL_Val << SDMMC_MC1R_CMDTYP_Pos) /* (SDMMC_MC1R) The command is not an e.MMC specific command. Position  */
 #define SDMMC_MC1R_CMDTYP_WAITIRQ             (SDMMC_MC1R_CMDTYP_WAITIRQ_Val << SDMMC_MC1R_CMDTYP_Pos) /* (SDMMC_MC1R) This bit must be set to 1 when the e.MMC is in Interrupt mode (CMD40). See "Interrupt Mode" in the Embedded MultiMedia Card (e.MMC) Electrical Standard 4.51. Position  */
 #define SDMMC_MC1R_CMDTYP_STREAM              (SDMMC_MC1R_CMDTYP_STREAM_Val << SDMMC_MC1R_CMDTYP_Pos) /* (SDMMC_MC1R) This bit must be set to 1 in the case of Stream Read(CMD11) or Stream Write (CMD20). Only effective for e.MMC up to revision 4.41. Position  */
+#define SDMMC_MC1R_CMDTYP_BOOT                (SDMMC_MC1R_CMDTYP_BOOT_Val << SDMMC_MC1R_CMDTYP_Pos) /* (SDMMC_MC1R) Starts a Boot Operation mode at the next write to SDMMC_CR. Boot data are read directly from e.MMC device. Position  */
 #define SDMMC_MC1R_DDR_Pos                    _UINT8_(3)                                           /* (SDMMC_MC1R) e.MMC HSDDR Mode Position */
 #define SDMMC_MC1R_DDR_Msk                    (_UINT8_(0x1) << SDMMC_MC1R_DDR_Pos)                 /* (SDMMC_MC1R) e.MMC HSDDR Mode Mask */
 #define SDMMC_MC1R_DDR(value)                 (SDMMC_MC1R_DDR_Msk & (_UINT8_(value) << SDMMC_MC1R_DDR_Pos)) /* Assigment of value for DDR in the SDMMC_MC1R register */
@@ -1816,6 +1897,9 @@
 #define   SDMMC_MC1R_OPD_1_Val                _UINT8_(0x1)                                         /* (SDMMC_MC1R) The command line is in open drain.  */
 #define SDMMC_MC1R_OPD_0                      (SDMMC_MC1R_OPD_0_Val << SDMMC_MC1R_OPD_Pos)         /* (SDMMC_MC1R) The command line is in push-pull. Position  */
 #define SDMMC_MC1R_OPD_1                      (SDMMC_MC1R_OPD_1_Val << SDMMC_MC1R_OPD_Pos)         /* (SDMMC_MC1R) The command line is in open drain. Position  */
+#define SDMMC_MC1R_BOOTA_Pos                  _UINT8_(5)                                           /* (SDMMC_MC1R) e.MMC Boot Acknowledge Enable Position */
+#define SDMMC_MC1R_BOOTA_Msk                  (_UINT8_(0x1) << SDMMC_MC1R_BOOTA_Pos)               /* (SDMMC_MC1R) e.MMC Boot Acknowledge Enable Mask */
+#define SDMMC_MC1R_BOOTA(value)               (SDMMC_MC1R_BOOTA_Msk & (_UINT8_(value) << SDMMC_MC1R_BOOTA_Pos)) /* Assigment of value for BOOTA in the SDMMC_MC1R register */
 #define SDMMC_MC1R_RSTN_Pos                   _UINT8_(6)                                           /* (SDMMC_MC1R) e.MMC Reset Signal Position */
 #define SDMMC_MC1R_RSTN_Msk                   (_UINT8_(0x1) << SDMMC_MC1R_RSTN_Pos)                /* (SDMMC_MC1R) e.MMC Reset Signal Mask */
 #define SDMMC_MC1R_RSTN(value)                (SDMMC_MC1R_RSTN_Msk & (_UINT8_(value) << SDMMC_MC1R_RSTN_Pos)) /* Assigment of value for RSTN in the SDMMC_MC1R register */
@@ -1830,18 +1914,55 @@
 #define   SDMMC_MC1R_FCD_ENABLED_Val          _UINT8_(0x1)                                         /* (SDMMC_MC1R) E.MMC Forced Card Detect is enabled.  */
 #define SDMMC_MC1R_FCD_DISABLED               (SDMMC_MC1R_FCD_DISABLED_Val << SDMMC_MC1R_FCD_Pos)  /* (SDMMC_MC1R) E.MMC Forced Card Detect is disabled. The SDMMC_CD signal is used and debounce timing is applied. Position  */
 #define SDMMC_MC1R_FCD_ENABLED                (SDMMC_MC1R_FCD_ENABLED_Val << SDMMC_MC1R_FCD_Pos)   /* (SDMMC_MC1R) E.MMC Forced Card Detect is enabled. Position  */
-#define SDMMC_MC1R_Msk                        _UINT8_(0xDB)                                        /* (SDMMC_MC1R) Register Mask  */
+#define SDMMC_MC1R_Msk                        _UINT8_(0xFB)                                        /* (SDMMC_MC1R) Register Mask  */
 
 
 /* -------- SDMMC_MC2R : (SDMMC Offset: 0x205) ( /W 8) e.MMC Control 2 Register -------- */
 #define SDMMC_MC2R_SRESP_Pos                  _UINT8_(0)                                           /* (SDMMC_MC2R) e.MMC Abort Wait IRQ Position */
 #define SDMMC_MC2R_SRESP_Msk                  (_UINT8_(0x1) << SDMMC_MC2R_SRESP_Pos)               /* (SDMMC_MC2R) e.MMC Abort Wait IRQ Mask */
 #define SDMMC_MC2R_SRESP(value)               (SDMMC_MC2R_SRESP_Msk & (_UINT8_(value) << SDMMC_MC2R_SRESP_Pos)) /* Assigment of value for SRESP in the SDMMC_MC2R register */
-#define SDMMC_MC2R_Msk                        _UINT8_(0x01)                                        /* (SDMMC_MC2R) Register Mask  */
+#define SDMMC_MC2R_ABOOT_Pos                  _UINT8_(1)                                           /* (SDMMC_MC2R) e.MMC Abort Boot Position */
+#define SDMMC_MC2R_ABOOT_Msk                  (_UINT8_(0x1) << SDMMC_MC2R_ABOOT_Pos)               /* (SDMMC_MC2R) e.MMC Abort Boot Mask */
+#define SDMMC_MC2R_ABOOT(value)               (SDMMC_MC2R_ABOOT_Msk & (_UINT8_(value) << SDMMC_MC2R_ABOOT_Pos)) /* Assigment of value for ABOOT in the SDMMC_MC2R register */
+#define SDMMC_MC2R_Msk                        _UINT8_(0x03)                                        /* (SDMMC_MC2R) Register Mask  */
+
+
+/* -------- SDMMC_MC3R : (SDMMC Offset: 0x206) (R/W 8) e.MMC Control 3 Register -------- */
+#define SDMMC_MC3R_RESETVALUE                 _UINT8_(0x00)                                        /*  (SDMMC_MC3R) e.MMC Control 3 Register  Reset Value */
+
+#define SDMMC_MC3R_HS400EN_Pos                _UINT8_(0)                                           /* (SDMMC_MC3R) HS400 Mode Enable Position */
+#define SDMMC_MC3R_HS400EN_Msk                (_UINT8_(0x1) << SDMMC_MC3R_HS400EN_Pos)             /* (SDMMC_MC3R) HS400 Mode Enable Mask */
+#define SDMMC_MC3R_HS400EN(value)             (SDMMC_MC3R_HS400EN_Msk & (_UINT8_(value) << SDMMC_MC3R_HS400EN_Pos)) /* Assigment of value for HS400EN in the SDMMC_MC3R register */
+#define   SDMMC_MC3R_HS400EN_DISABLED_Val     _UINT8_(0x0)                                         /* (SDMMC_MC3R) HS400 mode is disabled.  */
+#define   SDMMC_MC3R_HS400EN_ENABLED_Val      _UINT8_(0x1)                                         /* (SDMMC_MC3R) HS400 mode is enabled.  */
+#define SDMMC_MC3R_HS400EN_DISABLED           (SDMMC_MC3R_HS400EN_DISABLED_Val << SDMMC_MC3R_HS400EN_Pos) /* (SDMMC_MC3R) HS400 mode is disabled. Position  */
+#define SDMMC_MC3R_HS400EN_ENABLED            (SDMMC_MC3R_HS400EN_ENABLED_Val << SDMMC_MC3R_HS400EN_Pos) /* (SDMMC_MC3R) HS400 mode is enabled. Position  */
+#define SDMMC_MC3R_ESMEN_Pos                  _UINT8_(1)                                           /* (SDMMC_MC3R) Enhanced Strobe Mode Enable Position */
+#define SDMMC_MC3R_ESMEN_Msk                  (_UINT8_(0x1) << SDMMC_MC3R_ESMEN_Pos)               /* (SDMMC_MC3R) Enhanced Strobe Mode Enable Mask */
+#define SDMMC_MC3R_ESMEN(value)               (SDMMC_MC3R_ESMEN_Msk & (_UINT8_(value) << SDMMC_MC3R_ESMEN_Pos)) /* Assigment of value for ESMEN in the SDMMC_MC3R register */
+#define   SDMMC_MC3R_ESMEN_DISABLED_Val       _UINT8_(0x0)                                         /* (SDMMC_MC3R) Enhanced Strobe mode is disabled.  */
+#define   SDMMC_MC3R_ESMEN_ENABLED_Val        _UINT8_(0x1)                                         /* (SDMMC_MC3R) Enhanced Strobe mode is enabled.  */
+#define SDMMC_MC3R_ESMEN_DISABLED             (SDMMC_MC3R_ESMEN_DISABLED_Val << SDMMC_MC3R_ESMEN_Pos) /* (SDMMC_MC3R) Enhanced Strobe mode is disabled. Position  */
+#define SDMMC_MC3R_ESMEN_ENABLED              (SDMMC_MC3R_ESMEN_ENABLED_Val << SDMMC_MC3R_ESMEN_Pos) /* (SDMMC_MC3R) Enhanced Strobe mode is enabled. Position  */
+#define SDMMC_MC3R_DQSUPVAL_Pos               _UINT8_(3)                                           /* (SDMMC_MC3R) DQS Delay Update Timer Value Position */
+#define SDMMC_MC3R_DQSUPVAL_Msk               (_UINT8_(0x7) << SDMMC_MC3R_DQSUPVAL_Pos)            /* (SDMMC_MC3R) DQS Delay Update Timer Value Mask */
+#define SDMMC_MC3R_DQSUPVAL(value)            (SDMMC_MC3R_DQSUPVAL_Msk & (_UINT8_(value) << SDMMC_MC3R_DQSUPVAL_Pos)) /* Assigment of value for DQSUPVAL in the SDMMC_MC3R register */
+#define   SDMMC_MC3R_DQSUPVAL_0_Val           _UINT8_(0x0)                                         /* (SDMMC_MC3R) DQS delay update is performed each time a command is sent to the device.  */
+#define SDMMC_MC3R_DQSUPVAL_0                 (SDMMC_MC3R_DQSUPVAL_0_Val << SDMMC_MC3R_DQSUPVAL_Pos) /* (SDMMC_MC3R) DQS delay update is performed each time a command is sent to the device. Position  */
+#define SDMMC_MC3R_Msk                        _UINT8_(0x3B)                                        /* (SDMMC_MC3R) Register Mask  */
+
+
+/* -------- SDMMC_DEBR : (SDMMC Offset: 0x207) (R/W 8) Debounce Register -------- */
+#define SDMMC_DEBR_RESETVALUE                 _UINT8_(0x00)                                        /*  (SDMMC_DEBR) Debounce Register  Reset Value */
+
+#define SDMMC_DEBR_CDDVAL_Pos                 _UINT8_(0)                                           /* (SDMMC_DEBR) Card Detect Debounce Value Position */
+#define SDMMC_DEBR_CDDVAL_Msk                 (_UINT8_(0x3) << SDMMC_DEBR_CDDVAL_Pos)              /* (SDMMC_DEBR) Card Detect Debounce Value Mask */
+#define SDMMC_DEBR_CDDVAL(value)              (SDMMC_DEBR_CDDVAL_Msk & (_UINT8_(value) << SDMMC_DEBR_CDDVAL_Pos)) /* Assigment of value for CDDVAL in the SDMMC_DEBR register */
+#define SDMMC_DEBR_Msk                        _UINT8_(0x03)                                        /* (SDMMC_DEBR) Register Mask  */
 
 
 /* -------- SDMMC_ACR : (SDMMC Offset: 0x208) (R/W 32) AHB Control Register -------- */
-#define SDMMC_ACR_RESETVALUE                  _UINT32_(0x300)                                      /*  (SDMMC_ACR) AHB Control Register  Reset Value */
+#define SDMMC_ACR_RESETVALUE                  _UINT32_(0x00)                                       /*  (SDMMC_ACR) AHB Control Register  Reset Value */
 
 #define SDMMC_ACR_BMAX_Pos                    _UINT32_(0)                                          /* (SDMMC_ACR) AHB Maximum Burst Position */
 #define SDMMC_ACR_BMAX_Msk                    (_UINT32_(0x3) << SDMMC_ACR_BMAX_Pos)                /* (SDMMC_ACR) AHB Maximum Burst Mask */
@@ -1854,7 +1975,21 @@
 #define SDMMC_ACR_BMAX_INCR8                  (SDMMC_ACR_BMAX_INCR8_Val << SDMMC_ACR_BMAX_Pos)     /* (SDMMC_ACR) The maximum burst size is INCR8. Position  */
 #define SDMMC_ACR_BMAX_INCR4                  (SDMMC_ACR_BMAX_INCR4_Val << SDMMC_ACR_BMAX_Pos)     /* (SDMMC_ACR) The maximum burst size is INCR4. Position  */
 #define SDMMC_ACR_BMAX_SINGLE                 (SDMMC_ACR_BMAX_SINGLE_Val << SDMMC_ACR_BMAX_Pos)    /* (SDMMC_ACR) Only SINGLE transfers are performed. Position  */
-#define SDMMC_ACR_Msk                         _UINT32_(0x00000003)                                 /* (SDMMC_ACR) Register Mask  */
+#define SDMMC_ACR_BUFM_Pos                    _UINT32_(8)                                          /* (SDMMC_ACR) AHB Bufferable Mode Position */
+#define SDMMC_ACR_BUFM_Msk                    (_UINT32_(0x3) << SDMMC_ACR_BUFM_Pos)                /* (SDMMC_ACR) AHB Bufferable Mode Mask */
+#define SDMMC_ACR_BUFM(value)                 (SDMMC_ACR_BUFM_Msk & (_UINT32_(value) << SDMMC_ACR_BUFM_Pos)) /* Assigment of value for BUFM in the SDMMC_ACR register */
+#define   SDMMC_ACR_BUFM_NEVER_Val            _UINT32_(0x0)                                        /* (SDMMC_ACR) All SDMA/ADMA AHB accesses are not bufferable.  */
+#define   SDMMC_ACR_BUFM_ALWAYS_Val           _UINT32_(0x1)                                        /* (SDMMC_ACR) All SDMA/ADMA AHB accesses are bufferable.  */
+#define   SDMMC_ACR_BUFM_BLOCK_Val            _UINT32_(0x2)                                        /* (SDMMC_ACR) All SDMA/ADMA AHB accesses are bufferable except the last access of a data block.  */
+#define   SDMMC_ACR_BUFM_TRANSFER_Val         _UINT32_(0x3)                                        /* (SDMMC_ACR) All SDMA/ADMA AHB accesses are bufferable except the last access of a data transfer.  */
+#define SDMMC_ACR_BUFM_NEVER                  (SDMMC_ACR_BUFM_NEVER_Val << SDMMC_ACR_BUFM_Pos)     /* (SDMMC_ACR) All SDMA/ADMA AHB accesses are not bufferable. Position  */
+#define SDMMC_ACR_BUFM_ALWAYS                 (SDMMC_ACR_BUFM_ALWAYS_Val << SDMMC_ACR_BUFM_Pos)    /* (SDMMC_ACR) All SDMA/ADMA AHB accesses are bufferable. Position  */
+#define SDMMC_ACR_BUFM_BLOCK                  (SDMMC_ACR_BUFM_BLOCK_Val << SDMMC_ACR_BUFM_Pos)     /* (SDMMC_ACR) All SDMA/ADMA AHB accesses are bufferable except the last access of a data block. Position  */
+#define SDMMC_ACR_BUFM_TRANSFER               (SDMMC_ACR_BUFM_TRANSFER_Val << SDMMC_ACR_BUFM_Pos)  /* (SDMMC_ACR) All SDMA/ADMA AHB accesses are bufferable except the last access of a data transfer. Position  */
+#define SDMMC_ACR_DFQOS_Pos                   _UINT32_(12)                                         /* (SDMMC_ACR) Descriptor Fetch QOS Position */
+#define SDMMC_ACR_DFQOS_Msk                   (_UINT32_(0xF) << SDMMC_ACR_DFQOS_Pos)               /* (SDMMC_ACR) Descriptor Fetch QOS Mask */
+#define SDMMC_ACR_DFQOS(value)                (SDMMC_ACR_DFQOS_Msk & (_UINT32_(value) << SDMMC_ACR_DFQOS_Pos)) /* Assigment of value for DFQOS in the SDMMC_ACR register */
+#define SDMMC_ACR_Msk                         _UINT32_(0x0000F303)                                 /* (SDMMC_ACR) Register Mask  */
 
 
 /* -------- SDMMC_CC2R : (SDMMC Offset: 0x20C) (R/W 32) Clock Control 2 Register -------- */
@@ -1868,6 +2003,96 @@
 #define SDMMC_CC2R_FSDCLKD_0                  (SDMMC_CC2R_FSDCLKD_0_Val << SDMMC_CC2R_FSDCLKD_Pos) /* (SDMMC_CC2R) The SDCLK is forced and it cannot be stopped immediately after the transaction. Position  */
 #define SDMMC_CC2R_FSDCLKD_1                  (SDMMC_CC2R_FSDCLKD_1_Val << SDMMC_CC2R_FSDCLKD_Pos) /* (SDMMC_CC2R) The SDCLK is not forced and it can be stopped immediately after the transaction. Position  */
 #define SDMMC_CC2R_Msk                        _UINT32_(0x00000001)                                 /* (SDMMC_CC2R) Register Mask  */
+
+
+/* -------- SDMMC_RTC1R : (SDMMC Offset: 0x210) (R/W 8) Retuning Timer Control 1 Register -------- */
+#define SDMMC_RTC1R_RESETVALUE                _UINT8_(0x00)                                        /*  (SDMMC_RTC1R) Retuning Timer Control 1 Register  Reset Value */
+
+#define SDMMC_RTC1R_TMREN_Pos                 _UINT8_(0)                                           /* (SDMMC_RTC1R) Retuning Timer Enable Position */
+#define SDMMC_RTC1R_TMREN_Msk                 (_UINT8_(0x1) << SDMMC_RTC1R_TMREN_Pos)              /* (SDMMC_RTC1R) Retuning Timer Enable Mask */
+#define SDMMC_RTC1R_TMREN(value)              (SDMMC_RTC1R_TMREN_Msk & (_UINT8_(value) << SDMMC_RTC1R_TMREN_Pos)) /* Assigment of value for TMREN in the SDMMC_RTC1R register */
+#define   SDMMC_RTC1R_TMREN_DISABLED_Val      _UINT8_(0x0)                                         /* (SDMMC_RTC1R) The retuning timer is disabled.  */
+#define   SDMMC_RTC1R_TMREN_ENABLED_Val       _UINT8_(0x1)                                         /* (SDMMC_RTC1R) The retuning timer is enabled.  */
+#define SDMMC_RTC1R_TMREN_DISABLED            (SDMMC_RTC1R_TMREN_DISABLED_Val << SDMMC_RTC1R_TMREN_Pos) /* (SDMMC_RTC1R) The retuning timer is disabled. Position  */
+#define SDMMC_RTC1R_TMREN_ENABLED             (SDMMC_RTC1R_TMREN_ENABLED_Val << SDMMC_RTC1R_TMREN_Pos) /* (SDMMC_RTC1R) The retuning timer is enabled. Position  */
+#define SDMMC_RTC1R_Msk                       _UINT8_(0x01)                                        /* (SDMMC_RTC1R) Register Mask  */
+
+
+/* -------- SDMMC_RTC2R : (SDMMC Offset: 0x211) ( /W 8) Retuning Timer Control 2 Register -------- */
+#define SDMMC_RTC2R_RLD_Pos                   _UINT8_(0)                                           /* (SDMMC_RTC2R) Retuning Timer Reload Position */
+#define SDMMC_RTC2R_RLD_Msk                   (_UINT8_(0x1) << SDMMC_RTC2R_RLD_Pos)                /* (SDMMC_RTC2R) Retuning Timer Reload Mask */
+#define SDMMC_RTC2R_RLD(value)                (SDMMC_RTC2R_RLD_Msk & (_UINT8_(value) << SDMMC_RTC2R_RLD_Pos)) /* Assigment of value for RLD in the SDMMC_RTC2R register */
+#define SDMMC_RTC2R_Msk                       _UINT8_(0x01)                                        /* (SDMMC_RTC2R) Register Mask  */
+
+
+/* -------- SDMMC_RTCVR : (SDMMC Offset: 0x214) (R/W 32) Retuning Timer Counter Value Register -------- */
+#define SDMMC_RTCVR_RESETVALUE                _UINT32_(0x00)                                       /*  (SDMMC_RTCVR) Retuning Timer Counter Value Register  Reset Value */
+
+#define SDMMC_RTCVR_TCVAL_Pos                 _UINT32_(0)                                          /* (SDMMC_RTCVR) Retuning Timer Counter Value Position */
+#define SDMMC_RTCVR_TCVAL_Msk                 (_UINT32_(0xF) << SDMMC_RTCVR_TCVAL_Pos)             /* (SDMMC_RTCVR) Retuning Timer Counter Value Mask */
+#define SDMMC_RTCVR_TCVAL(value)              (SDMMC_RTCVR_TCVAL_Msk & (_UINT32_(value) << SDMMC_RTCVR_TCVAL_Pos)) /* Assigment of value for TCVAL in the SDMMC_RTCVR register */
+#define SDMMC_RTCVR_Msk                       _UINT32_(0x0000000F)                                 /* (SDMMC_RTCVR) Register Mask  */
+
+
+/* -------- SDMMC_RTISTER : (SDMMC Offset: 0x218) (R/W 8) Retuning Timer Interrupt Status Enable Register -------- */
+#define SDMMC_RTISTER_RESETVALUE              _UINT8_(0x00)                                        /*  (SDMMC_RTISTER) Retuning Timer Interrupt Status Enable Register  Reset Value */
+
+#define SDMMC_RTISTER_TEVT_Pos                _UINT8_(0)                                           /* (SDMMC_RTISTER) Retuning Timer Event Position */
+#define SDMMC_RTISTER_TEVT_Msk                (_UINT8_(0x1) << SDMMC_RTISTER_TEVT_Pos)             /* (SDMMC_RTISTER) Retuning Timer Event Mask */
+#define SDMMC_RTISTER_TEVT(value)             (SDMMC_RTISTER_TEVT_Msk & (_UINT8_(value) << SDMMC_RTISTER_TEVT_Pos)) /* Assigment of value for TEVT in the SDMMC_RTISTER register */
+#define   SDMMC_RTISTER_TEVT_MASKED_Val       _UINT8_(0x0)                                         /* (SDMMC_RTISTER) The TEVT status flag in SDMMC_RTISTR is masked.  */
+#define   SDMMC_RTISTER_TEVT_ENABLED_Val      _UINT8_(0x1)                                         /* (SDMMC_RTISTER) The TEVT status flag in SDMMC_RTISTR is enabled.  */
+#define SDMMC_RTISTER_TEVT_MASKED             (SDMMC_RTISTER_TEVT_MASKED_Val << SDMMC_RTISTER_TEVT_Pos) /* (SDMMC_RTISTER) The TEVT status flag in SDMMC_RTISTR is masked. Position  */
+#define SDMMC_RTISTER_TEVT_ENABLED            (SDMMC_RTISTER_TEVT_ENABLED_Val << SDMMC_RTISTER_TEVT_Pos) /* (SDMMC_RTISTER) The TEVT status flag in SDMMC_RTISTR is enabled. Position  */
+#define SDMMC_RTISTER_Msk                     _UINT8_(0x01)                                        /* (SDMMC_RTISTER) Register Mask  */
+
+
+/* -------- SDMMC_RTISIER : (SDMMC Offset: 0x219) (R/W 8) Retuning Timer Interrupt Signal Enable Register -------- */
+#define SDMMC_RTISIER_RESETVALUE              _UINT8_(0x00)                                        /*  (SDMMC_RTISIER) Retuning Timer Interrupt Signal Enable Register  Reset Value */
+
+#define SDMMC_RTISIER_TEVT_Pos                _UINT8_(0)                                           /* (SDMMC_RTISIER) Retuning Timer Event Position */
+#define SDMMC_RTISIER_TEVT_Msk                (_UINT8_(0x1) << SDMMC_RTISIER_TEVT_Pos)             /* (SDMMC_RTISIER) Retuning Timer Event Mask */
+#define SDMMC_RTISIER_TEVT(value)             (SDMMC_RTISIER_TEVT_Msk & (_UINT8_(value) << SDMMC_RTISIER_TEVT_Pos)) /* Assigment of value for TEVT in the SDMMC_RTISIER register */
+#define   SDMMC_RTISIER_TEVT_MASKED_Val       _UINT8_(0x0)                                         /* (SDMMC_RTISIER) No interrupt is generated when the TEVT status rises in SDMMC_RTISTR.  */
+#define   SDMMC_RTISIER_TEVT_ENABLED_Val      _UINT8_(0x1)                                         /* (SDMMC_RTISIER) An interrupt is generated when the TEVT status rises in SDMMC_RTISTR.  */
+#define SDMMC_RTISIER_TEVT_MASKED             (SDMMC_RTISIER_TEVT_MASKED_Val << SDMMC_RTISIER_TEVT_Pos) /* (SDMMC_RTISIER) No interrupt is generated when the TEVT status rises in SDMMC_RTISTR. Position  */
+#define SDMMC_RTISIER_TEVT_ENABLED            (SDMMC_RTISIER_TEVT_ENABLED_Val << SDMMC_RTISIER_TEVT_Pos) /* (SDMMC_RTISIER) An interrupt is generated when the TEVT status rises in SDMMC_RTISTR. Position  */
+#define SDMMC_RTISIER_Msk                     _UINT8_(0x01)                                        /* (SDMMC_RTISIER) Register Mask  */
+
+
+/* -------- SDMMC_RTISTR : (SDMMC Offset: 0x21C) (R/W 8) Retuning Timer Interrupt Status Register -------- */
+#define SDMMC_RTISTR_RESETVALUE               _UINT8_(0x00)                                        /*  (SDMMC_RTISTR) Retuning Timer Interrupt Status Register  Reset Value */
+
+#define SDMMC_RTISTR_TEVT_Pos                 _UINT8_(0)                                           /* (SDMMC_RTISTR) Retuning Timer Event Position */
+#define SDMMC_RTISTR_TEVT_Msk                 (_UINT8_(0x1) << SDMMC_RTISTR_TEVT_Pos)              /* (SDMMC_RTISTR) Retuning Timer Event Mask */
+#define SDMMC_RTISTR_TEVT(value)              (SDMMC_RTISTR_TEVT_Msk & (_UINT8_(value) << SDMMC_RTISTR_TEVT_Pos)) /* Assigment of value for TEVT in the SDMMC_RTISTR register */
+#define   SDMMC_RTISTR_TEVT_0_Val             _UINT8_(0x0)                                         /* (SDMMC_RTISTR) No retuning timer event.  */
+#define   SDMMC_RTISTR_TEVT_1_Val             _UINT8_(0x1)                                         /* (SDMMC_RTISTR) Retuning timer event.  */
+#define SDMMC_RTISTR_TEVT_0                   (SDMMC_RTISTR_TEVT_0_Val << SDMMC_RTISTR_TEVT_Pos)   /* (SDMMC_RTISTR) No retuning timer event. Position  */
+#define SDMMC_RTISTR_TEVT_1                   (SDMMC_RTISTR_TEVT_1_Val << SDMMC_RTISTR_TEVT_Pos)   /* (SDMMC_RTISTR) Retuning timer event. Position  */
+#define SDMMC_RTISTR_Msk                      _UINT8_(0x01)                                        /* (SDMMC_RTISTR) Register Mask  */
+
+
+/* -------- SDMMC_RTSSR : (SDMMC Offset: 0x21D) ( R/ 8) Retuning Timer Status Slots Register -------- */
+#define SDMMC_RTSSR_RESETVALUE                _UINT8_(0x00)                                        /*  (SDMMC_RTSSR) Retuning Timer Status Slots Register  Reset Value */
+
+#define SDMMC_RTSSR_TEVTSLOT_Pos              _UINT8_(0)                                           /* (SDMMC_RTSSR) Retuning Timer Event Slots Position */
+#define SDMMC_RTSSR_TEVTSLOT_Msk              (_UINT8_(0x7) << SDMMC_RTSSR_TEVTSLOT_Pos)           /* (SDMMC_RTSSR) Retuning Timer Event Slots Mask */
+#define SDMMC_RTSSR_TEVTSLOT(value)           (SDMMC_RTSSR_TEVTSLOT_Msk & (_UINT8_(value) << SDMMC_RTSSR_TEVTSLOT_Pos)) /* Assigment of value for TEVTSLOT in the SDMMC_RTSSR register */
+#define SDMMC_RTSSR_Msk                       _UINT8_(0x07)                                        /* (SDMMC_RTSSR) Register Mask  */
+
+
+/* -------- SDMMC_TUNCR : (SDMMC Offset: 0x220) (R/W 32) Tuning Control Register -------- */
+#define SDMMC_TUNCR_RESETVALUE                _UINT32_(0x00)                                       /*  (SDMMC_TUNCR) Tuning Control Register  Reset Value */
+
+#define SDMMC_TUNCR_SMPLPT_Pos                _UINT32_(0)                                          /* (SDMMC_TUNCR) Sampling Point Position */
+#define SDMMC_TUNCR_SMPLPT_Msk                (_UINT32_(0x1) << SDMMC_TUNCR_SMPLPT_Pos)            /* (SDMMC_TUNCR) Sampling Point Mask */
+#define SDMMC_TUNCR_SMPLPT(value)             (SDMMC_TUNCR_SMPLPT_Msk & (_UINT32_(value) << SDMMC_TUNCR_SMPLPT_Pos)) /* Assigment of value for SMPLPT in the SDMMC_TUNCR register */
+#define   SDMMC_TUNCR_SMPLPT_0_Val            _UINT32_(0x0)                                        /* (SDMMC_TUNCR) Sampling point is set at 50% of the data window.  */
+#define   SDMMC_TUNCR_SMPLPT_1_Val            _UINT32_(0x1)                                        /* (SDMMC_TUNCR) Sampling point is set at 75% of the data window.  */
+#define SDMMC_TUNCR_SMPLPT_0                  (SDMMC_TUNCR_SMPLPT_0_Val << SDMMC_TUNCR_SMPLPT_Pos) /* (SDMMC_TUNCR) Sampling point is set at 50% of the data window. Position  */
+#define SDMMC_TUNCR_SMPLPT_1                  (SDMMC_TUNCR_SMPLPT_1_Val << SDMMC_TUNCR_SMPLPT_Pos) /* (SDMMC_TUNCR) Sampling point is set at 75% of the data window. Position  */
+#define SDMMC_TUNCR_Msk                       _UINT32_(0x00000001)                                 /* (SDMMC_TUNCR) Register Mask  */
 
 
 /* -------- SDMMC_CACR : (SDMMC Offset: 0x230) (R/W 32) Capabilities Control Register -------- */
@@ -1901,8 +2126,75 @@
 #define SDMMC_DBGR_Msk                        _UINT32_(0x00000001)                                 /* (SDMMC_DBGR) Register Mask  */
 
 
+/* -------- SDMMC_CALCR : (SDMMC Offset: 0x240) (R/W 32) Calibration Control Register -------- */
+#define SDMMC_CALCR_RESETVALUE                _UINT32_(0x500E)                                     /*  (SDMMC_CALCR) Calibration Control Register  Reset Value */
+
+#define SDMMC_CALCR_EN_Pos                    _UINT32_(0)                                          /* (SDMMC_CALCR) PADs Calibration Enable Position */
+#define SDMMC_CALCR_EN_Msk                    (_UINT32_(0x1) << SDMMC_CALCR_EN_Pos)                /* (SDMMC_CALCR) PADs Calibration Enable Mask */
+#define SDMMC_CALCR_EN(value)                 (SDMMC_CALCR_EN_Msk & (_UINT32_(value) << SDMMC_CALCR_EN_Pos)) /* Assigment of value for EN in the SDMMC_CALCR register */
+#define   SDMMC_CALCR_EN_0_Val                _UINT32_(0x0)                                        /* (SDMMC_CALCR) SDMMC I/O calibration disabled.  */
+#define   SDMMC_CALCR_EN_1_Val                _UINT32_(0x1)                                        /* (SDMMC_CALCR) SDMMC I/O calibration enabled.  */
+#define SDMMC_CALCR_EN_0                      (SDMMC_CALCR_EN_0_Val << SDMMC_CALCR_EN_Pos)         /* (SDMMC_CALCR) SDMMC I/O calibration disabled. Position  */
+#define SDMMC_CALCR_EN_1                      (SDMMC_CALCR_EN_1_Val << SDMMC_CALCR_EN_Pos)         /* (SDMMC_CALCR) SDMMC I/O calibration enabled. Position  */
+#define SDMMC_CALCR_CLKDIV_Pos                _UINT32_(1)                                          /* (SDMMC_CALCR) Calibration Clock Division Position */
+#define SDMMC_CALCR_CLKDIV_Msk                (_UINT32_(0x7) << SDMMC_CALCR_CLKDIV_Pos)            /* (SDMMC_CALCR) Calibration Clock Division Mask */
+#define SDMMC_CALCR_CLKDIV(value)             (SDMMC_CALCR_CLKDIV_Msk & (_UINT32_(value) << SDMMC_CALCR_CLKDIV_Pos)) /* Assigment of value for CLKDIV in the SDMMC_CALCR register */
+#define SDMMC_CALCR_ALWYSON_Pos               _UINT32_(4)                                          /* (SDMMC_CALCR) Calibration Analog Always ON Position */
+#define SDMMC_CALCR_ALWYSON_Msk               (_UINT32_(0x1) << SDMMC_CALCR_ALWYSON_Pos)           /* (SDMMC_CALCR) Calibration Analog Always ON Mask */
+#define SDMMC_CALCR_ALWYSON(value)            (SDMMC_CALCR_ALWYSON_Msk & (_UINT32_(value) << SDMMC_CALCR_ALWYSON_Pos)) /* Assigment of value for ALWYSON in the SDMMC_CALCR register */
+#define   SDMMC_CALCR_ALWYSON_0_Val           _UINT32_(0x0)                                        /* (SDMMC_CALCR) Calibration analog is shut down after each calibration.  */
+#define   SDMMC_CALCR_ALWYSON_1_Val           _UINT32_(0x1)                                        /* (SDMMC_CALCR) Calibration analog remains powered after calibration.  */
+#define SDMMC_CALCR_ALWYSON_0                 (SDMMC_CALCR_ALWYSON_0_Val << SDMMC_CALCR_ALWYSON_Pos) /* (SDMMC_CALCR) Calibration analog is shut down after each calibration. Position  */
+#define SDMMC_CALCR_ALWYSON_1                 (SDMMC_CALCR_ALWYSON_1_Val << SDMMC_CALCR_ALWYSON_Pos) /* (SDMMC_CALCR) Calibration analog remains powered after calibration. Position  */
+#define SDMMC_CALCR_TUNDIS_Pos                _UINT32_(5)                                          /* (SDMMC_CALCR) Calibration During Tuning Disabled Position */
+#define SDMMC_CALCR_TUNDIS_Msk                (_UINT32_(0x1) << SDMMC_CALCR_TUNDIS_Pos)            /* (SDMMC_CALCR) Calibration During Tuning Disabled Mask */
+#define SDMMC_CALCR_TUNDIS(value)             (SDMMC_CALCR_TUNDIS_Msk & (_UINT32_(value) << SDMMC_CALCR_TUNDIS_Pos)) /* Assigment of value for TUNDIS in the SDMMC_CALCR register */
+#define   SDMMC_CALCR_TUNDIS_0_Val            _UINT32_(0x0)                                        /* (SDMMC_CALCR) Calibration is launched before each tuning.  */
+#define   SDMMC_CALCR_TUNDIS_1_Val            _UINT32_(0x1)                                        /* (SDMMC_CALCR) Calibration is not launched at tuning.  */
+#define SDMMC_CALCR_TUNDIS_0                  (SDMMC_CALCR_TUNDIS_0_Val << SDMMC_CALCR_TUNDIS_Pos) /* (SDMMC_CALCR) Calibration is launched before each tuning. Position  */
+#define SDMMC_CALCR_TUNDIS_1                  (SDMMC_CALCR_TUNDIS_1_Val << SDMMC_CALCR_TUNDIS_Pos) /* (SDMMC_CALCR) Calibration is not launched at tuning. Position  */
+#define SDMMC_CALCR_BPEN_Pos                  _UINT32_(6)                                          /* (SDMMC_CALCR) Calibration Bypass Enabled Position */
+#define SDMMC_CALCR_BPEN_Msk                  (_UINT32_(0x1) << SDMMC_CALCR_BPEN_Pos)              /* (SDMMC_CALCR) Calibration Bypass Enabled Mask */
+#define SDMMC_CALCR_BPEN(value)               (SDMMC_CALCR_BPEN_Msk & (_UINT32_(value) << SDMMC_CALCR_BPEN_Pos)) /* Assigment of value for BPEN in the SDMMC_CALCR register */
+#define   SDMMC_CALCR_BPEN_0_Val              _UINT32_(0x0)                                        /* (SDMMC_CALCR) Calibration bypass is not enabled.  */
+#define   SDMMC_CALCR_BPEN_1_Val              _UINT32_(0x1)                                        /* (SDMMC_CALCR) Calibration bypass is enabled. CALPBP and CALNBP codes are applied to the calibration cell.  */
+#define SDMMC_CALCR_BPEN_0                    (SDMMC_CALCR_BPEN_0_Val << SDMMC_CALCR_BPEN_Pos)     /* (SDMMC_CALCR) Calibration bypass is not enabled. Position  */
+#define SDMMC_CALCR_BPEN_1                    (SDMMC_CALCR_BPEN_1_Val << SDMMC_CALCR_BPEN_Pos)     /* (SDMMC_CALCR) Calibration bypass is enabled. CALPBP and CALNBP codes are applied to the calibration cell. Position  */
+#define SDMMC_CALCR_CNTVAL_Pos                _UINT32_(8)                                          /* (SDMMC_CALCR) Calibration Counter Value Position */
+#define SDMMC_CALCR_CNTVAL_Msk                (_UINT32_(0xFF) << SDMMC_CALCR_CNTVAL_Pos)           /* (SDMMC_CALCR) Calibration Counter Value Mask */
+#define SDMMC_CALCR_CNTVAL(value)             (SDMMC_CALCR_CNTVAL_Msk & (_UINT32_(value) << SDMMC_CALCR_CNTVAL_Pos)) /* Assigment of value for CNTVAL in the SDMMC_CALCR register */
+#define SDMMC_CALCR_CALN_Pos                  _UINT32_(16)                                         /* (SDMMC_CALCR) Calibration N Status Position */
+#define SDMMC_CALCR_CALN_Msk                  (_UINT32_(0xF) << SDMMC_CALCR_CALN_Pos)              /* (SDMMC_CALCR) Calibration N Status Mask */
+#define SDMMC_CALCR_CALN(value)               (SDMMC_CALCR_CALN_Msk & (_UINT32_(value) << SDMMC_CALCR_CALN_Pos)) /* Assigment of value for CALN in the SDMMC_CALCR register */
+#define SDMMC_CALCR_CALNBP_Pos                _UINT32_(20)                                         /* (SDMMC_CALCR) Calibration N Bypass value Position */
+#define SDMMC_CALCR_CALNBP_Msk                (_UINT32_(0xF) << SDMMC_CALCR_CALNBP_Pos)            /* (SDMMC_CALCR) Calibration N Bypass value Mask */
+#define SDMMC_CALCR_CALNBP(value)             (SDMMC_CALCR_CALNBP_Msk & (_UINT32_(value) << SDMMC_CALCR_CALNBP_Pos)) /* Assigment of value for CALNBP in the SDMMC_CALCR register */
+#define SDMMC_CALCR_CALP_Pos                  _UINT32_(24)                                         /* (SDMMC_CALCR) Calibration P Status Position */
+#define SDMMC_CALCR_CALP_Msk                  (_UINT32_(0xF) << SDMMC_CALCR_CALP_Pos)              /* (SDMMC_CALCR) Calibration P Status Mask */
+#define SDMMC_CALCR_CALP(value)               (SDMMC_CALCR_CALP_Msk & (_UINT32_(value) << SDMMC_CALCR_CALP_Pos)) /* Assigment of value for CALP in the SDMMC_CALCR register */
+#define SDMMC_CALCR_CALPBP_Pos                _UINT32_(28)                                         /* (SDMMC_CALCR) Calibration PBypass value Position */
+#define SDMMC_CALCR_CALPBP_Msk                (_UINT32_(0xF) << SDMMC_CALCR_CALPBP_Pos)            /* (SDMMC_CALCR) Calibration PBypass value Mask */
+#define SDMMC_CALCR_CALPBP(value)             (SDMMC_CALCR_CALPBP_Msk & (_UINT32_(value) << SDMMC_CALCR_CALPBP_Pos)) /* Assigment of value for CALPBP in the SDMMC_CALCR register */
+#define SDMMC_CALCR_Msk                       _UINT32_(0xFFFFFF7F)                                 /* (SDMMC_CALCR) Register Mask  */
+
+
+/* -------- SDMMC_EPVR8 : (SDMMC Offset: 0x244) (R/W 16) Extended Preset Value Register 8(for HS400) -------- */
+#define SDMMC_EPVR8_RESETVALUE                _UINT16_(0x00)                                       /*  (SDMMC_EPVR8) Extended Preset Value Register 8(for HS400)  Reset Value */
+
+#define SDMMC_EPVR8_SDCLKFSEL_Pos             _UINT16_(0)                                          /* (SDMMC_EPVR8) SDCLK Frequency Select Position */
+#define SDMMC_EPVR8_SDCLKFSEL_Msk             (_UINT16_(0x3FF) << SDMMC_EPVR8_SDCLKFSEL_Pos)       /* (SDMMC_EPVR8) SDCLK Frequency Select Mask */
+#define SDMMC_EPVR8_SDCLKFSEL(value)          (SDMMC_EPVR8_SDCLKFSEL_Msk & (_UINT16_(value) << SDMMC_EPVR8_SDCLKFSEL_Pos)) /* Assigment of value for SDCLKFSEL in the SDMMC_EPVR8 register */
+#define SDMMC_EPVR8_CLKGSEL_Pos               _UINT16_(10)                                         /* (SDMMC_EPVR8) Clock Generator Select Position */
+#define SDMMC_EPVR8_CLKGSEL_Msk               (_UINT16_(0x1) << SDMMC_EPVR8_CLKGSEL_Pos)           /* (SDMMC_EPVR8) Clock Generator Select Mask */
+#define SDMMC_EPVR8_CLKGSEL(value)            (SDMMC_EPVR8_CLKGSEL_Msk & (_UINT16_(value) << SDMMC_EPVR8_CLKGSEL_Pos)) /* Assigment of value for CLKGSEL in the SDMMC_EPVR8 register */
+#define SDMMC_EPVR8_DRVSEL_Pos                _UINT16_(14)                                         /* (SDMMC_EPVR8) Driver Strength Select Position */
+#define SDMMC_EPVR8_DRVSEL_Msk                (_UINT16_(0x3) << SDMMC_EPVR8_DRVSEL_Pos)            /* (SDMMC_EPVR8) Driver Strength Select Mask */
+#define SDMMC_EPVR8_DRVSEL(value)             (SDMMC_EPVR8_DRVSEL_Msk & (_UINT16_(value) << SDMMC_EPVR8_DRVSEL_Pos)) /* Assigment of value for DRVSEL in the SDMMC_EPVR8 register */
+#define SDMMC_EPVR8_Msk                       _UINT16_(0xC7FF)                                     /* (SDMMC_EPVR8) Register Mask  */
+
+
 /** \brief SDMMC register offsets definitions */
-#define SDMMC_SSAR_REG_OFST            _UINT32_(0x00)      /* (SDMMC_SSAR) SDMA System Address/Argument 2 Register Offset */
+#define SDMMC_SSAR_REG_OFST            _UINT32_(0x00)      /* (SDMMC_SSAR) SDMA System Address / Argument 2 Register Offset */
 #define SDMMC_BSR_REG_OFST             _UINT32_(0x04)      /* (SDMMC_BSR) Block Size Register Offset */
 #define SDMMC_BCR_REG_OFST             _UINT32_(0x06)      /* (SDMMC_BCR) Block Count Register Offset */
 #define SDMMC_ARG1R_REG_OFST           _UINT32_(0x08)      /* (SDMMC_ARG1R) Argument 1 Register Offset */
@@ -1938,20 +2230,41 @@
 #define SDMMC_AESR_REG_OFST            _UINT32_(0x54)      /* (SDMMC_AESR) ADMA Error Status Register Offset */
 #define SDMMC_ASAR0_REG_OFST           _UINT32_(0x58)      /* (SDMMC_ASAR0) ADMA System Address Register 0 Offset */
 #define SDMMC_PVR_REG_OFST             _UINT32_(0x60)      /* (SDMMC_PVR) Preset Value Register x (for initialization) Offset */
+#define SDMMC_PVR0_REG_OFST            _UINT32_(0x60)      /* (SDMMC_PVR0) Preset Value Register x (for initialization) Offset */
+#define SDMMC_PVR1_REG_OFST            _UINT32_(0x62)      /* (SDMMC_PVR1) Preset Value Register x (for initialization) Offset */
+#define SDMMC_PVR2_REG_OFST            _UINT32_(0x64)      /* (SDMMC_PVR2) Preset Value Register x (for initialization) Offset */
+#define SDMMC_PVR3_REG_OFST            _UINT32_(0x66)      /* (SDMMC_PVR3) Preset Value Register x (for initialization) Offset */
+#define SDMMC_PVR4_REG_OFST            _UINT32_(0x68)      /* (SDMMC_PVR4) Preset Value Register x (for initialization) Offset */
+#define SDMMC_PVR5_REG_OFST            _UINT32_(0x6A)      /* (SDMMC_PVR5) Preset Value Register x (for initialization) Offset */
+#define SDMMC_PVR6_REG_OFST            _UINT32_(0x6C)      /* (SDMMC_PVR6) Preset Value Register x (for initialization) Offset */
+#define SDMMC_PVR7_REG_OFST            _UINT32_(0x6E)      /* (SDMMC_PVR7) Preset Value Register x (for initialization) Offset */
 #define SDMMC_SISR_REG_OFST            _UINT32_(0xFC)      /* (SDMMC_SISR) Slot Interrupt Status Register Offset */
+#define SDMMC_HCVR_REG_OFST            _UINT32_(0xFE)      /* (SDMMC_HCVR) Host Controller Version Register Offset */
 #define SDMMC_APSR_REG_OFST            _UINT32_(0x200)     /* (SDMMC_APSR) Additional Present State Register Offset */
 #define SDMMC_MC1R_REG_OFST            _UINT32_(0x204)     /* (SDMMC_MC1R) e.MMC Control 1 Register Offset */
 #define SDMMC_MC2R_REG_OFST            _UINT32_(0x205)     /* (SDMMC_MC2R) e.MMC Control 2 Register Offset */
+#define SDMMC_MC3R_REG_OFST            _UINT32_(0x206)     /* (SDMMC_MC3R) e.MMC Control 3 Register Offset */
+#define SDMMC_DEBR_REG_OFST            _UINT32_(0x207)     /* (SDMMC_DEBR) Debounce Register Offset */
 #define SDMMC_ACR_REG_OFST             _UINT32_(0x208)     /* (SDMMC_ACR) AHB Control Register Offset */
 #define SDMMC_CC2R_REG_OFST            _UINT32_(0x20C)     /* (SDMMC_CC2R) Clock Control 2 Register Offset */
+#define SDMMC_RTC1R_REG_OFST           _UINT32_(0x210)     /* (SDMMC_RTC1R) Retuning Timer Control 1 Register Offset */
+#define SDMMC_RTC2R_REG_OFST           _UINT32_(0x211)     /* (SDMMC_RTC2R) Retuning Timer Control 2 Register Offset */
+#define SDMMC_RTCVR_REG_OFST           _UINT32_(0x214)     /* (SDMMC_RTCVR) Retuning Timer Counter Value Register Offset */
+#define SDMMC_RTISTER_REG_OFST         _UINT32_(0x218)     /* (SDMMC_RTISTER) Retuning Timer Interrupt Status Enable Register Offset */
+#define SDMMC_RTISIER_REG_OFST         _UINT32_(0x219)     /* (SDMMC_RTISIER) Retuning Timer Interrupt Signal Enable Register Offset */
+#define SDMMC_RTISTR_REG_OFST          _UINT32_(0x21C)     /* (SDMMC_RTISTR) Retuning Timer Interrupt Status Register Offset */
+#define SDMMC_RTSSR_REG_OFST           _UINT32_(0x21D)     /* (SDMMC_RTSSR) Retuning Timer Status Slots Register Offset */
+#define SDMMC_TUNCR_REG_OFST           _UINT32_(0x220)     /* (SDMMC_TUNCR) Tuning Control Register Offset */
 #define SDMMC_CACR_REG_OFST            _UINT32_(0x230)     /* (SDMMC_CACR) Capabilities Control Register Offset */
 #define SDMMC_DBGR_REG_OFST            _UINT32_(0x234)     /* (SDMMC_DBGR) Debug Register Offset */
+#define SDMMC_CALCR_REG_OFST           _UINT32_(0x240)     /* (SDMMC_CALCR) Calibration Control Register Offset */
+#define SDMMC_EPVR8_REG_OFST           _UINT32_(0x244)     /* (SDMMC_EPVR8) Extended Preset Value Register 8(for HS400) Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SDMMC register API structure */
 typedef struct
 {  /* Secure Digital MultiMedia Card Controller */
-  __IO  uint32_t                       SDMMC_SSAR;         /**< Offset: 0x00 (R/W  32) SDMA System Address/Argument 2 Register */
+  __IO  uint32_t                       SDMMC_SSAR;         /**< Offset: 0x00 (R/W  32) SDMA System Address / Argument 2 Register */
   __IO  uint16_t                       SDMMC_BSR;          /**< Offset: 0x04 (R/W  16) Block Size Register */
   __IO  uint16_t                       SDMMC_BCR;          /**< Offset: 0x06 (R/W  16) Block Count Register */
   __IO  uint32_t                       SDMMC_ARG1R;        /**< Offset: 0x08 (R/W  32) Argument 1 Register */
@@ -1985,19 +2298,35 @@ typedef struct
   __I   uint8_t                        Reserved2[0x03];
   __IO  uint32_t                       SDMMC_ASAR0;        /**< Offset: 0x58 (R/W  32) ADMA System Address Register 0 */
   __I   uint8_t                        Reserved3[0x04];
-  __IO  uint16_t                       SDMMC_PVR;          /**< Offset: 0x60 (R/W  16) Preset Value Register x (for initialization) */
-  __I   uint8_t                        Reserved4[0x9A];
+  __IO  uint16_t                       SDMMC_PVR[8];       /**< Offset: 0x60 (R/W  16) Preset Value Register x (for initialization) */
+  __I   uint8_t                        Reserved4[0x8C];
   __I   uint16_t                       SDMMC_SISR;         /**< Offset: 0xFC (R/   16) Slot Interrupt Status Register */
-  __I   uint8_t                        Reserved5[0x102];
+  __I   uint16_t                       SDMMC_HCVR;         /**< Offset: 0xFE (R/   16) Host Controller Version Register */
+  __I   uint8_t                        Reserved5[0x100];
   __I   uint32_t                       SDMMC_APSR;         /**< Offset: 0x200 (R/   32) Additional Present State Register */
   __IO  uint8_t                        SDMMC_MC1R;         /**< Offset: 0x204 (R/W  8) e.MMC Control 1 Register */
   __O   uint8_t                        SDMMC_MC2R;         /**< Offset: 0x205 ( /W  8) e.MMC Control 2 Register */
-  __I   uint8_t                        Reserved6[0x02];
+  __IO  uint8_t                        SDMMC_MC3R;         /**< Offset: 0x206 (R/W  8) e.MMC Control 3 Register */
+  __IO  uint8_t                        SDMMC_DEBR;         /**< Offset: 0x207 (R/W  8) Debounce Register */
   __IO  uint32_t                       SDMMC_ACR;          /**< Offset: 0x208 (R/W  32) AHB Control Register */
   __IO  uint32_t                       SDMMC_CC2R;         /**< Offset: 0x20C (R/W  32) Clock Control 2 Register */
-  __I   uint8_t                        Reserved7[0x20];
+  __IO  uint8_t                        SDMMC_RTC1R;        /**< Offset: 0x210 (R/W  8) Retuning Timer Control 1 Register */
+  __O   uint8_t                        SDMMC_RTC2R;        /**< Offset: 0x211 ( /W  8) Retuning Timer Control 2 Register */
+  __I   uint8_t                        Reserved6[0x02];
+  __IO  uint32_t                       SDMMC_RTCVR;        /**< Offset: 0x214 (R/W  32) Retuning Timer Counter Value Register */
+  __IO  uint8_t                        SDMMC_RTISTER;      /**< Offset: 0x218 (R/W  8) Retuning Timer Interrupt Status Enable Register */
+  __IO  uint8_t                        SDMMC_RTISIER;      /**< Offset: 0x219 (R/W  8) Retuning Timer Interrupt Signal Enable Register */
+  __I   uint8_t                        Reserved7[0x02];
+  __IO  uint8_t                        SDMMC_RTISTR;       /**< Offset: 0x21C (R/W  8) Retuning Timer Interrupt Status Register */
+  __I   uint8_t                        SDMMC_RTSSR;        /**< Offset: 0x21D (R/   8) Retuning Timer Status Slots Register */
+  __I   uint8_t                        Reserved8[0x02];
+  __IO  uint32_t                       SDMMC_TUNCR;        /**< Offset: 0x220 (R/W  32) Tuning Control Register */
+  __I   uint8_t                        Reserved9[0x0C];
   __IO  uint32_t                       SDMMC_CACR;         /**< Offset: 0x230 (R/W  32) Capabilities Control Register */
   __IO  uint32_t                       SDMMC_DBGR;         /**< Offset: 0x234 (R/W  32) Debug Register */
+  __I   uint8_t                        Reserved10[0x08];
+  __IO  uint32_t                       SDMMC_CALCR;        /**< Offset: 0x240 (R/W  32) Calibration Control Register */
+  __IO  uint16_t                       SDMMC_EPVR8;        /**< Offset: 0x244 (R/W  16) Extended Preset Value Register 8(for HS400) */
 } sdmmc_registers_t;
 
 

@@ -377,15 +377,6 @@
 #define SFR_CLEAR_ONLY_SD_CFG_NFC_Pos         _UINT32_(0)                                          /* (SFR_CLEAR_ONLY_SD_CFG) Shutdown Control Clear for Memories in NFC Position */
 #define SFR_CLEAR_ONLY_SD_CFG_NFC_Msk         (_UINT32_(0x1) << SFR_CLEAR_ONLY_SD_CFG_NFC_Pos)     /* (SFR_CLEAR_ONLY_SD_CFG) Shutdown Control Clear for Memories in NFC Mask */
 #define SFR_CLEAR_ONLY_SD_CFG_NFC(value)      (SFR_CLEAR_ONLY_SD_CFG_NFC_Msk & (_UINT32_(value) << SFR_CLEAR_ONLY_SD_CFG_NFC_Pos)) /* Assigment of value for NFC in the SFR_CLEAR_ONLY_SD_CFG register */
-#define SFR_CLEAR_ONLY_SD_CFG_DMAC0_Pos       _UINT32_(1)                                          /* (SFR_CLEAR_ONLY_SD_CFG) Shutdown Control Clear for Memories in DMAC0 Position */
-#define SFR_CLEAR_ONLY_SD_CFG_DMAC0_Msk       (_UINT32_(0x1) << SFR_CLEAR_ONLY_SD_CFG_DMAC0_Pos)   /* (SFR_CLEAR_ONLY_SD_CFG) Shutdown Control Clear for Memories in DMAC0 Mask */
-#define SFR_CLEAR_ONLY_SD_CFG_DMAC0(value)    (SFR_CLEAR_ONLY_SD_CFG_DMAC0_Msk & (_UINT32_(value) << SFR_CLEAR_ONLY_SD_CFG_DMAC0_Pos)) /* Assigment of value for DMAC0 in the SFR_CLEAR_ONLY_SD_CFG register */
-#define SFR_CLEAR_ONLY_SD_CFG_DMAC1_Pos       _UINT32_(2)                                          /* (SFR_CLEAR_ONLY_SD_CFG) Shutdown Control Clear for Memories in DMAC1 Position */
-#define SFR_CLEAR_ONLY_SD_CFG_DMAC1_Msk       (_UINT32_(0x1) << SFR_CLEAR_ONLY_SD_CFG_DMAC1_Pos)   /* (SFR_CLEAR_ONLY_SD_CFG) Shutdown Control Clear for Memories in DMAC1 Mask */
-#define SFR_CLEAR_ONLY_SD_CFG_DMAC1(value)    (SFR_CLEAR_ONLY_SD_CFG_DMAC1_Msk & (_UINT32_(value) << SFR_CLEAR_ONLY_SD_CFG_DMAC1_Pos)) /* Assigment of value for DMAC1 in the SFR_CLEAR_ONLY_SD_CFG register */
-#define SFR_CLEAR_ONLY_SD_CFG_DMAC2_Pos       _UINT32_(3)                                          /* (SFR_CLEAR_ONLY_SD_CFG) Shutdown Control Clear for Memories in DMAC2 Position */
-#define SFR_CLEAR_ONLY_SD_CFG_DMAC2_Msk       (_UINT32_(0x1) << SFR_CLEAR_ONLY_SD_CFG_DMAC2_Pos)   /* (SFR_CLEAR_ONLY_SD_CFG) Shutdown Control Clear for Memories in DMAC2 Mask */
-#define SFR_CLEAR_ONLY_SD_CFG_DMAC2(value)    (SFR_CLEAR_ONLY_SD_CFG_DMAC2_Msk & (_UINT32_(value) << SFR_CLEAR_ONLY_SD_CFG_DMAC2_Pos)) /* Assigment of value for DMAC2 in the SFR_CLEAR_ONLY_SD_CFG register */
 #define SFR_CLEAR_ONLY_SD_CFG_ASRC_Pos        _UINT32_(4)                                          /* (SFR_CLEAR_ONLY_SD_CFG) Shutdown Control Clear for Memories in Asynchronous Sample Rate Controller Position */
 #define SFR_CLEAR_ONLY_SD_CFG_ASRC_Msk        (_UINT32_(0x1) << SFR_CLEAR_ONLY_SD_CFG_ASRC_Pos)    /* (SFR_CLEAR_ONLY_SD_CFG) Shutdown Control Clear for Memories in Asynchronous Sample Rate Controller Mask */
 #define SFR_CLEAR_ONLY_SD_CFG_ASRC(value)     (SFR_CLEAR_ONLY_SD_CFG_ASRC_Msk & (_UINT32_(value) << SFR_CLEAR_ONLY_SD_CFG_ASRC_Pos)) /* Assigment of value for ASRC in the SFR_CLEAR_ONLY_SD_CFG register */
@@ -428,11 +419,8 @@
 #define SFR_CLEAR_ONLY_SD_CFG_I3CC_Pos        _UINT32_(17)                                         /* (SFR_CLEAR_ONLY_SD_CFG) Shutdown Control Clear for Memories in I3C Controller Position */
 #define SFR_CLEAR_ONLY_SD_CFG_I3CC_Msk        (_UINT32_(0x1) << SFR_CLEAR_ONLY_SD_CFG_I3CC_Pos)    /* (SFR_CLEAR_ONLY_SD_CFG) Shutdown Control Clear for Memories in I3C Controller Mask */
 #define SFR_CLEAR_ONLY_SD_CFG_I3CC(value)     (SFR_CLEAR_ONLY_SD_CFG_I3CC_Msk & (_UINT32_(value) << SFR_CLEAR_ONLY_SD_CFG_I3CC_Pos)) /* Assigment of value for I3CC in the SFR_CLEAR_ONLY_SD_CFG register */
-#define SFR_CLEAR_ONLY_SD_CFG_Msk             _UINT32_(0x0003FFFF)                                 /* (SFR_CLEAR_ONLY_SD_CFG) Register Mask  */
+#define SFR_CLEAR_ONLY_SD_CFG_Msk             _UINT32_(0x0003FFF1)                                 /* (SFR_CLEAR_ONLY_SD_CFG) Register Mask  */
 
-#define SFR_CLEAR_ONLY_SD_CFG_DMAC_Pos        _UINT32_(1)                                          /* (SFR_CLEAR_ONLY_SD_CFG Position) Shutdown Control Clear for Memories in DMACx */
-#define SFR_CLEAR_ONLY_SD_CFG_DMAC_Msk        (_UINT32_(0x7) << SFR_CLEAR_ONLY_SD_CFG_DMAC_Pos)    /* (SFR_CLEAR_ONLY_SD_CFG Mask) DMAC */
-#define SFR_CLEAR_ONLY_SD_CFG_DMAC(value)     (SFR_CLEAR_ONLY_SD_CFG_DMAC_Msk & (_UINT32_(value) << SFR_CLEAR_ONLY_SD_CFG_DMAC_Pos)) 
 #define SFR_CLEAR_ONLY_SD_CFG_GMAC_Pos        _UINT32_(7)                                          /* (SFR_CLEAR_ONLY_SD_CFG Position) Shutdown Control Clear for Memories in Ethernet MAC x */
 #define SFR_CLEAR_ONLY_SD_CFG_GMAC_Msk        (_UINT32_(0x3) << SFR_CLEAR_ONLY_SD_CFG_GMAC_Pos)    /* (SFR_CLEAR_ONLY_SD_CFG Mask) GMAC */
 #define SFR_CLEAR_ONLY_SD_CFG_GMAC(value)     (SFR_CLEAR_ONLY_SD_CFG_GMAC_Msk & (_UINT32_(value) << SFR_CLEAR_ONLY_SD_CFG_GMAC_Pos)) 
@@ -446,15 +434,6 @@
 #define SFR_DISABLE_SD_CFG_NFC_Pos            _UINT32_(0)                                          /* (SFR_DISABLE_SD_CFG) Shutdown Control Disable for Memories in NFC Position */
 #define SFR_DISABLE_SD_CFG_NFC_Msk            (_UINT32_(0x1) << SFR_DISABLE_SD_CFG_NFC_Pos)        /* (SFR_DISABLE_SD_CFG) Shutdown Control Disable for Memories in NFC Mask */
 #define SFR_DISABLE_SD_CFG_NFC(value)         (SFR_DISABLE_SD_CFG_NFC_Msk & (_UINT32_(value) << SFR_DISABLE_SD_CFG_NFC_Pos)) /* Assigment of value for NFC in the SFR_DISABLE_SD_CFG register */
-#define SFR_DISABLE_SD_CFG_DMAC0_Pos          _UINT32_(1)                                          /* (SFR_DISABLE_SD_CFG) Shutdown Control Disable for Memories in DMAC0 Position */
-#define SFR_DISABLE_SD_CFG_DMAC0_Msk          (_UINT32_(0x1) << SFR_DISABLE_SD_CFG_DMAC0_Pos)      /* (SFR_DISABLE_SD_CFG) Shutdown Control Disable for Memories in DMAC0 Mask */
-#define SFR_DISABLE_SD_CFG_DMAC0(value)       (SFR_DISABLE_SD_CFG_DMAC0_Msk & (_UINT32_(value) << SFR_DISABLE_SD_CFG_DMAC0_Pos)) /* Assigment of value for DMAC0 in the SFR_DISABLE_SD_CFG register */
-#define SFR_DISABLE_SD_CFG_DMAC1_Pos          _UINT32_(2)                                          /* (SFR_DISABLE_SD_CFG) Disable Shut Down Control for Memories in DMAC1 Position */
-#define SFR_DISABLE_SD_CFG_DMAC1_Msk          (_UINT32_(0x1) << SFR_DISABLE_SD_CFG_DMAC1_Pos)      /* (SFR_DISABLE_SD_CFG) Disable Shut Down Control for Memories in DMAC1 Mask */
-#define SFR_DISABLE_SD_CFG_DMAC1(value)       (SFR_DISABLE_SD_CFG_DMAC1_Msk & (_UINT32_(value) << SFR_DISABLE_SD_CFG_DMAC1_Pos)) /* Assigment of value for DMAC1 in the SFR_DISABLE_SD_CFG register */
-#define SFR_DISABLE_SD_CFG_DMAC2_Pos          _UINT32_(3)                                          /* (SFR_DISABLE_SD_CFG) Shutdown Control Disable for Memories in DMAC2 Position */
-#define SFR_DISABLE_SD_CFG_DMAC2_Msk          (_UINT32_(0x1) << SFR_DISABLE_SD_CFG_DMAC2_Pos)      /* (SFR_DISABLE_SD_CFG) Shutdown Control Disable for Memories in DMAC2 Mask */
-#define SFR_DISABLE_SD_CFG_DMAC2(value)       (SFR_DISABLE_SD_CFG_DMAC2_Msk & (_UINT32_(value) << SFR_DISABLE_SD_CFG_DMAC2_Pos)) /* Assigment of value for DMAC2 in the SFR_DISABLE_SD_CFG register */
 #define SFR_DISABLE_SD_CFG_ASRC_Pos           _UINT32_(4)                                          /* (SFR_DISABLE_SD_CFG) Shutdown Control Disable for Memories in Asynchronous Sample Rate Controller Position */
 #define SFR_DISABLE_SD_CFG_ASRC_Msk           (_UINT32_(0x1) << SFR_DISABLE_SD_CFG_ASRC_Pos)       /* (SFR_DISABLE_SD_CFG) Shutdown Control Disable for Memories in Asynchronous Sample Rate Controller Mask */
 #define SFR_DISABLE_SD_CFG_ASRC(value)        (SFR_DISABLE_SD_CFG_ASRC_Msk & (_UINT32_(value) << SFR_DISABLE_SD_CFG_ASRC_Pos)) /* Assigment of value for ASRC in the SFR_DISABLE_SD_CFG register */
@@ -497,11 +476,8 @@
 #define SFR_DISABLE_SD_CFG_I3CC_Pos           _UINT32_(17)                                         /* (SFR_DISABLE_SD_CFG) Shutdown Control Disable for Memories in I3C Controller Position */
 #define SFR_DISABLE_SD_CFG_I3CC_Msk           (_UINT32_(0x1) << SFR_DISABLE_SD_CFG_I3CC_Pos)       /* (SFR_DISABLE_SD_CFG) Shutdown Control Disable for Memories in I3C Controller Mask */
 #define SFR_DISABLE_SD_CFG_I3CC(value)        (SFR_DISABLE_SD_CFG_I3CC_Msk & (_UINT32_(value) << SFR_DISABLE_SD_CFG_I3CC_Pos)) /* Assigment of value for I3CC in the SFR_DISABLE_SD_CFG register */
-#define SFR_DISABLE_SD_CFG_Msk                _UINT32_(0x0003FFFF)                                 /* (SFR_DISABLE_SD_CFG) Register Mask  */
+#define SFR_DISABLE_SD_CFG_Msk                _UINT32_(0x0003FFF1)                                 /* (SFR_DISABLE_SD_CFG) Register Mask  */
 
-#define SFR_DISABLE_SD_CFG_DMAC_Pos           _UINT32_(1)                                          /* (SFR_DISABLE_SD_CFG Position) Shutdown Control Disable for Memories in DMACx */
-#define SFR_DISABLE_SD_CFG_DMAC_Msk           (_UINT32_(0x7) << SFR_DISABLE_SD_CFG_DMAC_Pos)       /* (SFR_DISABLE_SD_CFG Mask) DMAC */
-#define SFR_DISABLE_SD_CFG_DMAC(value)        (SFR_DISABLE_SD_CFG_DMAC_Msk & (_UINT32_(value) << SFR_DISABLE_SD_CFG_DMAC_Pos)) 
 #define SFR_DISABLE_SD_CFG_GMAC_Pos           _UINT32_(7)                                          /* (SFR_DISABLE_SD_CFG Position) Shutdown Control Disable for Memories in Ethernet MAC x */
 #define SFR_DISABLE_SD_CFG_GMAC_Msk           (_UINT32_(0x3) << SFR_DISABLE_SD_CFG_GMAC_Pos)       /* (SFR_DISABLE_SD_CFG Mask) GMAC */
 #define SFR_DISABLE_SD_CFG_GMAC(value)        (SFR_DISABLE_SD_CFG_GMAC_Msk & (_UINT32_(value) << SFR_DISABLE_SD_CFG_GMAC_Pos)) 
@@ -528,312 +504,6 @@
 #define SFR_MEMPOWER_DEEPSLEEP_1              (SFR_MEMPOWER_DEEPSLEEP_1_Val << SFR_MEMPOWER_DEEPSLEEP_Pos) /* (SFR_MEMPOWER) Memory Deep Sleep mode is enabled. Position  */
 #define SFR_MEMPOWER_Msk                      _UINT32_(0x00000003)                                 /* (SFR_MEMPOWER) Register Mask  */
 
-
-/* -------- SFR_LS : (SFR Offset: 0x2064) (R/W 32) Light Sleep Register -------- */
-#define SFR_LS_RESETVALUE                     _UINT32_(0x00)                                       /*  (SFR_LS) Light Sleep Register  Reset Value */
-
-#define SFR_LS_CA7_Pos                        _UINT32_(0)                                          /* (SFR_LS) Light Sleep Mode Control of Memories in Cortex-A7 Position */
-#define SFR_LS_CA7_Msk                        (_UINT32_(0x1) << SFR_LS_CA7_Pos)                    /* (SFR_LS) Light Sleep Mode Control of Memories in Cortex-A7 Mask */
-#define SFR_LS_CA7(value)                     (SFR_LS_CA7_Msk & (_UINT32_(value) << SFR_LS_CA7_Pos)) /* Assigment of value for CA7 in the SFR_LS register */
-#define SFR_LS_FLEXRAM_Pos                    _UINT32_(1)                                          /* (SFR_LS) Light Sleep Mode Control of Memories in FlexRAM Position */
-#define SFR_LS_FLEXRAM_Msk                    (_UINT32_(0x1) << SFR_LS_FLEXRAM_Pos)                /* (SFR_LS) Light Sleep Mode Control of Memories in FlexRAM Mask */
-#define SFR_LS_FLEXRAM(value)                 (SFR_LS_FLEXRAM_Msk & (_UINT32_(value) << SFR_LS_FLEXRAM_Pos)) /* Assigment of value for FLEXRAM in the SFR_LS register */
-#define SFR_LS_AXI2AHB_MSS_Pos                _UINT32_(2)                                          /* (SFR_LS) Light Sleep Mode Control of Memories in Interconnect MSS Position */
-#define SFR_LS_AXI2AHB_MSS_Msk                (_UINT32_(0x1) << SFR_LS_AXI2AHB_MSS_Pos)            /* (SFR_LS) Light Sleep Mode Control of Memories in Interconnect MSS Mask */
-#define SFR_LS_AXI2AHB_MSS(value)             (SFR_LS_AXI2AHB_MSS_Msk & (_UINT32_(value) << SFR_LS_AXI2AHB_MSS_Pos)) /* Assigment of value for AXI2AHB_MSS in the SFR_LS register */
-#define SFR_LS_AXI2AHB_CSS_Pos                _UINT32_(3)                                          /* (SFR_LS) Light Sleep Mode Control of Memories in Interconnect CSS Position */
-#define SFR_LS_AXI2AHB_CSS_Msk                (_UINT32_(0x1) << SFR_LS_AXI2AHB_CSS_Pos)            /* (SFR_LS) Light Sleep Mode Control of Memories in Interconnect CSS Mask */
-#define SFR_LS_AXI2AHB_CSS(value)             (SFR_LS_AXI2AHB_CSS_Msk & (_UINT32_(value) << SFR_LS_AXI2AHB_CSS_Pos)) /* Assigment of value for AXI2AHB_CSS in the SFR_LS register */
-#define SFR_LS_AXI2AHB_PSS_Pos                _UINT32_(4)                                          /* (SFR_LS) Light Sleep Mode Control of Memories in Interconnect APS Position */
-#define SFR_LS_AXI2AHB_PSS_Msk                (_UINT32_(0x1) << SFR_LS_AXI2AHB_PSS_Pos)            /* (SFR_LS) Light Sleep Mode Control of Memories in Interconnect APS Mask */
-#define SFR_LS_AXI2AHB_PSS(value)             (SFR_LS_AXI2AHB_PSS_Msk & (_UINT32_(value) << SFR_LS_AXI2AHB_PSS_Pos)) /* Assigment of value for AXI2AHB_PSS in the SFR_LS register */
-#define SFR_LS_PUF_Pos                        _UINT32_(5)                                          /* (SFR_LS) Light Sleep Mode Control of Memories in PUF Position */
-#define SFR_LS_PUF_Msk                        (_UINT32_(0x1) << SFR_LS_PUF_Pos)                    /* (SFR_LS) Light Sleep Mode Control of Memories in PUF Mask */
-#define SFR_LS_PUF(value)                     (SFR_LS_PUF_Msk & (_UINT32_(value) << SFR_LS_PUF_Pos)) /* Assigment of value for PUF in the SFR_LS register */
-#define SFR_LS_HSMC_Pos                       _UINT32_(6)                                          /* (SFR_LS) Light Sleep Mode Control of Memories in SMC Position */
-#define SFR_LS_HSMC_Msk                       (_UINT32_(0x1) << SFR_LS_HSMC_Pos)                   /* (SFR_LS) Light Sleep Mode Control of Memories in SMC Mask */
-#define SFR_LS_HSMC(value)                    (SFR_LS_HSMC_Msk & (_UINT32_(value) << SFR_LS_HSMC_Pos)) /* Assigment of value for HSMC in the SFR_LS register */
-#define SFR_LS_DMAC0_Pos                      _UINT32_(7)                                          /* (SFR_LS) Light Sleep Mode Control of Memories in DMAC0 Position */
-#define SFR_LS_DMAC0_Msk                      (_UINT32_(0x1) << SFR_LS_DMAC0_Pos)                  /* (SFR_LS) Light Sleep Mode Control of Memories in DMAC0 Mask */
-#define SFR_LS_DMAC0(value)                   (SFR_LS_DMAC0_Msk & (_UINT32_(value) << SFR_LS_DMAC0_Pos)) /* Assigment of value for DMAC0 in the SFR_LS register */
-#define SFR_LS_DMAC1_Pos                      _UINT32_(8)                                          /* (SFR_LS) Light Sleep Mode Control of Memories in DMAC1 Position */
-#define SFR_LS_DMAC1_Msk                      (_UINT32_(0x1) << SFR_LS_DMAC1_Pos)                  /* (SFR_LS) Light Sleep Mode Control of Memories in DMAC1 Mask */
-#define SFR_LS_DMAC1(value)                   (SFR_LS_DMAC1_Msk & (_UINT32_(value) << SFR_LS_DMAC1_Pos)) /* Assigment of value for DMAC1 in the SFR_LS register */
-#define SFR_LS_DMAC2_Pos                      _UINT32_(9)                                          /* (SFR_LS) Light Sleep Mode Control of Memories in DMAC2 Position */
-#define SFR_LS_DMAC2_Msk                      (_UINT32_(0x1) << SFR_LS_DMAC2_Pos)                  /* (SFR_LS) Light Sleep Mode Control of Memories in DMAC2 Mask */
-#define SFR_LS_DMAC2(value)                   (SFR_LS_DMAC2_Msk & (_UINT32_(value) << SFR_LS_DMAC2_Pos)) /* Assigment of value for DMAC2 in the SFR_LS register */
-#define SFR_LS_TZAESB_Pos                     _UINT32_(10)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in TZAESB Position */
-#define SFR_LS_TZAESB_Msk                     (_UINT32_(0x1) << SFR_LS_TZAESB_Pos)                 /* (SFR_LS) Light Sleep Mode Control of Memories in TZAESB Mask */
-#define SFR_LS_TZAESB(value)                  (SFR_LS_TZAESB_Msk & (_UINT32_(value) << SFR_LS_TZAESB_Pos)) /* Assigment of value for TZAESB in the SFR_LS register */
-#define SFR_LS_ASRC_Pos                       _UINT32_(11)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in ASRC Position */
-#define SFR_LS_ASRC_Msk                       (_UINT32_(0x1) << SFR_LS_ASRC_Pos)                   /* (SFR_LS) Light Sleep Mode Control of Memories in ASRC Mask */
-#define SFR_LS_ASRC(value)                    (SFR_LS_ASRC_Msk & (_UINT32_(value) << SFR_LS_ASRC_Pos)) /* Assigment of value for ASRC in the SFR_LS register */
-#define SFR_LS_PKCC_Pos                       _UINT32_(12)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in Public Key Cryptography Controller Position */
-#define SFR_LS_PKCC_Msk                       (_UINT32_(0x1) << SFR_LS_PKCC_Pos)                   /* (SFR_LS) Light Sleep Mode Control of Memories in Public Key Cryptography Controller Mask */
-#define SFR_LS_PKCC(value)                    (SFR_LS_PKCC_Msk & (_UINT32_(value) << SFR_LS_PKCC_Pos)) /* Assigment of value for PKCC in the SFR_LS register */
-#define SFR_LS_UDDRC_Pos                      _UINT32_(13)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in DDR Controller Position */
-#define SFR_LS_UDDRC_Msk                      (_UINT32_(0x1) << SFR_LS_UDDRC_Pos)                  /* (SFR_LS) Light Sleep Mode Control of Memories in DDR Controller Mask */
-#define SFR_LS_UDDRC(value)                   (SFR_LS_UDDRC_Msk & (_UINT32_(value) << SFR_LS_UDDRC_Pos)) /* Assigment of value for UDDRC in the SFR_LS register */
-#define SFR_LS_GPU2DC_Pos                     _UINT32_(14)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in GPU2DC Position */
-#define SFR_LS_GPU2DC_Msk                     (_UINT32_(0x1) << SFR_LS_GPU2DC_Pos)                 /* (SFR_LS) Light Sleep Mode Control of Memories in GPU2DC Mask */
-#define SFR_LS_GPU2DC(value)                  (SFR_LS_GPU2DC_Msk & (_UINT32_(value) << SFR_LS_GPU2DC_Pos)) /* Assigment of value for GPU2DC in the SFR_LS register */
-#define SFR_LS_GMAC0_Pos                      _UINT32_(15)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in GMAC0 Position */
-#define SFR_LS_GMAC0_Msk                      (_UINT32_(0x1) << SFR_LS_GMAC0_Pos)                  /* (SFR_LS) Light Sleep Mode Control of Memories in GMAC0 Mask */
-#define SFR_LS_GMAC0(value)                   (SFR_LS_GMAC0_Msk & (_UINT32_(value) << SFR_LS_GMAC0_Pos)) /* Assigment of value for GMAC0 in the SFR_LS register */
-#define SFR_LS_GMAC1_Pos                      _UINT32_(16)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in GMAC1 Position */
-#define SFR_LS_GMAC1_Msk                      (_UINT32_(0x1) << SFR_LS_GMAC1_Pos)                  /* (SFR_LS) Light Sleep Mode Control of Memories in GMAC1 Mask */
-#define SFR_LS_GMAC1(value)                   (SFR_LS_GMAC1_Msk & (_UINT32_(value) << SFR_LS_GMAC1_Pos)) /* Assigment of value for GMAC1 in the SFR_LS register */
-#define SFR_LS_LCDC_Pos                       _UINT32_(17)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in LCDC Position */
-#define SFR_LS_LCDC_Msk                       (_UINT32_(0x1) << SFR_LS_LCDC_Pos)                   /* (SFR_LS) Light Sleep Mode Control of Memories in LCDC Mask */
-#define SFR_LS_LCDC(value)                    (SFR_LS_LCDC_Msk & (_UINT32_(value) << SFR_LS_LCDC_Pos)) /* Assigment of value for LCDC in the SFR_LS register */
-#define SFR_LS_OTPC_Pos                       _UINT32_(18)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in OTP Position */
-#define SFR_LS_OTPC_Msk                       (_UINT32_(0x1) << SFR_LS_OTPC_Pos)                   /* (SFR_LS) Light Sleep Mode Control of Memories in OTP Mask */
-#define SFR_LS_OTPC(value)                    (SFR_LS_OTPC_Msk & (_UINT32_(value) << SFR_LS_OTPC_Pos)) /* Assigment of value for OTPC in the SFR_LS register */
-#define SFR_LS_SDMMC0_Pos                     _UINT32_(19)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in SDMMC 0 Position */
-#define SFR_LS_SDMMC0_Msk                     (_UINT32_(0x1) << SFR_LS_SDMMC0_Pos)                 /* (SFR_LS) Light Sleep Mode Control of Memories in SDMMC 0 Mask */
-#define SFR_LS_SDMMC0(value)                  (SFR_LS_SDMMC0_Msk & (_UINT32_(value) << SFR_LS_SDMMC0_Pos)) /* Assigment of value for SDMMC0 in the SFR_LS register */
-#define SFR_LS_SDMMC1_Pos                     _UINT32_(20)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in SDMMC 1 Position */
-#define SFR_LS_SDMMC1_Msk                     (_UINT32_(0x1) << SFR_LS_SDMMC1_Pos)                 /* (SFR_LS) Light Sleep Mode Control of Memories in SDMMC 1 Mask */
-#define SFR_LS_SDMMC1(value)                  (SFR_LS_SDMMC1_Msk & (_UINT32_(value) << SFR_LS_SDMMC1_Pos)) /* Assigment of value for SDMMC1 in the SFR_LS register */
-#define SFR_LS_SDMMC2_Pos                     _UINT32_(21)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in SDMMC 2 Position */
-#define SFR_LS_SDMMC2_Msk                     (_UINT32_(0x1) << SFR_LS_SDMMC2_Pos)                 /* (SFR_LS) Light Sleep Mode Control of Memories in SDMMC 2 Mask */
-#define SFR_LS_SDMMC2(value)                  (SFR_LS_SDMMC2_Msk & (_UINT32_(value) << SFR_LS_SDMMC2_Pos)) /* Assigment of value for SDMMC2 in the SFR_LS register */
-#define SFR_LS_UDPHSA_Pos                     _UINT32_(22)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in USB Device High-Speed Port A Position */
-#define SFR_LS_UDPHSA_Msk                     (_UINT32_(0x1) << SFR_LS_UDPHSA_Pos)                 /* (SFR_LS) Light Sleep Mode Control of Memories in USB Device High-Speed Port A Mask */
-#define SFR_LS_UDPHSA(value)                  (SFR_LS_UDPHSA_Msk & (_UINT32_(value) << SFR_LS_UDPHSA_Pos)) /* Assigment of value for UDPHSA in the SFR_LS register */
-#define SFR_LS_UDPHSB_Pos                     _UINT32_(23)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in USB Device High-Speed Port B Position */
-#define SFR_LS_UDPHSB_Msk                     (_UINT32_(0x1) << SFR_LS_UDPHSB_Pos)                 /* (SFR_LS) Light Sleep Mode Control of Memories in USB Device High-Speed Port B Mask */
-#define SFR_LS_UDPHSB(value)                  (SFR_LS_UDPHSB_Msk & (_UINT32_(value) << SFR_LS_UDPHSB_Pos)) /* Assigment of value for UDPHSB in the SFR_LS register */
-#define SFR_LS_EHCI_Pos                       _UINT32_(24)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in USB EHCI Position */
-#define SFR_LS_EHCI_Msk                       (_UINT32_(0x1) << SFR_LS_EHCI_Pos)                   /* (SFR_LS) Light Sleep Mode Control of Memories in USB EHCI Mask */
-#define SFR_LS_EHCI(value)                    (SFR_LS_EHCI_Msk & (_UINT32_(value) << SFR_LS_EHCI_Pos)) /* Assigment of value for EHCI in the SFR_LS register */
-#define SFR_LS_DSI_Pos                        _UINT32_(25)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in MIPI DSI Position */
-#define SFR_LS_DSI_Msk                        (_UINT32_(0x1) << SFR_LS_DSI_Pos)                    /* (SFR_LS) Light Sleep Mode Control of Memories in MIPI DSI Mask */
-#define SFR_LS_DSI(value)                     (SFR_LS_DSI_Msk & (_UINT32_(value) << SFR_LS_DSI_Pos)) /* Assigment of value for DSI in the SFR_LS register */
-#define SFR_LS_I3CC_Pos                       _UINT32_(26)                                         /* (SFR_LS) Light Sleep Mode Control of Memories in I3C Controller Position */
-#define SFR_LS_I3CC_Msk                       (_UINT32_(0x1) << SFR_LS_I3CC_Pos)                   /* (SFR_LS) Light Sleep Mode Control of Memories in I3C Controller Mask */
-#define SFR_LS_I3CC(value)                    (SFR_LS_I3CC_Msk & (_UINT32_(value) << SFR_LS_I3CC_Pos)) /* Assigment of value for I3CC in the SFR_LS register */
-#define SFR_LS_CA7_ETB_Pos                    _UINT32_(27)                                         /* (SFR_LS) Light Sleep Control of Memories in Cortex-A7 External Trace Buffer Position */
-#define SFR_LS_CA7_ETB_Msk                    (_UINT32_(0x1) << SFR_LS_CA7_ETB_Pos)                /* (SFR_LS) Light Sleep Control of Memories in Cortex-A7 External Trace Buffer Mask */
-#define SFR_LS_CA7_ETB(value)                 (SFR_LS_CA7_ETB_Msk & (_UINT32_(value) << SFR_LS_CA7_ETB_Pos)) /* Assigment of value for CA7_ETB in the SFR_LS register */
-#define SFR_LS_Msk                            _UINT32_(0x0FFFFFFF)                                 /* (SFR_LS) Register Mask  */
-
-#define SFR_LS_CA_Pos                         _UINT32_(0)                                          /* (SFR_LS Position) Light Sleep Mode Control of Memories in Cortex-A7 */
-#define SFR_LS_CA_Msk                         (_UINT32_(0x1) << SFR_LS_CA_Pos)                     /* (SFR_LS Mask) CA */
-#define SFR_LS_CA(value)                      (SFR_LS_CA_Msk & (_UINT32_(value) << SFR_LS_CA_Pos)) 
-#define SFR_LS_DMAC_Pos                       _UINT32_(7)                                          /* (SFR_LS Position) Light Sleep Mode Control of Memories in DMACx */
-#define SFR_LS_DMAC_Msk                       (_UINT32_(0x7) << SFR_LS_DMAC_Pos)                   /* (SFR_LS Mask) DMAC */
-#define SFR_LS_DMAC(value)                    (SFR_LS_DMAC_Msk & (_UINT32_(value) << SFR_LS_DMAC_Pos)) 
-#define SFR_LS_GMAC_Pos                       _UINT32_(15)                                         /* (SFR_LS Position) Light Sleep Mode Control of Memories in GMACx */
-#define SFR_LS_GMAC_Msk                       (_UINT32_(0x3) << SFR_LS_GMAC_Pos)                   /* (SFR_LS Mask) GMAC */
-#define SFR_LS_GMAC(value)                    (SFR_LS_GMAC_Msk & (_UINT32_(value) << SFR_LS_GMAC_Pos)) 
-#define SFR_LS_SDMMC_Pos                      _UINT32_(19)                                         /* (SFR_LS Position) Light Sleep Mode Control of Memories in SDMMC x */
-#define SFR_LS_SDMMC_Msk                      (_UINT32_(0x7) << SFR_LS_SDMMC_Pos)                  /* (SFR_LS Mask) SDMMC */
-#define SFR_LS_SDMMC(value)                   (SFR_LS_SDMMC_Msk & (_UINT32_(value) << SFR_LS_SDMMC_Pos)) 
-
-/* -------- SFR_DS : (SFR Offset: 0x2068) (R/W 32) Deep Sleep Register -------- */
-#define SFR_DS_RESETVALUE                     _UINT32_(0x00)                                       /*  (SFR_DS) Deep Sleep Register  Reset Value */
-
-#define SFR_DS_CA7_Pos                        _UINT32_(0)                                          /* (SFR_DS) Deep Sleep Mode Control of Memories in Cortex-A7 Position */
-#define SFR_DS_CA7_Msk                        (_UINT32_(0x1) << SFR_DS_CA7_Pos)                    /* (SFR_DS) Deep Sleep Mode Control of Memories in Cortex-A7 Mask */
-#define SFR_DS_CA7(value)                     (SFR_DS_CA7_Msk & (_UINT32_(value) << SFR_DS_CA7_Pos)) /* Assigment of value for CA7 in the SFR_DS register */
-#define SFR_DS_FLEXRAM_Pos                    _UINT32_(1)                                          /* (SFR_DS) Deep Sleep Mode Control of Memories in FlexRAM Position */
-#define SFR_DS_FLEXRAM_Msk                    (_UINT32_(0x1) << SFR_DS_FLEXRAM_Pos)                /* (SFR_DS) Deep Sleep Mode Control of Memories in FlexRAM Mask */
-#define SFR_DS_FLEXRAM(value)                 (SFR_DS_FLEXRAM_Msk & (_UINT32_(value) << SFR_DS_FLEXRAM_Pos)) /* Assigment of value for FLEXRAM in the SFR_DS register */
-#define SFR_DS_AXI2AHB_MSS_Pos                _UINT32_(2)                                          /* (SFR_DS) Deep Sleep Mode Control of Memories in Interconnect MSS Position */
-#define SFR_DS_AXI2AHB_MSS_Msk                (_UINT32_(0x1) << SFR_DS_AXI2AHB_MSS_Pos)            /* (SFR_DS) Deep Sleep Mode Control of Memories in Interconnect MSS Mask */
-#define SFR_DS_AXI2AHB_MSS(value)             (SFR_DS_AXI2AHB_MSS_Msk & (_UINT32_(value) << SFR_DS_AXI2AHB_MSS_Pos)) /* Assigment of value for AXI2AHB_MSS in the SFR_DS register */
-#define SFR_DS_AXI2AHB_CSS_Pos                _UINT32_(3)                                          /* (SFR_DS) Deep Sleep Mode Control of Memories in Interconnect CSS Position */
-#define SFR_DS_AXI2AHB_CSS_Msk                (_UINT32_(0x1) << SFR_DS_AXI2AHB_CSS_Pos)            /* (SFR_DS) Deep Sleep Mode Control of Memories in Interconnect CSS Mask */
-#define SFR_DS_AXI2AHB_CSS(value)             (SFR_DS_AXI2AHB_CSS_Msk & (_UINT32_(value) << SFR_DS_AXI2AHB_CSS_Pos)) /* Assigment of value for AXI2AHB_CSS in the SFR_DS register */
-#define SFR_DS_AXI2AHB_PSS_Pos                _UINT32_(4)                                          /* (SFR_DS) Deep Sleep Mode Control of Memories in Interconnect APS Position */
-#define SFR_DS_AXI2AHB_PSS_Msk                (_UINT32_(0x1) << SFR_DS_AXI2AHB_PSS_Pos)            /* (SFR_DS) Deep Sleep Mode Control of Memories in Interconnect APS Mask */
-#define SFR_DS_AXI2AHB_PSS(value)             (SFR_DS_AXI2AHB_PSS_Msk & (_UINT32_(value) << SFR_DS_AXI2AHB_PSS_Pos)) /* Assigment of value for AXI2AHB_PSS in the SFR_DS register */
-#define SFR_DS_PUF_Pos                        _UINT32_(5)                                          /* (SFR_DS) Deep Sleep Mode Control of Memories in PUF Position */
-#define SFR_DS_PUF_Msk                        (_UINT32_(0x1) << SFR_DS_PUF_Pos)                    /* (SFR_DS) Deep Sleep Mode Control of Memories in PUF Mask */
-#define SFR_DS_PUF(value)                     (SFR_DS_PUF_Msk & (_UINT32_(value) << SFR_DS_PUF_Pos)) /* Assigment of value for PUF in the SFR_DS register */
-#define SFR_DS_HSMC_Pos                       _UINT32_(6)                                          /* (SFR_DS) Deep Sleep Mode Control of Memories in SMC Position */
-#define SFR_DS_HSMC_Msk                       (_UINT32_(0x1) << SFR_DS_HSMC_Pos)                   /* (SFR_DS) Deep Sleep Mode Control of Memories in SMC Mask */
-#define SFR_DS_HSMC(value)                    (SFR_DS_HSMC_Msk & (_UINT32_(value) << SFR_DS_HSMC_Pos)) /* Assigment of value for HSMC in the SFR_DS register */
-#define SFR_DS_DMAC0_Pos                      _UINT32_(7)                                          /* (SFR_DS) Deep Sleep Mode Control of Memories in DMAC0 Position */
-#define SFR_DS_DMAC0_Msk                      (_UINT32_(0x1) << SFR_DS_DMAC0_Pos)                  /* (SFR_DS) Deep Sleep Mode Control of Memories in DMAC0 Mask */
-#define SFR_DS_DMAC0(value)                   (SFR_DS_DMAC0_Msk & (_UINT32_(value) << SFR_DS_DMAC0_Pos)) /* Assigment of value for DMAC0 in the SFR_DS register */
-#define SFR_DS_DMAC1_Pos                      _UINT32_(8)                                          /* (SFR_DS) Deep Sleep Mode Control of Memories in DMAC1 Position */
-#define SFR_DS_DMAC1_Msk                      (_UINT32_(0x1) << SFR_DS_DMAC1_Pos)                  /* (SFR_DS) Deep Sleep Mode Control of Memories in DMAC1 Mask */
-#define SFR_DS_DMAC1(value)                   (SFR_DS_DMAC1_Msk & (_UINT32_(value) << SFR_DS_DMAC1_Pos)) /* Assigment of value for DMAC1 in the SFR_DS register */
-#define SFR_DS_DMAC2_Pos                      _UINT32_(9)                                          /* (SFR_DS) Deep Sleep Mode Control of Memories in DMAC2 Position */
-#define SFR_DS_DMAC2_Msk                      (_UINT32_(0x1) << SFR_DS_DMAC2_Pos)                  /* (SFR_DS) Deep Sleep Mode Control of Memories in DMAC2 Mask */
-#define SFR_DS_DMAC2(value)                   (SFR_DS_DMAC2_Msk & (_UINT32_(value) << SFR_DS_DMAC2_Pos)) /* Assigment of value for DMAC2 in the SFR_DS register */
-#define SFR_DS_TZAESB_Pos                     _UINT32_(10)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in TZAESB Position */
-#define SFR_DS_TZAESB_Msk                     (_UINT32_(0x1) << SFR_DS_TZAESB_Pos)                 /* (SFR_DS) Deep Sleep Mode Control of Memories in TZAESB Mask */
-#define SFR_DS_TZAESB(value)                  (SFR_DS_TZAESB_Msk & (_UINT32_(value) << SFR_DS_TZAESB_Pos)) /* Assigment of value for TZAESB in the SFR_DS register */
-#define SFR_DS_ASRC_Pos                       _UINT32_(11)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in ASRC Position */
-#define SFR_DS_ASRC_Msk                       (_UINT32_(0x1) << SFR_DS_ASRC_Pos)                   /* (SFR_DS) Deep Sleep Mode Control of Memories in ASRC Mask */
-#define SFR_DS_ASRC(value)                    (SFR_DS_ASRC_Msk & (_UINT32_(value) << SFR_DS_ASRC_Pos)) /* Assigment of value for ASRC in the SFR_DS register */
-#define SFR_DS_PKCC_Pos                       _UINT32_(12)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in Public Key Cryptography Controller Position */
-#define SFR_DS_PKCC_Msk                       (_UINT32_(0x1) << SFR_DS_PKCC_Pos)                   /* (SFR_DS) Deep Sleep Mode Control of Memories in Public Key Cryptography Controller Mask */
-#define SFR_DS_PKCC(value)                    (SFR_DS_PKCC_Msk & (_UINT32_(value) << SFR_DS_PKCC_Pos)) /* Assigment of value for PKCC in the SFR_DS register */
-#define SFR_DS_UDDRC_Pos                      _UINT32_(13)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in DDR Controller Position */
-#define SFR_DS_UDDRC_Msk                      (_UINT32_(0x1) << SFR_DS_UDDRC_Pos)                  /* (SFR_DS) Deep Sleep Mode Control of Memories in DDR Controller Mask */
-#define SFR_DS_UDDRC(value)                   (SFR_DS_UDDRC_Msk & (_UINT32_(value) << SFR_DS_UDDRC_Pos)) /* Assigment of value for UDDRC in the SFR_DS register */
-#define SFR_DS_GPU2DC_Pos                     _UINT32_(14)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in GPU2DC Position */
-#define SFR_DS_GPU2DC_Msk                     (_UINT32_(0x1) << SFR_DS_GPU2DC_Pos)                 /* (SFR_DS) Deep Sleep Mode Control of Memories in GPU2DC Mask */
-#define SFR_DS_GPU2DC(value)                  (SFR_DS_GPU2DC_Msk & (_UINT32_(value) << SFR_DS_GPU2DC_Pos)) /* Assigment of value for GPU2DC in the SFR_DS register */
-#define SFR_DS_GMAC0_Pos                      _UINT32_(15)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in GMAC0 Position */
-#define SFR_DS_GMAC0_Msk                      (_UINT32_(0x1) << SFR_DS_GMAC0_Pos)                  /* (SFR_DS) Deep Sleep Mode Control of Memories in GMAC0 Mask */
-#define SFR_DS_GMAC0(value)                   (SFR_DS_GMAC0_Msk & (_UINT32_(value) << SFR_DS_GMAC0_Pos)) /* Assigment of value for GMAC0 in the SFR_DS register */
-#define SFR_DS_GMAC1_Pos                      _UINT32_(16)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in GMAC1 Position */
-#define SFR_DS_GMAC1_Msk                      (_UINT32_(0x1) << SFR_DS_GMAC1_Pos)                  /* (SFR_DS) Deep Sleep Mode Control of Memories in GMAC1 Mask */
-#define SFR_DS_GMAC1(value)                   (SFR_DS_GMAC1_Msk & (_UINT32_(value) << SFR_DS_GMAC1_Pos)) /* Assigment of value for GMAC1 in the SFR_DS register */
-#define SFR_DS_LCDC_Pos                       _UINT32_(17)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in LCDC Position */
-#define SFR_DS_LCDC_Msk                       (_UINT32_(0x1) << SFR_DS_LCDC_Pos)                   /* (SFR_DS) Deep Sleep Mode Control of Memories in LCDC Mask */
-#define SFR_DS_LCDC(value)                    (SFR_DS_LCDC_Msk & (_UINT32_(value) << SFR_DS_LCDC_Pos)) /* Assigment of value for LCDC in the SFR_DS register */
-#define SFR_DS_OTPC_Pos                       _UINT32_(18)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in OTP Position */
-#define SFR_DS_OTPC_Msk                       (_UINT32_(0x1) << SFR_DS_OTPC_Pos)                   /* (SFR_DS) Deep Sleep Mode Control of Memories in OTP Mask */
-#define SFR_DS_OTPC(value)                    (SFR_DS_OTPC_Msk & (_UINT32_(value) << SFR_DS_OTPC_Pos)) /* Assigment of value for OTPC in the SFR_DS register */
-#define SFR_DS_SDMMC0_Pos                     _UINT32_(19)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in SDMMC0 Position */
-#define SFR_DS_SDMMC0_Msk                     (_UINT32_(0x1) << SFR_DS_SDMMC0_Pos)                 /* (SFR_DS) Deep Sleep Mode Control of Memories in SDMMC0 Mask */
-#define SFR_DS_SDMMC0(value)                  (SFR_DS_SDMMC0_Msk & (_UINT32_(value) << SFR_DS_SDMMC0_Pos)) /* Assigment of value for SDMMC0 in the SFR_DS register */
-#define SFR_DS_SDMMC1_Pos                     _UINT32_(20)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in SDMMC1 Position */
-#define SFR_DS_SDMMC1_Msk                     (_UINT32_(0x1) << SFR_DS_SDMMC1_Pos)                 /* (SFR_DS) Deep Sleep Mode Control of Memories in SDMMC1 Mask */
-#define SFR_DS_SDMMC1(value)                  (SFR_DS_SDMMC1_Msk & (_UINT32_(value) << SFR_DS_SDMMC1_Pos)) /* Assigment of value for SDMMC1 in the SFR_DS register */
-#define SFR_DS_SDMMC2_Pos                     _UINT32_(21)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in SDMMC2 Position */
-#define SFR_DS_SDMMC2_Msk                     (_UINT32_(0x1) << SFR_DS_SDMMC2_Pos)                 /* (SFR_DS) Deep Sleep Mode Control of Memories in SDMMC2 Mask */
-#define SFR_DS_SDMMC2(value)                  (SFR_DS_SDMMC2_Msk & (_UINT32_(value) << SFR_DS_SDMMC2_Pos)) /* Assigment of value for SDMMC2 in the SFR_DS register */
-#define SFR_DS_UDPHSA_Pos                     _UINT32_(22)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in USB Device High-Speed Port A Position */
-#define SFR_DS_UDPHSA_Msk                     (_UINT32_(0x1) << SFR_DS_UDPHSA_Pos)                 /* (SFR_DS) Deep Sleep Mode Control of Memories in USB Device High-Speed Port A Mask */
-#define SFR_DS_UDPHSA(value)                  (SFR_DS_UDPHSA_Msk & (_UINT32_(value) << SFR_DS_UDPHSA_Pos)) /* Assigment of value for UDPHSA in the SFR_DS register */
-#define SFR_DS_UDPHSB_Pos                     _UINT32_(23)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in USB Device High-Speed Port B Position */
-#define SFR_DS_UDPHSB_Msk                     (_UINT32_(0x1) << SFR_DS_UDPHSB_Pos)                 /* (SFR_DS) Deep Sleep Mode Control of Memories in USB Device High-Speed Port B Mask */
-#define SFR_DS_UDPHSB(value)                  (SFR_DS_UDPHSB_Msk & (_UINT32_(value) << SFR_DS_UDPHSB_Pos)) /* Assigment of value for UDPHSB in the SFR_DS register */
-#define SFR_DS_EHCI_Pos                       _UINT32_(24)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in USB EHCI Position */
-#define SFR_DS_EHCI_Msk                       (_UINT32_(0x1) << SFR_DS_EHCI_Pos)                   /* (SFR_DS) Deep Sleep Mode Control of Memories in USB EHCI Mask */
-#define SFR_DS_EHCI(value)                    (SFR_DS_EHCI_Msk & (_UINT32_(value) << SFR_DS_EHCI_Pos)) /* Assigment of value for EHCI in the SFR_DS register */
-#define SFR_DS_DSI_Pos                        _UINT32_(25)                                         /* (SFR_DS) Deep Sleep MMode ode Control of Memories in MIPI DSI Position */
-#define SFR_DS_DSI_Msk                        (_UINT32_(0x1) << SFR_DS_DSI_Pos)                    /* (SFR_DS) Deep Sleep MMode ode Control of Memories in MIPI DSI Mask */
-#define SFR_DS_DSI(value)                     (SFR_DS_DSI_Msk & (_UINT32_(value) << SFR_DS_DSI_Pos)) /* Assigment of value for DSI in the SFR_DS register */
-#define SFR_DS_I3CC_Pos                       _UINT32_(26)                                         /* (SFR_DS) Deep Sleep Control of Memories in I3C Controller Position */
-#define SFR_DS_I3CC_Msk                       (_UINT32_(0x1) << SFR_DS_I3CC_Pos)                   /* (SFR_DS) Deep Sleep Control of Memories in I3C Controller Mask */
-#define SFR_DS_I3CC(value)                    (SFR_DS_I3CC_Msk & (_UINT32_(value) << SFR_DS_I3CC_Pos)) /* Assigment of value for I3CC in the SFR_DS register */
-#define SFR_DS_CA7_ETB_Pos                    _UINT32_(27)                                         /* (SFR_DS) Deep Sleep Mode Control of Memories in Cortex-A7 External Trace Buffer Position */
-#define SFR_DS_CA7_ETB_Msk                    (_UINT32_(0x1) << SFR_DS_CA7_ETB_Pos)                /* (SFR_DS) Deep Sleep Mode Control of Memories in Cortex-A7 External Trace Buffer Mask */
-#define SFR_DS_CA7_ETB(value)                 (SFR_DS_CA7_ETB_Msk & (_UINT32_(value) << SFR_DS_CA7_ETB_Pos)) /* Assigment of value for CA7_ETB in the SFR_DS register */
-#define SFR_DS_Msk                            _UINT32_(0x0FFFFFFF)                                 /* (SFR_DS) Register Mask  */
-
-#define SFR_DS_CA_Pos                         _UINT32_(0)                                          /* (SFR_DS Position) Deep Sleep Mode Control of Memories in Cortex-A7 */
-#define SFR_DS_CA_Msk                         (_UINT32_(0x1) << SFR_DS_CA_Pos)                     /* (SFR_DS Mask) CA */
-#define SFR_DS_CA(value)                      (SFR_DS_CA_Msk & (_UINT32_(value) << SFR_DS_CA_Pos)) 
-#define SFR_DS_DMAC_Pos                       _UINT32_(7)                                          /* (SFR_DS Position) Deep Sleep Mode Control of Memories in DMACx */
-#define SFR_DS_DMAC_Msk                       (_UINT32_(0x7) << SFR_DS_DMAC_Pos)                   /* (SFR_DS Mask) DMAC */
-#define SFR_DS_DMAC(value)                    (SFR_DS_DMAC_Msk & (_UINT32_(value) << SFR_DS_DMAC_Pos)) 
-#define SFR_DS_GMAC_Pos                       _UINT32_(15)                                         /* (SFR_DS Position) Deep Sleep Mode Control of Memories in GMACx */
-#define SFR_DS_GMAC_Msk                       (_UINT32_(0x3) << SFR_DS_GMAC_Pos)                   /* (SFR_DS Mask) GMAC */
-#define SFR_DS_GMAC(value)                    (SFR_DS_GMAC_Msk & (_UINT32_(value) << SFR_DS_GMAC_Pos)) 
-#define SFR_DS_SDMMC_Pos                      _UINT32_(19)                                         /* (SFR_DS Position) Deep Sleep Mode Control of Memories in SDMMCx */
-#define SFR_DS_SDMMC_Msk                      (_UINT32_(0x7) << SFR_DS_SDMMC_Pos)                  /* (SFR_DS Mask) SDMMC */
-#define SFR_DS_SDMMC(value)                   (SFR_DS_SDMMC_Msk & (_UINT32_(value) << SFR_DS_SDMMC_Pos)) 
-
-/* -------- SFR_SD : (SFR Offset: 0x206C) (R/W 32) Shutdown Register -------- */
-#define SFR_SD_RESETVALUE                     _UINT32_(0x00)                                       /*  (SFR_SD) Shutdown Register  Reset Value */
-
-#define SFR_SD_CA7_Pos                        _UINT32_(0)                                          /* (SFR_SD) Shutdown Mode Control for Memories in Cortex-A7 Position */
-#define SFR_SD_CA7_Msk                        (_UINT32_(0x1) << SFR_SD_CA7_Pos)                    /* (SFR_SD) Shutdown Mode Control for Memories in Cortex-A7 Mask */
-#define SFR_SD_CA7(value)                     (SFR_SD_CA7_Msk & (_UINT32_(value) << SFR_SD_CA7_Pos)) /* Assigment of value for CA7 in the SFR_SD register */
-#define SFR_SD_FLEXRAM_Pos                    _UINT32_(1)                                          /* (SFR_SD) Shutdown Mode Control for Memories in FlexRAM Position */
-#define SFR_SD_FLEXRAM_Msk                    (_UINT32_(0x1) << SFR_SD_FLEXRAM_Pos)                /* (SFR_SD) Shutdown Mode Control for Memories in FlexRAM Mask */
-#define SFR_SD_FLEXRAM(value)                 (SFR_SD_FLEXRAM_Msk & (_UINT32_(value) << SFR_SD_FLEXRAM_Pos)) /* Assigment of value for FLEXRAM in the SFR_SD register */
-#define SFR_SD_AXI2AHB_MSS_Pos                _UINT32_(2)                                          /* (SFR_SD) Shutdown Mode Control for Memories in Interconnect MSS Position */
-#define SFR_SD_AXI2AHB_MSS_Msk                (_UINT32_(0x1) << SFR_SD_AXI2AHB_MSS_Pos)            /* (SFR_SD) Shutdown Mode Control for Memories in Interconnect MSS Mask */
-#define SFR_SD_AXI2AHB_MSS(value)             (SFR_SD_AXI2AHB_MSS_Msk & (_UINT32_(value) << SFR_SD_AXI2AHB_MSS_Pos)) /* Assigment of value for AXI2AHB_MSS in the SFR_SD register */
-#define SFR_SD_AXI2AHB_CSS_Pos                _UINT32_(3)                                          /* (SFR_SD) Shutdown Mode Control for Memories in Interconnect CSS Position */
-#define SFR_SD_AXI2AHB_CSS_Msk                (_UINT32_(0x1) << SFR_SD_AXI2AHB_CSS_Pos)            /* (SFR_SD) Shutdown Mode Control for Memories in Interconnect CSS Mask */
-#define SFR_SD_AXI2AHB_CSS(value)             (SFR_SD_AXI2AHB_CSS_Msk & (_UINT32_(value) << SFR_SD_AXI2AHB_CSS_Pos)) /* Assigment of value for AXI2AHB_CSS in the SFR_SD register */
-#define SFR_SD_AXI2AHB_PSS_Pos                _UINT32_(4)                                          /* (SFR_SD) Shutdown Mode Control for Memories in Interconnect APS Position */
-#define SFR_SD_AXI2AHB_PSS_Msk                (_UINT32_(0x1) << SFR_SD_AXI2AHB_PSS_Pos)            /* (SFR_SD) Shutdown Mode Control for Memories in Interconnect APS Mask */
-#define SFR_SD_AXI2AHB_PSS(value)             (SFR_SD_AXI2AHB_PSS_Msk & (_UINT32_(value) << SFR_SD_AXI2AHB_PSS_Pos)) /* Assigment of value for AXI2AHB_PSS in the SFR_SD register */
-#define SFR_SD_PUF_Pos                        _UINT32_(5)                                          /* (SFR_SD) Shutdown Mode Control for Memories in PUF Position */
-#define SFR_SD_PUF_Msk                        (_UINT32_(0x1) << SFR_SD_PUF_Pos)                    /* (SFR_SD) Shutdown Mode Control for Memories in PUF Mask */
-#define SFR_SD_PUF(value)                     (SFR_SD_PUF_Msk & (_UINT32_(value) << SFR_SD_PUF_Pos)) /* Assigment of value for PUF in the SFR_SD register */
-#define SFR_SD_HSMC_Pos                       _UINT32_(6)                                          /* (SFR_SD) Shutdown Mode Control for Memories in SMC Position */
-#define SFR_SD_HSMC_Msk                       (_UINT32_(0x1) << SFR_SD_HSMC_Pos)                   /* (SFR_SD) Shutdown Mode Control for Memories in SMC Mask */
-#define SFR_SD_HSMC(value)                    (SFR_SD_HSMC_Msk & (_UINT32_(value) << SFR_SD_HSMC_Pos)) /* Assigment of value for HSMC in the SFR_SD register */
-#define SFR_SD_DMAC0_Pos                      _UINT32_(7)                                          /* (SFR_SD) Shutdown Mode Control for Memories in DMAC0 Position */
-#define SFR_SD_DMAC0_Msk                      (_UINT32_(0x1) << SFR_SD_DMAC0_Pos)                  /* (SFR_SD) Shutdown Mode Control for Memories in DMAC0 Mask */
-#define SFR_SD_DMAC0(value)                   (SFR_SD_DMAC0_Msk & (_UINT32_(value) << SFR_SD_DMAC0_Pos)) /* Assigment of value for DMAC0 in the SFR_SD register */
-#define SFR_SD_DMAC1_Pos                      _UINT32_(8)                                          /* (SFR_SD) Shutdown Mode Control for Memories in DMAC1 Position */
-#define SFR_SD_DMAC1_Msk                      (_UINT32_(0x1) << SFR_SD_DMAC1_Pos)                  /* (SFR_SD) Shutdown Mode Control for Memories in DMAC1 Mask */
-#define SFR_SD_DMAC1(value)                   (SFR_SD_DMAC1_Msk & (_UINT32_(value) << SFR_SD_DMAC1_Pos)) /* Assigment of value for DMAC1 in the SFR_SD register */
-#define SFR_SD_DMAC2_Pos                      _UINT32_(9)                                          /* (SFR_SD) Shutdown Mode Control for Memories in DMAC2 Position */
-#define SFR_SD_DMAC2_Msk                      (_UINT32_(0x1) << SFR_SD_DMAC2_Pos)                  /* (SFR_SD) Shutdown Mode Control for Memories in DMAC2 Mask */
-#define SFR_SD_DMAC2(value)                   (SFR_SD_DMAC2_Msk & (_UINT32_(value) << SFR_SD_DMAC2_Pos)) /* Assigment of value for DMAC2 in the SFR_SD register */
-#define SFR_SD_TZAESB_Pos                     _UINT32_(10)                                         /* (SFR_SD) Shutdown Mode Control for Memories in TZAESB Position */
-#define SFR_SD_TZAESB_Msk                     (_UINT32_(0x1) << SFR_SD_TZAESB_Pos)                 /* (SFR_SD) Shutdown Mode Control for Memories in TZAESB Mask */
-#define SFR_SD_TZAESB(value)                  (SFR_SD_TZAESB_Msk & (_UINT32_(value) << SFR_SD_TZAESB_Pos)) /* Assigment of value for TZAESB in the SFR_SD register */
-#define SFR_SD_ASRC_Pos                       _UINT32_(11)                                         /* (SFR_SD) Shutdown Mode Control for Memories in ASRC Position */
-#define SFR_SD_ASRC_Msk                       (_UINT32_(0x1) << SFR_SD_ASRC_Pos)                   /* (SFR_SD) Shutdown Mode Control for Memories in ASRC Mask */
-#define SFR_SD_ASRC(value)                    (SFR_SD_ASRC_Msk & (_UINT32_(value) << SFR_SD_ASRC_Pos)) /* Assigment of value for ASRC in the SFR_SD register */
-#define SFR_SD_PKCC_Pos                       _UINT32_(12)                                         /* (SFR_SD) Shutdown Mode Control for Memories in Public Key Cryptography Controller Position */
-#define SFR_SD_PKCC_Msk                       (_UINT32_(0x1) << SFR_SD_PKCC_Pos)                   /* (SFR_SD) Shutdown Mode Control for Memories in Public Key Cryptography Controller Mask */
-#define SFR_SD_PKCC(value)                    (SFR_SD_PKCC_Msk & (_UINT32_(value) << SFR_SD_PKCC_Pos)) /* Assigment of value for PKCC in the SFR_SD register */
-#define SFR_SD_UDDRC_Pos                      _UINT32_(13)                                         /* (SFR_SD) Shutdown Mode Control for Memories in DDR Controller Position */
-#define SFR_SD_UDDRC_Msk                      (_UINT32_(0x1) << SFR_SD_UDDRC_Pos)                  /* (SFR_SD) Shutdown Mode Control for Memories in DDR Controller Mask */
-#define SFR_SD_UDDRC(value)                   (SFR_SD_UDDRC_Msk & (_UINT32_(value) << SFR_SD_UDDRC_Pos)) /* Assigment of value for UDDRC in the SFR_SD register */
-#define SFR_SD_GPU2DC_Pos                     _UINT32_(14)                                         /* (SFR_SD) Shutdown Mode Control for Memories in GPU2DC Position */
-#define SFR_SD_GPU2DC_Msk                     (_UINT32_(0x1) << SFR_SD_GPU2DC_Pos)                 /* (SFR_SD) Shutdown Mode Control for Memories in GPU2DC Mask */
-#define SFR_SD_GPU2DC(value)                  (SFR_SD_GPU2DC_Msk & (_UINT32_(value) << SFR_SD_GPU2DC_Pos)) /* Assigment of value for GPU2DC in the SFR_SD register */
-#define SFR_SD_GMAC0_Pos                      _UINT32_(15)                                         /* (SFR_SD) Shutdown Mode Control for Memories in GMAC0 Position */
-#define SFR_SD_GMAC0_Msk                      (_UINT32_(0x1) << SFR_SD_GMAC0_Pos)                  /* (SFR_SD) Shutdown Mode Control for Memories in GMAC0 Mask */
-#define SFR_SD_GMAC0(value)                   (SFR_SD_GMAC0_Msk & (_UINT32_(value) << SFR_SD_GMAC0_Pos)) /* Assigment of value for GMAC0 in the SFR_SD register */
-#define SFR_SD_GMAC1_Pos                      _UINT32_(16)                                         /* (SFR_SD) Shutdown Mode Control for Memories in GMAC1 Position */
-#define SFR_SD_GMAC1_Msk                      (_UINT32_(0x1) << SFR_SD_GMAC1_Pos)                  /* (SFR_SD) Shutdown Mode Control for Memories in GMAC1 Mask */
-#define SFR_SD_GMAC1(value)                   (SFR_SD_GMAC1_Msk & (_UINT32_(value) << SFR_SD_GMAC1_Pos)) /* Assigment of value for GMAC1 in the SFR_SD register */
-#define SFR_SD_LCDC_Pos                       _UINT32_(17)                                         /* (SFR_SD) Shutdown Mode Control for Memories in LCDC Position */
-#define SFR_SD_LCDC_Msk                       (_UINT32_(0x1) << SFR_SD_LCDC_Pos)                   /* (SFR_SD) Shutdown Mode Control for Memories in LCDC Mask */
-#define SFR_SD_LCDC(value)                    (SFR_SD_LCDC_Msk & (_UINT32_(value) << SFR_SD_LCDC_Pos)) /* Assigment of value for LCDC in the SFR_SD register */
-#define SFR_SD_OTPC_Pos                       _UINT32_(18)                                         /* (SFR_SD) Shutdown Mode Control for Memories in OTP Position */
-#define SFR_SD_OTPC_Msk                       (_UINT32_(0x1) << SFR_SD_OTPC_Pos)                   /* (SFR_SD) Shutdown Mode Control for Memories in OTP Mask */
-#define SFR_SD_OTPC(value)                    (SFR_SD_OTPC_Msk & (_UINT32_(value) << SFR_SD_OTPC_Pos)) /* Assigment of value for OTPC in the SFR_SD register */
-#define SFR_SD_SDMMC0_Pos                     _UINT32_(19)                                         /* (SFR_SD) Shutdown Mode Control for Memories in SDMMC0 Position */
-#define SFR_SD_SDMMC0_Msk                     (_UINT32_(0x1) << SFR_SD_SDMMC0_Pos)                 /* (SFR_SD) Shutdown Mode Control for Memories in SDMMC0 Mask */
-#define SFR_SD_SDMMC0(value)                  (SFR_SD_SDMMC0_Msk & (_UINT32_(value) << SFR_SD_SDMMC0_Pos)) /* Assigment of value for SDMMC0 in the SFR_SD register */
-#define SFR_SD_SDMMC1_Pos                     _UINT32_(20)                                         /* (SFR_SD) Shutdown Mode Control for Memories in SDMMC1 Position */
-#define SFR_SD_SDMMC1_Msk                     (_UINT32_(0x1) << SFR_SD_SDMMC1_Pos)                 /* (SFR_SD) Shutdown Mode Control for Memories in SDMMC1 Mask */
-#define SFR_SD_SDMMC1(value)                  (SFR_SD_SDMMC1_Msk & (_UINT32_(value) << SFR_SD_SDMMC1_Pos)) /* Assigment of value for SDMMC1 in the SFR_SD register */
-#define SFR_SD_SDMMC2_Pos                     _UINT32_(21)                                         /* (SFR_SD) Shutdown Mode Control for Memories in SDMMC2 Position */
-#define SFR_SD_SDMMC2_Msk                     (_UINT32_(0x1) << SFR_SD_SDMMC2_Pos)                 /* (SFR_SD) Shutdown Mode Control for Memories in SDMMC2 Mask */
-#define SFR_SD_SDMMC2(value)                  (SFR_SD_SDMMC2_Msk & (_UINT32_(value) << SFR_SD_SDMMC2_Pos)) /* Assigment of value for SDMMC2 in the SFR_SD register */
-#define SFR_SD_UDPHSA_Pos                     _UINT32_(22)                                         /* (SFR_SD) Shutdown Mode Control for Memories in USB Device High-Speed Port A Position */
-#define SFR_SD_UDPHSA_Msk                     (_UINT32_(0x1) << SFR_SD_UDPHSA_Pos)                 /* (SFR_SD) Shutdown Mode Control for Memories in USB Device High-Speed Port A Mask */
-#define SFR_SD_UDPHSA(value)                  (SFR_SD_UDPHSA_Msk & (_UINT32_(value) << SFR_SD_UDPHSA_Pos)) /* Assigment of value for UDPHSA in the SFR_SD register */
-#define SFR_SD_UDPHSB_Pos                     _UINT32_(23)                                         /* (SFR_SD) Shutdown Mode Control for Memories in USB Device High-Speed Port B Position */
-#define SFR_SD_UDPHSB_Msk                     (_UINT32_(0x1) << SFR_SD_UDPHSB_Pos)                 /* (SFR_SD) Shutdown Mode Control for Memories in USB Device High-Speed Port B Mask */
-#define SFR_SD_UDPHSB(value)                  (SFR_SD_UDPHSB_Msk & (_UINT32_(value) << SFR_SD_UDPHSB_Pos)) /* Assigment of value for UDPHSB in the SFR_SD register */
-#define SFR_SD_EHCI_Pos                       _UINT32_(24)                                         /* (SFR_SD) Shutdown Mode Control for Memories in USB EHCI Position */
-#define SFR_SD_EHCI_Msk                       (_UINT32_(0x1) << SFR_SD_EHCI_Pos)                   /* (SFR_SD) Shutdown Mode Control for Memories in USB EHCI Mask */
-#define SFR_SD_EHCI(value)                    (SFR_SD_EHCI_Msk & (_UINT32_(value) << SFR_SD_EHCI_Pos)) /* Assigment of value for EHCI in the SFR_SD register */
-#define SFR_SD_DSI_Pos                        _UINT32_(25)                                         /* (SFR_SD) Shutdown Mode Control for Memories in MIPI DSI Position */
-#define SFR_SD_DSI_Msk                        (_UINT32_(0x1) << SFR_SD_DSI_Pos)                    /* (SFR_SD) Shutdown Mode Control for Memories in MIPI DSI Mask */
-#define SFR_SD_DSI(value)                     (SFR_SD_DSI_Msk & (_UINT32_(value) << SFR_SD_DSI_Pos)) /* Assigment of value for DSI in the SFR_SD register */
-#define SFR_SD_I3CC_Pos                       _UINT32_(26)                                         /* (SFR_SD) Shutdown Mode Control for Memories in I3C Controller Position */
-#define SFR_SD_I3CC_Msk                       (_UINT32_(0x1) << SFR_SD_I3CC_Pos)                   /* (SFR_SD) Shutdown Mode Control for Memories in I3C Controller Mask */
-#define SFR_SD_I3CC(value)                    (SFR_SD_I3CC_Msk & (_UINT32_(value) << SFR_SD_I3CC_Pos)) /* Assigment of value for I3CC in the SFR_SD register */
-#define SFR_SD_CA7_ETB_Pos                    _UINT32_(27)                                         /* (SFR_SD) Shutdown Mode Control for Memories in Cortex-A7 External Trace Buffer Position */
-#define SFR_SD_CA7_ETB_Msk                    (_UINT32_(0x1) << SFR_SD_CA7_ETB_Pos)                /* (SFR_SD) Shutdown Mode Control for Memories in Cortex-A7 External Trace Buffer Mask */
-#define SFR_SD_CA7_ETB(value)                 (SFR_SD_CA7_ETB_Msk & (_UINT32_(value) << SFR_SD_CA7_ETB_Pos)) /* Assigment of value for CA7_ETB in the SFR_SD register */
-#define SFR_SD_Msk                            _UINT32_(0x0FFFFFFF)                                 /* (SFR_SD) Register Mask  */
-
-#define SFR_SD_CA_Pos                         _UINT32_(0)                                          /* (SFR_SD Position) Shutdown Mode Control for Memories in Cortex-A7 */
-#define SFR_SD_CA_Msk                         (_UINT32_(0x1) << SFR_SD_CA_Pos)                     /* (SFR_SD Mask) CA */
-#define SFR_SD_CA(value)                      (SFR_SD_CA_Msk & (_UINT32_(value) << SFR_SD_CA_Pos)) 
-#define SFR_SD_DMAC_Pos                       _UINT32_(7)                                          /* (SFR_SD Position) Shutdown Mode Control for Memories in DMACx */
-#define SFR_SD_DMAC_Msk                       (_UINT32_(0x7) << SFR_SD_DMAC_Pos)                   /* (SFR_SD Mask) DMAC */
-#define SFR_SD_DMAC(value)                    (SFR_SD_DMAC_Msk & (_UINT32_(value) << SFR_SD_DMAC_Pos)) 
-#define SFR_SD_GMAC_Pos                       _UINT32_(15)                                         /* (SFR_SD Position) Shutdown Mode Control for Memories in GMACx */
-#define SFR_SD_GMAC_Msk                       (_UINT32_(0x3) << SFR_SD_GMAC_Pos)                   /* (SFR_SD Mask) GMAC */
-#define SFR_SD_GMAC(value)                    (SFR_SD_GMAC_Msk & (_UINT32_(value) << SFR_SD_GMAC_Pos)) 
-#define SFR_SD_SDMMC_Pos                      _UINT32_(19)                                         /* (SFR_SD Position) Shutdown Mode Control for Memories in SDMMCx */
-#define SFR_SD_SDMMC_Msk                      (_UINT32_(0x7) << SFR_SD_SDMMC_Pos)                  /* (SFR_SD Mask) SDMMC */
-#define SFR_SD_SDMMC(value)                   (SFR_SD_SDMMC_Msk & (_UINT32_(value) << SFR_SD_SDMMC_Pos)) 
 
 /* -------- SFR_PUFCTL : (SFR Offset: 0x2200) (R/W 32) PUFSRAM Domain Control Register -------- */
 #define SFR_PUFCTL_RESETVALUE                 _UINT32_(0x148)                                      /*  (SFR_PUFCTL) PUFSRAM Domain Control Register  Reset Value */
@@ -999,9 +669,6 @@
 #define SFR_CLEAR_ONLY_SD_CFG_REG_OFST _UINT32_(0x2058)    /* (SFR_CLEAR_ONLY_SD_CFG) Memory Clear-Only Shutdown Configuration Register Offset */
 #define SFR_DISABLE_SD_CFG_REG_OFST    _UINT32_(0x205C)    /* (SFR_DISABLE_SD_CFG) Memory Disable Shutdown Configuration Register Offset */
 #define SFR_MEMPOWER_REG_OFST          _UINT32_(0x2060)    /* (SFR_MEMPOWER) Memory Power Mode Register Offset */
-#define SFR_LS_REG_OFST                _UINT32_(0x2064)    /* (SFR_LS) Light Sleep Register Offset */
-#define SFR_DS_REG_OFST                _UINT32_(0x2068)    /* (SFR_DS) Deep Sleep Register Offset */
-#define SFR_SD_REG_OFST                _UINT32_(0x206C)    /* (SFR_SD) Shutdown Register Offset */
 #define SFR_PUFCTL_REG_OFST            _UINT32_(0x2200)    /* (SFR_PUFCTL) PUFSRAM Domain Control Register Offset */
 #define SFR_PUFDIS_REG_OFST            _UINT32_(0x2208)    /* (SFR_PUFDIS) PUF Disable Functions Register Offset */
 #define SFR_PUFRUCR_REG_OFST           _UINT32_(0x220C)    /* (SFR_PUFRUCR) PUF Restrict User Context x Register Offset */
@@ -1037,10 +704,7 @@ typedef struct
   __IO  uint32_t                       SFR_CLEAR_ONLY_SD_CFG; /**< Offset: 0x2058 (R/W  32) Memory Clear-Only Shutdown Configuration Register */
   __IO  uint32_t                       SFR_DISABLE_SD_CFG; /**< Offset: 0x205C (R/W  32) Memory Disable Shutdown Configuration Register */
   __IO  uint32_t                       SFR_MEMPOWER;       /**< Offset: 0x2060 (R/W  32) Memory Power Mode Register */
-  __IO  uint32_t                       SFR_LS;             /**< Offset: 0x2064 (R/W  32) Light Sleep Register */
-  __IO  uint32_t                       SFR_DS;             /**< Offset: 0x2068 (R/W  32) Deep Sleep Register */
-  __IO  uint32_t                       SFR_SD;             /**< Offset: 0x206C (R/W  32) Shutdown Register */
-  __I   uint8_t                        Reserved7[0x190];
+  __I   uint8_t                        Reserved7[0x19C];
   __IO  uint32_t                       SFR_PUFCTL;         /**< Offset: 0x2200 (R/W  32) PUFSRAM Domain Control Register */
   __I   uint8_t                        Reserved8[0x04];
   __IO  uint32_t                       SFR_PUFDIS;         /**< Offset: 0x2208 (R/W  32) PUF Disable Functions Register */
