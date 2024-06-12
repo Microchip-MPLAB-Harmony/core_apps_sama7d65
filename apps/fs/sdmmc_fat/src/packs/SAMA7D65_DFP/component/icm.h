@@ -25,6 +25,64 @@
 /*   SOFTWARE API DEFINITION FOR ICM                                          */
 /* ************************************************************************** */
 
+/* -------- ICM_RADDR : (ICM Offset: 0x00) (R/W 32) ICM Region Start Address -------- */
+#define ICM_RADDR_RADDR_Pos                   _UINT32_(0)                                          /* (ICM_RADDR) Region Start Address Position */
+#define ICM_RADDR_RADDR_Msk                   (_UINT32_(0xFFFFFFFF) << ICM_RADDR_RADDR_Pos)        /* (ICM_RADDR) Region Start Address Mask */
+#define ICM_RADDR_RADDR(value)                (ICM_RADDR_RADDR_Msk & (_UINT32_(value) << ICM_RADDR_RADDR_Pos)) /* Assigment of value for RADDR in the ICM_RADDR register */
+#define ICM_RADDR_Msk                         _UINT32_(0xFFFFFFFF)                                 /* (ICM_RADDR) Register Mask  */
+
+
+/* -------- ICM_RCFG : (ICM Offset: 0x04) (R/W 32) ICM Region Configuration -------- */
+#define ICM_RCFG_CDWBN_Pos                    _UINT32_(0)                                          /* (ICM_RCFG) Compare Digest or Write Back Digest Position */
+#define ICM_RCFG_CDWBN_Msk                    (_UINT32_(0x1) << ICM_RCFG_CDWBN_Pos)                /* (ICM_RCFG) Compare Digest or Write Back Digest Mask */
+#define ICM_RCFG_CDWBN(value)                 (ICM_RCFG_CDWBN_Msk & (_UINT32_(value) << ICM_RCFG_CDWBN_Pos)) /* Assigment of value for CDWBN in the ICM_RCFG register */
+#define ICM_RCFG_WRAP_Pos                     _UINT32_(1)                                          /* (ICM_RCFG) Wrap Command Position */
+#define ICM_RCFG_WRAP_Msk                     (_UINT32_(0x1) << ICM_RCFG_WRAP_Pos)                 /* (ICM_RCFG) Wrap Command Mask */
+#define ICM_RCFG_WRAP(value)                  (ICM_RCFG_WRAP_Msk & (_UINT32_(value) << ICM_RCFG_WRAP_Pos)) /* Assigment of value for WRAP in the ICM_RCFG register */
+#define ICM_RCFG_EOM_Pos                      _UINT32_(2)                                          /* (ICM_RCFG) End Of Monitoring Position */
+#define ICM_RCFG_EOM_Msk                      (_UINT32_(0x1) << ICM_RCFG_EOM_Pos)                  /* (ICM_RCFG) End Of Monitoring Mask */
+#define ICM_RCFG_EOM(value)                   (ICM_RCFG_EOM_Msk & (_UINT32_(value) << ICM_RCFG_EOM_Pos)) /* Assigment of value for EOM in the ICM_RCFG register */
+#define ICM_RCFG_RHIEN_Pos                    _UINT32_(4)                                          /* (ICM_RCFG) Region Hash Completed Interrupt Disable (Default Enabled) Position */
+#define ICM_RCFG_RHIEN_Msk                    (_UINT32_(0x1) << ICM_RCFG_RHIEN_Pos)                /* (ICM_RCFG) Region Hash Completed Interrupt Disable (Default Enabled) Mask */
+#define ICM_RCFG_RHIEN(value)                 (ICM_RCFG_RHIEN_Msk & (_UINT32_(value) << ICM_RCFG_RHIEN_Pos)) /* Assigment of value for RHIEN in the ICM_RCFG register */
+#define ICM_RCFG_DMIEN_Pos                    _UINT32_(5)                                          /* (ICM_RCFG) Digest Mismatch Interrupt Disable (Default Enabled) Position */
+#define ICM_RCFG_DMIEN_Msk                    (_UINT32_(0x1) << ICM_RCFG_DMIEN_Pos)                /* (ICM_RCFG) Digest Mismatch Interrupt Disable (Default Enabled) Mask */
+#define ICM_RCFG_DMIEN(value)                 (ICM_RCFG_DMIEN_Msk & (_UINT32_(value) << ICM_RCFG_DMIEN_Pos)) /* Assigment of value for DMIEN in the ICM_RCFG register */
+#define ICM_RCFG_BEIEN_Pos                    _UINT32_(6)                                          /* (ICM_RCFG) Bus Error Interrupt Disable (Default Enabled) Position */
+#define ICM_RCFG_BEIEN_Msk                    (_UINT32_(0x1) << ICM_RCFG_BEIEN_Pos)                /* (ICM_RCFG) Bus Error Interrupt Disable (Default Enabled) Mask */
+#define ICM_RCFG_BEIEN(value)                 (ICM_RCFG_BEIEN_Msk & (_UINT32_(value) << ICM_RCFG_BEIEN_Pos)) /* Assigment of value for BEIEN in the ICM_RCFG register */
+#define ICM_RCFG_WCIEN_Pos                    _UINT32_(7)                                          /* (ICM_RCFG) Wrap Condition Interrupt Disable (Default Enabled) Position */
+#define ICM_RCFG_WCIEN_Msk                    (_UINT32_(0x1) << ICM_RCFG_WCIEN_Pos)                /* (ICM_RCFG) Wrap Condition Interrupt Disable (Default Enabled) Mask */
+#define ICM_RCFG_WCIEN(value)                 (ICM_RCFG_WCIEN_Msk & (_UINT32_(value) << ICM_RCFG_WCIEN_Pos)) /* Assigment of value for WCIEN in the ICM_RCFG register */
+#define ICM_RCFG_ECIEN_Pos                    _UINT32_(8)                                          /* (ICM_RCFG) End Bit Condition Interrupt (Default Enabled) Position */
+#define ICM_RCFG_ECIEN_Msk                    (_UINT32_(0x1) << ICM_RCFG_ECIEN_Pos)                /* (ICM_RCFG) End Bit Condition Interrupt (Default Enabled) Mask */
+#define ICM_RCFG_ECIEN(value)                 (ICM_RCFG_ECIEN_Msk & (_UINT32_(value) << ICM_RCFG_ECIEN_Pos)) /* Assigment of value for ECIEN in the ICM_RCFG register */
+#define ICM_RCFG_SUIEN_Pos                    _UINT32_(9)                                          /* (ICM_RCFG) Monitoring Status Updated Condition Interrupt (Default Enabled) Position */
+#define ICM_RCFG_SUIEN_Msk                    (_UINT32_(0x1) << ICM_RCFG_SUIEN_Pos)                /* (ICM_RCFG) Monitoring Status Updated Condition Interrupt (Default Enabled) Mask */
+#define ICM_RCFG_SUIEN(value)                 (ICM_RCFG_SUIEN_Msk & (_UINT32_(value) << ICM_RCFG_SUIEN_Pos)) /* Assigment of value for SUIEN in the ICM_RCFG register */
+#define ICM_RCFG_PROCDLY_Pos                  _UINT32_(10)                                         /* (ICM_RCFG) Processing Delay Position */
+#define ICM_RCFG_PROCDLY_Msk                  (_UINT32_(0x1) << ICM_RCFG_PROCDLY_Pos)              /* (ICM_RCFG) Processing Delay Mask */
+#define ICM_RCFG_PROCDLY(value)               (ICM_RCFG_PROCDLY_Msk & (_UINT32_(value) << ICM_RCFG_PROCDLY_Pos)) /* Assigment of value for PROCDLY in the ICM_RCFG register */
+#define ICM_RCFG_ALGO_Pos                     _UINT32_(12)                                         /* (ICM_RCFG) SHA Algorithm Position */
+#define ICM_RCFG_ALGO_Msk                     (_UINT32_(0x7) << ICM_RCFG_ALGO_Pos)                 /* (ICM_RCFG) SHA Algorithm Mask */
+#define ICM_RCFG_ALGO(value)                  (ICM_RCFG_ALGO_Msk & (_UINT32_(value) << ICM_RCFG_ALGO_Pos)) /* Assigment of value for ALGO in the ICM_RCFG register */
+#define ICM_RCFG_Msk                          _UINT32_(0x000077F7)                                 /* (ICM_RCFG) Register Mask  */
+
+
+/* -------- ICM_RCTRL : (ICM Offset: 0x08) (R/W 32) ICM Region Control -------- */
+#define ICM_RCTRL_TRSIZE_Pos                  _UINT32_(0)                                          /* (ICM_RCTRL) Transfer Size for the Current Chunk of Data Position */
+#define ICM_RCTRL_TRSIZE_Msk                  (_UINT32_(0xFFFF) << ICM_RCTRL_TRSIZE_Pos)           /* (ICM_RCTRL) Transfer Size for the Current Chunk of Data Mask */
+#define ICM_RCTRL_TRSIZE(value)               (ICM_RCTRL_TRSIZE_Msk & (_UINT32_(value) << ICM_RCTRL_TRSIZE_Pos)) /* Assigment of value for TRSIZE in the ICM_RCTRL register */
+#define ICM_RCTRL_Msk                         _UINT32_(0x0000FFFF)                                 /* (ICM_RCTRL) Register Mask  */
+
+
+/* -------- ICM_RNEXT : (ICM Offset: 0x0C) (R/W 32) ICM Region Next Address -------- */
+#define ICM_RNEXT_NEXT_Pos                    _UINT32_(3)                                          /* (ICM_RNEXT) Region Transfer Descriptor Next Address Position */
+#define ICM_RNEXT_NEXT_Msk                    (_UINT32_(0x1FFFFFFF) << ICM_RNEXT_NEXT_Pos)         /* (ICM_RNEXT) Region Transfer Descriptor Next Address Mask */
+#define ICM_RNEXT_NEXT(value)                 (ICM_RNEXT_NEXT_Msk & (_UINT32_(value) << ICM_RNEXT_NEXT_Pos)) /* Assigment of value for NEXT in the ICM_RNEXT register */
+#define ICM_RNEXT_Msk                         _UINT32_(0xFFFFFFF8)                                 /* (ICM_RNEXT) Register Mask  */
+
+
 /* -------- ICM_CFG : (ICM Offset: 0x00) (R/W 32) Configuration Register -------- */
 #define ICM_CFG_RESETVALUE                    _UINT32_(0x00)                                       /*  (ICM_CFG) Configuration Register  Reset Value */
 
@@ -443,6 +501,10 @@
 
 
 /** \brief ICM register offsets definitions */
+#define ICM_RADDR_REG_OFST             _UINT32_(0x00)      /* (ICM_RADDR) ICM Region Start Address Offset */
+#define ICM_RCFG_REG_OFST              _UINT32_(0x04)      /* (ICM_RCFG) ICM Region Configuration Offset */
+#define ICM_RCTRL_REG_OFST             _UINT32_(0x08)      /* (ICM_RCTRL) ICM Region Control Offset */
+#define ICM_RNEXT_REG_OFST             _UINT32_(0x0C)      /* (ICM_RNEXT) ICM Region Next Address Offset */
 #define ICM_CFG_REG_OFST               _UINT32_(0x00)      /* (ICM_CFG) Configuration Register Offset */
 #define ICM_CTRL_REG_OFST              _UINT32_(0x04)      /* (ICM_CTRL) Control Register Offset */
 #define ICM_SR_REG_OFST                _UINT32_(0x08)      /* (ICM_SR) Status Register Offset */
@@ -466,6 +528,19 @@
 #define ICM_WPSR_REG_OFST              _UINT32_(0xE8)      /* (ICM_WPSR) Write Protection Status Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+/** \brief ICM_DSC register API structure */
+typedef struct
+{  /* ICM Region Descriptor */
+  __IO  uint32_t                       ICM_RADDR;          /**< Offset: 0x00 (R/W  32) ICM Region Start Address */
+  __IO  uint32_t                       ICM_RCFG;           /**< Offset: 0x04 (R/W  32) ICM Region Configuration */
+  __IO  uint32_t                       ICM_RCTRL;          /**< Offset: 0x08 (R/W  32) ICM Region Control */
+  __IO  uint32_t                       ICM_RNEXT;          /**< Offset: 0x0C (R/W  32) ICM Region Next Address */
+} icm_dsc_registers_t
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
 /** \brief ICM register API structure */
 typedef struct
 {  /* Integrity Check Monitor */

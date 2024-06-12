@@ -549,19 +549,238 @@
 
 
 /* -------- DDR3PHY_MR0 : (DDR3PHY Offset: 0x40) (R/W 32) Mode Register -------- */
-#define DDR3PHY_MR0_Msk                       _UINT32_(0x00000000)                                 /* (DDR3PHY_MR0) Register Mask  */
+#define DDR3PHY_MR0_BT_Pos                    _UINT32_(3)                                          /* (DDR3PHY_MR0) Burst Type Position */
+#define DDR3PHY_MR0_BT_Msk                    (_UINT32_(0x1) << DDR3PHY_MR0_BT_Pos)                /* (DDR3PHY_MR0) Burst Type Mask */
+#define DDR3PHY_MR0_BT(value)                 (DDR3PHY_MR0_BT_Msk & (_UINT32_(value) << DDR3PHY_MR0_BT_Pos)) /* Assigment of value for BT in the DDR3PHY_MR0 register */
+#define DDR3PHY_MR0_TM_Pos                    _UINT32_(7)                                          /* (DDR3PHY_MR0) Operating Mode Position */
+#define DDR3PHY_MR0_TM_Msk                    (_UINT32_(0x1) << DDR3PHY_MR0_TM_Pos)                /* (DDR3PHY_MR0) Operating Mode Mask */
+#define DDR3PHY_MR0_TM(value)                 (DDR3PHY_MR0_TM_Msk & (_UINT32_(value) << DDR3PHY_MR0_TM_Pos)) /* Assigment of value for TM in the DDR3PHY_MR0 register */
+#define DDR3PHY_MR0_DR_Pos                    _UINT32_(8)                                          /* (DDR3PHY_MR0) DLL Reset Position */
+#define DDR3PHY_MR0_DR_Msk                    (_UINT32_(0x1) << DDR3PHY_MR0_DR_Pos)                /* (DDR3PHY_MR0) DLL Reset Mask */
+#define DDR3PHY_MR0_DR(value)                 (DDR3PHY_MR0_DR_Msk & (_UINT32_(value) << DDR3PHY_MR0_DR_Pos)) /* Assigment of value for DR in the DDR3PHY_MR0 register */
+#define DDR3PHY_MR0_WR_Pos                    _UINT32_(9)                                          /* (DDR3PHY_MR0) Write Recovery Position */
+#define DDR3PHY_MR0_WR_Msk                    (_UINT32_(0x7) << DDR3PHY_MR0_WR_Pos)                /* (DDR3PHY_MR0) Write Recovery Mask */
+#define DDR3PHY_MR0_WR(value)                 (DDR3PHY_MR0_WR_Msk & (_UINT32_(value) << DDR3PHY_MR0_WR_Pos)) /* Assigment of value for WR in the DDR3PHY_MR0 register */
+#define DDR3PHY_MR0_PD_Pos                    _UINT32_(12)                                         /* (DDR3PHY_MR0) Power-Down Control Position */
+#define DDR3PHY_MR0_PD_Msk                    (_UINT32_(0x1) << DDR3PHY_MR0_PD_Pos)                /* (DDR3PHY_MR0) Power-Down Control Mask */
+#define DDR3PHY_MR0_PD(value)                 (DDR3PHY_MR0_PD_Msk & (_UINT32_(value) << DDR3PHY_MR0_PD_Pos)) /* Assigment of value for PD in the DDR3PHY_MR0 register */
+#define DDR3PHY_MR0_Msk                       _UINT32_(0x00001F88)                                 /* (DDR3PHY_MR0) Register Mask  */
+
+/* DDR3 mode */
+#define DDR3PHY_MR0_DDR3_BL_Pos               _UINT32_(0)                                          /* (DDR3PHY_MR0) Burst Length Position */
+#define DDR3PHY_MR0_DDR3_BL_Msk               (_UINT32_(0x3) << DDR3PHY_MR0_DDR3_BL_Pos)           /* (DDR3PHY_MR0) Burst Length Mask */
+#define DDR3PHY_MR0_DDR3_BL(value)            (DDR3PHY_MR0_DDR3_BL_Msk & (_UINT32_(value) << DDR3PHY_MR0_DDR3_BL_Pos))
+#define DDR3PHY_MR0_DDR3_CL0_Pos              _UINT32_(2)                                          /* (DDR3PHY_MR0) CAS Latency 0 Position */
+#define DDR3PHY_MR0_DDR3_CL0_Msk              (_UINT32_(0x1) << DDR3PHY_MR0_DDR3_CL0_Pos)          /* (DDR3PHY_MR0) CAS Latency 0 Mask */
+#define DDR3PHY_MR0_DDR3_CL0(value)           (DDR3PHY_MR0_DDR3_CL0_Msk & (_UINT32_(value) << DDR3PHY_MR0_DDR3_CL0_Pos))
+#define DDR3PHY_MR0_DDR3_CL1_Pos              _UINT32_(4)                                          /* (DDR3PHY_MR0) CAS Latency 1 Position */
+#define DDR3PHY_MR0_DDR3_CL1_Msk              (_UINT32_(0x1) << DDR3PHY_MR0_DDR3_CL1_Pos)          /* (DDR3PHY_MR0) CAS Latency 1 Mask */
+#define DDR3PHY_MR0_DDR3_CL1(value)           (DDR3PHY_MR0_DDR3_CL1_Msk & (_UINT32_(value) << DDR3PHY_MR0_DDR3_CL1_Pos))
+#define DDR3PHY_MR0_DDR3_CL2_Pos              _UINT32_(5)                                          /* (DDR3PHY_MR0) CAS Latency 2 Position */
+#define DDR3PHY_MR0_DDR3_CL2_Msk              (_UINT32_(0x1) << DDR3PHY_MR0_DDR3_CL2_Pos)          /* (DDR3PHY_MR0) CAS Latency 2 Mask */
+#define DDR3PHY_MR0_DDR3_CL2(value)           (DDR3PHY_MR0_DDR3_CL2_Msk & (_UINT32_(value) << DDR3PHY_MR0_DDR3_CL2_Pos))
+#define DDR3PHY_MR0_DDR3_CL3_Pos              _UINT32_(6)                                          /* (DDR3PHY_MR0) CAS Latency 3 Position */
+#define DDR3PHY_MR0_DDR3_CL3_Msk              (_UINT32_(0x1) << DDR3PHY_MR0_DDR3_CL3_Pos)          /* (DDR3PHY_MR0) CAS Latency 3 Mask */
+#define DDR3PHY_MR0_DDR3_CL3(value)           (DDR3PHY_MR0_DDR3_CL3_Msk & (_UINT32_(value) << DDR3PHY_MR0_DDR3_CL3_Pos))
+#define DDR3PHY_MR0_DDR3_Msk                  _UINT32_(0x00000077)                                  /* (DDR3PHY_MR0_DDR3) Register Mask  */
+
+/* DDR2 mode */
+#define DDR3PHY_MR0_DDR2_BL_Pos               _UINT32_(0)                                          /* (DDR3PHY_MR0) Burst Length Position */
+#define DDR3PHY_MR0_DDR2_BL_Msk               (_UINT32_(0x7) << DDR3PHY_MR0_DDR2_BL_Pos)           /* (DDR3PHY_MR0) Burst Length Mask */
+#define DDR3PHY_MR0_DDR2_BL(value)            (DDR3PHY_MR0_DDR2_BL_Msk & (_UINT32_(value) << DDR3PHY_MR0_DDR2_BL_Pos))
+#define DDR3PHY_MR0_DDR2_CL_Pos               _UINT32_(4)                                          /* (DDR3PHY_MR0) CAS Latency x Position */
+#define DDR3PHY_MR0_DDR2_CL_Msk               (_UINT32_(0x7) << DDR3PHY_MR0_DDR2_CL_Pos)           /* (DDR3PHY_MR0) CAS Latency x Mask */
+#define DDR3PHY_MR0_DDR2_CL(value)            (DDR3PHY_MR0_DDR2_CL_Msk & (_UINT32_(value) << DDR3PHY_MR0_DDR2_CL_Pos))
+#define DDR3PHY_MR0_DDR2_Msk                  _UINT32_(0x00000077)                                  /* (DDR3PHY_MR0_DDR2) Register Mask  */
 
 
 /* -------- DDR3PHY_MR1 : (DDR3PHY Offset: 0x44) (R/W 32) Extended Mode Register -------- */
 #define DDR3PHY_MR1_Msk                       _UINT32_(0x00000000)                                 /* (DDR3PHY_MR1) Register Mask  */
 
+/* DDR3 mode */
+#define DDR3PHY_MR1_DDR3_DE_Pos               _UINT32_(0)                                          /* (DDR3PHY_MR1) DLL Enable/Disable Position */
+#define DDR3PHY_MR1_DDR3_DE_Msk               (_UINT32_(0x1) << DDR3PHY_MR1_DDR3_DE_Pos)           /* (DDR3PHY_MR1) DLL Enable/Disable Mask */
+#define DDR3PHY_MR1_DDR3_DE(value)            (DDR3PHY_MR1_DDR3_DE_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR3_DE_Pos))
+#define DDR3PHY_MR1_DDR3_DIC0_Pos             _UINT32_(1)                                          /* (DDR3PHY_MR1) Output Driver Impedance Control 0 Position */
+#define DDR3PHY_MR1_DDR3_DIC0_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_DDR3_DIC0_Pos)         /* (DDR3PHY_MR1) Output Driver Impedance Control 0 Mask */
+#define DDR3PHY_MR1_DDR3_DIC0(value)          (DDR3PHY_MR1_DDR3_DIC0_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR3_DIC0_Pos))
+#define DDR3PHY_MR1_DDR3_RTT0_Pos             _UINT32_(2)                                          /* (DDR3PHY_MR1) On-Die Termination 0 Position */
+#define DDR3PHY_MR1_DDR3_RTT0_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_DDR3_RTT0_Pos)         /* (DDR3PHY_MR1) On-Die Termination 0 Mask */
+#define DDR3PHY_MR1_DDR3_RTT0(value)          (DDR3PHY_MR1_DDR3_RTT0_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR3_RTT0_Pos))
+#define DDR3PHY_MR1_DDR3_AL_Pos               _UINT32_(3)                                          /* (DDR3PHY_MR1) Posted CAS Additive Latency Position */
+#define DDR3PHY_MR1_DDR3_AL_Msk               (_UINT32_(0x3) << DDR3PHY_MR1_DDR3_AL_Pos)           /* (DDR3PHY_MR1) Posted CAS Additive Latency Mask */
+#define DDR3PHY_MR1_DDR3_AL(value)            (DDR3PHY_MR1_DDR3_AL_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR3_AL_Pos))
+#define DDR3PHY_MR1_DDR3_DIC1_Pos             _UINT32_(5)                                          /* (DDR3PHY_MR1) Output Driver Impedance Control 1 Position */
+#define DDR3PHY_MR1_DDR3_DIC1_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_DDR3_DIC1_Pos)         /* (DDR3PHY_MR1) Output Driver Impedance Control 1 Mask */
+#define DDR3PHY_MR1_DDR3_DIC1(value)          (DDR3PHY_MR1_DDR3_DIC1_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR3_DIC1_Pos))
+#define DDR3PHY_MR1_DDR3_RTT1_Pos             _UINT32_(6)                                          /* (DDR3PHY_MR1) On-Die Termination 1 Position */
+#define DDR3PHY_MR1_DDR3_RTT1_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_DDR3_RTT1_Pos)         /* (DDR3PHY_MR1) On-Die Termination 1 Mask */
+#define DDR3PHY_MR1_DDR3_RTT1(value)          (DDR3PHY_MR1_DDR3_RTT1_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR3_RTT1_Pos))
+#define DDR3PHY_MR1_DDR3_LEVEL_Pos            _UINT32_(7)                                          /* (DDR3PHY_MR1) Write Leveling Enable Position */
+#define DDR3PHY_MR1_DDR3_LEVEL_Msk            (_UINT32_(0x1) << DDR3PHY_MR1_DDR3_LEVEL_Pos)        /* (DDR3PHY_MR1) Write Leveling Enable Mask */
+#define DDR3PHY_MR1_DDR3_LEVEL(value)         (DDR3PHY_MR1_DDR3_LEVEL_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR3_LEVEL_Pos))
+#define DDR3PHY_MR1_DDR3_RTT2_Pos             _UINT32_(9)                                          /* (DDR3PHY_MR1) On-Die Termination 2 Position */
+#define DDR3PHY_MR1_DDR3_RTT2_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_DDR3_RTT2_Pos)         /* (DDR3PHY_MR1) On-Die Termination 2 Mask */
+#define DDR3PHY_MR1_DDR3_RTT2(value)          (DDR3PHY_MR1_DDR3_RTT2_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR3_RTT2_Pos))
+#define DDR3PHY_MR1_DDR3_TDQS_Pos             _UINT32_(11)                                         /* (DDR3PHY_MR1) Termination Data Strobe Position */
+#define DDR3PHY_MR1_DDR3_TDQS_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_DDR3_TDQS_Pos)         /* (DDR3PHY_MR1) Termination Data Strobe Mask */
+#define DDR3PHY_MR1_DDR3_TDQS(value)          (DDR3PHY_MR1_DDR3_TDQS_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR3_TDQS_Pos))
+#define DDR3PHY_MR1_DDR3_QOFF_Pos             _UINT32_(12)                                         /* (DDR3PHY_MR1) Output Enable/Disable Position */
+#define DDR3PHY_MR1_DDR3_QOFF_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_DDR3_QOFF_Pos)         /* (DDR3PHY_MR1) Output Enable/Disable Mask */
+#define DDR3PHY_MR1_DDR3_QOFF(value)          (DDR3PHY_MR1_DDR3_QOFF_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR3_QOFF_Pos))
+#define DDR3PHY_MR1_DDR3_Msk                  _UINT32_(0x00001AFF)                                  /* (DDR3PHY_MR1_DDR3) Register Mask  */
+
+/* DDR2 mode */
+#define DDR3PHY_MR1_DDR2_DE_Pos               _UINT32_(0)                                          /* (DDR3PHY_MR1) DLL Enable/Disable Position */
+#define DDR3PHY_MR1_DDR2_DE_Msk               (_UINT32_(0x1) << DDR3PHY_MR1_DDR2_DE_Pos)           /* (DDR3PHY_MR1) DLL Enable/Disable Mask */
+#define DDR3PHY_MR1_DDR2_DE(value)            (DDR3PHY_MR1_DDR2_DE_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR2_DE_Pos))
+#define DDR3PHY_MR1_DDR2_DIC_Pos              _UINT32_(1)                                          /* (DDR3PHY_MR1) Output Driver Impedance Control Position */
+#define DDR3PHY_MR1_DDR2_DIC_Msk              (_UINT32_(0x1) << DDR3PHY_MR1_DDR2_DIC_Pos)          /* (DDR3PHY_MR1) Output Driver Impedance Control Mask */
+#define DDR3PHY_MR1_DDR2_DIC(value)           (DDR3PHY_MR1_DDR2_DIC_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR2_DIC_Pos))
+#define DDR3PHY_MR1_DDR2_RTT0_Pos             _UINT32_(2)                                          /* (DDR3PHY_MR1) On-Die Termination 0 Position */
+#define DDR3PHY_MR1_DDR2_RTT0_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_DDR2_RTT0_Pos)         /* (DDR3PHY_MR1) On-Die Termination 0 Mask */
+#define DDR3PHY_MR1_DDR2_RTT0(value)          (DDR3PHY_MR1_DDR2_RTT0_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR2_RTT0_Pos))
+#define DDR3PHY_MR1_DDR2_AL_Pos               _UINT32_(3)                                          /* (DDR3PHY_MR1) Posted CAS Additive Latency Position */
+#define DDR3PHY_MR1_DDR2_AL_Msk               (_UINT32_(0x7) << DDR3PHY_MR1_DDR2_AL_Pos)           /* (DDR3PHY_MR1) Posted CAS Additive Latency Mask */
+#define DDR3PHY_MR1_DDR2_AL(value)            (DDR3PHY_MR1_DDR2_AL_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR2_AL_Pos))
+#define DDR3PHY_MR1_DDR2_RTT1_Pos             _UINT32_(6)                                          /* (DDR3PHY_MR1) On-Die Termination 1 Position */
+#define DDR3PHY_MR1_DDR2_RTT1_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_DDR2_RTT1_Pos)         /* (DDR3PHY_MR1) On-Die Termination 1 Mask */
+#define DDR3PHY_MR1_DDR2_RTT1(value)          (DDR3PHY_MR1_DDR2_RTT1_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR2_RTT1_Pos))
+#define DDR3PHY_MR1_DDR2_OCD_Pos              _UINT32_(7)                                          /* (DDR3PHY_MR1) Off-Chip Driver (OCD) Impedance Calibration Position */
+#define DDR3PHY_MR1_DDR2_OCD_Msk              (_UINT32_(0x7) << DDR3PHY_MR1_DDR2_OCD_Pos)          /* (DDR3PHY_MR1) Off-Chip Driver (OCD) Impedance Calibration Mask */
+#define DDR3PHY_MR1_DDR2_OCD(value)           (DDR3PHY_MR1_DDR2_OCD_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR2_OCD_Pos))
+#define DDR3PHY_MR1_DDR2_RDQS_Pos             _UINT32_(11)                                         /* (DDR3PHY_MR1) RDQS Enable/Disable Position */
+#define DDR3PHY_MR1_DDR2_RDQS_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_DDR2_RDQS_Pos)         /* (DDR3PHY_MR1) RDQS Enable/Disable Mask */
+#define DDR3PHY_MR1_DDR2_RDQS(value)          (DDR3PHY_MR1_DDR2_RDQS_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR2_RDQS_Pos))
+#define DDR3PHY_MR1_DDR2_QOFF_Pos             _UINT32_(12)                                         /* (DDR3PHY_MR1) Output Enable/Disable Position */
+#define DDR3PHY_MR1_DDR2_QOFF_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_DDR2_QOFF_Pos)         /* (DDR3PHY_MR1) Output Enable/Disable Mask */
+#define DDR3PHY_MR1_DDR2_QOFF(value)          (DDR3PHY_MR1_DDR2_QOFF_Msk & (_UINT32_(value) << DDR3PHY_MR1_DDR2_QOFF_Pos))
+#define DDR3PHY_MR1_DDR2_Msk                  _UINT32_(0x00001BFF)                                  /* (DDR3PHY_MR1_DDR2) Register Mask  */
+
+/* LPDDR2 mode */
+#define DDR3PHY_MR1_LPDDR2_BL_Pos             _UINT32_(0)                                          /* (DDR3PHY_MR1) Burst Length Position */
+#define DDR3PHY_MR1_LPDDR2_BL_Msk             (_UINT32_(0x7) << DDR3PHY_MR1_LPDDR2_BL_Pos)         /* (DDR3PHY_MR1) Burst Length Mask */
+#define DDR3PHY_MR1_LPDDR2_BL(value)          (DDR3PHY_MR1_LPDDR2_BL_Msk & (_UINT32_(value) << DDR3PHY_MR1_LPDDR2_BL_Pos))
+#define DDR3PHY_MR1_LPDDR2_BT_Pos             _UINT32_(3)                                          /* (DDR3PHY_MR1) Burst Type Position */
+#define DDR3PHY_MR1_LPDDR2_BT_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_LPDDR2_BT_Pos)         /* (DDR3PHY_MR1) Burst Type Mask */
+#define DDR3PHY_MR1_LPDDR2_BT(value)          (DDR3PHY_MR1_LPDDR2_BT_Msk & (_UINT32_(value) << DDR3PHY_MR1_LPDDR2_BT_Pos))
+#define DDR3PHY_MR1_LPDDR2_WC_Pos             _UINT32_(4)                                          /* (DDR3PHY_MR1) Wrap Control Position */
+#define DDR3PHY_MR1_LPDDR2_WC_Msk             (_UINT32_(0x1) << DDR3PHY_MR1_LPDDR2_WC_Pos)         /* (DDR3PHY_MR1) Wrap Control Mask */
+#define DDR3PHY_MR1_LPDDR2_WC(value)          (DDR3PHY_MR1_LPDDR2_WC_Msk & (_UINT32_(value) << DDR3PHY_MR1_LPDDR2_WC_Pos))
+#define DDR3PHY_MR1_LPDDR2_nWR_Pos            _UINT32_(5)                                          /* (DDR3PHY_MR1) Write Recovery Position */
+#define DDR3PHY_MR1_LPDDR2_nWR_Msk            (_UINT32_(0x7) << DDR3PHY_MR1_LPDDR2_nWR_Pos)        /* (DDR3PHY_MR1) Write Recovery Mask */
+#define DDR3PHY_MR1_LPDDR2_nWR(value)         (DDR3PHY_MR1_LPDDR2_nWR_Msk & (_UINT32_(value) << DDR3PHY_MR1_LPDDR2_nWR_Pos))
+#define DDR3PHY_MR1_LPDDR2_Msk                _UINT32_(0x000000FF)                                  /* (DDR3PHY_MR1_LPDDR2) Register Mask  */
+
+/* LPDDR3 mode */
+#define DDR3PHY_MR1_LPDDR3_BL_Pos             _UINT32_(0)                                          /* (DDR3PHY_MR1) Burst Length Position */
+#define DDR3PHY_MR1_LPDDR3_BL_Msk             (_UINT32_(0x7) << DDR3PHY_MR1_LPDDR3_BL_Pos)         /* (DDR3PHY_MR1) Burst Length Mask */
+#define DDR3PHY_MR1_LPDDR3_BL(value)          (DDR3PHY_MR1_LPDDR3_BL_Msk & (_UINT32_(value) << DDR3PHY_MR1_LPDDR3_BL_Pos))
+#define DDR3PHY_MR1_LPDDR3_nWR_Pos            _UINT32_(5)                                          /* (DDR3PHY_MR1) Write Recovery Position */
+#define DDR3PHY_MR1_LPDDR3_nWR_Msk            (_UINT32_(0x7) << DDR3PHY_MR1_LPDDR3_nWR_Pos)        /* (DDR3PHY_MR1) Write Recovery Mask */
+#define DDR3PHY_MR1_LPDDR3_nWR(value)         (DDR3PHY_MR1_LPDDR3_nWR_Msk & (_UINT32_(value) << DDR3PHY_MR1_LPDDR3_nWR_Pos))
+#define DDR3PHY_MR1_LPDDR3_Msk                _UINT32_(0x000000E7)                                  /* (DDR3PHY_MR1_LPDDR3) Register Mask  */
+
 
 /* -------- DDR3PHY_MR2 : (DDR3PHY Offset: 0x48) (R/W 32) Extended Mode Register 2 -------- */
 #define DDR3PHY_MR2_Msk                       _UINT32_(0x00000000)                                 /* (DDR3PHY_MR2) Register Mask  */
 
+/* DDR3 mode */
+#define DDR3PHY_MR2_DDR3_PASR_Pos             _UINT32_(0)                                          /* (DDR3PHY_MR2) Partial Array Self Refresh Position */
+#define DDR3PHY_MR2_DDR3_PASR_Msk             (_UINT32_(0x7) << DDR3PHY_MR2_DDR3_PASR_Pos)         /* (DDR3PHY_MR2) Partial Array Self Refresh Mask */
+#define DDR3PHY_MR2_DDR3_PASR(value)          (DDR3PHY_MR2_DDR3_PASR_Msk & (_UINT32_(value) << DDR3PHY_MR2_DDR3_PASR_Pos))
+#define DDR3PHY_MR2_DDR3_CWL_Pos              _UINT32_(3)                                          /* (DDR3PHY_MR2) CAS Write Latency Position */
+#define DDR3PHY_MR2_DDR3_CWL_Msk              (_UINT32_(0x7) << DDR3PHY_MR2_DDR3_CWL_Pos)          /* (DDR3PHY_MR2) CAS Write Latency Mask */
+#define DDR3PHY_MR2_DDR3_CWL(value)           (DDR3PHY_MR2_DDR3_CWL_Msk & (_UINT32_(value) << DDR3PHY_MR2_DDR3_CWL_Pos))
+#define DDR3PHY_MR2_DDR3_ASR_Pos              _UINT32_(6)                                          /* (DDR3PHY_MR2) Auto Self-Refresh Position */
+#define DDR3PHY_MR2_DDR3_ASR_Msk              (_UINT32_(0x1) << DDR3PHY_MR2_DDR3_ASR_Pos)          /* (DDR3PHY_MR2) Auto Self-Refresh Mask */
+#define DDR3PHY_MR2_DDR3_ASR(value)           (DDR3PHY_MR2_DDR3_ASR_Msk & (_UINT32_(value) << DDR3PHY_MR2_DDR3_ASR_Pos))
+#define DDR3PHY_MR2_DDR3_SRT_Pos              _UINT32_(7)                                          /* (DDR3PHY_MR2) Self-Refresh Temperature Range Position */
+#define DDR3PHY_MR2_DDR3_SRT_Msk              (_UINT32_(0x1) << DDR3PHY_MR2_DDR3_SRT_Pos)          /* (DDR3PHY_MR2) Self-Refresh Temperature Range Mask */
+#define DDR3PHY_MR2_DDR3_SRT(value)           (DDR3PHY_MR2_DDR3_SRT_Msk & (_UINT32_(value) << DDR3PHY_MR2_DDR3_SRT_Pos))
+#define DDR3PHY_MR2_DDR3_RTTWR_Pos            _UINT32_(9)                                          /* (DDR3PHY_MR2) Dynamic ODT Position */
+#define DDR3PHY_MR2_DDR3_RTTWR_Msk            (_UINT32_(0x3) << DDR3PHY_MR2_DDR3_RTTWR_Pos)        /* (DDR3PHY_MR2) Dynamic ODT Mask */
+#define DDR3PHY_MR2_DDR3_RTTWR(value)         (DDR3PHY_MR2_DDR3_RTTWR_Msk & (_UINT32_(value) << DDR3PHY_MR2_DDR3_RTTWR_Pos))
+#define DDR3PHY_MR2_DDR3_RSVD_Pos             _UINT32_(11)                                         /* (DDR3PHY_MR2) Reserved Position */
+#define DDR3PHY_MR2_DDR3_RSVD_Msk             (_UINT32_(0x1F) << DDR3PHY_MR2_DDR3_RSVD_Pos)        /* (DDR3PHY_MR2) Reserved Mask */
+#define DDR3PHY_MR2_DDR3_RSVD(value)          (DDR3PHY_MR2_DDR3_RSVD_Msk & (_UINT32_(value) << DDR3PHY_MR2_DDR3_RSVD_Pos))
+#define DDR3PHY_MR2_DDR3_Msk                  _UINT32_(0x0000FEFF)                                  /* (DDR3PHY_MR2_DDR3) Register Mask  */
+
+/* DDR2 mode */
+#define DDR3PHY_MR2_DDR2_PASR_Pos             _UINT32_(0)                                          /* (DDR3PHY_MR2) Partial Array Self Refresh Position */
+#define DDR3PHY_MR2_DDR2_PASR_Msk             (_UINT32_(0x7) << DDR3PHY_MR2_DDR2_PASR_Pos)         /* (DDR3PHY_MR2) Partial Array Self Refresh Mask */
+#define DDR3PHY_MR2_DDR2_PASR(value)          (DDR3PHY_MR2_DDR2_PASR_Msk & (_UINT32_(value) << DDR3PHY_MR2_DDR2_PASR_Pos))
+#define DDR3PHY_MR2_DDR2_DCC_Pos              _UINT32_(3)                                          /* (DDR3PHY_MR2) Duty Cycle Corrector Position */
+#define DDR3PHY_MR2_DDR2_DCC_Msk              (_UINT32_(0x1) << DDR3PHY_MR2_DDR2_DCC_Pos)          /* (DDR3PHY_MR2) Duty Cycle Corrector Mask */
+#define DDR3PHY_MR2_DDR2_DCC(value)           (DDR3PHY_MR2_DDR2_DCC_Msk & (_UINT32_(value) << DDR3PHY_MR2_DDR2_DCC_Pos))
+#define DDR3PHY_MR2_DDR2_SRF_Pos              _UINT32_(7)                                          /* (DDR3PHY_MR2) Self-Refresh Rate Position */
+#define DDR3PHY_MR2_DDR2_SRF_Msk              (_UINT32_(0x1) << DDR3PHY_MR2_DDR2_SRF_Pos)          /* (DDR3PHY_MR2) Self-Refresh Rate Mask */
+#define DDR3PHY_MR2_DDR2_SRF(value)           (DDR3PHY_MR2_DDR2_SRF_Msk & (_UINT32_(value) << DDR3PHY_MR2_DDR2_SRF_Pos))
+#define DDR3PHY_MR2_DDR2_RSVD_Pos             _UINT32_(11)                                         /* (DDR3PHY_MR2) Reserved Position */
+#define DDR3PHY_MR2_DDR2_RSVD_Msk             (_UINT32_(0x1F) << DDR3PHY_MR2_DDR2_RSVD_Pos)        /* (DDR3PHY_MR2) Reserved Mask */
+#define DDR3PHY_MR2_DDR2_RSVD(value)          (DDR3PHY_MR2_DDR2_RSVD_Msk & (_UINT32_(value) << DDR3PHY_MR2_DDR2_RSVD_Pos))
+#define DDR3PHY_MR2_DDR2_Msk                  _UINT32_(0x0000F88F)                                  /* (DDR3PHY_MR2_DDR2) Register Mask  */
+
+/* LPDDR2 mode */
+#define DDR3PHY_MR2_LPDDR2_RLWL_Pos           _UINT32_(0)                                          /* (DDR3PHY_MR2) Read and Write Latency Position */
+#define DDR3PHY_MR2_LPDDR2_RLWL_Msk           (_UINT32_(0xF) << DDR3PHY_MR2_LPDDR2_RLWL_Pos)       /* (DDR3PHY_MR2) Read and Write Latency Mask */
+#define DDR3PHY_MR2_LPDDR2_RLWL(value)        (DDR3PHY_MR2_LPDDR2_RLWL_Msk & (_UINT32_(value) << DDR3PHY_MR2_LPDDR2_RLWL_Pos))
+#define DDR3PHY_MR2_LPDDR2_RSVD_Pos           _UINT32_(4)                                          /* (DDR3PHY_MR2) Reserved Position */
+#define DDR3PHY_MR2_LPDDR2_RSVD_Msk           (_UINT32_(0xF) << DDR3PHY_MR2_LPDDR2_RSVD_Pos)       /* (DDR3PHY_MR2) Reserved Mask */
+#define DDR3PHY_MR2_LPDDR2_RSVD(value)        (DDR3PHY_MR2_LPDDR2_RSVD_Msk & (_UINT32_(value) << DDR3PHY_MR2_LPDDR2_RSVD_Pos))
+#define DDR3PHY_MR2_LPDDR2_Msk                _UINT32_(0x000000FF)                                  /* (DDR3PHY_MR2_LPDDR2) Register Mask  */
+
+/* LPDDR3 mode */
+#define DDR3PHY_MR2_LPDDR3_RLWL_Pos           _UINT32_(0)                                          /* (DDR3PHY_MR2) Read and Write Latency Position */
+#define DDR3PHY_MR2_LPDDR3_RLWL_Msk           (_UINT32_(0xF) << DDR3PHY_MR2_LPDDR3_RLWL_Pos)       /* (DDR3PHY_MR2) Read and Write Latency Mask */
+#define DDR3PHY_MR2_LPDDR3_RLWL(value)        (DDR3PHY_MR2_LPDDR3_RLWL_Msk & (_UINT32_(value) << DDR3PHY_MR2_LPDDR3_RLWL_Pos))
+#define DDR3PHY_MR2_LPDDR3_RSVD_Pos           _UINT32_(4)                                          /* (DDR3PHY_MR2) Reserved Position */
+#define DDR3PHY_MR2_LPDDR3_RSVD_Msk           (_UINT32_(0xF) << DDR3PHY_MR2_LPDDR3_RSVD_Pos)       /* (DDR3PHY_MR2) Reserved Mask */
+#define DDR3PHY_MR2_LPDDR3_RSVD(value)        (DDR3PHY_MR2_LPDDR3_RSVD_Msk & (_UINT32_(value) << DDR3PHY_MR2_LPDDR3_RSVD_Pos))
+#define DDR3PHY_MR2_LPDDR3_Msk                _UINT32_(0x000000FF)                                  /* (DDR3PHY_MR2_LPDDR3) Register Mask  */
+
 
 /* -------- DDR3PHY_MR3 : (DDR3PHY Offset: 0x4C) (R/W 32) Extended Mode Register 3 -------- */
 #define DDR3PHY_MR3_Msk                       _UINT32_(0x00000000)                                 /* (DDR3PHY_MR3) Register Mask  */
+
+/* DDR3 mode */
+#define DDR3PHY_MR3_DDR3_MPRLOC_Pos           _UINT32_(0)                                          /* (DDR3PHY_MR3) Multi-Purpose Register (MPR) Location Position */
+#define DDR3PHY_MR3_DDR3_MPRLOC_Msk           (_UINT32_(0x3) << DDR3PHY_MR3_DDR3_MPRLOC_Pos)       /* (DDR3PHY_MR3) Multi-Purpose Register (MPR) Location Mask */
+#define DDR3PHY_MR3_DDR3_MPRLOC(value)        (DDR3PHY_MR3_DDR3_MPRLOC_Msk & (_UINT32_(value) << DDR3PHY_MR3_DDR3_MPRLOC_Pos))
+#define DDR3PHY_MR3_DDR3_MPR_Pos              _UINT32_(2)                                          /* (DDR3PHY_MR3) Multi-Purpose Register Enable Position */
+#define DDR3PHY_MR3_DDR3_MPR_Msk              (_UINT32_(0x1) << DDR3PHY_MR3_DDR3_MPR_Pos)          /* (DDR3PHY_MR3) Multi-Purpose Register Enable Mask */
+#define DDR3PHY_MR3_DDR3_MPR(value)           (DDR3PHY_MR3_DDR3_MPR_Msk & (_UINT32_(value) << DDR3PHY_MR3_DDR3_MPR_Pos))
+#define DDR3PHY_MR3_DDR3_RSVD_Pos             _UINT32_(3)                                          /* (DDR3PHY_MR3) Reserved Position */
+#define DDR3PHY_MR3_DDR3_RSVD_Msk             (_UINT32_(0x1FFF) << DDR3PHY_MR3_DDR3_RSVD_Pos)      /* (DDR3PHY_MR3) Reserved Mask */
+#define DDR3PHY_MR3_DDR3_RSVD(value)          (DDR3PHY_MR3_DDR3_RSVD_Msk & (_UINT32_(value) << DDR3PHY_MR3_DDR3_RSVD_Pos))
+#define DDR3PHY_MR3_DDR3_Msk                  _UINT32_(0x0000FFFF)                                  /* (DDR3PHY_MR3_DDR3) Register Mask  */
+
+/* EMR3_DDR2 mode */
+#define DDR3PHY_MR3_EMR3_DDR2_RSVD_Pos        _UINT32_(0)                                          /* (DDR3PHY_MR3) Reserved Position */
+#define DDR3PHY_MR3_EMR3_DDR2_RSVD_Msk        (_UINT32_(0xFFFF) << DDR3PHY_MR3_EMR3_DDR2_RSVD_Pos) /* (DDR3PHY_MR3) Reserved Mask */
+#define DDR3PHY_MR3_EMR3_DDR2_RSVD(value)     (DDR3PHY_MR3_EMR3_DDR2_RSVD_Msk & (_UINT32_(value) << DDR3PHY_MR3_EMR3_DDR2_RSVD_Pos))
+#define DDR3PHY_MR3_EMR3_DDR2_Msk             _UINT32_(0x0000FFFF)                                  /* (DDR3PHY_MR3_EMR3_DDR2) Register Mask  */
+
+/* LPDDR2 mode */
+#define DDR3PHY_MR3_LPDDR2_DS_Pos             _UINT32_(0)                                          /* (DDR3PHY_MR3) Drive Strength Position */
+#define DDR3PHY_MR3_LPDDR2_DS_Msk             (_UINT32_(0xF) << DDR3PHY_MR3_LPDDR2_DS_Pos)         /* (DDR3PHY_MR3) Drive Strength Mask */
+#define DDR3PHY_MR3_LPDDR2_DS(value)          (DDR3PHY_MR3_LPDDR2_DS_Msk & (_UINT32_(value) << DDR3PHY_MR3_LPDDR2_DS_Pos))
+#define DDR3PHY_MR3_LPDDR2_RSVD_Pos           _UINT32_(4)                                          /* (DDR3PHY_MR3) Reserved Position */
+#define DDR3PHY_MR3_LPDDR2_RSVD_Msk           (_UINT32_(0xF) << DDR3PHY_MR3_LPDDR2_RSVD_Pos)       /* (DDR3PHY_MR3) Reserved Mask */
+#define DDR3PHY_MR3_LPDDR2_RSVD(value)        (DDR3PHY_MR3_LPDDR2_RSVD_Msk & (_UINT32_(value) << DDR3PHY_MR3_LPDDR2_RSVD_Pos))
+#define DDR3PHY_MR3_LPDDR2_Msk                _UINT32_(0x000000FF)                                  /* (DDR3PHY_MR3_LPDDR2) Register Mask  */
+
+/* LPDDR3 mode */
+#define DDR3PHY_MR3_LPDDR3_DQODT_Pos          _UINT32_(0)                                          /* (DDR3PHY_MR3) On-Die Termination Position */
+#define DDR3PHY_MR3_LPDDR3_DQODT_Msk          (_UINT32_(0x3) << DDR3PHY_MR3_LPDDR3_DQODT_Pos)      /* (DDR3PHY_MR3) On-Die Termination Mask */
+#define DDR3PHY_MR3_LPDDR3_DQODT(value)       (DDR3PHY_MR3_LPDDR3_DQODT_Msk & (_UINT32_(value) << DDR3PHY_MR3_LPDDR3_DQODT_Pos))
+#define DDR3PHY_MR3_LPDDR3_PDCTL_Pos          _UINT32_(2)                                          /* (DDR3PHY_MR3) Power-Down Control Position */
+#define DDR3PHY_MR3_LPDDR3_PDCTL_Msk          (_UINT32_(0x3) << DDR3PHY_MR3_LPDDR3_PDCTL_Pos)      /* (DDR3PHY_MR3) Power-Down Control Mask */
+#define DDR3PHY_MR3_LPDDR3_PDCTL(value)       (DDR3PHY_MR3_LPDDR3_PDCTL_Msk & (_UINT32_(value) << DDR3PHY_MR3_LPDDR3_PDCTL_Pos))
+#define DDR3PHY_MR3_LPDDR3_RSVD_Pos           _UINT32_(4)                                          /* (DDR3PHY_MR3) Reserved Position */
+#define DDR3PHY_MR3_LPDDR3_RSVD_Msk           (_UINT32_(0xF) << DDR3PHY_MR3_LPDDR3_RSVD_Pos)       /* (DDR3PHY_MR3) Reserved Mask */
+#define DDR3PHY_MR3_LPDDR3_RSVD(value)        (DDR3PHY_MR3_LPDDR3_RSVD_Msk & (_UINT32_(value) << DDR3PHY_MR3_LPDDR3_RSVD_Pos))
+#define DDR3PHY_MR3_LPDDR3_Msk                _UINT32_(0x000000FF)                                  /* (DDR3PHY_MR3_LPDDR3) Register Mask  */
 
 
 /* -------- DDR3PHY_ODTCR : (DDR3PHY Offset: 0x50) (R/W 32) ODT Configuration Register -------- */
@@ -635,14 +854,6 @@
 #define DDR3PHY_DTDR1_DTBYTE7_Msk             (_UINT32_(0xFF) << DDR3PHY_DTDR1_DTBYTE7_Pos)        /* (DDR3PHY_DTDR1) Data Training Data: The second 4 bytes of data used during data training. This same data byte is used for each Byte Lane. Default sequence is a walking 1 while toggling data every data cycle. Mask */
 #define DDR3PHY_DTDR1_DTBYTE7(value)          (DDR3PHY_DTDR1_DTBYTE7_Msk & (_UINT32_(value) << DDR3PHY_DTDR1_DTBYTE7_Pos)) /* Assigment of value for DTBYTE7 in the DDR3PHY_DTDR1 register */
 #define DDR3PHY_DTDR1_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (DDR3PHY_DTDR1) Register Mask  */
-
-
-/* -------- DDR3PHY_DTPSL : (DDR3PHY Offset: 0x60) ( R/ 32) Data Training Phase shift Log -------- */
-#define DDR3PHY_DTPSL_Msk                     _UINT32_(0x00000000)                                 /* (DDR3PHY_DTPSL) Register Mask  */
-
-
-/* -------- DDR3PHY_ACODLY : (DDR3PHY Offset: 0x64) (R/W 32) Data Training AC Ouput delay -------- */
-#define DDR3PHY_ACODLY_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ACODLY) Register Mask  */
 
 
 /* -------- DDR3PHY_DCUAR : (DDR3PHY Offset: 0xC0) (R/W 32) DCU Address Register -------- */
@@ -838,14 +1049,6 @@
 #define DDR3PHY_BISTFWR1_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_BISTFWR1) Register Mask  */
 
 
-/* -------- DDR3PHY_GPR0 : (DDR3PHY Offset: 0x178) (R/W 32) General Purpose Register 0 -------- */
-#define DDR3PHY_GPR0_Msk                      _UINT32_(0x00000000)                                 /* (DDR3PHY_GPR0) Register Mask  */
-
-
-/* -------- DDR3PHY_GPR1 : (DDR3PHY Offset: 0x17C) (R/W 32) General Purpose Register 1 -------- */
-#define DDR3PHY_GPR1_Msk                      _UINT32_(0x00000000)                                 /* (DDR3PHY_GPR1) Register Mask  */
-
-
 /* -------- DDR3PHY_ZQ0CR0 : (DDR3PHY Offset: 0x180) (R/W 32) ZQ Impedence Control Register 0 -------- */
 #define DDR3PHY_ZQ0CR0_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ0CR0) Register Mask  */
 
@@ -860,54 +1063,6 @@
 
 /* -------- DDR3PHY_ZQ0SR1 : (DDR3PHY Offset: 0x18C) ( R/ 32) ZQ Impedence Control Status Register 1 -------- */
 #define DDR3PHY_ZQ0SR1_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ0SR1) Register Mask  */
-
-
-/* -------- DDR3PHY_ZQ1CR0 : (DDR3PHY Offset: 0x190) (R/W 32) ZQ Impedence Control Register 0 -------- */
-#define DDR3PHY_ZQ1CR0_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ1CR0) Register Mask  */
-
-
-/* -------- DDR3PHY_ZQ1CR1 : (DDR3PHY Offset: 0x194) (R/W 32) ZQ Impedence Control Register 1 -------- */
-#define DDR3PHY_ZQ1CR1_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ1CR1) Register Mask  */
-
-
-/* -------- DDR3PHY_ZQ1SR0 : (DDR3PHY Offset: 0x198) ( R/ 32) ZQ Impedence Control Status Register 0 -------- */
-#define DDR3PHY_ZQ1SR0_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ1SR0) Register Mask  */
-
-
-/* -------- DDR3PHY_ZQ1SR1 : (DDR3PHY Offset: 0x19C) ( R/ 32) ZQ Impedence Control Status Register 1 -------- */
-#define DDR3PHY_ZQ1SR1_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ1SR1) Register Mask  */
-
-
-/* -------- DDR3PHY_ZQ2CR0 : (DDR3PHY Offset: 0x1A0) (R/W 32) ZQ Impedence Control Register 0 -------- */
-#define DDR3PHY_ZQ2CR0_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ2CR0) Register Mask  */
-
-
-/* -------- DDR3PHY_ZQ2CR1 : (DDR3PHY Offset: 0x1A4) (R/W 32) ZQ Impedence Control Register 1 -------- */
-#define DDR3PHY_ZQ2CR1_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ2CR1) Register Mask  */
-
-
-/* -------- DDR3PHY_ZQ2SR0 : (DDR3PHY Offset: 0x1A8) ( R/ 32) ZQ Impedence Control Status Register 0 -------- */
-#define DDR3PHY_ZQ2SR0_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ2SR0) Register Mask  */
-
-
-/* -------- DDR3PHY_ZQ2SR1 : (DDR3PHY Offset: 0x1AC) ( R/ 32) ZQ Impedence Control Status Register 1 -------- */
-#define DDR3PHY_ZQ2SR1_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ2SR1) Register Mask  */
-
-
-/* -------- DDR3PHY_ZQ3CR0 : (DDR3PHY Offset: 0x1B0) (R/W 32) ZQ Impedence Control Register 0 -------- */
-#define DDR3PHY_ZQ3CR0_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ3CR0) Register Mask  */
-
-
-/* -------- DDR3PHY_ZQ3CR1 : (DDR3PHY Offset: 0x1B4) (R/W 32) ZQ Impedence Control Register 1 -------- */
-#define DDR3PHY_ZQ3CR1_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ3CR1) Register Mask  */
-
-
-/* -------- DDR3PHY_ZQ3SR0 : (DDR3PHY Offset: 0x1B8) ( R/ 32) ZQ Impedence Control Status Register 0 -------- */
-#define DDR3PHY_ZQ3SR0_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ3SR0) Register Mask  */
-
-
-/* -------- DDR3PHY_ZQ3SR1 : (DDR3PHY Offset: 0x1BC) ( R/ 32) ZQ Impedence Control Status Register 1 -------- */
-#define DDR3PHY_ZQ3SR1_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_ZQ3SR1) Register Mask  */
 
 
 /* -------- DDR3PHY_DX0GCR : (DDR3PHY Offset: 0x1C0) (R/W 32) DATX8 General Configuration Register -------- */
@@ -934,22 +1089,6 @@
 #define DDR3PHY_DX0DQSTR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX0DQSTR) Register Mask  */
 
 
-/* -------- DDR3PHY_DX0DQIDLY : (DDR3PHY Offset: 0x1D8) (R/W 32) DATX8 DQ  Input  Delay -------- */
-#define DDR3PHY_DX0DQIDLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX0DQIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX0DQODLY : (DDR3PHY Offset: 0x1DC) (R/W 32) DATX8 DQ  Output Delay -------- */
-#define DDR3PHY_DX0DQODLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX0DQODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX0DQSIDLY : (DDR3PHY Offset: 0x1E0) (R/W 32) DATX8 DQS Input  Delay -------- */
-#define DDR3PHY_DX0DQSIDLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX0DQSIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX0DQSODLY : (DDR3PHY Offset: 0x1E4) (R/W 32) DATX8 DQS Output Delay -------- */
-#define DDR3PHY_DX0DQSODLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX0DQSODLY) Register Mask  */
-
-
 /* -------- DDR3PHY_DX1GCR : (DDR3PHY Offset: 0x200) (R/W 32) DATX8 General Configuration Register -------- */
 #define DDR3PHY_DX1GCR_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_DX1GCR) Register Mask  */
 
@@ -972,302 +1111,6 @@
 
 /* -------- DDR3PHY_DX1DQSTR : (DDR3PHY Offset: 0x214) (R/W 32) DATX8 DQS Timing Register -------- */
 #define DDR3PHY_DX1DQSTR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX1DQSTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX1DQIDLY : (DDR3PHY Offset: 0x218) (R/W 32) DATX8 DQ  Input  Delay -------- */
-#define DDR3PHY_DX1DQIDLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX1DQIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX1DQODLY : (DDR3PHY Offset: 0x21C) (R/W 32) DATX8 DQ  Output Delay -------- */
-#define DDR3PHY_DX1DQODLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX1DQODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX1DQSIDLY : (DDR3PHY Offset: 0x220) (R/W 32) DATX8 DQS Input  Delay -------- */
-#define DDR3PHY_DX1DQSIDLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX1DQSIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX1DQSODLY : (DDR3PHY Offset: 0x224) (R/W 32) DATX8 DQS Output Delay -------- */
-#define DDR3PHY_DX1DQSODLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX1DQSODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX2GCR : (DDR3PHY Offset: 0x240) (R/W 32) DATX8 General Configuration Register -------- */
-#define DDR3PHY_DX2GCR_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_DX2GCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX2GSR0 : (DDR3PHY Offset: 0x244) ( R/ 32) DATX8 General Status Register 0 -------- */
-#define DDR3PHY_DX2GSR0_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX2GSR0) Register Mask  */
-
-
-/* -------- DDR3PHY_DX2GSR1 : (DDR3PHY Offset: 0x248) ( R/ 32) DATX8 General Status Register 1 -------- */
-#define DDR3PHY_DX2GSR1_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX2GSR1) Register Mask  */
-
-
-/* -------- DDR3PHY_DX2DLLCR : (DDR3PHY Offset: 0x24C) (R/W 32) DATX8 DLL Control Register -------- */
-#define DDR3PHY_DX2DLLCR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX2DLLCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX2DQTR : (DDR3PHY Offset: 0x250) (R/W 32) DATX8 DQ Timing Register -------- */
-#define DDR3PHY_DX2DQTR_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX2DQTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX2DQSTR : (DDR3PHY Offset: 0x254) (R/W 32) DATX8 DQS Timing Register -------- */
-#define DDR3PHY_DX2DQSTR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX2DQSTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX2DQIDLY : (DDR3PHY Offset: 0x258) (R/W 32) DATX8 DQ  Input  Delay -------- */
-#define DDR3PHY_DX2DQIDLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX2DQIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX2DQODLY : (DDR3PHY Offset: 0x25C) (R/W 32) DATX8 DQ  Output Delay -------- */
-#define DDR3PHY_DX2DQODLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX2DQODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX2DQSIDLY : (DDR3PHY Offset: 0x260) (R/W 32) DATX8 DQS Input  Delay -------- */
-#define DDR3PHY_DX2DQSIDLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX2DQSIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX2DQSODLY : (DDR3PHY Offset: 0x264) (R/W 32) DATX8 DQS Output Delay -------- */
-#define DDR3PHY_DX2DQSODLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX2DQSODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX3GCR : (DDR3PHY Offset: 0x280) (R/W 32) DATX8 General Configuration Register -------- */
-#define DDR3PHY_DX3GCR_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_DX3GCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX3GSR0 : (DDR3PHY Offset: 0x284) ( R/ 32) DATX8 General Status Register 0 -------- */
-#define DDR3PHY_DX3GSR0_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX3GSR0) Register Mask  */
-
-
-/* -------- DDR3PHY_DX3GSR1 : (DDR3PHY Offset: 0x288) ( R/ 32) DATX8 General Status Register 1 -------- */
-#define DDR3PHY_DX3GSR1_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX3GSR1) Register Mask  */
-
-
-/* -------- DDR3PHY_DX3DLLCR : (DDR3PHY Offset: 0x28C) (R/W 32) DATX8 DLL Control Register -------- */
-#define DDR3PHY_DX3DLLCR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX3DLLCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX3DQTR : (DDR3PHY Offset: 0x290) (R/W 32) DATX8 DQ Timing Register -------- */
-#define DDR3PHY_DX3DQTR_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX3DQTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX3DQSTR : (DDR3PHY Offset: 0x294) (R/W 32) DATX8 DQS Timing Register -------- */
-#define DDR3PHY_DX3DQSTR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX3DQSTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX3DQIDLY : (DDR3PHY Offset: 0x298) (R/W 32) DATX8 DQ  Input  Delay -------- */
-#define DDR3PHY_DX3DQIDLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX3DQIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX3DQODLY : (DDR3PHY Offset: 0x29C) (R/W 32) DATX8 DQ  Output Delay -------- */
-#define DDR3PHY_DX3DQODLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX3DQODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX3DQSIDLY : (DDR3PHY Offset: 0x2A0) (R/W 32) DATX8 DQS Input  Delay -------- */
-#define DDR3PHY_DX3DQSIDLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX3DQSIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX3DQSODLY : (DDR3PHY Offset: 0x2A4) (R/W 32) DATX8 DQS Output Delay -------- */
-#define DDR3PHY_DX3DQSODLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX3DQSODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX4GCR : (DDR3PHY Offset: 0x2C0) (R/W 32) DATX8 General Configuration Register -------- */
-#define DDR3PHY_DX4GCR_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_DX4GCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX4GSR0 : (DDR3PHY Offset: 0x2C4) ( R/ 32) DATX8 General Status Register 0 -------- */
-#define DDR3PHY_DX4GSR0_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX4GSR0) Register Mask  */
-
-
-/* -------- DDR3PHY_DX4GSR1 : (DDR3PHY Offset: 0x2C8) ( R/ 32) DATX8 General Status Register 1 -------- */
-#define DDR3PHY_DX4GSR1_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX4GSR1) Register Mask  */
-
-
-/* -------- DDR3PHY_DX4DLLCR : (DDR3PHY Offset: 0x2CC) (R/W 32) DATX8 DLL Control Register -------- */
-#define DDR3PHY_DX4DLLCR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX4DLLCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX4DQTR : (DDR3PHY Offset: 0x2D0) (R/W 32) DATX8 DQ Timing Register -------- */
-#define DDR3PHY_DX4DQTR_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX4DQTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX4DQSTR : (DDR3PHY Offset: 0x2D4) (R/W 32) DATX8 DQS Timing Register -------- */
-#define DDR3PHY_DX4DQSTR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX4DQSTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX4DQIDLY : (DDR3PHY Offset: 0x2D8) (R/W 32) DATX8 DQ  Input  Delay -------- */
-#define DDR3PHY_DX4DQIDLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX4DQIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX4DQODLY : (DDR3PHY Offset: 0x2DC) (R/W 32) DATX8 DQ  Output Delay -------- */
-#define DDR3PHY_DX4DQODLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX4DQODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX4DQSIDLY : (DDR3PHY Offset: 0x2E0) (R/W 32) DATX8 DQS Input  Delay -------- */
-#define DDR3PHY_DX4DQSIDLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX4DQSIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX4DQSODLY : (DDR3PHY Offset: 0x2E4) (R/W 32) DATX8 DQS Output Delay -------- */
-#define DDR3PHY_DX4DQSODLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX4DQSODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX5GCR : (DDR3PHY Offset: 0x300) (R/W 32) DATX8 General Configuration Register -------- */
-#define DDR3PHY_DX5GCR_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_DX5GCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX5GSR0 : (DDR3PHY Offset: 0x304) ( R/ 32) DATX8 General Status Register 0 -------- */
-#define DDR3PHY_DX5GSR0_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX5GSR0) Register Mask  */
-
-
-/* -------- DDR3PHY_DX5GSR1 : (DDR3PHY Offset: 0x308) ( R/ 32) DATX8 General Status Register 1 -------- */
-#define DDR3PHY_DX5GSR1_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX5GSR1) Register Mask  */
-
-
-/* -------- DDR3PHY_DX5DLLCR : (DDR3PHY Offset: 0x30C) (R/W 32) DATX8 DLL Control Register -------- */
-#define DDR3PHY_DX5DLLCR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX5DLLCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX5DQTR : (DDR3PHY Offset: 0x310) (R/W 32) DATX8 DQ Timing Register -------- */
-#define DDR3PHY_DX5DQTR_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX5DQTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX5DQSTR : (DDR3PHY Offset: 0x314) (R/W 32) DATX8 DQS Timing Register -------- */
-#define DDR3PHY_DX5DQSTR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX5DQSTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX5DQIDLY : (DDR3PHY Offset: 0x318) (R/W 32) DATX8 DQ  Input  Delay -------- */
-#define DDR3PHY_DX5DQIDLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX5DQIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX5DQODLY : (DDR3PHY Offset: 0x31C) (R/W 32) DATX8 DQ  Output Delay -------- */
-#define DDR3PHY_DX5DQODLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX5DQODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX5DQSIDLY : (DDR3PHY Offset: 0x320) (R/W 32) DATX8 DQS Input  Delay -------- */
-#define DDR3PHY_DX5DQSIDLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX5DQSIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX5DQSODLY : (DDR3PHY Offset: 0x324) (R/W 32) DATX8 DQS Output Delay -------- */
-#define DDR3PHY_DX5DQSODLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX5DQSODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX6GCR : (DDR3PHY Offset: 0x340) (R/W 32) DATX8 General Configuration Register -------- */
-#define DDR3PHY_DX6GCR_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_DX6GCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX6GSR0 : (DDR3PHY Offset: 0x344) ( R/ 32) DATX8 General Status Register 0 -------- */
-#define DDR3PHY_DX6GSR0_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX6GSR0) Register Mask  */
-
-
-/* -------- DDR3PHY_DX6GSR1 : (DDR3PHY Offset: 0x348) ( R/ 32) DATX8 General Status Register 1 -------- */
-#define DDR3PHY_DX6GSR1_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX6GSR1) Register Mask  */
-
-
-/* -------- DDR3PHY_DX6DLLCR : (DDR3PHY Offset: 0x34C) (R/W 32) DATX8 DLL Control Register -------- */
-#define DDR3PHY_DX6DLLCR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX6DLLCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX6DQTR : (DDR3PHY Offset: 0x350) (R/W 32) DATX8 DQ Timing Register -------- */
-#define DDR3PHY_DX6DQTR_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX6DQTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX6DQSTR : (DDR3PHY Offset: 0x354) (R/W 32) DATX8 DQS Timing Register -------- */
-#define DDR3PHY_DX6DQSTR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX6DQSTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX6DQIDLY : (DDR3PHY Offset: 0x358) (R/W 32) DATX8 DQ  Input  Delay -------- */
-#define DDR3PHY_DX6DQIDLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX6DQIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX6DQODLY : (DDR3PHY Offset: 0x35C) (R/W 32) DATX8 DQ  Output Delay -------- */
-#define DDR3PHY_DX6DQODLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX6DQODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX6DQSIDLY : (DDR3PHY Offset: 0x360) (R/W 32) DATX8 DQS Input  Delay -------- */
-#define DDR3PHY_DX6DQSIDLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX6DQSIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX6DQSODLY : (DDR3PHY Offset: 0x364) (R/W 32) DATX8 DQS Output Delay -------- */
-#define DDR3PHY_DX6DQSODLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX6DQSODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX7GCR : (DDR3PHY Offset: 0x380) (R/W 32) DATX8 General Configuration Register -------- */
-#define DDR3PHY_DX7GCR_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_DX7GCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX7GSR0 : (DDR3PHY Offset: 0x384) ( R/ 32) DATX8 General Status Register 0 -------- */
-#define DDR3PHY_DX7GSR0_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX7GSR0) Register Mask  */
-
-
-/* -------- DDR3PHY_DX7GSR1 : (DDR3PHY Offset: 0x388) ( R/ 32) DATX8 General Status Register 1 -------- */
-#define DDR3PHY_DX7GSR1_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX7GSR1) Register Mask  */
-
-
-/* -------- DDR3PHY_DX7DLLCR : (DDR3PHY Offset: 0x38C) (R/W 32) DATX8 DLL Control Register -------- */
-#define DDR3PHY_DX7DLLCR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX7DLLCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX7DQTR : (DDR3PHY Offset: 0x390) (R/W 32) DATX8 DQ Timing Register -------- */
-#define DDR3PHY_DX7DQTR_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX7DQTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX7DQSTR : (DDR3PHY Offset: 0x394) (R/W 32) DATX8 DQS Timing Register -------- */
-#define DDR3PHY_DX7DQSTR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX7DQSTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX7DQIDLY : (DDR3PHY Offset: 0x398) (R/W 32) DATX8 DQ  Input  Delay -------- */
-#define DDR3PHY_DX7DQIDLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX7DQIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX7DQODLY : (DDR3PHY Offset: 0x39C) (R/W 32) DATX8 DQ  Output Delay -------- */
-#define DDR3PHY_DX7DQODLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX7DQODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX7DQSIDLY : (DDR3PHY Offset: 0x3A0) (R/W 32) DATX8 DQS Input  Delay -------- */
-#define DDR3PHY_DX7DQSIDLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX7DQSIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX7DQSODLY : (DDR3PHY Offset: 0x3A4) (R/W 32) DATX8 DQS Output Delay -------- */
-#define DDR3PHY_DX7DQSODLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX7DQSODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX8GCR : (DDR3PHY Offset: 0x3C0) (R/W 32) DATX8 General Configuration Register -------- */
-#define DDR3PHY_DX8GCR_Msk                    _UINT32_(0x00000000)                                 /* (DDR3PHY_DX8GCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX8GSR0 : (DDR3PHY Offset: 0x3C4) ( R/ 32) DATX8 General Status Register 0 -------- */
-#define DDR3PHY_DX8GSR0_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX8GSR0) Register Mask  */
-
-
-/* -------- DDR3PHY_DX8GSR1 : (DDR3PHY Offset: 0x3C8) ( R/ 32) DATX8 General Status Register 1 -------- */
-#define DDR3PHY_DX8GSR1_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX8GSR1) Register Mask  */
-
-
-/* -------- DDR3PHY_DX8DLLCR : (DDR3PHY Offset: 0x3CC) (R/W 32) DATX8 DLL Control Register -------- */
-#define DDR3PHY_DX8DLLCR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX8DLLCR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX8DQTR : (DDR3PHY Offset: 0x3D0) (R/W 32) DATX8 DQ Timing Register -------- */
-#define DDR3PHY_DX8DQTR_Msk                   _UINT32_(0x00000000)                                 /* (DDR3PHY_DX8DQTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX8DQSTR : (DDR3PHY Offset: 0x3D4) (R/W 32) DATX8 DQS Timing Register -------- */
-#define DDR3PHY_DX8DQSTR_Msk                  _UINT32_(0x00000000)                                 /* (DDR3PHY_DX8DQSTR) Register Mask  */
-
-
-/* -------- DDR3PHY_DX8DQIDLY : (DDR3PHY Offset: 0x3D8) (R/W 32) DATX8 DQ  Input  Delay -------- */
-#define DDR3PHY_DX8DQIDLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX8DQIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX8DQODLY : (DDR3PHY Offset: 0x3DC) (R/W 32) DATX8 DQ  Output Delay -------- */
-#define DDR3PHY_DX8DQODLY_Msk                 _UINT32_(0x00000000)                                 /* (DDR3PHY_DX8DQODLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX8DQSIDLY : (DDR3PHY Offset: 0x3E0) (R/W 32) DATX8 DQS Input  Delay -------- */
-#define DDR3PHY_DX8DQSIDLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX8DQSIDLY) Register Mask  */
-
-
-/* -------- DDR3PHY_DX8DQSODLY : (DDR3PHY Offset: 0x3E4) (R/W 32) DATX8 DQS Output Delay -------- */
-#define DDR3PHY_DX8DQSODLY_Msk                _UINT32_(0x00000000)                                 /* (DDR3PHY_DX8DQSODLY) Register Mask  */
 
 
 /** \brief DDR3PHY register offsets definitions */
@@ -1295,8 +1138,6 @@
 #define DDR3PHY_DTAR_REG_OFST          _UINT32_(0x54)      /* (DDR3PHY_DTAR) Data Training Address Register Offset */
 #define DDR3PHY_DTDR0_REG_OFST         _UINT32_(0x58)      /* (DDR3PHY_DTDR0) Data Training Data Register 0 Offset */
 #define DDR3PHY_DTDR1_REG_OFST         _UINT32_(0x5C)      /* (DDR3PHY_DTDR1) Data Training Data Register 1 Offset */
-#define DDR3PHY_DTPSL_REG_OFST         _UINT32_(0x60)      /* (DDR3PHY_DTPSL) Data Training Phase shift Log Offset */
-#define DDR3PHY_ACODLY_REG_OFST        _UINT32_(0x64)      /* (DDR3PHY_ACODLY) Data Training AC Ouput delay Offset */
 #define DDR3PHY_DCUAR_REG_OFST         _UINT32_(0xC0)      /* (DDR3PHY_DCUAR) DCU Address Register Offset */
 #define DDR3PHY_DCUDR_REG_OFST         _UINT32_(0xC4)      /* (DDR3PHY_DCUDR) DCU Data Register Offset */
 #define DDR3PHY_DCURR_REG_OFST         _UINT32_(0xC8)      /* (DDR3PHY_DCURR) DCU Run Register Offset */
@@ -1322,114 +1163,22 @@
 #define DDR3PHY_BISTWCSR_REG_OFST      _UINT32_(0x138)     /* (DDR3PHY_BISTWCSR) BIST Word Count Status Register Offset */
 #define DDR3PHY_BISTFWR0_REG_OFST      _UINT32_(0x13C)     /* (DDR3PHY_BISTFWR0) BIST Fail Word 0 Register Offset */
 #define DDR3PHY_BISTFWR1_REG_OFST      _UINT32_(0x140)     /* (DDR3PHY_BISTFWR1) BIST Fail Word 1 Register Offset */
-#define DDR3PHY_GPR0_REG_OFST          _UINT32_(0x178)     /* (DDR3PHY_GPR0) General Purpose Register 0 Offset */
-#define DDR3PHY_GPR1_REG_OFST          _UINT32_(0x17C)     /* (DDR3PHY_GPR1) General Purpose Register 1 Offset */
 #define DDR3PHY_ZQ0CR0_REG_OFST        _UINT32_(0x180)     /* (DDR3PHY_ZQ0CR0) ZQ Impedence Control Register 0 Offset */
 #define DDR3PHY_ZQ0CR1_REG_OFST        _UINT32_(0x184)     /* (DDR3PHY_ZQ0CR1) ZQ Impedence Control Register 1 Offset */
 #define DDR3PHY_ZQ0SR0_REG_OFST        _UINT32_(0x188)     /* (DDR3PHY_ZQ0SR0) ZQ Impedence Control Status Register 0 Offset */
 #define DDR3PHY_ZQ0SR1_REG_OFST        _UINT32_(0x18C)     /* (DDR3PHY_ZQ0SR1) ZQ Impedence Control Status Register 1 Offset */
-#define DDR3PHY_ZQ1CR0_REG_OFST        _UINT32_(0x190)     /* (DDR3PHY_ZQ1CR0) ZQ Impedence Control Register 0 Offset */
-#define DDR3PHY_ZQ1CR1_REG_OFST        _UINT32_(0x194)     /* (DDR3PHY_ZQ1CR1) ZQ Impedence Control Register 1 Offset */
-#define DDR3PHY_ZQ1SR0_REG_OFST        _UINT32_(0x198)     /* (DDR3PHY_ZQ1SR0) ZQ Impedence Control Status Register 0 Offset */
-#define DDR3PHY_ZQ1SR1_REG_OFST        _UINT32_(0x19C)     /* (DDR3PHY_ZQ1SR1) ZQ Impedence Control Status Register 1 Offset */
-#define DDR3PHY_ZQ2CR0_REG_OFST        _UINT32_(0x1A0)     /* (DDR3PHY_ZQ2CR0) ZQ Impedence Control Register 0 Offset */
-#define DDR3PHY_ZQ2CR1_REG_OFST        _UINT32_(0x1A4)     /* (DDR3PHY_ZQ2CR1) ZQ Impedence Control Register 1 Offset */
-#define DDR3PHY_ZQ2SR0_REG_OFST        _UINT32_(0x1A8)     /* (DDR3PHY_ZQ2SR0) ZQ Impedence Control Status Register 0 Offset */
-#define DDR3PHY_ZQ2SR1_REG_OFST        _UINT32_(0x1AC)     /* (DDR3PHY_ZQ2SR1) ZQ Impedence Control Status Register 1 Offset */
-#define DDR3PHY_ZQ3CR0_REG_OFST        _UINT32_(0x1B0)     /* (DDR3PHY_ZQ3CR0) ZQ Impedence Control Register 0 Offset */
-#define DDR3PHY_ZQ3CR1_REG_OFST        _UINT32_(0x1B4)     /* (DDR3PHY_ZQ3CR1) ZQ Impedence Control Register 1 Offset */
-#define DDR3PHY_ZQ3SR0_REG_OFST        _UINT32_(0x1B8)     /* (DDR3PHY_ZQ3SR0) ZQ Impedence Control Status Register 0 Offset */
-#define DDR3PHY_ZQ3SR1_REG_OFST        _UINT32_(0x1BC)     /* (DDR3PHY_ZQ3SR1) ZQ Impedence Control Status Register 1 Offset */
 #define DDR3PHY_DX0GCR_REG_OFST        _UINT32_(0x1C0)     /* (DDR3PHY_DX0GCR) DATX8 General Configuration Register Offset */
 #define DDR3PHY_DX0GSR0_REG_OFST       _UINT32_(0x1C4)     /* (DDR3PHY_DX0GSR0) DATX8 General Status Register 0 Offset */
 #define DDR3PHY_DX0GSR1_REG_OFST       _UINT32_(0x1C8)     /* (DDR3PHY_DX0GSR1) DATX8 General Status Register 1 Offset */
 #define DDR3PHY_DX0DLLCR_REG_OFST      _UINT32_(0x1CC)     /* (DDR3PHY_DX0DLLCR) DATX8 DLL Control Register Offset */
 #define DDR3PHY_DX0DQTR_REG_OFST       _UINT32_(0x1D0)     /* (DDR3PHY_DX0DQTR) DATX8 DQ Timing Register Offset */
 #define DDR3PHY_DX0DQSTR_REG_OFST      _UINT32_(0x1D4)     /* (DDR3PHY_DX0DQSTR) DATX8 DQS Timing Register Offset */
-#define DDR3PHY_DX0DQIDLY_REG_OFST     _UINT32_(0x1D8)     /* (DDR3PHY_DX0DQIDLY) DATX8 DQ  Input  Delay Offset */
-#define DDR3PHY_DX0DQODLY_REG_OFST     _UINT32_(0x1DC)     /* (DDR3PHY_DX0DQODLY) DATX8 DQ  Output Delay Offset */
-#define DDR3PHY_DX0DQSIDLY_REG_OFST    _UINT32_(0x1E0)     /* (DDR3PHY_DX0DQSIDLY) DATX8 DQS Input  Delay Offset */
-#define DDR3PHY_DX0DQSODLY_REG_OFST    _UINT32_(0x1E4)     /* (DDR3PHY_DX0DQSODLY) DATX8 DQS Output Delay Offset */
 #define DDR3PHY_DX1GCR_REG_OFST        _UINT32_(0x200)     /* (DDR3PHY_DX1GCR) DATX8 General Configuration Register Offset */
 #define DDR3PHY_DX1GSR0_REG_OFST       _UINT32_(0x204)     /* (DDR3PHY_DX1GSR0) DATX8 General Status Register 0 Offset */
 #define DDR3PHY_DX1GSR1_REG_OFST       _UINT32_(0x208)     /* (DDR3PHY_DX1GSR1) DATX8 General Status Register 1 Offset */
 #define DDR3PHY_DX1DLLCR_REG_OFST      _UINT32_(0x20C)     /* (DDR3PHY_DX1DLLCR) DATX8 DLL Control Register Offset */
 #define DDR3PHY_DX1DQTR_REG_OFST       _UINT32_(0x210)     /* (DDR3PHY_DX1DQTR) DATX8 DQ Timing Register Offset */
 #define DDR3PHY_DX1DQSTR_REG_OFST      _UINT32_(0x214)     /* (DDR3PHY_DX1DQSTR) DATX8 DQS Timing Register Offset */
-#define DDR3PHY_DX1DQIDLY_REG_OFST     _UINT32_(0x218)     /* (DDR3PHY_DX1DQIDLY) DATX8 DQ  Input  Delay Offset */
-#define DDR3PHY_DX1DQODLY_REG_OFST     _UINT32_(0x21C)     /* (DDR3PHY_DX1DQODLY) DATX8 DQ  Output Delay Offset */
-#define DDR3PHY_DX1DQSIDLY_REG_OFST    _UINT32_(0x220)     /* (DDR3PHY_DX1DQSIDLY) DATX8 DQS Input  Delay Offset */
-#define DDR3PHY_DX1DQSODLY_REG_OFST    _UINT32_(0x224)     /* (DDR3PHY_DX1DQSODLY) DATX8 DQS Output Delay Offset */
-#define DDR3PHY_DX2GCR_REG_OFST        _UINT32_(0x240)     /* (DDR3PHY_DX2GCR) DATX8 General Configuration Register Offset */
-#define DDR3PHY_DX2GSR0_REG_OFST       _UINT32_(0x244)     /* (DDR3PHY_DX2GSR0) DATX8 General Status Register 0 Offset */
-#define DDR3PHY_DX2GSR1_REG_OFST       _UINT32_(0x248)     /* (DDR3PHY_DX2GSR1) DATX8 General Status Register 1 Offset */
-#define DDR3PHY_DX2DLLCR_REG_OFST      _UINT32_(0x24C)     /* (DDR3PHY_DX2DLLCR) DATX8 DLL Control Register Offset */
-#define DDR3PHY_DX2DQTR_REG_OFST       _UINT32_(0x250)     /* (DDR3PHY_DX2DQTR) DATX8 DQ Timing Register Offset */
-#define DDR3PHY_DX2DQSTR_REG_OFST      _UINT32_(0x254)     /* (DDR3PHY_DX2DQSTR) DATX8 DQS Timing Register Offset */
-#define DDR3PHY_DX2DQIDLY_REG_OFST     _UINT32_(0x258)     /* (DDR3PHY_DX2DQIDLY) DATX8 DQ  Input  Delay Offset */
-#define DDR3PHY_DX2DQODLY_REG_OFST     _UINT32_(0x25C)     /* (DDR3PHY_DX2DQODLY) DATX8 DQ  Output Delay Offset */
-#define DDR3PHY_DX2DQSIDLY_REG_OFST    _UINT32_(0x260)     /* (DDR3PHY_DX2DQSIDLY) DATX8 DQS Input  Delay Offset */
-#define DDR3PHY_DX2DQSODLY_REG_OFST    _UINT32_(0x264)     /* (DDR3PHY_DX2DQSODLY) DATX8 DQS Output Delay Offset */
-#define DDR3PHY_DX3GCR_REG_OFST        _UINT32_(0x280)     /* (DDR3PHY_DX3GCR) DATX8 General Configuration Register Offset */
-#define DDR3PHY_DX3GSR0_REG_OFST       _UINT32_(0x284)     /* (DDR3PHY_DX3GSR0) DATX8 General Status Register 0 Offset */
-#define DDR3PHY_DX3GSR1_REG_OFST       _UINT32_(0x288)     /* (DDR3PHY_DX3GSR1) DATX8 General Status Register 1 Offset */
-#define DDR3PHY_DX3DLLCR_REG_OFST      _UINT32_(0x28C)     /* (DDR3PHY_DX3DLLCR) DATX8 DLL Control Register Offset */
-#define DDR3PHY_DX3DQTR_REG_OFST       _UINT32_(0x290)     /* (DDR3PHY_DX3DQTR) DATX8 DQ Timing Register Offset */
-#define DDR3PHY_DX3DQSTR_REG_OFST      _UINT32_(0x294)     /* (DDR3PHY_DX3DQSTR) DATX8 DQS Timing Register Offset */
-#define DDR3PHY_DX3DQIDLY_REG_OFST     _UINT32_(0x298)     /* (DDR3PHY_DX3DQIDLY) DATX8 DQ  Input  Delay Offset */
-#define DDR3PHY_DX3DQODLY_REG_OFST     _UINT32_(0x29C)     /* (DDR3PHY_DX3DQODLY) DATX8 DQ  Output Delay Offset */
-#define DDR3PHY_DX3DQSIDLY_REG_OFST    _UINT32_(0x2A0)     /* (DDR3PHY_DX3DQSIDLY) DATX8 DQS Input  Delay Offset */
-#define DDR3PHY_DX3DQSODLY_REG_OFST    _UINT32_(0x2A4)     /* (DDR3PHY_DX3DQSODLY) DATX8 DQS Output Delay Offset */
-#define DDR3PHY_DX4GCR_REG_OFST        _UINT32_(0x2C0)     /* (DDR3PHY_DX4GCR) DATX8 General Configuration Register Offset */
-#define DDR3PHY_DX4GSR0_REG_OFST       _UINT32_(0x2C4)     /* (DDR3PHY_DX4GSR0) DATX8 General Status Register 0 Offset */
-#define DDR3PHY_DX4GSR1_REG_OFST       _UINT32_(0x2C8)     /* (DDR3PHY_DX4GSR1) DATX8 General Status Register 1 Offset */
-#define DDR3PHY_DX4DLLCR_REG_OFST      _UINT32_(0x2CC)     /* (DDR3PHY_DX4DLLCR) DATX8 DLL Control Register Offset */
-#define DDR3PHY_DX4DQTR_REG_OFST       _UINT32_(0x2D0)     /* (DDR3PHY_DX4DQTR) DATX8 DQ Timing Register Offset */
-#define DDR3PHY_DX4DQSTR_REG_OFST      _UINT32_(0x2D4)     /* (DDR3PHY_DX4DQSTR) DATX8 DQS Timing Register Offset */
-#define DDR3PHY_DX4DQIDLY_REG_OFST     _UINT32_(0x2D8)     /* (DDR3PHY_DX4DQIDLY) DATX8 DQ  Input  Delay Offset */
-#define DDR3PHY_DX4DQODLY_REG_OFST     _UINT32_(0x2DC)     /* (DDR3PHY_DX4DQODLY) DATX8 DQ  Output Delay Offset */
-#define DDR3PHY_DX4DQSIDLY_REG_OFST    _UINT32_(0x2E0)     /* (DDR3PHY_DX4DQSIDLY) DATX8 DQS Input  Delay Offset */
-#define DDR3PHY_DX4DQSODLY_REG_OFST    _UINT32_(0x2E4)     /* (DDR3PHY_DX4DQSODLY) DATX8 DQS Output Delay Offset */
-#define DDR3PHY_DX5GCR_REG_OFST        _UINT32_(0x300)     /* (DDR3PHY_DX5GCR) DATX8 General Configuration Register Offset */
-#define DDR3PHY_DX5GSR0_REG_OFST       _UINT32_(0x304)     /* (DDR3PHY_DX5GSR0) DATX8 General Status Register 0 Offset */
-#define DDR3PHY_DX5GSR1_REG_OFST       _UINT32_(0x308)     /* (DDR3PHY_DX5GSR1) DATX8 General Status Register 1 Offset */
-#define DDR3PHY_DX5DLLCR_REG_OFST      _UINT32_(0x30C)     /* (DDR3PHY_DX5DLLCR) DATX8 DLL Control Register Offset */
-#define DDR3PHY_DX5DQTR_REG_OFST       _UINT32_(0x310)     /* (DDR3PHY_DX5DQTR) DATX8 DQ Timing Register Offset */
-#define DDR3PHY_DX5DQSTR_REG_OFST      _UINT32_(0x314)     /* (DDR3PHY_DX5DQSTR) DATX8 DQS Timing Register Offset */
-#define DDR3PHY_DX5DQIDLY_REG_OFST     _UINT32_(0x318)     /* (DDR3PHY_DX5DQIDLY) DATX8 DQ  Input  Delay Offset */
-#define DDR3PHY_DX5DQODLY_REG_OFST     _UINT32_(0x31C)     /* (DDR3PHY_DX5DQODLY) DATX8 DQ  Output Delay Offset */
-#define DDR3PHY_DX5DQSIDLY_REG_OFST    _UINT32_(0x320)     /* (DDR3PHY_DX5DQSIDLY) DATX8 DQS Input  Delay Offset */
-#define DDR3PHY_DX5DQSODLY_REG_OFST    _UINT32_(0x324)     /* (DDR3PHY_DX5DQSODLY) DATX8 DQS Output Delay Offset */
-#define DDR3PHY_DX6GCR_REG_OFST        _UINT32_(0x340)     /* (DDR3PHY_DX6GCR) DATX8 General Configuration Register Offset */
-#define DDR3PHY_DX6GSR0_REG_OFST       _UINT32_(0x344)     /* (DDR3PHY_DX6GSR0) DATX8 General Status Register 0 Offset */
-#define DDR3PHY_DX6GSR1_REG_OFST       _UINT32_(0x348)     /* (DDR3PHY_DX6GSR1) DATX8 General Status Register 1 Offset */
-#define DDR3PHY_DX6DLLCR_REG_OFST      _UINT32_(0x34C)     /* (DDR3PHY_DX6DLLCR) DATX8 DLL Control Register Offset */
-#define DDR3PHY_DX6DQTR_REG_OFST       _UINT32_(0x350)     /* (DDR3PHY_DX6DQTR) DATX8 DQ Timing Register Offset */
-#define DDR3PHY_DX6DQSTR_REG_OFST      _UINT32_(0x354)     /* (DDR3PHY_DX6DQSTR) DATX8 DQS Timing Register Offset */
-#define DDR3PHY_DX6DQIDLY_REG_OFST     _UINT32_(0x358)     /* (DDR3PHY_DX6DQIDLY) DATX8 DQ  Input  Delay Offset */
-#define DDR3PHY_DX6DQODLY_REG_OFST     _UINT32_(0x35C)     /* (DDR3PHY_DX6DQODLY) DATX8 DQ  Output Delay Offset */
-#define DDR3PHY_DX6DQSIDLY_REG_OFST    _UINT32_(0x360)     /* (DDR3PHY_DX6DQSIDLY) DATX8 DQS Input  Delay Offset */
-#define DDR3PHY_DX6DQSODLY_REG_OFST    _UINT32_(0x364)     /* (DDR3PHY_DX6DQSODLY) DATX8 DQS Output Delay Offset */
-#define DDR3PHY_DX7GCR_REG_OFST        _UINT32_(0x380)     /* (DDR3PHY_DX7GCR) DATX8 General Configuration Register Offset */
-#define DDR3PHY_DX7GSR0_REG_OFST       _UINT32_(0x384)     /* (DDR3PHY_DX7GSR0) DATX8 General Status Register 0 Offset */
-#define DDR3PHY_DX7GSR1_REG_OFST       _UINT32_(0x388)     /* (DDR3PHY_DX7GSR1) DATX8 General Status Register 1 Offset */
-#define DDR3PHY_DX7DLLCR_REG_OFST      _UINT32_(0x38C)     /* (DDR3PHY_DX7DLLCR) DATX8 DLL Control Register Offset */
-#define DDR3PHY_DX7DQTR_REG_OFST       _UINT32_(0x390)     /* (DDR3PHY_DX7DQTR) DATX8 DQ Timing Register Offset */
-#define DDR3PHY_DX7DQSTR_REG_OFST      _UINT32_(0x394)     /* (DDR3PHY_DX7DQSTR) DATX8 DQS Timing Register Offset */
-#define DDR3PHY_DX7DQIDLY_REG_OFST     _UINT32_(0x398)     /* (DDR3PHY_DX7DQIDLY) DATX8 DQ  Input  Delay Offset */
-#define DDR3PHY_DX7DQODLY_REG_OFST     _UINT32_(0x39C)     /* (DDR3PHY_DX7DQODLY) DATX8 DQ  Output Delay Offset */
-#define DDR3PHY_DX7DQSIDLY_REG_OFST    _UINT32_(0x3A0)     /* (DDR3PHY_DX7DQSIDLY) DATX8 DQS Input  Delay Offset */
-#define DDR3PHY_DX7DQSODLY_REG_OFST    _UINT32_(0x3A4)     /* (DDR3PHY_DX7DQSODLY) DATX8 DQS Output Delay Offset */
-#define DDR3PHY_DX8GCR_REG_OFST        _UINT32_(0x3C0)     /* (DDR3PHY_DX8GCR) DATX8 General Configuration Register Offset */
-#define DDR3PHY_DX8GSR0_REG_OFST       _UINT32_(0x3C4)     /* (DDR3PHY_DX8GSR0) DATX8 General Status Register 0 Offset */
-#define DDR3PHY_DX8GSR1_REG_OFST       _UINT32_(0x3C8)     /* (DDR3PHY_DX8GSR1) DATX8 General Status Register 1 Offset */
-#define DDR3PHY_DX8DLLCR_REG_OFST      _UINT32_(0x3CC)     /* (DDR3PHY_DX8DLLCR) DATX8 DLL Control Register Offset */
-#define DDR3PHY_DX8DQTR_REG_OFST       _UINT32_(0x3D0)     /* (DDR3PHY_DX8DQTR) DATX8 DQ Timing Register Offset */
-#define DDR3PHY_DX8DQSTR_REG_OFST      _UINT32_(0x3D4)     /* (DDR3PHY_DX8DQSTR) DATX8 DQS Timing Register Offset */
-#define DDR3PHY_DX8DQIDLY_REG_OFST     _UINT32_(0x3D8)     /* (DDR3PHY_DX8DQIDLY) DATX8 DQ  Input  Delay Offset */
-#define DDR3PHY_DX8DQODLY_REG_OFST     _UINT32_(0x3DC)     /* (DDR3PHY_DX8DQODLY) DATX8 DQ  Output Delay Offset */
-#define DDR3PHY_DX8DQSIDLY_REG_OFST    _UINT32_(0x3E0)     /* (DDR3PHY_DX8DQSIDLY) DATX8 DQS Input  Delay Offset */
-#define DDR3PHY_DX8DQSODLY_REG_OFST    _UINT32_(0x3E4)     /* (DDR3PHY_DX8DQSODLY) DATX8 DQS Output Delay Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief DDR3PHY register API structure */
@@ -1459,9 +1208,7 @@ typedef struct
   __IO  uint32_t                       DDR3PHY_DTAR;       /**< Offset: 0x54 (R/W  32) Data Training Address Register */
   __IO  uint32_t                       DDR3PHY_DTDR0;      /**< Offset: 0x58 (R/W  32) Data Training Data Register 0 */
   __IO  uint32_t                       DDR3PHY_DTDR1;      /**< Offset: 0x5C (R/W  32) Data Training Data Register 1 */
-  __I   uint32_t                       DDR3PHY_DTPSL;      /**< Offset: 0x60 (R/   32) Data Training Phase shift Log */
-  __IO  uint32_t                       DDR3PHY_ACODLY;     /**< Offset: 0x64 (R/W  32) Data Training AC Ouput delay */
-  __I   uint8_t                        Reserved1[0x58];
+  __I   uint8_t                        Reserved1[0x60];
   __IO  uint32_t                       DDR3PHY_DCUAR;      /**< Offset: 0xC0 (R/W  32) DCU Address Register */
   __IO  uint32_t                       DDR3PHY_DCUDR;      /**< Offset: 0xC4 (R/W  32) DCU Data Register */
   __IO  uint32_t                       DDR3PHY_DCURR;      /**< Offset: 0xC8 (R/W  32) DCU Run Register */
@@ -1488,123 +1235,25 @@ typedef struct
   __IO  uint32_t                       DDR3PHY_BISTWCSR;   /**< Offset: 0x138 (R/W  32) BIST Word Count Status Register */
   __IO  uint32_t                       DDR3PHY_BISTFWR0;   /**< Offset: 0x13C (R/W  32) BIST Fail Word 0 Register */
   __IO  uint32_t                       DDR3PHY_BISTFWR1;   /**< Offset: 0x140 (R/W  32) BIST Fail Word 1 Register */
-  __I   uint8_t                        Reserved3[0x34];
-  __IO  uint32_t                       DDR3PHY_GPR0;       /**< Offset: 0x178 (R/W  32) General Purpose Register 0 */
-  __IO  uint32_t                       DDR3PHY_GPR1;       /**< Offset: 0x17C (R/W  32) General Purpose Register 1 */
+  __I   uint8_t                        Reserved3[0x3C];
   __IO  uint32_t                       DDR3PHY_ZQ0CR0;     /**< Offset: 0x180 (R/W  32) ZQ Impedence Control Register 0 */
   __IO  uint32_t                       DDR3PHY_ZQ0CR1;     /**< Offset: 0x184 (R/W  32) ZQ Impedence Control Register 1 */
   __I   uint32_t                       DDR3PHY_ZQ0SR0;     /**< Offset: 0x188 (R/   32) ZQ Impedence Control Status Register 0 */
   __I   uint32_t                       DDR3PHY_ZQ0SR1;     /**< Offset: 0x18C (R/   32) ZQ Impedence Control Status Register 1 */
-  __IO  uint32_t                       DDR3PHY_ZQ1CR0;     /**< Offset: 0x190 (R/W  32) ZQ Impedence Control Register 0 */
-  __IO  uint32_t                       DDR3PHY_ZQ1CR1;     /**< Offset: 0x194 (R/W  32) ZQ Impedence Control Register 1 */
-  __I   uint32_t                       DDR3PHY_ZQ1SR0;     /**< Offset: 0x198 (R/   32) ZQ Impedence Control Status Register 0 */
-  __I   uint32_t                       DDR3PHY_ZQ1SR1;     /**< Offset: 0x19C (R/   32) ZQ Impedence Control Status Register 1 */
-  __IO  uint32_t                       DDR3PHY_ZQ2CR0;     /**< Offset: 0x1A0 (R/W  32) ZQ Impedence Control Register 0 */
-  __IO  uint32_t                       DDR3PHY_ZQ2CR1;     /**< Offset: 0x1A4 (R/W  32) ZQ Impedence Control Register 1 */
-  __I   uint32_t                       DDR3PHY_ZQ2SR0;     /**< Offset: 0x1A8 (R/   32) ZQ Impedence Control Status Register 0 */
-  __I   uint32_t                       DDR3PHY_ZQ2SR1;     /**< Offset: 0x1AC (R/   32) ZQ Impedence Control Status Register 1 */
-  __IO  uint32_t                       DDR3PHY_ZQ3CR0;     /**< Offset: 0x1B0 (R/W  32) ZQ Impedence Control Register 0 */
-  __IO  uint32_t                       DDR3PHY_ZQ3CR1;     /**< Offset: 0x1B4 (R/W  32) ZQ Impedence Control Register 1 */
-  __I   uint32_t                       DDR3PHY_ZQ3SR0;     /**< Offset: 0x1B8 (R/   32) ZQ Impedence Control Status Register 0 */
-  __I   uint32_t                       DDR3PHY_ZQ3SR1;     /**< Offset: 0x1BC (R/   32) ZQ Impedence Control Status Register 1 */
+  __I   uint8_t                        Reserved4[0x30];
   __IO  uint32_t                       DDR3PHY_DX0GCR;     /**< Offset: 0x1C0 (R/W  32) DATX8 General Configuration Register */
   __I   uint32_t                       DDR3PHY_DX0GSR0;    /**< Offset: 0x1C4 (R/   32) DATX8 General Status Register 0 */
   __I   uint32_t                       DDR3PHY_DX0GSR1;    /**< Offset: 0x1C8 (R/   32) DATX8 General Status Register 1 */
   __IO  uint32_t                       DDR3PHY_DX0DLLCR;   /**< Offset: 0x1CC (R/W  32) DATX8 DLL Control Register */
   __IO  uint32_t                       DDR3PHY_DX0DQTR;    /**< Offset: 0x1D0 (R/W  32) DATX8 DQ Timing Register */
   __IO  uint32_t                       DDR3PHY_DX0DQSTR;   /**< Offset: 0x1D4 (R/W  32) DATX8 DQS Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX0DQIDLY;  /**< Offset: 0x1D8 (R/W  32) DATX8 DQ  Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX0DQODLY;  /**< Offset: 0x1DC (R/W  32) DATX8 DQ  Output Delay */
-  __IO  uint32_t                       DDR3PHY_DX0DQSIDLY; /**< Offset: 0x1E0 (R/W  32) DATX8 DQS Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX0DQSODLY; /**< Offset: 0x1E4 (R/W  32) DATX8 DQS Output Delay */
-  __I   uint8_t                        Reserved4[0x18];
+  __I   uint8_t                        Reserved5[0x28];
   __IO  uint32_t                       DDR3PHY_DX1GCR;     /**< Offset: 0x200 (R/W  32) DATX8 General Configuration Register */
   __I   uint32_t                       DDR3PHY_DX1GSR0;    /**< Offset: 0x204 (R/   32) DATX8 General Status Register 0 */
   __I   uint32_t                       DDR3PHY_DX1GSR1;    /**< Offset: 0x208 (R/   32) DATX8 General Status Register 1 */
   __IO  uint32_t                       DDR3PHY_DX1DLLCR;   /**< Offset: 0x20C (R/W  32) DATX8 DLL Control Register */
   __IO  uint32_t                       DDR3PHY_DX1DQTR;    /**< Offset: 0x210 (R/W  32) DATX8 DQ Timing Register */
   __IO  uint32_t                       DDR3PHY_DX1DQSTR;   /**< Offset: 0x214 (R/W  32) DATX8 DQS Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX1DQIDLY;  /**< Offset: 0x218 (R/W  32) DATX8 DQ  Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX1DQODLY;  /**< Offset: 0x21C (R/W  32) DATX8 DQ  Output Delay */
-  __IO  uint32_t                       DDR3PHY_DX1DQSIDLY; /**< Offset: 0x220 (R/W  32) DATX8 DQS Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX1DQSODLY; /**< Offset: 0x224 (R/W  32) DATX8 DQS Output Delay */
-  __I   uint8_t                        Reserved5[0x18];
-  __IO  uint32_t                       DDR3PHY_DX2GCR;     /**< Offset: 0x240 (R/W  32) DATX8 General Configuration Register */
-  __I   uint32_t                       DDR3PHY_DX2GSR0;    /**< Offset: 0x244 (R/   32) DATX8 General Status Register 0 */
-  __I   uint32_t                       DDR3PHY_DX2GSR1;    /**< Offset: 0x248 (R/   32) DATX8 General Status Register 1 */
-  __IO  uint32_t                       DDR3PHY_DX2DLLCR;   /**< Offset: 0x24C (R/W  32) DATX8 DLL Control Register */
-  __IO  uint32_t                       DDR3PHY_DX2DQTR;    /**< Offset: 0x250 (R/W  32) DATX8 DQ Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX2DQSTR;   /**< Offset: 0x254 (R/W  32) DATX8 DQS Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX2DQIDLY;  /**< Offset: 0x258 (R/W  32) DATX8 DQ  Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX2DQODLY;  /**< Offset: 0x25C (R/W  32) DATX8 DQ  Output Delay */
-  __IO  uint32_t                       DDR3PHY_DX2DQSIDLY; /**< Offset: 0x260 (R/W  32) DATX8 DQS Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX2DQSODLY; /**< Offset: 0x264 (R/W  32) DATX8 DQS Output Delay */
-  __I   uint8_t                        Reserved6[0x18];
-  __IO  uint32_t                       DDR3PHY_DX3GCR;     /**< Offset: 0x280 (R/W  32) DATX8 General Configuration Register */
-  __I   uint32_t                       DDR3PHY_DX3GSR0;    /**< Offset: 0x284 (R/   32) DATX8 General Status Register 0 */
-  __I   uint32_t                       DDR3PHY_DX3GSR1;    /**< Offset: 0x288 (R/   32) DATX8 General Status Register 1 */
-  __IO  uint32_t                       DDR3PHY_DX3DLLCR;   /**< Offset: 0x28C (R/W  32) DATX8 DLL Control Register */
-  __IO  uint32_t                       DDR3PHY_DX3DQTR;    /**< Offset: 0x290 (R/W  32) DATX8 DQ Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX3DQSTR;   /**< Offset: 0x294 (R/W  32) DATX8 DQS Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX3DQIDLY;  /**< Offset: 0x298 (R/W  32) DATX8 DQ  Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX3DQODLY;  /**< Offset: 0x29C (R/W  32) DATX8 DQ  Output Delay */
-  __IO  uint32_t                       DDR3PHY_DX3DQSIDLY; /**< Offset: 0x2A0 (R/W  32) DATX8 DQS Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX3DQSODLY; /**< Offset: 0x2A4 (R/W  32) DATX8 DQS Output Delay */
-  __I   uint8_t                        Reserved7[0x18];
-  __IO  uint32_t                       DDR3PHY_DX4GCR;     /**< Offset: 0x2C0 (R/W  32) DATX8 General Configuration Register */
-  __I   uint32_t                       DDR3PHY_DX4GSR0;    /**< Offset: 0x2C4 (R/   32) DATX8 General Status Register 0 */
-  __I   uint32_t                       DDR3PHY_DX4GSR1;    /**< Offset: 0x2C8 (R/   32) DATX8 General Status Register 1 */
-  __IO  uint32_t                       DDR3PHY_DX4DLLCR;   /**< Offset: 0x2CC (R/W  32) DATX8 DLL Control Register */
-  __IO  uint32_t                       DDR3PHY_DX4DQTR;    /**< Offset: 0x2D0 (R/W  32) DATX8 DQ Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX4DQSTR;   /**< Offset: 0x2D4 (R/W  32) DATX8 DQS Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX4DQIDLY;  /**< Offset: 0x2D8 (R/W  32) DATX8 DQ  Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX4DQODLY;  /**< Offset: 0x2DC (R/W  32) DATX8 DQ  Output Delay */
-  __IO  uint32_t                       DDR3PHY_DX4DQSIDLY; /**< Offset: 0x2E0 (R/W  32) DATX8 DQS Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX4DQSODLY; /**< Offset: 0x2E4 (R/W  32) DATX8 DQS Output Delay */
-  __I   uint8_t                        Reserved8[0x18];
-  __IO  uint32_t                       DDR3PHY_DX5GCR;     /**< Offset: 0x300 (R/W  32) DATX8 General Configuration Register */
-  __I   uint32_t                       DDR3PHY_DX5GSR0;    /**< Offset: 0x304 (R/   32) DATX8 General Status Register 0 */
-  __I   uint32_t                       DDR3PHY_DX5GSR1;    /**< Offset: 0x308 (R/   32) DATX8 General Status Register 1 */
-  __IO  uint32_t                       DDR3PHY_DX5DLLCR;   /**< Offset: 0x30C (R/W  32) DATX8 DLL Control Register */
-  __IO  uint32_t                       DDR3PHY_DX5DQTR;    /**< Offset: 0x310 (R/W  32) DATX8 DQ Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX5DQSTR;   /**< Offset: 0x314 (R/W  32) DATX8 DQS Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX5DQIDLY;  /**< Offset: 0x318 (R/W  32) DATX8 DQ  Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX5DQODLY;  /**< Offset: 0x31C (R/W  32) DATX8 DQ  Output Delay */
-  __IO  uint32_t                       DDR3PHY_DX5DQSIDLY; /**< Offset: 0x320 (R/W  32) DATX8 DQS Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX5DQSODLY; /**< Offset: 0x324 (R/W  32) DATX8 DQS Output Delay */
-  __I   uint8_t                        Reserved9[0x18];
-  __IO  uint32_t                       DDR3PHY_DX6GCR;     /**< Offset: 0x340 (R/W  32) DATX8 General Configuration Register */
-  __I   uint32_t                       DDR3PHY_DX6GSR0;    /**< Offset: 0x344 (R/   32) DATX8 General Status Register 0 */
-  __I   uint32_t                       DDR3PHY_DX6GSR1;    /**< Offset: 0x348 (R/   32) DATX8 General Status Register 1 */
-  __IO  uint32_t                       DDR3PHY_DX6DLLCR;   /**< Offset: 0x34C (R/W  32) DATX8 DLL Control Register */
-  __IO  uint32_t                       DDR3PHY_DX6DQTR;    /**< Offset: 0x350 (R/W  32) DATX8 DQ Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX6DQSTR;   /**< Offset: 0x354 (R/W  32) DATX8 DQS Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX6DQIDLY;  /**< Offset: 0x358 (R/W  32) DATX8 DQ  Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX6DQODLY;  /**< Offset: 0x35C (R/W  32) DATX8 DQ  Output Delay */
-  __IO  uint32_t                       DDR3PHY_DX6DQSIDLY; /**< Offset: 0x360 (R/W  32) DATX8 DQS Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX6DQSODLY; /**< Offset: 0x364 (R/W  32) DATX8 DQS Output Delay */
-  __I   uint8_t                        Reserved10[0x18];
-  __IO  uint32_t                       DDR3PHY_DX7GCR;     /**< Offset: 0x380 (R/W  32) DATX8 General Configuration Register */
-  __I   uint32_t                       DDR3PHY_DX7GSR0;    /**< Offset: 0x384 (R/   32) DATX8 General Status Register 0 */
-  __I   uint32_t                       DDR3PHY_DX7GSR1;    /**< Offset: 0x388 (R/   32) DATX8 General Status Register 1 */
-  __IO  uint32_t                       DDR3PHY_DX7DLLCR;   /**< Offset: 0x38C (R/W  32) DATX8 DLL Control Register */
-  __IO  uint32_t                       DDR3PHY_DX7DQTR;    /**< Offset: 0x390 (R/W  32) DATX8 DQ Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX7DQSTR;   /**< Offset: 0x394 (R/W  32) DATX8 DQS Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX7DQIDLY;  /**< Offset: 0x398 (R/W  32) DATX8 DQ  Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX7DQODLY;  /**< Offset: 0x39C (R/W  32) DATX8 DQ  Output Delay */
-  __IO  uint32_t                       DDR3PHY_DX7DQSIDLY; /**< Offset: 0x3A0 (R/W  32) DATX8 DQS Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX7DQSODLY; /**< Offset: 0x3A4 (R/W  32) DATX8 DQS Output Delay */
-  __I   uint8_t                        Reserved11[0x18];
-  __IO  uint32_t                       DDR3PHY_DX8GCR;     /**< Offset: 0x3C0 (R/W  32) DATX8 General Configuration Register */
-  __I   uint32_t                       DDR3PHY_DX8GSR0;    /**< Offset: 0x3C4 (R/   32) DATX8 General Status Register 0 */
-  __I   uint32_t                       DDR3PHY_DX8GSR1;    /**< Offset: 0x3C8 (R/   32) DATX8 General Status Register 1 */
-  __IO  uint32_t                       DDR3PHY_DX8DLLCR;   /**< Offset: 0x3CC (R/W  32) DATX8 DLL Control Register */
-  __IO  uint32_t                       DDR3PHY_DX8DQTR;    /**< Offset: 0x3D0 (R/W  32) DATX8 DQ Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX8DQSTR;   /**< Offset: 0x3D4 (R/W  32) DATX8 DQS Timing Register */
-  __IO  uint32_t                       DDR3PHY_DX8DQIDLY;  /**< Offset: 0x3D8 (R/W  32) DATX8 DQ  Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX8DQODLY;  /**< Offset: 0x3DC (R/W  32) DATX8 DQ  Output Delay */
-  __IO  uint32_t                       DDR3PHY_DX8DQSIDLY; /**< Offset: 0x3E0 (R/W  32) DATX8 DQS Input  Delay */
-  __IO  uint32_t                       DDR3PHY_DX8DQSODLY; /**< Offset: 0x3E4 (R/W  32) DATX8 DQS Output Delay */
 } ddr3phy_registers_t;
 
 

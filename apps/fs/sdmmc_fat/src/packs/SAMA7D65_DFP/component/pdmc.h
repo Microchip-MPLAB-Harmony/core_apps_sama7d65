@@ -507,8 +507,8 @@
 #define   PDMC_WPSR_SWE_1_Val                 _UINT32_(0x1)                                        /* (PDMC_WPSR) A software error has occurred since the last read of PDMC_WPSR. SWETYP details the type of software error; the associated incorrect software access is reported in WPSRC (if WPVS=0).  */
 #define PDMC_WPSR_SWE_0                       (PDMC_WPSR_SWE_0_Val << PDMC_WPSR_SWE_Pos)           /* (PDMC_WPSR) No software error has occurred since the last read of PDMC_WPSR. Position  */
 #define PDMC_WPSR_SWE_1                       (PDMC_WPSR_SWE_1_Val << PDMC_WPSR_SWE_Pos)           /* (PDMC_WPSR) A software error has occurred since the last read of PDMC_WPSR. SWETYP details the type of software error; the associated incorrect software access is reported in WPSRC (if WPVS=0). Position  */
-#define PDMC_WPSR_NCE_Pos                     _UINT32_(5)                                          /* (PDMC_WPSR) Non Corrected Error (cleared by reconfiguring the faulty registers or by clearing the error via PDMC_FIR) Position */
-#define PDMC_WPSR_NCE_Msk                     (_UINT32_(0x1) << PDMC_WPSR_NCE_Pos)                 /* (PDMC_WPSR) Non Corrected Error (cleared by reconfiguring the faulty registers or by clearing the error via PDMC_FIR) Mask */
+#define PDMC_WPSR_NCE_Pos                     _UINT32_(4)                                          /* (PDMC_WPSR) Non Corrected Error (cleared by reconfiguring the faulty registers or by clearing the error via PDMC_FIR) Position */
+#define PDMC_WPSR_NCE_Msk                     (_UINT32_(0x3) << PDMC_WPSR_NCE_Pos)                 /* (PDMC_WPSR) Non Corrected Error (cleared by reconfiguring the faulty registers or by clearing the error via PDMC_FIR) Mask */
 #define PDMC_WPSR_NCE(value)                  (PDMC_WPSR_NCE_Msk & (_UINT32_(value) << PDMC_WPSR_NCE_Pos)) /* Assigment of value for NCE in the PDMC_WPSR register */
 #define   PDMC_WPSR_NCE_0_Val                 _UINT32_(0x0)                                        /* (PDMC_WPSR) No error is detected in the configuration registers.  */
 #define   PDMC_WPSR_NCE_1_Val                 _UINT32_(0x1)                                        /* (PDMC_WPSR) An error is detected in PDMC_MR, PDMC_CFGR or PDMC_IMR.  */
@@ -518,7 +518,7 @@
 #define PDMC_WPSR_WPSRC_Msk                   (_UINT32_(0xFFFF) << PDMC_WPSR_WPSRC_Pos)            /* (PDMC_WPSR) Write Protection Source Mask */
 #define PDMC_WPSR_WPSRC(value)                (PDMC_WPSR_WPSRC_Msk & (_UINT32_(value) << PDMC_WPSR_WPSRC_Pos)) /* Assigment of value for WPSRC in the PDMC_WPSR register */
 #define PDMC_WPSR_SWETYP_Pos                  _UINT32_(24)                                         /* (PDMC_WPSR) Software Error Type (cleared on read) Position */
-#define PDMC_WPSR_SWETYP_Msk                  (_UINT32_(0x3) << PDMC_WPSR_SWETYP_Pos)              /* (PDMC_WPSR) Software Error Type (cleared on read) Mask */
+#define PDMC_WPSR_SWETYP_Msk                  (_UINT32_(0x7) << PDMC_WPSR_SWETYP_Pos)              /* (PDMC_WPSR) Software Error Type (cleared on read) Mask */
 #define PDMC_WPSR_SWETYP(value)               (PDMC_WPSR_SWETYP_Msk & (_UINT32_(value) << PDMC_WPSR_SWETYP_Pos)) /* Assigment of value for SWETYP in the PDMC_WPSR register */
 #define   PDMC_WPSR_SWETYP_READ_WO_Val        _UINT32_(0x0)                                        /* (PDMC_WPSR) A write-only register has been read (warning).  */
 #define   PDMC_WPSR_SWETYP_WRITE_RO_Val       _UINT32_(0x1)                                        /* (PDMC_WPSR) A write access has been performed on a read-only register (warning).  */
@@ -526,7 +526,7 @@
 #define PDMC_WPSR_SWETYP_READ_WO              (PDMC_WPSR_SWETYP_READ_WO_Val << PDMC_WPSR_SWETYP_Pos) /* (PDMC_WPSR) A write-only register has been read (warning). Position  */
 #define PDMC_WPSR_SWETYP_WRITE_RO             (PDMC_WPSR_SWETYP_WRITE_RO_Val << PDMC_WPSR_SWETYP_Pos) /* (PDMC_WPSR) A write access has been performed on a read-only register (warning). Position  */
 #define PDMC_WPSR_SWETYP_UNDEF_RW             (PDMC_WPSR_SWETYP_UNDEF_RW_Val << PDMC_WPSR_SWETYP_Pos) /* (PDMC_WPSR) Access to an undefined address (warning). Position  */
-#define PDMC_WPSR_Msk                         _UINT32_(0x03FFFF2D)                                 /* (PDMC_WPSR) Register Mask  */
+#define PDMC_WPSR_Msk                         _UINT32_(0x07FFFF3D)                                 /* (PDMC_WPSR) Register Mask  */
 
 
 /* -------- PDMC_FIR : (PDMC Offset: 0x38) (R/W 32) Fault Injection Register -------- */
@@ -560,6 +560,13 @@
 #define   PDMC_FIR_F3_1_Val                   _UINT32_(0x1)                                        /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_WPMR (the configuration is not modified) which triggers the PDMC_WPSR.NCE to '1'.  */
 #define PDMC_FIR_F3_0                         (PDMC_FIR_F3_0_Val << PDMC_FIR_F3_Pos)               /* (PDMC_FIR) No effect. Position  */
 #define PDMC_FIR_F3_1                         (PDMC_FIR_F3_1_Val << PDMC_FIR_F3_Pos)               /* (PDMC_FIR) Creates a single fault in the error detection circuitry of PDMC_WPMR (the configuration is not modified) which triggers the PDMC_WPSR.NCE to '1'. Position  */
+#define PDMC_FIR_SFEN_Pos                     _UINT32_(5)                                          /* (PDMC_FIR) Single Fault Enable Position */
+#define PDMC_FIR_SFEN_Msk                     (_UINT32_(0x1) << PDMC_FIR_SFEN_Pos)                 /* (PDMC_FIR) Single Fault Enable Mask */
+#define PDMC_FIR_SFEN(value)                  (PDMC_FIR_SFEN_Msk & (_UINT32_(value) << PDMC_FIR_SFEN_Pos)) /* Assigment of value for SFEN in the PDMC_FIR register */
+#define   PDMC_FIR_SFEN_0_Val                 _UINT32_(0x0)                                        /* (PDMC_FIR) No effect.  */
+#define   PDMC_FIR_SFEN_1_Val                 _UINT32_(0x1)                                        /* (PDMC_FIR) Always write to '1' for fault injection  */
+#define PDMC_FIR_SFEN_0                       (PDMC_FIR_SFEN_0_Val << PDMC_FIR_SFEN_Pos)           /* (PDMC_FIR) No effect. Position  */
+#define PDMC_FIR_SFEN_1                       (PDMC_FIR_SFEN_1_Val << PDMC_FIR_SFEN_Pos)           /* (PDMC_FIR) Always write to '1' for fault injection Position  */
 #define PDMC_FIR_FIRDIS_Pos                   _UINT32_(7)                                          /* (PDMC_FIR) Fault Injection Register Disable Position */
 #define PDMC_FIR_FIRDIS_Msk                   (_UINT32_(0x1) << PDMC_FIR_FIRDIS_Pos)               /* (PDMC_FIR) Fault Injection Register Disable Mask */
 #define PDMC_FIR_FIRDIS(value)                (PDMC_FIR_FIRDIS_Msk & (_UINT32_(value) << PDMC_FIR_FIRDIS_Pos)) /* Assigment of value for FIRDIS in the PDMC_FIR register */
@@ -572,7 +579,7 @@
 #define PDMC_FIR_FIKEY(value)                 (PDMC_FIR_FIKEY_Msk & (_UINT32_(value) << PDMC_FIR_FIKEY_Pos)) /* Assigment of value for FIKEY in the PDMC_FIR register */
 #define   PDMC_FIR_FIKEY_PASSWD_Val           _UINT32_(0x504649)                                   /* (PDMC_FIR) Writing any other value in this field aborts the write operation of the WPEN bit. Always reads as 0.  */
 #define PDMC_FIR_FIKEY_PASSWD                 (PDMC_FIR_FIKEY_PASSWD_Val << PDMC_FIR_FIKEY_Pos)    /* (PDMC_FIR) Writing any other value in this field aborts the write operation of the WPEN bit. Always reads as 0. Position  */
-#define PDMC_FIR_Msk                          _UINT32_(0xFFFFFF8F)                                 /* (PDMC_FIR) Register Mask  */
+#define PDMC_FIR_Msk                          _UINT32_(0xFFFFFFAF)                                 /* (PDMC_FIR) Register Mask  */
 
 #define PDMC_FIR_F_Pos                        _UINT32_(0)                                          /* (PDMC_FIR Position) Single Fault for Mode Registers (PDMC_MR) */
 #define PDMC_FIR_F_Msk                        (_UINT32_(0xF) << PDMC_FIR_F_Pos)                    /* (PDMC_FIR Mask) F */

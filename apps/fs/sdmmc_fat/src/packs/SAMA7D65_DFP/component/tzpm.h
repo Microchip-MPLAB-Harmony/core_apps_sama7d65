@@ -37,7 +37,7 @@
 
 
 /* -------- TZPM_PIDR0 : (TZPM Offset: 0x08) (R/W 32) Peripheral ID Register 0 -------- */
-#define TZPM_PIDR0_RESETVALUE                 _UINT32_(0x01)                                       /*  (TZPM_PIDR0) Peripheral ID Register 0  Reset Value */
+#define TZPM_PIDR0_RESETVALUE                 _UINT32_(0x7802)                                     /*  (TZPM_PIDR0) Peripheral ID Register 0  Reset Value */
 
 #define TZPM_PIDR0_PID0_Pos                   _UINT32_(0)                                          /* (TZPM_PIDR0) Peripheral ID 0 Security Position */
 #define TZPM_PIDR0_PID0_Msk                   (_UINT32_(0x1) << TZPM_PIDR0_PID0_Pos)               /* (TZPM_PIDR0) Peripheral ID 0 Security Mask */
@@ -270,7 +270,7 @@
 #define TZPM_PIDR0_PID(value)                 (TZPM_PIDR0_PID_Msk & (_UINT32_(value) << TZPM_PIDR0_PID_Pos)) 
 
 /* -------- TZPM_PIDR1 : (TZPM Offset: 0x0C) (R/W 32) Peripheral ID Register 1 -------- */
-#define TZPM_PIDR1_RESETVALUE                 _UINT32_(0x01)                                       /*  (TZPM_PIDR1) Peripheral ID Register 1  Reset Value */
+#define TZPM_PIDR1_RESETVALUE                 _UINT32_(0x00)                                       /*  (TZPM_PIDR1) Peripheral ID Register 1  Reset Value */
 
 #define TZPM_PIDR1_PID32_Pos                  _UINT32_(0)                                          /* (TZPM_PIDR1) Peripheral ID 32 Security Position */
 #define TZPM_PIDR1_PID32_Msk                  (_UINT32_(0x1) << TZPM_PIDR1_PID32_Pos)              /* (TZPM_PIDR1) Peripheral ID 32 Security Mask */
@@ -503,7 +503,7 @@
 #define TZPM_PIDR1_PID(value)                 (TZPM_PIDR1_PID_Msk & (_UINT32_(value) << TZPM_PIDR1_PID_Pos)) 
 
 /* -------- TZPM_PIDR2 : (TZPM Offset: 0x10) (R/W 32) Peripheral ID Register 2 -------- */
-#define TZPM_PIDR2_RESETVALUE                 _UINT32_(0x01)                                       /*  (TZPM_PIDR2) Peripheral ID Register 2  Reset Value */
+#define TZPM_PIDR2_RESETVALUE                 _UINT32_(0x20000000)                                 /*  (TZPM_PIDR2) Peripheral ID Register 2  Reset Value */
 
 #define TZPM_PIDR2_PID64_Pos                  _UINT32_(0)                                          /* (TZPM_PIDR2) Peripheral ID 64 Security Position */
 #define TZPM_PIDR2_PID64_Msk                  (_UINT32_(0x1) << TZPM_PIDR2_PID64_Pos)              /* (TZPM_PIDR2) Peripheral ID 64 Security Mask */
@@ -736,7 +736,7 @@
 #define TZPM_PIDR2_PID(value)                 (TZPM_PIDR2_PID_Msk & (_UINT32_(value) << TZPM_PIDR2_PID_Pos)) 
 
 /* -------- TZPM_PIDR3 : (TZPM Offset: 0x14) (R/W 32) Peripheral ID Register 3 -------- */
-#define TZPM_PIDR3_RESETVALUE                 _UINT32_(0x01)                                       /*  (TZPM_PIDR3) Peripheral ID Register 3  Reset Value */
+#define TZPM_PIDR3_RESETVALUE                 _UINT32_(0x00)                                       /*  (TZPM_PIDR3) Peripheral ID Register 3  Reset Value */
 
 #define TZPM_PIDR3_PID96_Pos                  _UINT32_(0)                                          /* (TZPM_PIDR3) Peripheral ID 96 Security Position */
 #define TZPM_PIDR3_PID96_Msk                  (_UINT32_(0x1) << TZPM_PIDR3_PID96_Pos)              /* (TZPM_PIDR3) Peripheral ID 96 Security Mask */
@@ -968,119 +968,12 @@
 #define TZPM_PIDR3_PID_Msk                    (_UINT32_(0xFFFFFFFF) << TZPM_PIDR3_PID_Pos)         /* (TZPM_PIDR3 Mask) PID */
 #define TZPM_PIDR3_PID(value)                 (TZPM_PIDR3_PID_Msk & (_UINT32_(value) << TZPM_PIDR3_PID_Pos)) 
 
-/* -------- TZPM_PIDR4 : (TZPM Offset: 0x18) (R/W 32) Peripheral ID Register 4 -------- */
-#define TZPM_PIDR4_RESETVALUE                 _UINT32_(0x01)                                       /*  (TZPM_PIDR4) Peripheral ID Register 4  Reset Value */
-
-#define TZPM_PIDR4_PID128_Pos                 _UINT32_(0)                                          /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID128_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID128_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID128(value)              (TZPM_PIDR4_PID128_Msk & (_UINT32_(value) << TZPM_PIDR4_PID128_Pos)) /* Assigment of value for PID128 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID129_Pos                 _UINT32_(1)                                          /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID129_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID129_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID129(value)              (TZPM_PIDR4_PID129_Msk & (_UINT32_(value) << TZPM_PIDR4_PID129_Pos)) /* Assigment of value for PID129 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID130_Pos                 _UINT32_(2)                                          /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID130_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID130_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID130(value)              (TZPM_PIDR4_PID130_Msk & (_UINT32_(value) << TZPM_PIDR4_PID130_Pos)) /* Assigment of value for PID130 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID131_Pos                 _UINT32_(3)                                          /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID131_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID131_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID131(value)              (TZPM_PIDR4_PID131_Msk & (_UINT32_(value) << TZPM_PIDR4_PID131_Pos)) /* Assigment of value for PID131 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID132_Pos                 _UINT32_(4)                                          /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID132_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID132_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID132(value)              (TZPM_PIDR4_PID132_Msk & (_UINT32_(value) << TZPM_PIDR4_PID132_Pos)) /* Assigment of value for PID132 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID133_Pos                 _UINT32_(5)                                          /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID133_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID133_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID133(value)              (TZPM_PIDR4_PID133_Msk & (_UINT32_(value) << TZPM_PIDR4_PID133_Pos)) /* Assigment of value for PID133 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID134_Pos                 _UINT32_(6)                                          /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID134_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID134_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID134(value)              (TZPM_PIDR4_PID134_Msk & (_UINT32_(value) << TZPM_PIDR4_PID134_Pos)) /* Assigment of value for PID134 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID135_Pos                 _UINT32_(7)                                          /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID135_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID135_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID135(value)              (TZPM_PIDR4_PID135_Msk & (_UINT32_(value) << TZPM_PIDR4_PID135_Pos)) /* Assigment of value for PID135 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID136_Pos                 _UINT32_(8)                                          /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID136_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID136_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID136(value)              (TZPM_PIDR4_PID136_Msk & (_UINT32_(value) << TZPM_PIDR4_PID136_Pos)) /* Assigment of value for PID136 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID137_Pos                 _UINT32_(9)                                          /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID137_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID137_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID137(value)              (TZPM_PIDR4_PID137_Msk & (_UINT32_(value) << TZPM_PIDR4_PID137_Pos)) /* Assigment of value for PID137 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID138_Pos                 _UINT32_(10)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID138_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID138_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID138(value)              (TZPM_PIDR4_PID138_Msk & (_UINT32_(value) << TZPM_PIDR4_PID138_Pos)) /* Assigment of value for PID138 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID139_Pos                 _UINT32_(11)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID139_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID139_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID139(value)              (TZPM_PIDR4_PID139_Msk & (_UINT32_(value) << TZPM_PIDR4_PID139_Pos)) /* Assigment of value for PID139 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID140_Pos                 _UINT32_(12)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID140_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID140_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID140(value)              (TZPM_PIDR4_PID140_Msk & (_UINT32_(value) << TZPM_PIDR4_PID140_Pos)) /* Assigment of value for PID140 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID141_Pos                 _UINT32_(13)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID141_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID141_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID141(value)              (TZPM_PIDR4_PID141_Msk & (_UINT32_(value) << TZPM_PIDR4_PID141_Pos)) /* Assigment of value for PID141 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID142_Pos                 _UINT32_(14)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID142_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID142_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID142(value)              (TZPM_PIDR4_PID142_Msk & (_UINT32_(value) << TZPM_PIDR4_PID142_Pos)) /* Assigment of value for PID142 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID143_Pos                 _UINT32_(15)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID143_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID143_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID143(value)              (TZPM_PIDR4_PID143_Msk & (_UINT32_(value) << TZPM_PIDR4_PID143_Pos)) /* Assigment of value for PID143 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID144_Pos                 _UINT32_(16)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID144_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID144_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID144(value)              (TZPM_PIDR4_PID144_Msk & (_UINT32_(value) << TZPM_PIDR4_PID144_Pos)) /* Assigment of value for PID144 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID145_Pos                 _UINT32_(17)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID145_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID145_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID145(value)              (TZPM_PIDR4_PID145_Msk & (_UINT32_(value) << TZPM_PIDR4_PID145_Pos)) /* Assigment of value for PID145 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID146_Pos                 _UINT32_(18)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID146_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID146_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID146(value)              (TZPM_PIDR4_PID146_Msk & (_UINT32_(value) << TZPM_PIDR4_PID146_Pos)) /* Assigment of value for PID146 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID147_Pos                 _UINT32_(19)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID147_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID147_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID147(value)              (TZPM_PIDR4_PID147_Msk & (_UINT32_(value) << TZPM_PIDR4_PID147_Pos)) /* Assigment of value for PID147 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID148_Pos                 _UINT32_(20)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID148_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID148_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID148(value)              (TZPM_PIDR4_PID148_Msk & (_UINT32_(value) << TZPM_PIDR4_PID148_Pos)) /* Assigment of value for PID148 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID149_Pos                 _UINT32_(21)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID149_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID149_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID149(value)              (TZPM_PIDR4_PID149_Msk & (_UINT32_(value) << TZPM_PIDR4_PID149_Pos)) /* Assigment of value for PID149 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID150_Pos                 _UINT32_(22)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID150_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID150_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID150(value)              (TZPM_PIDR4_PID150_Msk & (_UINT32_(value) << TZPM_PIDR4_PID150_Pos)) /* Assigment of value for PID150 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID151_Pos                 _UINT32_(23)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID151_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID151_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID151(value)              (TZPM_PIDR4_PID151_Msk & (_UINT32_(value) << TZPM_PIDR4_PID151_Pos)) /* Assigment of value for PID151 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID152_Pos                 _UINT32_(24)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID152_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID152_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID152(value)              (TZPM_PIDR4_PID152_Msk & (_UINT32_(value) << TZPM_PIDR4_PID152_Pos)) /* Assigment of value for PID152 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID153_Pos                 _UINT32_(25)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID153_Msk                 (_UINT32_(0x3) << TZPM_PIDR4_PID153_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID153(value)              (TZPM_PIDR4_PID153_Msk & (_UINT32_(value) << TZPM_PIDR4_PID153_Pos)) /* Assigment of value for PID153 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID155_Pos                 _UINT32_(27)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID155_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID155_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID155(value)              (TZPM_PIDR4_PID155_Msk & (_UINT32_(value) << TZPM_PIDR4_PID155_Pos)) /* Assigment of value for PID155 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID156_Pos                 _UINT32_(28)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID156_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID156_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID156(value)              (TZPM_PIDR4_PID156_Msk & (_UINT32_(value) << TZPM_PIDR4_PID156_Pos)) /* Assigment of value for PID156 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID157_Pos                 _UINT32_(29)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID157_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID157_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID157(value)              (TZPM_PIDR4_PID157_Msk & (_UINT32_(value) << TZPM_PIDR4_PID157_Pos)) /* Assigment of value for PID157 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID158_Pos                 _UINT32_(30)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID158_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID158_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID158(value)              (TZPM_PIDR4_PID158_Msk & (_UINT32_(value) << TZPM_PIDR4_PID158_Pos)) /* Assigment of value for PID158 in the TZPM_PIDR4 register */
-#define TZPM_PIDR4_PID159_Pos                 _UINT32_(31)                                         /* (TZPM_PIDR4) Peripheral ID x Security Position */
-#define TZPM_PIDR4_PID159_Msk                 (_UINT32_(0x1) << TZPM_PIDR4_PID159_Pos)             /* (TZPM_PIDR4) Peripheral ID x Security Mask */
-#define TZPM_PIDR4_PID159(value)              (TZPM_PIDR4_PID159_Msk & (_UINT32_(value) << TZPM_PIDR4_PID159_Pos)) /* Assigment of value for PID159 in the TZPM_PIDR4 register */
-#define   TZPM_PIDR4_PID159_0_Val             _UINT32_(0x0)                                        /* (TZPM_PIDR4) Secure accesses only.  */
-#define   TZPM_PIDR4_PID159_1_Val             _UINT32_(0x1)                                        /* (TZPM_PIDR4) Non-secure accesses are allowed.  */
-#define TZPM_PIDR4_PID159_0                   (TZPM_PIDR4_PID159_0_Val << TZPM_PIDR4_PID159_Pos)   /* (TZPM_PIDR4) Secure accesses only. Position  */
-#define TZPM_PIDR4_PID159_1                   (TZPM_PIDR4_PID159_1_Val << TZPM_PIDR4_PID159_Pos)   /* (TZPM_PIDR4) Non-secure accesses are allowed. Position  */
-#define TZPM_PIDR4_Msk                        _UINT32_(0xFFFFFFFF)                                 /* (TZPM_PIDR4) Register Mask  */
-
-#define TZPM_PIDR4_PID_Pos                    _UINT32_(27)                                         /* (TZPM_PIDR4 Position) Peripheral ID x Security */
-#define TZPM_PIDR4_PID_Msk                    (_UINT32_(0x1F) << TZPM_PIDR4_PID_Pos)               /* (TZPM_PIDR4 Mask) PID */
-#define TZPM_PIDR4_PID(value)                 (TZPM_PIDR4_PID_Msk & (_UINT32_(value) << TZPM_PIDR4_PID_Pos)) 
-
 /** \brief TZPM register offsets definitions */
 #define TZPM_KEY_REG_OFST              _UINT32_(0x04)      /* (TZPM_KEY) Key Register Offset */
 #define TZPM_PIDR0_REG_OFST            _UINT32_(0x08)      /* (TZPM_PIDR0) Peripheral ID Register 0 Offset */
 #define TZPM_PIDR1_REG_OFST            _UINT32_(0x0C)      /* (TZPM_PIDR1) Peripheral ID Register 1 Offset */
 #define TZPM_PIDR2_REG_OFST            _UINT32_(0x10)      /* (TZPM_PIDR2) Peripheral ID Register 2 Offset */
 #define TZPM_PIDR3_REG_OFST            _UINT32_(0x14)      /* (TZPM_PIDR3) Peripheral ID Register 3 Offset */
-#define TZPM_PIDR4_REG_OFST            _UINT32_(0x18)      /* (TZPM_PIDR4) Peripheral ID Register 4 Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief TZPM register API structure */
@@ -1092,7 +985,6 @@ typedef struct
   __IO  uint32_t                       TZPM_PIDR1;         /**< Offset: 0x0C (R/W  32) Peripheral ID Register 1 */
   __IO  uint32_t                       TZPM_PIDR2;         /**< Offset: 0x10 (R/W  32) Peripheral ID Register 2 */
   __IO  uint32_t                       TZPM_PIDR3;         /**< Offset: 0x14 (R/W  32) Peripheral ID Register 3 */
-  __IO  uint32_t                       TZPM_PIDR4;         /**< Offset: 0x18 (R/W  32) Peripheral ID Register 4 */
 } tzpm_registers_t;
 
 
