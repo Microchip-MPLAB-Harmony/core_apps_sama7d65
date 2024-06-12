@@ -65,85 +65,6 @@
 #define GMAC_EMAC_ASAT_Msk                    _UINT32_(0x3F01FFFF)                                 /* (GMAC_EMAC_ASAT) Register Mask  */
 
 
-/* -------- GMAC_EMAC_FRER_CTRLx_A : (GMAC Offset: 0x00) (R/W 32) Express MAC Frame Elimination Control1 A Register -------- */
-#define GMAC_EMAC_FRER_CTRLx_A_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_FRER_CTRLx_A) Express MAC Frame Elimination Control1 A Register  Reset Value */
-
-#define GMAC_EMAC_FRER_CTRLx_A_MEMBER_STREAM_1_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_CTRLx_A) Pointer to Screener Type 2 Register Position */
-#define GMAC_EMAC_FRER_CTRLx_A_MEMBER_STREAM_1_Msk (_UINT32_(0xF) << GMAC_EMAC_FRER_CTRLx_A_MEMBER_STREAM_1_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) Pointer to Screener Type 2 Register Mask */
-#define GMAC_EMAC_FRER_CTRLx_A_MEMBER_STREAM_1(value) (GMAC_EMAC_FRER_CTRLx_A_MEMBER_STREAM_1_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRLx_A_MEMBER_STREAM_1_Pos)) /* Assigment of value for MEMBER_STREAM_1 in the GMAC_EMAC_FRER_CTRLx_A register */
-#define GMAC_EMAC_FRER_CTRLx_A_MEMBER_STREAM_2_Pos _UINT32_(4)                                          /* (GMAC_EMAC_FRER_CTRLx_A) Pointer to Screener Type 2 Register Position */
-#define GMAC_EMAC_FRER_CTRLx_A_MEMBER_STREAM_2_Msk (_UINT32_(0xF) << GMAC_EMAC_FRER_CTRLx_A_MEMBER_STREAM_2_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) Pointer to Screener Type 2 Register Mask */
-#define GMAC_EMAC_FRER_CTRLx_A_MEMBER_STREAM_2(value) (GMAC_EMAC_FRER_CTRLx_A_MEMBER_STREAM_2_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRLx_A_MEMBER_STREAM_2_Pos)) /* Assigment of value for MEMBER_STREAM_2 in the GMAC_EMAC_FRER_CTRLx_A register */
-#define GMAC_EMAC_FRER_CTRLx_A_OFFSET_VALUE_Pos _UINT32_(8)                                          /* (GMAC_EMAC_FRER_CTRLx_A) Offset in Bytes from Start Packet Delimiter to MSB for 802.1CB Sequence Number Position */
-#define GMAC_EMAC_FRER_CTRLx_A_OFFSET_VALUE_Msk (_UINT32_(0x1FF) << GMAC_EMAC_FRER_CTRLx_A_OFFSET_VALUE_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) Offset in Bytes from Start Packet Delimiter to MSB for 802.1CB Sequence Number Mask */
-#define GMAC_EMAC_FRER_CTRLx_A_OFFSET_VALUE(value) (GMAC_EMAC_FRER_CTRLx_A_OFFSET_VALUE_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRLx_A_OFFSET_VALUE_Pos)) /* Assigment of value for OFFSET_VALUE in the GMAC_EMAC_FRER_CTRLx_A register */
-#define GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_Pos  _UINT32_(28)                                         /* (GMAC_EMAC_FRER_CTRLx_A) Redundancy Tag Enable Position */
-#define GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_Msk  (_UINT32_(0x1) << GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) Redundancy Tag Enable Mask */
-#define GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG(value) (GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_Pos)) /* Assigment of value for USE_R_TAG in the GMAC_EMAC_FRER_CTRLx_A register */
-#define   GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_FRER_CTRLx_A) Identifies bottom of sequence number with OFFSET_VALUE.  */
-#define   GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_FRER_CTRLx_A) Identifies sequence number with redundancy tag.  */
-#define GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_0    (GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_0_Val << GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) Identifies bottom of sequence number with OFFSET_VALUE. Position  */
-#define GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_1    (GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_1_Val << GMAC_EMAC_FRER_CTRLx_A_USE_R_TAG_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) Identifies sequence number with redundancy tag. Position  */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_Pos _UINT32_(29)                                         /* (GMAC_EMAC_FRER_CTRLx_A) 802.1CB Sequence Recovery Reset Timer Enable Position */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_Msk (_UINT32_(0x1) << GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) 802.1CB Sequence Recovery Reset Timer Enable Mask */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER(value) (GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_Pos)) /* Assigment of value for EN_SEQRECRST_TIMER in the GMAC_EMAC_FRER_CTRLx_A register */
-#define   GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_FRER_CTRLx_A) Disables the sequence recovery reset timer.  */
-#define   GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_FRER_CTRLx_A) Enables the sequence recovery reset timer.  */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_0 (GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_0_Val << GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) Disables the sequence recovery reset timer. Position  */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_1 (GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_1_Val << GMAC_EMAC_FRER_CTRLx_A_EN_SEQRECRST_TIMER_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) Enables the sequence recovery reset timer. Position  */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_Pos _UINT32_(30)                                         /* (GMAC_EMAC_FRER_CTRLx_A) 802.1CB Vector Recovery Algorithm Enable Position */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_Msk (_UINT32_(0x1) << GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) 802.1CB Vector Recovery Algorithm Enable Mask */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG(value) (GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_Pos)) /* Assigment of value for EN_VECTOR_REC_ALG in the GMAC_EMAC_FRER_CTRLx_A register */
-#define   GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_FRER_CTRLx_A) Enables the match recovery algorithm.  */
-#define   GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_FRER_CTRLx_A) Enables the vector recovery algorithm.  */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_0 (GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_0_Val << GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) Enables the match recovery algorithm. Position  */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_1 (GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_1_Val << GMAC_EMAC_FRER_CTRLx_A_EN_VECTOR_REC_ALG_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) Enables the vector recovery algorithm. Position  */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_Pos _UINT32_(31)                                         /* (GMAC_EMAC_FRER_CTRLx_A) 802.1CB Elimination of Received Frames Enable Position */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_Msk (_UINT32_(0x1) << GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) 802.1CB Elimination of Received Frames Enable Mask */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION(value) (GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_Pos)) /* Assigment of value for EN_ELIMINATION in the GMAC_EMAC_FRER_CTRLx_A register */
-#define   GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_FRER_CTRLx_A) Disables the elimination of received frames.  */
-#define   GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_FRER_CTRLx_A) Enables the elimination of received frames.  */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_0 (GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_0_Val << GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) Disables the elimination of received frames. Position  */
-#define GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_1 (GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_1_Val << GMAC_EMAC_FRER_CTRLx_A_EN_ELIMINATION_Pos) /* (GMAC_EMAC_FRER_CTRLx_A) Enables the elimination of received frames. Position  */
-#define GMAC_EMAC_FRER_CTRLx_A_Msk            _UINT32_(0xF001FFFF)                                 /* (GMAC_EMAC_FRER_CTRLx_A) Register Mask  */
-
-
-/* -------- GMAC_EMAC_FRER_CTRLx_B : (GMAC Offset: 0x04) (R/W 32) Express MAC Frame Elimination Control1 B Register -------- */
-#define GMAC_EMAC_FRER_CTRLx_B_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_FRER_CTRLx_B) Express MAC Frame Elimination Control1 B Register  Reset Value */
-
-#define GMAC_EMAC_FRER_CTRLx_B_SEQ_REC_WINDOW_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_CTRLx_B) Vector Recovery Window Position */
-#define GMAC_EMAC_FRER_CTRLx_B_SEQ_REC_WINDOW_Msk (_UINT32_(0x3F) << GMAC_EMAC_FRER_CTRLx_B_SEQ_REC_WINDOW_Pos) /* (GMAC_EMAC_FRER_CTRLx_B) Vector Recovery Window Mask */
-#define GMAC_EMAC_FRER_CTRLx_B_SEQ_REC_WINDOW(value) (GMAC_EMAC_FRER_CTRLx_B_SEQ_REC_WINDOW_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRLx_B_SEQ_REC_WINDOW_Pos)) /* Assigment of value for SEQ_REC_WINDOW in the GMAC_EMAC_FRER_CTRLx_B register */
-#define GMAC_EMAC_FRER_CTRLx_B_SEQ_NUM_LENGTH_Pos _UINT32_(8)                                          /* (GMAC_EMAC_FRER_CTRLx_B) Number of Significants bits of the 802.1CB Sequence Number Position */
-#define GMAC_EMAC_FRER_CTRLx_B_SEQ_NUM_LENGTH_Msk (_UINT32_(0x1F) << GMAC_EMAC_FRER_CTRLx_B_SEQ_NUM_LENGTH_Pos) /* (GMAC_EMAC_FRER_CTRLx_B) Number of Significants bits of the 802.1CB Sequence Number Mask */
-#define GMAC_EMAC_FRER_CTRLx_B_SEQ_NUM_LENGTH(value) (GMAC_EMAC_FRER_CTRLx_B_SEQ_NUM_LENGTH_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRLx_B_SEQ_NUM_LENGTH_Pos)) /* Assigment of value for SEQ_NUM_LENGTH in the GMAC_EMAC_FRER_CTRLx_B register */
-#define GMAC_EMAC_FRER_CTRLx_B_Msk            _UINT32_(0x00001F3F)                                 /* (GMAC_EMAC_FRER_CTRLx_B) Register Mask  */
-
-
-/* -------- GMAC_EMAC_FRER_STATx_A : (GMAC Offset: 0x08) (R/W 32) Express MAC Frame Elimination Statistics1 A Register -------- */
-#define GMAC_EMAC_FRER_STATx_A_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_FRER_STATx_A) Express MAC Frame Elimination Statistics1 A Register  Reset Value */
-
-#define GMAC_EMAC_FRER_STATx_A_LATENT_ERRS_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_STATx_A) Number of Sequence Numbers Seen Without a Duplicate (Clear on read) Position */
-#define GMAC_EMAC_FRER_STATx_A_LATENT_ERRS_Msk (_UINT32_(0x3FF) << GMAC_EMAC_FRER_STATx_A_LATENT_ERRS_Pos) /* (GMAC_EMAC_FRER_STATx_A) Number of Sequence Numbers Seen Without a Duplicate (Clear on read) Mask */
-#define GMAC_EMAC_FRER_STATx_A_LATENT_ERRS(value) (GMAC_EMAC_FRER_STATx_A_LATENT_ERRS_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_STATx_A_LATENT_ERRS_Pos)) /* Assigment of value for LATENT_ERRS in the GMAC_EMAC_FRER_STATx_A register */
-#define GMAC_EMAC_FRER_STATx_A_VEC_REC_ROGUE_Pos _UINT32_(16)                                         /* (GMAC_EMAC_FRER_STATx_A) Number of Dropped Frames (Clear on read) Position */
-#define GMAC_EMAC_FRER_STATx_A_VEC_REC_ROGUE_Msk (_UINT32_(0x3FF) << GMAC_EMAC_FRER_STATx_A_VEC_REC_ROGUE_Pos) /* (GMAC_EMAC_FRER_STATx_A) Number of Dropped Frames (Clear on read) Mask */
-#define GMAC_EMAC_FRER_STATx_A_VEC_REC_ROGUE(value) (GMAC_EMAC_FRER_STATx_A_VEC_REC_ROGUE_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_STATx_A_VEC_REC_ROGUE_Pos)) /* Assigment of value for VEC_REC_ROGUE in the GMAC_EMAC_FRER_STATx_A register */
-#define GMAC_EMAC_FRER_STATx_A_Msk            _UINT32_(0x03FF03FF)                                 /* (GMAC_EMAC_FRER_STATx_A) Register Mask  */
-
-
-/* -------- GMAC_EMAC_FRER_STATx_B : (GMAC Offset: 0x0C) (R/W 32) Express MAC Frame Elimination Statistics1 B Register -------- */
-#define GMAC_EMAC_FRER_STATx_B_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_FRER_STATx_B) Express MAC Frame Elimination Statistics1 B Register  Reset Value */
-
-#define GMAC_EMAC_FRER_STATx_B_OUT_OF_ORDER_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_STATx_B) Out of Order Sequence Numbers Received (Clear on read) Position */
-#define GMAC_EMAC_FRER_STATx_B_OUT_OF_ORDER_Msk (_UINT32_(0x3FF) << GMAC_EMAC_FRER_STATx_B_OUT_OF_ORDER_Pos) /* (GMAC_EMAC_FRER_STATx_B) Out of Order Sequence Numbers Received (Clear on read) Mask */
-#define GMAC_EMAC_FRER_STATx_B_OUT_OF_ORDER(value) (GMAC_EMAC_FRER_STATx_B_OUT_OF_ORDER_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_STATx_B_OUT_OF_ORDER_Pos)) /* Assigment of value for OUT_OF_ORDER in the GMAC_EMAC_FRER_STATx_B register */
-#define GMAC_EMAC_FRER_STATx_B_SEQRST_COUNT_Pos _UINT32_(16)                                         /* (GMAC_EMAC_FRER_STATx_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Position */
-#define GMAC_EMAC_FRER_STATx_B_SEQRST_COUNT_Msk (_UINT32_(0x3FF) << GMAC_EMAC_FRER_STATx_B_SEQRST_COUNT_Pos) /* (GMAC_EMAC_FRER_STATx_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Mask */
-#define GMAC_EMAC_FRER_STATx_B_SEQRST_COUNT(value) (GMAC_EMAC_FRER_STATx_B_SEQRST_COUNT_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_STATx_B_SEQRST_COUNT_Pos)) /* Assigment of value for SEQRST_COUNT in the GMAC_EMAC_FRER_STATx_B register */
-#define GMAC_EMAC_FRER_STATx_B_Msk            _UINT32_(0x03FF03FF)                                 /* (GMAC_EMAC_FRER_STATx_B) Register Mask  */
-
-
 /* -------- GMAC_EMAC_SAB : (GMAC Offset: 0x00) (R/W 32) Express MAC Specific Address Bottom Register  -------- */
 #define GMAC_EMAC_SAB_RESETVALUE              _UINT32_(0x00)                                       /*  (GMAC_EMAC_SAB) Express MAC Specific Address Bottom Register   Reset Value */
 
@@ -272,8 +193,8 @@
 #define GMAC_FRER_CTRL_B_SEQ_REC_WINDOW_Pos   _UINT32_(0)                                          /* (GMAC_FRER_CTRL_B) Vector Recovery Window Position */
 #define GMAC_FRER_CTRL_B_SEQ_REC_WINDOW_Msk   (_UINT32_(0x3F) << GMAC_FRER_CTRL_B_SEQ_REC_WINDOW_Pos) /* (GMAC_FRER_CTRL_B) Vector Recovery Window Mask */
 #define GMAC_FRER_CTRL_B_SEQ_REC_WINDOW(value) (GMAC_FRER_CTRL_B_SEQ_REC_WINDOW_Msk & (_UINT32_(value) << GMAC_FRER_CTRL_B_SEQ_REC_WINDOW_Pos)) /* Assigment of value for SEQ_REC_WINDOW in the GMAC_FRER_CTRL_B register */
-#define GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Pos   _UINT32_(8)                                          /* (GMAC_FRER_CTRL_B) Number of Significants bits of the 802.1CB Sequence Number Position */
-#define GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Msk   (_UINT32_(0x1F) << GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Pos) /* (GMAC_FRER_CTRL_B) Number of Significants bits of the 802.1CB Sequence Number Mask */
+#define GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Pos   _UINT32_(8)                                          /* (GMAC_FRER_CTRL_B) Number of Significants Bits of the 802.1CB Sequence Number Position */
+#define GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Msk   (_UINT32_(0x1F) << GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Pos) /* (GMAC_FRER_CTRL_B) Number of Significants Bits of the 802.1CB Sequence Number Mask */
 #define GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH(value) (GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Msk & (_UINT32_(value) << GMAC_FRER_CTRL_B_SEQ_NUM_LENGTH_Pos)) /* Assigment of value for SEQ_NUM_LENGTH in the GMAC_FRER_CTRL_B register */
 #define GMAC_FRER_CTRL_B_Msk                  _UINT32_(0x00001F3F)                                 /* (GMAC_FRER_CTRL_B) Register Mask  */
 
@@ -288,18 +209,6 @@
 #define GMAC_FRER_STAT_A_VEC_REC_ROGUE_Msk    (_UINT32_(0x3FF) << GMAC_FRER_STAT_A_VEC_REC_ROGUE_Pos) /* (GMAC_FRER_STAT_A) Number of Dropped Frames (Clear on read) Mask */
 #define GMAC_FRER_STAT_A_VEC_REC_ROGUE(value) (GMAC_FRER_STAT_A_VEC_REC_ROGUE_Msk & (_UINT32_(value) << GMAC_FRER_STAT_A_VEC_REC_ROGUE_Pos)) /* Assigment of value for VEC_REC_ROGUE in the GMAC_FRER_STAT_A register */
 #define GMAC_FRER_STAT_A_Msk                  _UINT32_(0x03FF03FF)                                 /* (GMAC_FRER_STAT_A) Register Mask  */
-
-
-/* -------- GMAC_FRER_STAT_B : (GMAC Offset: 0x0C) ( R/ 32) Frame Elimination Statistics B Register  -------- */
-#define GMAC_FRER_STAT_B_RESETVALUE           _UINT32_(0x00)                                       /*  (GMAC_FRER_STAT_B) Frame Elimination Statistics B Register   Reset Value */
-
-#define GMAC_FRER_STAT_B_OUT_OF_ORDER_Pos     _UINT32_(0)                                          /* (GMAC_FRER_STAT_B) Out of Order Sequence Numbers Received (Clear on read) Position */
-#define GMAC_FRER_STAT_B_OUT_OF_ORDER_Msk     (_UINT32_(0x3FF) << GMAC_FRER_STAT_B_OUT_OF_ORDER_Pos) /* (GMAC_FRER_STAT_B) Out of Order Sequence Numbers Received (Clear on read) Mask */
-#define GMAC_FRER_STAT_B_OUT_OF_ORDER(value)  (GMAC_FRER_STAT_B_OUT_OF_ORDER_Msk & (_UINT32_(value) << GMAC_FRER_STAT_B_OUT_OF_ORDER_Pos)) /* Assigment of value for OUT_OF_ORDER in the GMAC_FRER_STAT_B register */
-#define GMAC_FRER_STAT_B_SEQRST_COUNT_Pos     _UINT32_(16)                                         /* (GMAC_FRER_STAT_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Position */
-#define GMAC_FRER_STAT_B_SEQRST_COUNT_Msk     (_UINT32_(0x3FF) << GMAC_FRER_STAT_B_SEQRST_COUNT_Pos) /* (GMAC_FRER_STAT_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Mask */
-#define GMAC_FRER_STAT_B_SEQRST_COUNT(value)  (GMAC_FRER_STAT_B_SEQRST_COUNT_Msk & (_UINT32_(value) << GMAC_FRER_STAT_B_SEQRST_COUNT_Pos)) /* Assigment of value for SEQRST_COUNT in the GMAC_FRER_STAT_B register */
-#define GMAC_FRER_STAT_B_Msk                  _UINT32_(0x03FF03FF)                                 /* (GMAC_FRER_STAT_B) Register Mask  */
 
 
 /* -------- GMAC_ST2CW0R : (GMAC Offset: 0x00) (R/W 32) Screening Type 2 Compare Word 0 Register  -------- */
@@ -1420,110 +1329,14 @@
 /* -------- GMAC_RX_WATERMARK : (GMAC Offset: 0x7C) (R/W 32) Receive Watermark Register -------- */
 #define GMAC_RX_WATERMARK_RESETVALUE          _UINT32_(0x00)                                       /*  (GMAC_RX_WATERMARK) Receive Watermark Register  Reset Value */
 
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK0_Pos _UINT32_(0)                                          /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 0 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK0_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK0_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 0 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK0(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK0_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK0_Pos)) /* Assigment of value for RX_HIGH_WATERMARK0 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK1_Pos _UINT32_(1)                                          /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 1 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK1_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK1_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 1 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK1(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK1_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK1_Pos)) /* Assigment of value for RX_HIGH_WATERMARK1 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK2_Pos _UINT32_(2)                                          /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 2 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK2_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK2_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 2 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK2(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK2_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK2_Pos)) /* Assigment of value for RX_HIGH_WATERMARK2 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK3_Pos _UINT32_(3)                                          /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 3 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK3_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK3_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 3 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK3(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK3_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK3_Pos)) /* Assigment of value for RX_HIGH_WATERMARK3 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK4_Pos _UINT32_(4)                                          /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 4 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK4_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK4_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 4 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK4(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK4_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK4_Pos)) /* Assigment of value for RX_HIGH_WATERMARK4 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK5_Pos _UINT32_(5)                                          /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 5 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK5_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK5_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 5 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK5(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK5_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK5_Pos)) /* Assigment of value for RX_HIGH_WATERMARK5 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK6_Pos _UINT32_(6)                                          /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 6 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK6_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK6_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 6 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK6(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK6_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK6_Pos)) /* Assigment of value for RX_HIGH_WATERMARK6 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK7_Pos _UINT32_(7)                                          /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 7 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK7_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK7_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 7 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK7(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK7_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK7_Pos)) /* Assigment of value for RX_HIGH_WATERMARK7 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK8_Pos _UINT32_(8)                                          /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 8 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK8_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK8_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 8 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK8(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK8_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK8_Pos)) /* Assigment of value for RX_HIGH_WATERMARK8 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK9_Pos _UINT32_(9)                                          /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 9 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK9_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK9_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 9 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK9(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK9_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK9_Pos)) /* Assigment of value for RX_HIGH_WATERMARK9 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK10_Pos _UINT32_(10)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 10 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK10_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK10_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 10 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK10(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK10_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK10_Pos)) /* Assigment of value for RX_HIGH_WATERMARK10 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK11_Pos _UINT32_(11)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 11 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK11_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK11_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 11 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK11(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK11_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK11_Pos)) /* Assigment of value for RX_HIGH_WATERMARK11 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK12_Pos _UINT32_(12)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 12 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK12_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK12_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 12 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK12(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK12_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK12_Pos)) /* Assigment of value for RX_HIGH_WATERMARK12 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK13_Pos _UINT32_(13)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 13 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK13_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK13_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 13 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK13(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK13_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK13_Pos)) /* Assigment of value for RX_HIGH_WATERMARK13 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK14_Pos _UINT32_(14)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 14 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK14_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK14_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 14 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK14(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK14_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK14_Pos)) /* Assigment of value for RX_HIGH_WATERMARK14 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK15_Pos _UINT32_(15)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 15 Position */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK15_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK15_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 15 Mask */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK15(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK15_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK15_Pos)) /* Assigment of value for RX_HIGH_WATERMARK15 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK0_Pos _UINT32_(16)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 0 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK0_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK0_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 0 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK0(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK0_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK0_Pos)) /* Assigment of value for RX_LOW_WATERMARK0 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK1_Pos _UINT32_(17)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 1 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK1_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK1_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 1 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK1(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK1_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK1_Pos)) /* Assigment of value for RX_LOW_WATERMARK1 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK2_Pos _UINT32_(18)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 2 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK2_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK2_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 2 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK2(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK2_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK2_Pos)) /* Assigment of value for RX_LOW_WATERMARK2 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK3_Pos _UINT32_(19)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 3 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK3_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK3_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 3 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK3(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK3_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK3_Pos)) /* Assigment of value for RX_LOW_WATERMARK3 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK4_Pos _UINT32_(20)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 4 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK4_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK4_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 4 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK4(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK4_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK4_Pos)) /* Assigment of value for RX_LOW_WATERMARK4 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK5_Pos _UINT32_(21)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 5 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK5_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK5_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 5 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK5(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK5_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK5_Pos)) /* Assigment of value for RX_LOW_WATERMARK5 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK6_Pos _UINT32_(22)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 6 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK6_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK6_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 6 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK6(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK6_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK6_Pos)) /* Assigment of value for RX_LOW_WATERMARK6 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK7_Pos _UINT32_(23)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 7 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK7_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK7_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 7 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK7(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK7_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK7_Pos)) /* Assigment of value for RX_LOW_WATERMARK7 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK8_Pos _UINT32_(24)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 8 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK8_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK8_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 8 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK8(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK8_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK8_Pos)) /* Assigment of value for RX_LOW_WATERMARK8 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK9_Pos _UINT32_(25)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 9 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK9_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK9_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 9 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK9(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK9_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK9_Pos)) /* Assigment of value for RX_LOW_WATERMARK9 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK10_Pos _UINT32_(26)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 10 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK10_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK10_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 10 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK10(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK10_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK10_Pos)) /* Assigment of value for RX_LOW_WATERMARK10 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK11_Pos _UINT32_(27)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 11 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK11_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK11_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 11 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK11(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK11_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK11_Pos)) /* Assigment of value for RX_LOW_WATERMARK11 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK12_Pos _UINT32_(28)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 12 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK12_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK12_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 12 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK12(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK12_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK12_Pos)) /* Assigment of value for RX_LOW_WATERMARK12 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK13_Pos _UINT32_(29)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 13 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK13_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK13_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 13 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK13(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK13_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK13_Pos)) /* Assigment of value for RX_LOW_WATERMARK13 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK14_Pos _UINT32_(30)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 14 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK14_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK14_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 14 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK14(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK14_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK14_Pos)) /* Assigment of value for RX_LOW_WATERMARK14 in the GMAC_RX_WATERMARK register */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK15_Pos _UINT32_(31)                                         /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 15 Position */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK15_Msk (_UINT32_(0x1) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK15_Pos) /* (GMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 15 Mask */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK15(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK15_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK15_Pos)) /* Assigment of value for RX_LOW_WATERMARK15 in the GMAC_RX_WATERMARK register */
+#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Pos _UINT32_(0)                                          /* (GMAC_RX_WATERMARK) Receive Watermark High Threshold Position */
+#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Msk (_UINT32_(0xFFFF) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Pos) /* (GMAC_RX_WATERMARK) Receive Watermark High Threshold Mask */
+#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Pos)) /* Assigment of value for RX_HIGH_WATERMARK in the GMAC_RX_WATERMARK register */
+#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK_Pos _UINT32_(16)                                         /* (GMAC_RX_WATERMARK) Receive Watermark Low Threshold Position */
+#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK_Msk (_UINT32_(0xFFFF) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK_Pos) /* (GMAC_RX_WATERMARK) Receive Watermark Low Threshold Mask */
+#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK_Pos)) /* Assigment of value for RX_LOW_WATERMARK in the GMAC_RX_WATERMARK register */
 #define GMAC_RX_WATERMARK_Msk                 _UINT32_(0xFFFFFFFF)                                 /* (GMAC_RX_WATERMARK) Register Mask  */
 
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Pos _UINT32_(0)                                          /* (GMAC_RX_WATERMARK Position) Transmit DMA Lockup Detector Enable for Queue x */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Msk (_UINT32_(0xFFFF) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Pos) /* (GMAC_RX_WATERMARK Mask) RX_HIGH_WATERMARK */
-#define GMAC_RX_WATERMARK_RX_HIGH_WATERMARK(value) (GMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Pos)) 
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK_Pos _UINT32_(16)                                         /* (GMAC_RX_WATERMARK Position) Transmit DMA Lockup Detector Enable for Queue x5 */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK_Msk (_UINT32_(0xFFFF) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK_Pos) /* (GMAC_RX_WATERMARK Mask) RX_LOW_WATERMARK */
-#define GMAC_RX_WATERMARK_RX_LOW_WATERMARK(value) (GMAC_RX_WATERMARK_RX_LOW_WATERMARK_Msk & (_UINT32_(value) << GMAC_RX_WATERMARK_RX_LOW_WATERMARK_Pos)) 
 
 /* -------- GMAC_HRB : (GMAC Offset: 0x80) (R/W 32) Hash Register Bottom -------- */
 #define GMAC_HRB_RESETVALUE                   _UINT32_(0x00)                                       /*  (GMAC_HRB) Hash Register Bottom  Reset Value */
@@ -1566,6 +1379,18 @@
 #define GMAC_SAT1_FILTSORD_0                  (GMAC_SAT1_FILTSORD_0_Val << GMAC_SAT1_FILTSORD_Pos) /* (GMAC_SAT1) The filter is a destination address filter. Position  */
 #define GMAC_SAT1_FILTSORD_1                  (GMAC_SAT1_FILTSORD_1_Val << GMAC_SAT1_FILTSORD_Pos) /* (GMAC_SAT1) The filter is a source address filter. Position  */
 #define GMAC_SAT1_Msk                         _UINT32_(0x0001FFFF)                                 /* (GMAC_SAT1) Register Mask  */
+
+
+/* -------- GMAC_FRER_STAT_B : (GMAC Offset: 0x8C) ( R/ 32) Frame Elimination Statistics B Register  -------- */
+#define GMAC_FRER_STAT_B_RESETVALUE           _UINT32_(0x00)                                       /*  (GMAC_FRER_STAT_B) Frame Elimination Statistics B Register   Reset Value */
+
+#define GMAC_FRER_STAT_B_OUT_OF_ORDER_Pos     _UINT32_(0)                                          /* (GMAC_FRER_STAT_B) Out of Order Sequence Numbers Received (Clear on read) Position */
+#define GMAC_FRER_STAT_B_OUT_OF_ORDER_Msk     (_UINT32_(0x3FF) << GMAC_FRER_STAT_B_OUT_OF_ORDER_Pos) /* (GMAC_FRER_STAT_B) Out of Order Sequence Numbers Received (Clear on read) Mask */
+#define GMAC_FRER_STAT_B_OUT_OF_ORDER(value)  (GMAC_FRER_STAT_B_OUT_OF_ORDER_Msk & (_UINT32_(value) << GMAC_FRER_STAT_B_OUT_OF_ORDER_Pos)) /* Assigment of value for OUT_OF_ORDER in the GMAC_FRER_STAT_B register */
+#define GMAC_FRER_STAT_B_SEQRST_COUNT_Pos     _UINT32_(16)                                         /* (GMAC_FRER_STAT_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Position */
+#define GMAC_FRER_STAT_B_SEQRST_COUNT_Msk     (_UINT32_(0xFF) << GMAC_FRER_STAT_B_SEQRST_COUNT_Pos) /* (GMAC_FRER_STAT_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Mask */
+#define GMAC_FRER_STAT_B_SEQRST_COUNT(value)  (GMAC_FRER_STAT_B_SEQRST_COUNT_Msk & (_UINT32_(value) << GMAC_FRER_STAT_B_SEQRST_COUNT_Pos)) /* Assigment of value for SEQRST_COUNT in the GMAC_FRER_STAT_B register */
+#define GMAC_FRER_STAT_B_Msk                  _UINT32_(0x00FF03FF)                                 /* (GMAC_FRER_STAT_B) Register Mask  */
 
 
 /* -------- GMAC_SAB2 : (GMAC Offset: 0x90) (R/W 32) Specific Address 2 Bottom Register -------- */
@@ -2518,8 +2343,8 @@
 #define GMAC_TXPQUANT1_Msk                    _UINT32_(0xFFFFFFFF)                                 /* (GMAC_TXPQUANT1) Register Mask  */
 
 
-/* -------- GMAC_TXPQUANT2 : (GMAC Offset: 0x264) (R/W 32) Transmit Pause Quantum 2 Register -------- */
-#define GMAC_TXPQUANT2_RESETVALUE             _UINT32_(0xFFFFFFFF)                                 /*  (GMAC_TXPQUANT2) Transmit Pause Quantum 2 Register  Reset Value */
+/* -------- GMAC_TXPQUANT2 : (GMAC Offset: 0x264) (R/W 32) Transmit Pause Quantum 2 Register{*}0{*} -------- */
+#define GMAC_TXPQUANT2_RESETVALUE             _UINT32_(0xFFFFFFFF)                                 /*  (GMAC_TXPQUANT2) Transmit Pause Quantum 2 Register{*}0{*}  Reset Value */
 
 #define GMAC_TXPQUANT2_QUANT_P4_Pos           _UINT32_(0)                                          /* (GMAC_TXPQUANT2) Priority 4 Transmit Pause Quantum Position */
 #define GMAC_TXPQUANT2_QUANT_P4_Msk           (_UINT32_(0xFFFF) << GMAC_TXPQUANT2_QUANT_P4_Pos)    /* (GMAC_TXPQUANT2) Priority 4 Transmit Pause Quantum Mask */
@@ -3235,67 +3060,67 @@
 /* -------- GMAC_SCR2_RATE_STATUS : (GMAC Offset: 0xB80) ( R/ 32) Screening 2 Rate Status Register -------- */
 #define GMAC_SCR2_RATE_STATUS_RESETVALUE      _UINT32_(0x00)                                       /*  (GMAC_SCR2_RATE_STATUS) Screening 2 Rate Status Register  Reset Value */
 
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Pos _UINT32_(0)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 0 Position */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 0 Mask */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Pos)) /* Assigment of value for EXCESS_RATE_Q0 in the GMAC_SCR2_RATE_STATUS register */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Pos _UINT32_(1)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 1 Position */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 1 Mask */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Pos)) /* Assigment of value for EXCESS_RATE_Q1 in the GMAC_SCR2_RATE_STATUS register */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Pos _UINT32_(2)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 2 Position */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 2 Mask */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Pos)) /* Assigment of value for EXCESS_RATE_Q2 in the GMAC_SCR2_RATE_STATUS register */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Pos _UINT32_(3)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 3 Position */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 3 Mask */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Pos)) /* Assigment of value for EXCESS_RATE_Q3 in the GMAC_SCR2_RATE_STATUS register */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Pos _UINT32_(4)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 4 Position */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 4 Mask */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Pos)) /* Assigment of value for EXCESS_RATE_Q4 in the GMAC_SCR2_RATE_STATUS register */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Pos _UINT32_(5)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 5 Position */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 5 Mask */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Pos)) /* Assigment of value for EXCESS_RATE_Q5 in the GMAC_SCR2_RATE_STATUS register */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Pos _UINT32_(6)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 6 Position */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 6 Mask */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Pos)) /* Assigment of value for EXCESS_RATE_Q6 in the GMAC_SCR2_RATE_STATUS register */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Pos _UINT32_(7)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 7 Position */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 7 Mask */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Pos)) /* Assigment of value for EXCESS_RATE_Q7 in the GMAC_SCR2_RATE_STATUS register */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Pos _UINT32_(0)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 0 Position */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 0 Mask */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Pos)) /* Assigment of value for EXCESS_RATE_R0 in the GMAC_SCR2_RATE_STATUS register */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Pos _UINT32_(1)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 1 Position */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 1 Mask */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Pos)) /* Assigment of value for EXCESS_RATE_R1 in the GMAC_SCR2_RATE_STATUS register */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_Pos _UINT32_(2)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 2 Position */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 2 Mask */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_Pos)) /* Assigment of value for EXCESS_RATE_R2 in the GMAC_SCR2_RATE_STATUS register */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R2_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_Pos _UINT32_(3)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 3 Position */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 3 Mask */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_Pos)) /* Assigment of value for EXCESS_RATE_R3 in the GMAC_SCR2_RATE_STATUS register */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R3_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_Pos _UINT32_(4)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 4 Position */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 4 Mask */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_Pos)) /* Assigment of value for EXCESS_RATE_R4 in the GMAC_SCR2_RATE_STATUS register */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R4_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_Pos _UINT32_(5)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 5 Position */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 5 Mask */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_Pos)) /* Assigment of value for EXCESS_RATE_R5 in the GMAC_SCR2_RATE_STATUS register */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R5_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_Pos _UINT32_(6)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 6 Position */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 6 Mask */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_Pos)) /* Assigment of value for EXCESS_RATE_R6 in the GMAC_SCR2_RATE_STATUS register */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R6_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_Pos _UINT32_(7)                                          /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 7 Position */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_Msk (_UINT32_(0x1) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_Pos) /* (GMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register 7 Mask */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_Pos)) /* Assigment of value for EXCESS_RATE_R7 in the GMAC_SCR2_RATE_STATUS register */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_0_Val _UINT32_(0x0)                                        /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define   GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_1_Val _UINT32_(0x1)                                        /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS.  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_0 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_0_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_Pos) /* (GMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_1 (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_1_Val << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R7_Pos) /* (GMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_SCR2_RATE_STATUS. Position  */
 #define GMAC_SCR2_RATE_STATUS_Msk             _UINT32_(0x000000FF)                                 /* (GMAC_SCR2_RATE_STATUS) Register Mask  */
 
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q_Pos _UINT32_(0)                                          /* (GMAC_SCR2_RATE_STATUS Position) Excessive Screener Rate Queue 7 */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q_Msk (_UINT32_(0xFF) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q_Pos) /* (GMAC_SCR2_RATE_STATUS Mask) EXCESS_RATE_Q */
-#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q_Pos)) 
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R_Pos _UINT32_(0)                                          /* (GMAC_SCR2_RATE_STATUS Position) Excessive Screener Rate Register 7 */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R_Msk (_UINT32_(0xFF) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R_Pos) /* (GMAC_SCR2_RATE_STATUS Mask) EXCESS_RATE_R */
+#define GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R(value) (GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R_Msk & (_UINT32_(value) << GMAC_SCR2_RATE_STATUS_EXCESS_RATE_R_Pos)) 
 
 /* -------- GMAC_MMSL_CR : (GMAC Offset: 0xF00) (R/W 32) MMSL Control Register -------- */
 #define GMAC_MMSL_CR_RESETVALUE               _UINT32_(0x20)                                       /*  (GMAC_MMSL_CR) MMSL Control Register  Reset Value */
@@ -4683,110 +4508,14 @@
 /* -------- GMAC_EMAC_RX_WATERMARK : (GMAC Offset: 0x107C) (R/W 32) Express MAC Receive Watermark Register -------- */
 #define GMAC_EMAC_RX_WATERMARK_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_RX_WATERMARK) Express MAC Receive Watermark Register  Reset Value */
 
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK0_Pos _UINT32_(0)                                          /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 0 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK0_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK0_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 0 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK0(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK0_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK0_Pos)) /* Assigment of value for RX_HIGH_WATERMARK0 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK1_Pos _UINT32_(1)                                          /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 1 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK1_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK1_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 1 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK1(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK1_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK1_Pos)) /* Assigment of value for RX_HIGH_WATERMARK1 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK2_Pos _UINT32_(2)                                          /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 2 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK2_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK2_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 2 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK2(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK2_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK2_Pos)) /* Assigment of value for RX_HIGH_WATERMARK2 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK3_Pos _UINT32_(3)                                          /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 3 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK3_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK3_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 3 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK3(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK3_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK3_Pos)) /* Assigment of value for RX_HIGH_WATERMARK3 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK4_Pos _UINT32_(4)                                          /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 4 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK4_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK4_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 4 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK4(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK4_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK4_Pos)) /* Assigment of value for RX_HIGH_WATERMARK4 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK5_Pos _UINT32_(5)                                          /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 5 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK5_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK5_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 5 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK5(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK5_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK5_Pos)) /* Assigment of value for RX_HIGH_WATERMARK5 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK6_Pos _UINT32_(6)                                          /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 6 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK6_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK6_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 6 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK6(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK6_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK6_Pos)) /* Assigment of value for RX_HIGH_WATERMARK6 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK7_Pos _UINT32_(7)                                          /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 7 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK7_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK7_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 7 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK7(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK7_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK7_Pos)) /* Assigment of value for RX_HIGH_WATERMARK7 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK8_Pos _UINT32_(8)                                          /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 8 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK8_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK8_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 8 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK8(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK8_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK8_Pos)) /* Assigment of value for RX_HIGH_WATERMARK8 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK9_Pos _UINT32_(9)                                          /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 9 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK9_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK9_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 9 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK9(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK9_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK9_Pos)) /* Assigment of value for RX_HIGH_WATERMARK9 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK10_Pos _UINT32_(10)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 10 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK10_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK10_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 10 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK10(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK10_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK10_Pos)) /* Assigment of value for RX_HIGH_WATERMARK10 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK11_Pos _UINT32_(11)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 11 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK11_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK11_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 11 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK11(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK11_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK11_Pos)) /* Assigment of value for RX_HIGH_WATERMARK11 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK12_Pos _UINT32_(12)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 12 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK12_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK12_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 12 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK12(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK12_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK12_Pos)) /* Assigment of value for RX_HIGH_WATERMARK12 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK13_Pos _UINT32_(13)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 13 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK13_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK13_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 13 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK13(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK13_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK13_Pos)) /* Assigment of value for RX_HIGH_WATERMARK13 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK14_Pos _UINT32_(14)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 14 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK14_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK14_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 14 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK14(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK14_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK14_Pos)) /* Assigment of value for RX_HIGH_WATERMARK14 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK15_Pos _UINT32_(15)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 15 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK15_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK15_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 15 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK15(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK15_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK15_Pos)) /* Assigment of value for RX_HIGH_WATERMARK15 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK0_Pos _UINT32_(16)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 0 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK0_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK0_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 0 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK0(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK0_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK0_Pos)) /* Assigment of value for RX_LOW_WATERMARK0 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK1_Pos _UINT32_(17)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 1 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK1_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK1_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 1 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK1(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK1_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK1_Pos)) /* Assigment of value for RX_LOW_WATERMARK1 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK2_Pos _UINT32_(18)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 2 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK2_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK2_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 2 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK2(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK2_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK2_Pos)) /* Assigment of value for RX_LOW_WATERMARK2 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK3_Pos _UINT32_(19)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 3 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK3_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK3_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 3 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK3(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK3_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK3_Pos)) /* Assigment of value for RX_LOW_WATERMARK3 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK4_Pos _UINT32_(20)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 4 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK4_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK4_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 4 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK4(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK4_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK4_Pos)) /* Assigment of value for RX_LOW_WATERMARK4 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK5_Pos _UINT32_(21)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 5 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK5_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK5_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 5 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK5(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK5_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK5_Pos)) /* Assigment of value for RX_LOW_WATERMARK5 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK6_Pos _UINT32_(22)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 6 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK6_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK6_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 6 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK6(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK6_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK6_Pos)) /* Assigment of value for RX_LOW_WATERMARK6 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK7_Pos _UINT32_(23)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 7 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK7_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK7_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 7 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK7(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK7_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK7_Pos)) /* Assigment of value for RX_LOW_WATERMARK7 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK8_Pos _UINT32_(24)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 8 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK8_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK8_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 8 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK8(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK8_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK8_Pos)) /* Assigment of value for RX_LOW_WATERMARK8 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK9_Pos _UINT32_(25)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 9 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK9_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK9_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 9 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK9(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK9_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK9_Pos)) /* Assigment of value for RX_LOW_WATERMARK9 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK10_Pos _UINT32_(26)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 10 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK10_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK10_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 10 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK10(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK10_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK10_Pos)) /* Assigment of value for RX_LOW_WATERMARK10 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK11_Pos _UINT32_(27)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 11 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK11_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK11_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 11 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK11(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK11_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK11_Pos)) /* Assigment of value for RX_LOW_WATERMARK11 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK12_Pos _UINT32_(28)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 12 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK12_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK12_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 12 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK12(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK12_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK12_Pos)) /* Assigment of value for RX_LOW_WATERMARK12 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK13_Pos _UINT32_(29)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 13 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK13_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK13_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 13 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK13(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK13_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK13_Pos)) /* Assigment of value for RX_LOW_WATERMARK13 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK14_Pos _UINT32_(30)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 14 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK14_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK14_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 14 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK14(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK14_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK14_Pos)) /* Assigment of value for RX_LOW_WATERMARK14 in the GMAC_EMAC_RX_WATERMARK register */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK15_Pos _UINT32_(31)                                         /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 15 Position */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK15_Msk (_UINT32_(0x1) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK15_Pos) /* (GMAC_EMAC_RX_WATERMARK) Transmit DMA Lockup Detector Enable for Queue 15 Mask */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK15(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK15_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK15_Pos)) /* Assigment of value for RX_LOW_WATERMARK15 in the GMAC_EMAC_RX_WATERMARK register */
+#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Pos _UINT32_(0)                                          /* (GMAC_EMAC_RX_WATERMARK) Receive Watermark High Threshold Position */
+#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Msk (_UINT32_(0xFFFF) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Pos) /* (GMAC_EMAC_RX_WATERMARK) Receive Watermark High Threshold Mask */
+#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Pos)) /* Assigment of value for RX_HIGH_WATERMARK in the GMAC_EMAC_RX_WATERMARK register */
+#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK_Pos _UINT32_(16)                                         /* (GMAC_EMAC_RX_WATERMARK) Receive Watermark Low Threshold Position */
+#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK_Msk (_UINT32_(0xFFFF) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK_Pos) /* (GMAC_EMAC_RX_WATERMARK) Receive Watermark Low Threshold Mask */
+#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK_Pos)) /* Assigment of value for RX_LOW_WATERMARK in the GMAC_EMAC_RX_WATERMARK register */
 #define GMAC_EMAC_RX_WATERMARK_Msk            _UINT32_(0xFFFFFFFF)                                 /* (GMAC_EMAC_RX_WATERMARK) Register Mask  */
 
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Pos _UINT32_(0)                                          /* (GMAC_EMAC_RX_WATERMARK Position) Transmit DMA Lockup Detector Enable for Queue x */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Msk (_UINT32_(0xFFFF) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Pos) /* (GMAC_EMAC_RX_WATERMARK Mask) RX_HIGH_WATERMARK */
-#define GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK(value) (GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_HIGH_WATERMARK_Pos)) 
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK_Pos _UINT32_(16)                                         /* (GMAC_EMAC_RX_WATERMARK Position) Transmit DMA Lockup Detector Enable for Queue x5 */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK_Msk (_UINT32_(0xFFFF) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK_Pos) /* (GMAC_EMAC_RX_WATERMARK Mask) RX_LOW_WATERMARK */
-#define GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK(value) (GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK_Msk & (_UINT32_(value) << GMAC_EMAC_RX_WATERMARK_RX_LOW_WATERMARK_Pos)) 
 
 /* -------- GMAC_EMAC_HRB : (GMAC Offset: 0x1080) (R/W 32) Express MAC Hash Register Bottom -------- */
 #define GMAC_EMAC_HRB_RESETVALUE              _UINT32_(0x00)                                       /*  (GMAC_EMAC_HRB) Express MAC Hash Register Bottom  Reset Value */
@@ -5899,196 +5628,96 @@
 /* -------- GMAC_EMAC_TSCTL : (GMAC Offset: 0x1580) (R/W 32) Express MACTransmit Schedule Control Register -------- */
 #define GMAC_EMAC_TSCTL_RESETVALUE            _UINT32_(0x00)                                       /*  (GMAC_EMAC_TSCTL) Express MACTransmit Schedule Control Register  Reset Value */
 
-#define GMAC_EMAC_TSCTL_TXSQ0_Pos             _UINT32_(0)                                          /* (GMAC_EMAC_TSCTL) Transmit Schedule for Qx Position */
-#define GMAC_EMAC_TSCTL_TXSQ0_Msk             (_UINT32_(0x3) << GMAC_EMAC_TSCTL_TXSQ0_Pos)         /* (GMAC_EMAC_TSCTL) Transmit Schedule for Qx Mask */
+#define GMAC_EMAC_TSCTL_TXSQ0_Pos             _UINT32_(0)                                          /* (GMAC_EMAC_TSCTL) Transmit Schedule for Q0 Position */
+#define GMAC_EMAC_TSCTL_TXSQ0_Msk             (_UINT32_(0x1) << GMAC_EMAC_TSCTL_TXSQ0_Pos)         /* (GMAC_EMAC_TSCTL) Transmit Schedule for Q0 Mask */
 #define GMAC_EMAC_TSCTL_TXSQ0(value)          (GMAC_EMAC_TSCTL_TXSQ0_Msk & (_UINT32_(value) << GMAC_EMAC_TSCTL_TXSQ0_Pos)) /* Assigment of value for TXSQ0 in the GMAC_EMAC_TSCTL register */
 #define   GMAC_EMAC_TSCTL_TXSQ0_FP_Val        _UINT32_(0x0)                                        /* (GMAC_EMAC_TSCTL) Fixed Priority  */
-#define   GMAC_EMAC_TSCTL_TXSQ0_CBS_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_TSCTL) CBS Enabled only valid for top two enabled queues and if CBS capability selected.  */
+#define   GMAC_EMAC_TSCTL_TXSQ0_CBS_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_TSCTL) CBS Enabled only valid if CBS capability selected  */
 #define   GMAC_EMAC_TSCTL_TXSQ0_DWRR_Val      _UINT32_(0x2)                                        /* (GMAC_EMAC_TSCTL) DWRR enabled  */
 #define   GMAC_EMAC_TSCTL_TXSQ0_ETS_Val       _UINT32_(0x3)                                        /* (GMAC_EMAC_TSCTL) ETS enabled  */
 #define GMAC_EMAC_TSCTL_TXSQ0_FP              (GMAC_EMAC_TSCTL_TXSQ0_FP_Val << GMAC_EMAC_TSCTL_TXSQ0_Pos) /* (GMAC_EMAC_TSCTL) Fixed Priority Position  */
-#define GMAC_EMAC_TSCTL_TXSQ0_CBS             (GMAC_EMAC_TSCTL_TXSQ0_CBS_Val << GMAC_EMAC_TSCTL_TXSQ0_Pos) /* (GMAC_EMAC_TSCTL) CBS Enabled only valid for top two enabled queues and if CBS capability selected. Position  */
+#define GMAC_EMAC_TSCTL_TXSQ0_CBS             (GMAC_EMAC_TSCTL_TXSQ0_CBS_Val << GMAC_EMAC_TSCTL_TXSQ0_Pos) /* (GMAC_EMAC_TSCTL) CBS Enabled only valid if CBS capability selected Position  */
 #define GMAC_EMAC_TSCTL_TXSQ0_DWRR            (GMAC_EMAC_TSCTL_TXSQ0_DWRR_Val << GMAC_EMAC_TSCTL_TXSQ0_Pos) /* (GMAC_EMAC_TSCTL) DWRR enabled Position  */
 #define GMAC_EMAC_TSCTL_TXSQ0_ETS             (GMAC_EMAC_TSCTL_TXSQ0_ETS_Val << GMAC_EMAC_TSCTL_TXSQ0_Pos) /* (GMAC_EMAC_TSCTL) ETS enabled Position  */
-#define GMAC_EMAC_TSCTL_TXSQ1_Pos             _UINT32_(2)                                          /* (GMAC_EMAC_TSCTL) Transmit Schedule for Qx Position */
-#define GMAC_EMAC_TSCTL_TXSQ1_Msk             (_UINT32_(0x3) << GMAC_EMAC_TSCTL_TXSQ1_Pos)         /* (GMAC_EMAC_TSCTL) Transmit Schedule for Qx Mask */
+#define GMAC_EMAC_TSCTL_TXSQ1_Pos             _UINT32_(1)                                          /* (GMAC_EMAC_TSCTL) Transmit Schedule for Q0 Position */
+#define GMAC_EMAC_TSCTL_TXSQ1_Msk             (_UINT32_(0x1) << GMAC_EMAC_TSCTL_TXSQ1_Pos)         /* (GMAC_EMAC_TSCTL) Transmit Schedule for Q0 Mask */
 #define GMAC_EMAC_TSCTL_TXSQ1(value)          (GMAC_EMAC_TSCTL_TXSQ1_Msk & (_UINT32_(value) << GMAC_EMAC_TSCTL_TXSQ1_Pos)) /* Assigment of value for TXSQ1 in the GMAC_EMAC_TSCTL register */
 #define   GMAC_EMAC_TSCTL_TXSQ1_FP_Val        _UINT32_(0x0)                                        /* (GMAC_EMAC_TSCTL) Fixed Priority  */
-#define   GMAC_EMAC_TSCTL_TXSQ1_CBS_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_TSCTL) CBS Enabled only valid for top two enabled queues and if CBS capability selected.  */
+#define   GMAC_EMAC_TSCTL_TXSQ1_CBS_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_TSCTL) CBS Enabled only valid if CBS capability selected  */
 #define   GMAC_EMAC_TSCTL_TXSQ1_DWRR_Val      _UINT32_(0x2)                                        /* (GMAC_EMAC_TSCTL) DWRR enabled  */
 #define   GMAC_EMAC_TSCTL_TXSQ1_ETS_Val       _UINT32_(0x3)                                        /* (GMAC_EMAC_TSCTL) ETS enabled  */
 #define GMAC_EMAC_TSCTL_TXSQ1_FP              (GMAC_EMAC_TSCTL_TXSQ1_FP_Val << GMAC_EMAC_TSCTL_TXSQ1_Pos) /* (GMAC_EMAC_TSCTL) Fixed Priority Position  */
-#define GMAC_EMAC_TSCTL_TXSQ1_CBS             (GMAC_EMAC_TSCTL_TXSQ1_CBS_Val << GMAC_EMAC_TSCTL_TXSQ1_Pos) /* (GMAC_EMAC_TSCTL) CBS Enabled only valid for top two enabled queues and if CBS capability selected. Position  */
+#define GMAC_EMAC_TSCTL_TXSQ1_CBS             (GMAC_EMAC_TSCTL_TXSQ1_CBS_Val << GMAC_EMAC_TSCTL_TXSQ1_Pos) /* (GMAC_EMAC_TSCTL) CBS Enabled only valid if CBS capability selected Position  */
 #define GMAC_EMAC_TSCTL_TXSQ1_DWRR            (GMAC_EMAC_TSCTL_TXSQ1_DWRR_Val << GMAC_EMAC_TSCTL_TXSQ1_Pos) /* (GMAC_EMAC_TSCTL) DWRR enabled Position  */
 #define GMAC_EMAC_TSCTL_TXSQ1_ETS             (GMAC_EMAC_TSCTL_TXSQ1_ETS_Val << GMAC_EMAC_TSCTL_TXSQ1_Pos) /* (GMAC_EMAC_TSCTL) ETS enabled Position  */
-#define GMAC_EMAC_TSCTL_TXSQ2_Pos             _UINT32_(4)                                          /* (GMAC_EMAC_TSCTL) Transmit Schedule for Qx Position */
-#define GMAC_EMAC_TSCTL_TXSQ2_Msk             (_UINT32_(0x3) << GMAC_EMAC_TSCTL_TXSQ2_Pos)         /* (GMAC_EMAC_TSCTL) Transmit Schedule for Qx Mask */
-#define GMAC_EMAC_TSCTL_TXSQ2(value)          (GMAC_EMAC_TSCTL_TXSQ2_Msk & (_UINT32_(value) << GMAC_EMAC_TSCTL_TXSQ2_Pos)) /* Assigment of value for TXSQ2 in the GMAC_EMAC_TSCTL register */
-#define   GMAC_EMAC_TSCTL_TXSQ2_FP_Val        _UINT32_(0x0)                                        /* (GMAC_EMAC_TSCTL) Fixed Priority  */
-#define   GMAC_EMAC_TSCTL_TXSQ2_CBS_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_TSCTL) CBS Enabled only valid for top two enabled queues and if CBS capability selected.  */
-#define   GMAC_EMAC_TSCTL_TXSQ2_DWRR_Val      _UINT32_(0x2)                                        /* (GMAC_EMAC_TSCTL) DWRR enabled  */
-#define   GMAC_EMAC_TSCTL_TXSQ2_ETS_Val       _UINT32_(0x3)                                        /* (GMAC_EMAC_TSCTL) ETS enabled  */
-#define GMAC_EMAC_TSCTL_TXSQ2_FP              (GMAC_EMAC_TSCTL_TXSQ2_FP_Val << GMAC_EMAC_TSCTL_TXSQ2_Pos) /* (GMAC_EMAC_TSCTL) Fixed Priority Position  */
-#define GMAC_EMAC_TSCTL_TXSQ2_CBS             (GMAC_EMAC_TSCTL_TXSQ2_CBS_Val << GMAC_EMAC_TSCTL_TXSQ2_Pos) /* (GMAC_EMAC_TSCTL) CBS Enabled only valid for top two enabled queues and if CBS capability selected. Position  */
-#define GMAC_EMAC_TSCTL_TXSQ2_DWRR            (GMAC_EMAC_TSCTL_TXSQ2_DWRR_Val << GMAC_EMAC_TSCTL_TXSQ2_Pos) /* (GMAC_EMAC_TSCTL) DWRR enabled Position  */
-#define GMAC_EMAC_TSCTL_TXSQ2_ETS             (GMAC_EMAC_TSCTL_TXSQ2_ETS_Val << GMAC_EMAC_TSCTL_TXSQ2_Pos) /* (GMAC_EMAC_TSCTL) ETS enabled Position  */
-#define GMAC_EMAC_TSCTL_TXSQ3_Pos             _UINT32_(6)                                          /* (GMAC_EMAC_TSCTL) Transmit Schedule for Qx Position */
-#define GMAC_EMAC_TSCTL_TXSQ3_Msk             (_UINT32_(0x3) << GMAC_EMAC_TSCTL_TXSQ3_Pos)         /* (GMAC_EMAC_TSCTL) Transmit Schedule for Qx Mask */
-#define GMAC_EMAC_TSCTL_TXSQ3(value)          (GMAC_EMAC_TSCTL_TXSQ3_Msk & (_UINT32_(value) << GMAC_EMAC_TSCTL_TXSQ3_Pos)) /* Assigment of value for TXSQ3 in the GMAC_EMAC_TSCTL register */
-#define   GMAC_EMAC_TSCTL_TXSQ3_FP_Val        _UINT32_(0x0)                                        /* (GMAC_EMAC_TSCTL) Fixed Priority  */
-#define   GMAC_EMAC_TSCTL_TXSQ3_CBS_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_TSCTL) CBS Enabled only valid for top two enabled queues and if CBS capability selected.  */
-#define   GMAC_EMAC_TSCTL_TXSQ3_DWRR_Val      _UINT32_(0x2)                                        /* (GMAC_EMAC_TSCTL) DWRR enabled  */
-#define   GMAC_EMAC_TSCTL_TXSQ3_ETS_Val       _UINT32_(0x3)                                        /* (GMAC_EMAC_TSCTL) ETS enabled  */
-#define GMAC_EMAC_TSCTL_TXSQ3_FP              (GMAC_EMAC_TSCTL_TXSQ3_FP_Val << GMAC_EMAC_TSCTL_TXSQ3_Pos) /* (GMAC_EMAC_TSCTL) Fixed Priority Position  */
-#define GMAC_EMAC_TSCTL_TXSQ3_CBS             (GMAC_EMAC_TSCTL_TXSQ3_CBS_Val << GMAC_EMAC_TSCTL_TXSQ3_Pos) /* (GMAC_EMAC_TSCTL) CBS Enabled only valid for top two enabled queues and if CBS capability selected. Position  */
-#define GMAC_EMAC_TSCTL_TXSQ3_DWRR            (GMAC_EMAC_TSCTL_TXSQ3_DWRR_Val << GMAC_EMAC_TSCTL_TXSQ3_Pos) /* (GMAC_EMAC_TSCTL) DWRR enabled Position  */
-#define GMAC_EMAC_TSCTL_TXSQ3_ETS             (GMAC_EMAC_TSCTL_TXSQ3_ETS_Val << GMAC_EMAC_TSCTL_TXSQ3_Pos) /* (GMAC_EMAC_TSCTL) ETS enabled Position  */
-#define GMAC_EMAC_TSCTL_TXSQ4_Pos             _UINT32_(8)                                          /* (GMAC_EMAC_TSCTL) Transmit Schedule for Qx Position */
-#define GMAC_EMAC_TSCTL_TXSQ4_Msk             (_UINT32_(0x3) << GMAC_EMAC_TSCTL_TXSQ4_Pos)         /* (GMAC_EMAC_TSCTL) Transmit Schedule for Qx Mask */
-#define GMAC_EMAC_TSCTL_TXSQ4(value)          (GMAC_EMAC_TSCTL_TXSQ4_Msk & (_UINT32_(value) << GMAC_EMAC_TSCTL_TXSQ4_Pos)) /* Assigment of value for TXSQ4 in the GMAC_EMAC_TSCTL register */
-#define   GMAC_EMAC_TSCTL_TXSQ4_FP_Val        _UINT32_(0x0)                                        /* (GMAC_EMAC_TSCTL) Fixed Priority  */
-#define   GMAC_EMAC_TSCTL_TXSQ4_CBS_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_TSCTL) CBS Enabled only valid for top two enabled queues and if CBS capability selected.  */
-#define   GMAC_EMAC_TSCTL_TXSQ4_DWRR_Val      _UINT32_(0x2)                                        /* (GMAC_EMAC_TSCTL) DWRR enabled  */
-#define   GMAC_EMAC_TSCTL_TXSQ4_ETS_Val       _UINT32_(0x3)                                        /* (GMAC_EMAC_TSCTL) ETS enabled  */
-#define GMAC_EMAC_TSCTL_TXSQ4_FP              (GMAC_EMAC_TSCTL_TXSQ4_FP_Val << GMAC_EMAC_TSCTL_TXSQ4_Pos) /* (GMAC_EMAC_TSCTL) Fixed Priority Position  */
-#define GMAC_EMAC_TSCTL_TXSQ4_CBS             (GMAC_EMAC_TSCTL_TXSQ4_CBS_Val << GMAC_EMAC_TSCTL_TXSQ4_Pos) /* (GMAC_EMAC_TSCTL) CBS Enabled only valid for top two enabled queues and if CBS capability selected. Position  */
-#define GMAC_EMAC_TSCTL_TXSQ4_DWRR            (GMAC_EMAC_TSCTL_TXSQ4_DWRR_Val << GMAC_EMAC_TSCTL_TXSQ4_Pos) /* (GMAC_EMAC_TSCTL) DWRR enabled Position  */
-#define GMAC_EMAC_TSCTL_TXSQ4_ETS             (GMAC_EMAC_TSCTL_TXSQ4_ETS_Val << GMAC_EMAC_TSCTL_TXSQ4_Pos) /* (GMAC_EMAC_TSCTL) ETS enabled Position  */
-#define GMAC_EMAC_TSCTL_TXSQ5_Pos             _UINT32_(10)                                         /* (GMAC_EMAC_TSCTL) Transmit Schedule for Qx Position */
-#define GMAC_EMAC_TSCTL_TXSQ5_Msk             (_UINT32_(0x3) << GMAC_EMAC_TSCTL_TXSQ5_Pos)         /* (GMAC_EMAC_TSCTL) Transmit Schedule for Qx Mask */
-#define GMAC_EMAC_TSCTL_TXSQ5(value)          (GMAC_EMAC_TSCTL_TXSQ5_Msk & (_UINT32_(value) << GMAC_EMAC_TSCTL_TXSQ5_Pos)) /* Assigment of value for TXSQ5 in the GMAC_EMAC_TSCTL register */
-#define   GMAC_EMAC_TSCTL_TXSQ5_FP_Val        _UINT32_(0x0)                                        /* (GMAC_EMAC_TSCTL) Fixed Priority  */
-#define   GMAC_EMAC_TSCTL_TXSQ5_CBS_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_TSCTL) CBS Enabled only valid for top two enabled queues and if CBS capability selected.  */
-#define   GMAC_EMAC_TSCTL_TXSQ5_DWRR_Val      _UINT32_(0x2)                                        /* (GMAC_EMAC_TSCTL) DWRR enabled  */
-#define   GMAC_EMAC_TSCTL_TXSQ5_ETS_Val       _UINT32_(0x3)                                        /* (GMAC_EMAC_TSCTL) ETS enabled  */
-#define GMAC_EMAC_TSCTL_TXSQ5_FP              (GMAC_EMAC_TSCTL_TXSQ5_FP_Val << GMAC_EMAC_TSCTL_TXSQ5_Pos) /* (GMAC_EMAC_TSCTL) Fixed Priority Position  */
-#define GMAC_EMAC_TSCTL_TXSQ5_CBS             (GMAC_EMAC_TSCTL_TXSQ5_CBS_Val << GMAC_EMAC_TSCTL_TXSQ5_Pos) /* (GMAC_EMAC_TSCTL) CBS Enabled only valid for top two enabled queues and if CBS capability selected. Position  */
-#define GMAC_EMAC_TSCTL_TXSQ5_DWRR            (GMAC_EMAC_TSCTL_TXSQ5_DWRR_Val << GMAC_EMAC_TSCTL_TXSQ5_Pos) /* (GMAC_EMAC_TSCTL) DWRR enabled Position  */
-#define GMAC_EMAC_TSCTL_TXSQ5_ETS             (GMAC_EMAC_TSCTL_TXSQ5_ETS_Val << GMAC_EMAC_TSCTL_TXSQ5_Pos) /* (GMAC_EMAC_TSCTL) ETS enabled Position  */
-#define GMAC_EMAC_TSCTL_Msk                   _UINT32_(0x00000FFF)                                 /* (GMAC_EMAC_TSCTL) Register Mask  */
+#define GMAC_EMAC_TSCTL_Msk                   _UINT32_(0x00000003)                                 /* (GMAC_EMAC_TSCTL) Register Mask  */
 
+#define GMAC_EMAC_TSCTL_TXSQ_Pos              _UINT32_(0)                                          /* (GMAC_EMAC_TSCTL Position) Transmit Schedule for Qx */
+#define GMAC_EMAC_TSCTL_TXSQ_Msk              (_UINT32_(0x3) << GMAC_EMAC_TSCTL_TXSQ_Pos)          /* (GMAC_EMAC_TSCTL Mask) TXSQ */
+#define GMAC_EMAC_TSCTL_TXSQ(value)           (GMAC_EMAC_TSCTL_TXSQ_Msk & (_UINT32_(value) << GMAC_EMAC_TSCTL_TXSQ_Pos)) 
 
-/* -------- GMAC_EMAC_TQBWRL0 : (GMAC Offset: 0x1590) (R/W 32) Express MAC Transmit Queue Bandwidth Rate Limit 0 Register -------- */
-#define GMAC_EMAC_TQBWRL0_RESETVALUE          _UINT32_(0x00)                                       /*  (GMAC_EMAC_TQBWRL0) Express MAC Transmit Queue Bandwidth Rate Limit 0 Register  Reset Value */
+/* -------- GMAC_EMAC_TQBWRL : (GMAC Offset: 0x1590) (R/W 32) Express MAC Transmit Queue Bandwidth Rate Limit Register -------- */
+#define GMAC_EMAC_TQBWRL_RESETVALUE           _UINT32_(0x00)                                       /*  (GMAC_EMAC_TQBWRL) Express MAC Transmit Queue Bandwidth Rate Limit Register  Reset Value */
 
-#define GMAC_EMAC_TQBWRL0_ALLOCQ0_Pos         _UINT32_(0)                                          /* (GMAC_EMAC_TQBWRL0) DWRR Weighting or ETS Bandwidth Allocation for Qx Position */
-#define GMAC_EMAC_TQBWRL0_ALLOCQ0_Msk         (_UINT32_(0xFF) << GMAC_EMAC_TQBWRL0_ALLOCQ0_Pos)    /* (GMAC_EMAC_TQBWRL0) DWRR Weighting or ETS Bandwidth Allocation for Qx Mask */
-#define GMAC_EMAC_TQBWRL0_ALLOCQ0(value)      (GMAC_EMAC_TQBWRL0_ALLOCQ0_Msk & (_UINT32_(value) << GMAC_EMAC_TQBWRL0_ALLOCQ0_Pos)) /* Assigment of value for ALLOCQ0 in the GMAC_EMAC_TQBWRL0 register */
-#define GMAC_EMAC_TQBWRL0_ALLOCQ1_Pos         _UINT32_(8)                                          /* (GMAC_EMAC_TQBWRL0) DWRR Weighting or ETS Bandwidth Allocation for Qx Position */
-#define GMAC_EMAC_TQBWRL0_ALLOCQ1_Msk         (_UINT32_(0xFF) << GMAC_EMAC_TQBWRL0_ALLOCQ1_Pos)    /* (GMAC_EMAC_TQBWRL0) DWRR Weighting or ETS Bandwidth Allocation for Qx Mask */
-#define GMAC_EMAC_TQBWRL0_ALLOCQ1(value)      (GMAC_EMAC_TQBWRL0_ALLOCQ1_Msk & (_UINT32_(value) << GMAC_EMAC_TQBWRL0_ALLOCQ1_Pos)) /* Assigment of value for ALLOCQ1 in the GMAC_EMAC_TQBWRL0 register */
-#define GMAC_EMAC_TQBWRL0_ALLOCQ2_Pos         _UINT32_(16)                                         /* (GMAC_EMAC_TQBWRL0) DWRR Weighting or ETS Bandwidth Allocation for Qx Position */
-#define GMAC_EMAC_TQBWRL0_ALLOCQ2_Msk         (_UINT32_(0xFF) << GMAC_EMAC_TQBWRL0_ALLOCQ2_Pos)    /* (GMAC_EMAC_TQBWRL0) DWRR Weighting or ETS Bandwidth Allocation for Qx Mask */
-#define GMAC_EMAC_TQBWRL0_ALLOCQ2(value)      (GMAC_EMAC_TQBWRL0_ALLOCQ2_Msk & (_UINT32_(value) << GMAC_EMAC_TQBWRL0_ALLOCQ2_Pos)) /* Assigment of value for ALLOCQ2 in the GMAC_EMAC_TQBWRL0 register */
-#define GMAC_EMAC_TQBWRL0_ALLOCQ3_Pos         _UINT32_(24)                                         /* (GMAC_EMAC_TQBWRL0) DWRR Weighting or ETS Bandwidth Allocation for Qx Position */
-#define GMAC_EMAC_TQBWRL0_ALLOCQ3_Msk         (_UINT32_(0xFF) << GMAC_EMAC_TQBWRL0_ALLOCQ3_Pos)    /* (GMAC_EMAC_TQBWRL0) DWRR Weighting or ETS Bandwidth Allocation for Qx Mask */
-#define GMAC_EMAC_TQBWRL0_ALLOCQ3(value)      (GMAC_EMAC_TQBWRL0_ALLOCQ3_Msk & (_UINT32_(value) << GMAC_EMAC_TQBWRL0_ALLOCQ3_Pos)) /* Assigment of value for ALLOCQ3 in the GMAC_EMAC_TQBWRL0 register */
-#define GMAC_EMAC_TQBWRL0_Msk                 _UINT32_(0xFFFFFFFF)                                 /* (GMAC_EMAC_TQBWRL0) Register Mask  */
+#define GMAC_EMAC_TQBWRL_ALLOCQ0_Pos          _UINT32_(0)                                          /* (GMAC_EMAC_TQBWRL) DWRR Weighting or ETS Bandwidth Allocation for EMAC Position */
+#define GMAC_EMAC_TQBWRL_ALLOCQ0_Msk          (_UINT32_(0xFF) << GMAC_EMAC_TQBWRL_ALLOCQ0_Pos)     /* (GMAC_EMAC_TQBWRL) DWRR Weighting or ETS Bandwidth Allocation for EMAC Mask */
+#define GMAC_EMAC_TQBWRL_ALLOCQ0(value)       (GMAC_EMAC_TQBWRL_ALLOCQ0_Msk & (_UINT32_(value) << GMAC_EMAC_TQBWRL_ALLOCQ0_Pos)) /* Assigment of value for ALLOCQ0 in the GMAC_EMAC_TQBWRL register */
+#define GMAC_EMAC_TQBWRL_Msk                  _UINT32_(0x000000FF)                                 /* (GMAC_EMAC_TQBWRL) Register Mask  */
 
 
 /* -------- GMAC_EMAC_TQSA : (GMAC Offset: 0x15A0) (R/W 32) Express MAC Transmit Queue Segment Allocation Register -------- */
 #define GMAC_EMAC_TQSA_RESETVALUE             _UINT32_(0x00)                                       /*  (GMAC_EMAC_TQSA) Express MAC Transmit Queue Segment Allocation Register  Reset Value */
 
-#define GMAC_EMAC_TQSA_SEGALLOCQ0_Pos         _UINT32_(0)                                          /* (GMAC_EMAC_TQSA) Segment Allocation for Qx Position */
-#define GMAC_EMAC_TQSA_SEGALLOCQ0_Msk         (_UINT32_(0x7) << GMAC_EMAC_TQSA_SEGALLOCQ0_Pos)     /* (GMAC_EMAC_TQSA) Segment Allocation for Qx Mask */
+#define GMAC_EMAC_TQSA_SEGALLOCQ0_Pos         _UINT32_(0)                                          /* (GMAC_EMAC_TQSA) Segment Allocation for EMAC Position */
+#define GMAC_EMAC_TQSA_SEGALLOCQ0_Msk         (_UINT32_(0x7) << GMAC_EMAC_TQSA_SEGALLOCQ0_Pos)     /* (GMAC_EMAC_TQSA) Segment Allocation for EMAC Mask */
 #define GMAC_EMAC_TQSA_SEGALLOCQ0(value)      (GMAC_EMAC_TQSA_SEGALLOCQ0_Msk & (_UINT32_(value) << GMAC_EMAC_TQSA_SEGALLOCQ0_Pos)) /* Assigment of value for SEGALLOCQ0 in the GMAC_EMAC_TQSA register */
-#define GMAC_EMAC_TQSA_SEGALLOCQ1_Pos         _UINT32_(4)                                          /* (GMAC_EMAC_TQSA) Segment Allocation for Qx Position */
-#define GMAC_EMAC_TQSA_SEGALLOCQ1_Msk         (_UINT32_(0x7) << GMAC_EMAC_TQSA_SEGALLOCQ1_Pos)     /* (GMAC_EMAC_TQSA) Segment Allocation for Qx Mask */
-#define GMAC_EMAC_TQSA_SEGALLOCQ1(value)      (GMAC_EMAC_TQSA_SEGALLOCQ1_Msk & (_UINT32_(value) << GMAC_EMAC_TQSA_SEGALLOCQ1_Pos)) /* Assigment of value for SEGALLOCQ1 in the GMAC_EMAC_TQSA register */
-#define GMAC_EMAC_TQSA_SEGALLOCQ2_Pos         _UINT32_(8)                                          /* (GMAC_EMAC_TQSA) Segment Allocation for Qx Position */
-#define GMAC_EMAC_TQSA_SEGALLOCQ2_Msk         (_UINT32_(0x7) << GMAC_EMAC_TQSA_SEGALLOCQ2_Pos)     /* (GMAC_EMAC_TQSA) Segment Allocation for Qx Mask */
-#define GMAC_EMAC_TQSA_SEGALLOCQ2(value)      (GMAC_EMAC_TQSA_SEGALLOCQ2_Msk & (_UINT32_(value) << GMAC_EMAC_TQSA_SEGALLOCQ2_Pos)) /* Assigment of value for SEGALLOCQ2 in the GMAC_EMAC_TQSA register */
-#define GMAC_EMAC_TQSA_SEGALLOCQ3_Pos         _UINT32_(12)                                         /* (GMAC_EMAC_TQSA) Segment Allocation for Qx Position */
-#define GMAC_EMAC_TQSA_SEGALLOCQ3_Msk         (_UINT32_(0x7) << GMAC_EMAC_TQSA_SEGALLOCQ3_Pos)     /* (GMAC_EMAC_TQSA) Segment Allocation for Qx Mask */
-#define GMAC_EMAC_TQSA_SEGALLOCQ3(value)      (GMAC_EMAC_TQSA_SEGALLOCQ3_Msk & (_UINT32_(value) << GMAC_EMAC_TQSA_SEGALLOCQ3_Pos)) /* Assigment of value for SEGALLOCQ3 in the GMAC_EMAC_TQSA register */
-#define GMAC_EMAC_TQSA_SEGALLOCQ4_Pos         _UINT32_(16)                                         /* (GMAC_EMAC_TQSA) Segment Allocation for Qx Position */
-#define GMAC_EMAC_TQSA_SEGALLOCQ4_Msk         (_UINT32_(0x7) << GMAC_EMAC_TQSA_SEGALLOCQ4_Pos)     /* (GMAC_EMAC_TQSA) Segment Allocation for Qx Mask */
-#define GMAC_EMAC_TQSA_SEGALLOCQ4(value)      (GMAC_EMAC_TQSA_SEGALLOCQ4_Msk & (_UINT32_(value) << GMAC_EMAC_TQSA_SEGALLOCQ4_Pos)) /* Assigment of value for SEGALLOCQ4 in the GMAC_EMAC_TQSA register */
-#define GMAC_EMAC_TQSA_SEGALLOCQ5_Pos         _UINT32_(20)                                         /* (GMAC_EMAC_TQSA) Segment Allocation for Qx Position */
-#define GMAC_EMAC_TQSA_SEGALLOCQ5_Msk         (_UINT32_(0x7) << GMAC_EMAC_TQSA_SEGALLOCQ5_Pos)     /* (GMAC_EMAC_TQSA) Segment Allocation for Qx Mask */
-#define GMAC_EMAC_TQSA_SEGALLOCQ5(value)      (GMAC_EMAC_TQSA_SEGALLOCQ5_Msk & (_UINT32_(value) << GMAC_EMAC_TQSA_SEGALLOCQ5_Pos)) /* Assigment of value for SEGALLOCQ5 in the GMAC_EMAC_TQSA register */
-#define GMAC_EMAC_TQSA_Msk                    _UINT32_(0x00777777)                                 /* (GMAC_EMAC_TQSA) Register Mask  */
+#define GMAC_EMAC_TQSA_Msk                    _UINT32_(0x00000007)                                 /* (GMAC_EMAC_TQSA) Register Mask  */
 
 
-/* -------- GMAC_EMAC_ENST_START_Q : (GMAC Offset: 0x1800) (R/W 32) Express MAC ENST Start Time Queue Register (index = 0) -------- */
-#define GMAC_EMAC_ENST_START_Q_RESETVALUE     _UINT32_(0x1FFFF)                                    /*  (GMAC_EMAC_ENST_START_Q) Express MAC ENST Start Time Queue Register (index = 0)  Reset Value */
+/* -------- GMAC_EMAC_ENST_START : (GMAC Offset: 0x1800) (R/W 32) Express MAC ENST Start Time Queue Register -------- */
+#define GMAC_EMAC_ENST_START_RESETVALUE       _UINT32_(0x1FFFF)                                    /*  (GMAC_EMAC_ENST_START) Express MAC ENST Start Time Queue Register  Reset Value */
 
-#define GMAC_EMAC_ENST_START_Q_START_NSEC_Pos _UINT32_(0)                                          /* (GMAC_EMAC_ENST_START_Q) Nanoseconds for Start Time Position */
-#define GMAC_EMAC_ENST_START_Q_START_NSEC_Msk (_UINT32_(0x3FFFFFFF) << GMAC_EMAC_ENST_START_Q_START_NSEC_Pos) /* (GMAC_EMAC_ENST_START_Q) Nanoseconds for Start Time Mask */
-#define GMAC_EMAC_ENST_START_Q_START_NSEC(value) (GMAC_EMAC_ENST_START_Q_START_NSEC_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_START_Q_START_NSEC_Pos)) /* Assigment of value for START_NSEC in the GMAC_EMAC_ENST_START_Q register */
-#define GMAC_EMAC_ENST_START_Q_START_SEC_Pos  _UINT32_(30)                                         /* (GMAC_EMAC_ENST_START_Q) Seconds for Start Time Position */
-#define GMAC_EMAC_ENST_START_Q_START_SEC_Msk  (_UINT32_(0x3) << GMAC_EMAC_ENST_START_Q_START_SEC_Pos) /* (GMAC_EMAC_ENST_START_Q) Seconds for Start Time Mask */
-#define GMAC_EMAC_ENST_START_Q_START_SEC(value) (GMAC_EMAC_ENST_START_Q_START_SEC_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_START_Q_START_SEC_Pos)) /* Assigment of value for START_SEC in the GMAC_EMAC_ENST_START_Q register */
-#define GMAC_EMAC_ENST_START_Q_Msk            _UINT32_(0xFFFFFFFF)                                 /* (GMAC_EMAC_ENST_START_Q) Register Mask  */
-
-
-/* -------- GMAC_EMAC_ENST_ON_Q : (GMAC Offset: 0x1820) (R/W 32) Express MAC ENST On Time Queue Register (index = 0) -------- */
-#define GMAC_EMAC_ENST_ON_Q_RESETVALUE        _UINT32_(0x1FFFF)                                    /*  (GMAC_EMAC_ENST_ON_Q) Express MAC ENST On Time Queue Register (index = 0)  Reset Value */
-
-#define GMAC_EMAC_ENST_ON_Q_ON_TIME_Pos       _UINT32_(0)                                          /* (GMAC_EMAC_ENST_ON_Q) Time for which the Queue is to be Open Position */
-#define GMAC_EMAC_ENST_ON_Q_ON_TIME_Msk       (_UINT32_(0x1FFFF) << GMAC_EMAC_ENST_ON_Q_ON_TIME_Pos) /* (GMAC_EMAC_ENST_ON_Q) Time for which the Queue is to be Open Mask */
-#define GMAC_EMAC_ENST_ON_Q_ON_TIME(value)    (GMAC_EMAC_ENST_ON_Q_ON_TIME_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_ON_Q_ON_TIME_Pos)) /* Assigment of value for ON_TIME in the GMAC_EMAC_ENST_ON_Q register */
-#define GMAC_EMAC_ENST_ON_Q_Msk               _UINT32_(0x0001FFFF)                                 /* (GMAC_EMAC_ENST_ON_Q) Register Mask  */
+#define GMAC_EMAC_ENST_START_START_NSEC_Pos   _UINT32_(0)                                          /* (GMAC_EMAC_ENST_START) Nanoseconds for Start Time Position */
+#define GMAC_EMAC_ENST_START_START_NSEC_Msk   (_UINT32_(0x3FFFFFFF) << GMAC_EMAC_ENST_START_START_NSEC_Pos) /* (GMAC_EMAC_ENST_START) Nanoseconds for Start Time Mask */
+#define GMAC_EMAC_ENST_START_START_NSEC(value) (GMAC_EMAC_ENST_START_START_NSEC_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_START_START_NSEC_Pos)) /* Assigment of value for START_NSEC in the GMAC_EMAC_ENST_START register */
+#define GMAC_EMAC_ENST_START_START_SEC_Pos    _UINT32_(30)                                         /* (GMAC_EMAC_ENST_START) Seconds for Start Time Position */
+#define GMAC_EMAC_ENST_START_START_SEC_Msk    (_UINT32_(0x3) << GMAC_EMAC_ENST_START_START_SEC_Pos) /* (GMAC_EMAC_ENST_START) Seconds for Start Time Mask */
+#define GMAC_EMAC_ENST_START_START_SEC(value) (GMAC_EMAC_ENST_START_START_SEC_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_START_START_SEC_Pos)) /* Assigment of value for START_SEC in the GMAC_EMAC_ENST_START register */
+#define GMAC_EMAC_ENST_START_Msk              _UINT32_(0xFFFFFFFF)                                 /* (GMAC_EMAC_ENST_START) Register Mask  */
 
 
-/* -------- GMAC_EMAC_ENST_OFF_Q : (GMAC Offset: 0x1840) (R/W 32) Express MAC ENST Off Time Queue Register (index = 0) -------- */
-#define GMAC_EMAC_ENST_OFF_Q_RESETVALUE       _UINT32_(0x00)                                       /*  (GMAC_EMAC_ENST_OFF_Q) Express MAC ENST Off Time Queue Register (index = 0)  Reset Value */
+/* -------- GMAC_EMAC_ENST_ON : (GMAC Offset: 0x1820) (R/W 32) Express MAC ENST On Time Queue Register -------- */
+#define GMAC_EMAC_ENST_ON_RESETVALUE          _UINT32_(0x1FFFF)                                    /*  (GMAC_EMAC_ENST_ON) Express MAC ENST On Time Queue Register  Reset Value */
 
-#define GMAC_EMAC_ENST_OFF_Q_OFF_TIME_Pos     _UINT32_(0)                                          /* (GMAC_EMAC_ENST_OFF_Q) Time for which the Queue is to be Blocked Position */
-#define GMAC_EMAC_ENST_OFF_Q_OFF_TIME_Msk     (_UINT32_(0x1FFFF) << GMAC_EMAC_ENST_OFF_Q_OFF_TIME_Pos) /* (GMAC_EMAC_ENST_OFF_Q) Time for which the Queue is to be Blocked Mask */
-#define GMAC_EMAC_ENST_OFF_Q_OFF_TIME(value)  (GMAC_EMAC_ENST_OFF_Q_OFF_TIME_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_OFF_Q_OFF_TIME_Pos)) /* Assigment of value for OFF_TIME in the GMAC_EMAC_ENST_OFF_Q register */
-#define GMAC_EMAC_ENST_OFF_Q_Msk              _UINT32_(0x0001FFFF)                                 /* (GMAC_EMAC_ENST_OFF_Q) Register Mask  */
+#define GMAC_EMAC_ENST_ON_ON_TIME_Pos         _UINT32_(0)                                          /* (GMAC_EMAC_ENST_ON) Time for which the Queue is to be Open Position */
+#define GMAC_EMAC_ENST_ON_ON_TIME_Msk         (_UINT32_(0x1FFFF) << GMAC_EMAC_ENST_ON_ON_TIME_Pos) /* (GMAC_EMAC_ENST_ON) Time for which the Queue is to be Open Mask */
+#define GMAC_EMAC_ENST_ON_ON_TIME(value)      (GMAC_EMAC_ENST_ON_ON_TIME_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_ON_ON_TIME_Pos)) /* Assigment of value for ON_TIME in the GMAC_EMAC_ENST_ON register */
+#define GMAC_EMAC_ENST_ON_Msk                 _UINT32_(0x0001FFFF)                                 /* (GMAC_EMAC_ENST_ON) Register Mask  */
+
+
+/* -------- GMAC_EMAC_ENST_OFF : (GMAC Offset: 0x1840) (R/W 32) Express MAC ENST Off Time Queue Register -------- */
+#define GMAC_EMAC_ENST_OFF_RESETVALUE         _UINT32_(0x00)                                       /*  (GMAC_EMAC_ENST_OFF) Express MAC ENST Off Time Queue Register  Reset Value */
+
+#define GMAC_EMAC_ENST_OFF_OFF_TIME_Pos       _UINT32_(0)                                          /* (GMAC_EMAC_ENST_OFF) Time for which the Queue is to be Blocked Position */
+#define GMAC_EMAC_ENST_OFF_OFF_TIME_Msk       (_UINT32_(0x1FFFF) << GMAC_EMAC_ENST_OFF_OFF_TIME_Pos) /* (GMAC_EMAC_ENST_OFF) Time for which the Queue is to be Blocked Mask */
+#define GMAC_EMAC_ENST_OFF_OFF_TIME(value)    (GMAC_EMAC_ENST_OFF_OFF_TIME_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_OFF_OFF_TIME_Pos)) /* Assigment of value for OFF_TIME in the GMAC_EMAC_ENST_OFF register */
+#define GMAC_EMAC_ENST_OFF_Msk                _UINT32_(0x0001FFFF)                                 /* (GMAC_EMAC_ENST_OFF) Register Mask  */
 
 
 /* -------- GMAC_EMAC_ENST_CR : (GMAC Offset: 0x1880) (R/W 32) Express MAC ENST Control Register -------- */
 #define GMAC_EMAC_ENST_CR_RESETVALUE          _UINT32_(0x00)                                       /*  (GMAC_EMAC_ENST_CR) Express MAC ENST Control Register  Reset Value */
 
-#define GMAC_EMAC_ENST_CR_EN_Q0_Pos           _UINT32_(0)                                          /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for Queue 0 Position */
-#define GMAC_EMAC_ENST_CR_EN_Q0_Msk           (_UINT32_(0x1) << GMAC_EMAC_ENST_CR_EN_Q0_Pos)       /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for Queue 0 Mask */
+#define GMAC_EMAC_ENST_CR_EN_Q0_Pos           _UINT32_(0)                                          /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for EMAC Position */
+#define GMAC_EMAC_ENST_CR_EN_Q0_Msk           (_UINT32_(0x1) << GMAC_EMAC_ENST_CR_EN_Q0_Pos)       /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for EMAC Mask */
 #define GMAC_EMAC_ENST_CR_EN_Q0(value)        (GMAC_EMAC_ENST_CR_EN_Q0_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_CR_EN_Q0_Pos)) /* Assigment of value for EN_Q0 in the GMAC_EMAC_ENST_CR register */
-#define   GMAC_EMAC_ENST_CR_EN_Q0_0_Val       _UINT32_(0x0)                                        /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for queue x.  */
-#define   GMAC_EMAC_ENST_CR_EN_Q0_1_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for queue x. EMAC has only 1 queue and ENST is enabled by writing EN_Q0.  */
-#define GMAC_EMAC_ENST_CR_EN_Q0_0             (GMAC_EMAC_ENST_CR_EN_Q0_0_Val << GMAC_EMAC_ENST_CR_EN_Q0_Pos) /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for queue x. Position  */
-#define GMAC_EMAC_ENST_CR_EN_Q0_1             (GMAC_EMAC_ENST_CR_EN_Q0_1_Val << GMAC_EMAC_ENST_CR_EN_Q0_Pos) /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for queue x. EMAC has only 1 queue and ENST is enabled by writing EN_Q0. Position  */
-#define GMAC_EMAC_ENST_CR_EN_Q1_Pos           _UINT32_(1)                                          /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for Queue 1 Position */
-#define GMAC_EMAC_ENST_CR_EN_Q1_Msk           (_UINT32_(0x1) << GMAC_EMAC_ENST_CR_EN_Q1_Pos)       /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for Queue 1 Mask */
-#define GMAC_EMAC_ENST_CR_EN_Q1(value)        (GMAC_EMAC_ENST_CR_EN_Q1_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_CR_EN_Q1_Pos)) /* Assigment of value for EN_Q1 in the GMAC_EMAC_ENST_CR register */
-#define   GMAC_EMAC_ENST_CR_EN_Q1_0_Val       _UINT32_(0x0)                                        /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for queue x.  */
-#define   GMAC_EMAC_ENST_CR_EN_Q1_1_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for queue x. EMAC has only 1 queue and ENST is enabled by writing EN_Q0.  */
-#define GMAC_EMAC_ENST_CR_EN_Q1_0             (GMAC_EMAC_ENST_CR_EN_Q1_0_Val << GMAC_EMAC_ENST_CR_EN_Q1_Pos) /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for queue x. Position  */
-#define GMAC_EMAC_ENST_CR_EN_Q1_1             (GMAC_EMAC_ENST_CR_EN_Q1_1_Val << GMAC_EMAC_ENST_CR_EN_Q1_Pos) /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for queue x. EMAC has only 1 queue and ENST is enabled by writing EN_Q0. Position  */
-#define GMAC_EMAC_ENST_CR_EN_Q2_Pos           _UINT32_(2)                                          /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for Queue 2 Position */
-#define GMAC_EMAC_ENST_CR_EN_Q2_Msk           (_UINT32_(0x1) << GMAC_EMAC_ENST_CR_EN_Q2_Pos)       /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for Queue 2 Mask */
-#define GMAC_EMAC_ENST_CR_EN_Q2(value)        (GMAC_EMAC_ENST_CR_EN_Q2_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_CR_EN_Q2_Pos)) /* Assigment of value for EN_Q2 in the GMAC_EMAC_ENST_CR register */
-#define   GMAC_EMAC_ENST_CR_EN_Q2_0_Val       _UINT32_(0x0)                                        /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for queue x.  */
-#define   GMAC_EMAC_ENST_CR_EN_Q2_1_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for queue x. EMAC has only 1 queue and ENST is enabled by writing EN_Q0.  */
-#define GMAC_EMAC_ENST_CR_EN_Q2_0             (GMAC_EMAC_ENST_CR_EN_Q2_0_Val << GMAC_EMAC_ENST_CR_EN_Q2_Pos) /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for queue x. Position  */
-#define GMAC_EMAC_ENST_CR_EN_Q2_1             (GMAC_EMAC_ENST_CR_EN_Q2_1_Val << GMAC_EMAC_ENST_CR_EN_Q2_Pos) /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for queue x. EMAC has only 1 queue and ENST is enabled by writing EN_Q0. Position  */
-#define GMAC_EMAC_ENST_CR_EN_Q3_Pos           _UINT32_(3)                                          /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for Queue 3 Position */
-#define GMAC_EMAC_ENST_CR_EN_Q3_Msk           (_UINT32_(0x1) << GMAC_EMAC_ENST_CR_EN_Q3_Pos)       /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for Queue 3 Mask */
-#define GMAC_EMAC_ENST_CR_EN_Q3(value)        (GMAC_EMAC_ENST_CR_EN_Q3_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_CR_EN_Q3_Pos)) /* Assigment of value for EN_Q3 in the GMAC_EMAC_ENST_CR register */
-#define   GMAC_EMAC_ENST_CR_EN_Q3_0_Val       _UINT32_(0x0)                                        /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for queue x.  */
-#define   GMAC_EMAC_ENST_CR_EN_Q3_1_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for queue x. EMAC has only 1 queue and ENST is enabled by writing EN_Q0.  */
-#define GMAC_EMAC_ENST_CR_EN_Q3_0             (GMAC_EMAC_ENST_CR_EN_Q3_0_Val << GMAC_EMAC_ENST_CR_EN_Q3_Pos) /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for queue x. Position  */
-#define GMAC_EMAC_ENST_CR_EN_Q3_1             (GMAC_EMAC_ENST_CR_EN_Q3_1_Val << GMAC_EMAC_ENST_CR_EN_Q3_Pos) /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for queue x. EMAC has only 1 queue and ENST is enabled by writing EN_Q0. Position  */
-#define GMAC_EMAC_ENST_CR_EN_Q4_Pos           _UINT32_(4)                                          /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for Queue 4 Position */
-#define GMAC_EMAC_ENST_CR_EN_Q4_Msk           (_UINT32_(0x1) << GMAC_EMAC_ENST_CR_EN_Q4_Pos)       /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for Queue 4 Mask */
-#define GMAC_EMAC_ENST_CR_EN_Q4(value)        (GMAC_EMAC_ENST_CR_EN_Q4_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_CR_EN_Q4_Pos)) /* Assigment of value for EN_Q4 in the GMAC_EMAC_ENST_CR register */
-#define   GMAC_EMAC_ENST_CR_EN_Q4_0_Val       _UINT32_(0x0)                                        /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for queue x.  */
-#define   GMAC_EMAC_ENST_CR_EN_Q4_1_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for queue x. EMAC has only 1 queue and ENST is enabled by writing EN_Q0.  */
-#define GMAC_EMAC_ENST_CR_EN_Q4_0             (GMAC_EMAC_ENST_CR_EN_Q4_0_Val << GMAC_EMAC_ENST_CR_EN_Q4_Pos) /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for queue x. Position  */
-#define GMAC_EMAC_ENST_CR_EN_Q4_1             (GMAC_EMAC_ENST_CR_EN_Q4_1_Val << GMAC_EMAC_ENST_CR_EN_Q4_Pos) /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for queue x. EMAC has only 1 queue and ENST is enabled by writing EN_Q0. Position  */
-#define GMAC_EMAC_ENST_CR_EN_Q5_Pos           _UINT32_(5)                                          /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for Queue 5 Position */
-#define GMAC_EMAC_ENST_CR_EN_Q5_Msk           (_UINT32_(0x1) << GMAC_EMAC_ENST_CR_EN_Q5_Pos)       /* (GMAC_EMAC_ENST_CR) Enhanced Scheduled Traffic Enable for Queue 5 Mask */
-#define GMAC_EMAC_ENST_CR_EN_Q5(value)        (GMAC_EMAC_ENST_CR_EN_Q5_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_CR_EN_Q5_Pos)) /* Assigment of value for EN_Q5 in the GMAC_EMAC_ENST_CR register */
-#define   GMAC_EMAC_ENST_CR_EN_Q5_0_Val       _UINT32_(0x0)                                        /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for queue x.  */
-#define   GMAC_EMAC_ENST_CR_EN_Q5_1_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for queue x. EMAC has only 1 queue and ENST is enabled by writing EN_Q0.  */
-#define GMAC_EMAC_ENST_CR_EN_Q5_0             (GMAC_EMAC_ENST_CR_EN_Q5_0_Val << GMAC_EMAC_ENST_CR_EN_Q5_Pos) /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for queue x. Position  */
-#define GMAC_EMAC_ENST_CR_EN_Q5_1             (GMAC_EMAC_ENST_CR_EN_Q5_1_Val << GMAC_EMAC_ENST_CR_EN_Q5_Pos) /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for queue x. EMAC has only 1 queue and ENST is enabled by writing EN_Q0. Position  */
-#define GMAC_EMAC_ENST_CR_Msk                 _UINT32_(0x0000003F)                                 /* (GMAC_EMAC_ENST_CR) Register Mask  */
+#define   GMAC_EMAC_ENST_CR_EN_Q0_0_Val       _UINT32_(0x0)                                        /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for EMAC.  */
+#define   GMAC_EMAC_ENST_CR_EN_Q0_1_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for EMAC. EMAC has only 1 queue and ENST is enabled by writing EN_Q0.  */
+#define GMAC_EMAC_ENST_CR_EN_Q0_0             (GMAC_EMAC_ENST_CR_EN_Q0_0_Val << GMAC_EMAC_ENST_CR_EN_Q0_Pos) /* (GMAC_EMAC_ENST_CR) Disables the enhanced scheduled traffic for EMAC. Position  */
+#define GMAC_EMAC_ENST_CR_EN_Q0_1             (GMAC_EMAC_ENST_CR_EN_Q0_1_Val << GMAC_EMAC_ENST_CR_EN_Q0_Pos) /* (GMAC_EMAC_ENST_CR) Enables the enhanced scheduled traffic for EMAC. EMAC has only 1 queue and ENST is enabled by writing EN_Q0. Position  */
+#define GMAC_EMAC_ENST_CR_Msk                 _UINT32_(0x00000001)                                 /* (GMAC_EMAC_ENST_CR) Register Mask  */
 
-#define GMAC_EMAC_ENST_CR_EN_Q_Pos            _UINT32_(0)                                          /* (GMAC_EMAC_ENST_CR Position) Enhanced Scheduled Traffic Enable for Queue 5 */
-#define GMAC_EMAC_ENST_CR_EN_Q_Msk            (_UINT32_(0x3F) << GMAC_EMAC_ENST_CR_EN_Q_Pos)       /* (GMAC_EMAC_ENST_CR Mask) EN_Q */
+#define GMAC_EMAC_ENST_CR_EN_Q_Pos            _UINT32_(0)                                          /* (GMAC_EMAC_ENST_CR Position) Enhanced Scheduled Traffic Enable for EMAC */
+#define GMAC_EMAC_ENST_CR_EN_Q_Msk            (_UINT32_(0x1) << GMAC_EMAC_ENST_CR_EN_Q_Pos)        /* (GMAC_EMAC_ENST_CR Mask) EN_Q */
 #define GMAC_EMAC_ENST_CR_EN_Q(value)         (GMAC_EMAC_ENST_CR_EN_Q_Msk & (_UINT32_(value) << GMAC_EMAC_ENST_CR_EN_Q_Pos)) 
 
 /* -------- GMAC_EMAC_FRER_TIMEOUT : (GMAC Offset: 0x18A0) (R/W 32) Express MAC Frame Elimination Timeout Register -------- */
@@ -6121,6 +5750,164 @@
 #define GMAC_EMAC_FRER_REDTAG_STRIP_R_TAG_0   (GMAC_EMAC_FRER_REDTAG_STRIP_R_TAG_0_Val << GMAC_EMAC_FRER_REDTAG_STRIP_R_TAG_Pos) /* (GMAC_EMAC_FRER_REDTAG) Disables the stripping function. When the statistics counters need to reflect the actual number of octets received, then the stripping functionality must be disabled. Position  */
 #define GMAC_EMAC_FRER_REDTAG_STRIP_R_TAG_1   (GMAC_EMAC_FRER_REDTAG_STRIP_R_TAG_1_Val << GMAC_EMAC_FRER_REDTAG_STRIP_R_TAG_Pos) /* (GMAC_EMAC_FRER_REDTAG) Enables the stripping function, the receive octet counters reflect post deletion frame size so the frame elimination functionality is transparent to higher level management. Position  */
 #define GMAC_EMAC_FRER_REDTAG_Msk             _UINT32_(0xC000FFFF)                                 /* (GMAC_EMAC_FRER_REDTAG) Register Mask  */
+
+
+/* -------- GMAC_EMAC_FRER_CTRL1_A : (GMAC Offset: 0x18C0) (R/W 32) Express MAC Frame Elimination Control1 A Register -------- */
+#define GMAC_EMAC_FRER_CTRL1_A_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_FRER_CTRL1_A) Express MAC Frame Elimination Control1 A Register  Reset Value */
+
+#define GMAC_EMAC_FRER_CTRL1_A_MEMBER_STREAM_1_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_CTRL1_A) Pointer to Screener Type 2 Register Position */
+#define GMAC_EMAC_FRER_CTRL1_A_MEMBER_STREAM_1_Msk (_UINT32_(0xF) << GMAC_EMAC_FRER_CTRL1_A_MEMBER_STREAM_1_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) Pointer to Screener Type 2 Register Mask */
+#define GMAC_EMAC_FRER_CTRL1_A_MEMBER_STREAM_1(value) (GMAC_EMAC_FRER_CTRL1_A_MEMBER_STREAM_1_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL1_A_MEMBER_STREAM_1_Pos)) /* Assigment of value for MEMBER_STREAM_1 in the GMAC_EMAC_FRER_CTRL1_A register */
+#define GMAC_EMAC_FRER_CTRL1_A_MEMBER_STREAM_2_Pos _UINT32_(4)                                          /* (GMAC_EMAC_FRER_CTRL1_A) Pointer to Screener Type 2 Register Position */
+#define GMAC_EMAC_FRER_CTRL1_A_MEMBER_STREAM_2_Msk (_UINT32_(0xF) << GMAC_EMAC_FRER_CTRL1_A_MEMBER_STREAM_2_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) Pointer to Screener Type 2 Register Mask */
+#define GMAC_EMAC_FRER_CTRL1_A_MEMBER_STREAM_2(value) (GMAC_EMAC_FRER_CTRL1_A_MEMBER_STREAM_2_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL1_A_MEMBER_STREAM_2_Pos)) /* Assigment of value for MEMBER_STREAM_2 in the GMAC_EMAC_FRER_CTRL1_A register */
+#define GMAC_EMAC_FRER_CTRL1_A_OFFSET_VALUE_Pos _UINT32_(8)                                          /* (GMAC_EMAC_FRER_CTRL1_A) Offset in Bytes from Start Packet Delimiter to MSB for 802.1CB Sequence Number Position */
+#define GMAC_EMAC_FRER_CTRL1_A_OFFSET_VALUE_Msk (_UINT32_(0x1FF) << GMAC_EMAC_FRER_CTRL1_A_OFFSET_VALUE_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) Offset in Bytes from Start Packet Delimiter to MSB for 802.1CB Sequence Number Mask */
+#define GMAC_EMAC_FRER_CTRL1_A_OFFSET_VALUE(value) (GMAC_EMAC_FRER_CTRL1_A_OFFSET_VALUE_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL1_A_OFFSET_VALUE_Pos)) /* Assigment of value for OFFSET_VALUE in the GMAC_EMAC_FRER_CTRL1_A register */
+#define GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_Pos  _UINT32_(28)                                         /* (GMAC_EMAC_FRER_CTRL1_A) Redundancy Tag Enable Position */
+#define GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_Msk  (_UINT32_(0x1) << GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) Redundancy Tag Enable Mask */
+#define GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG(value) (GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_Pos)) /* Assigment of value for USE_R_TAG in the GMAC_EMAC_FRER_CTRL1_A register */
+#define   GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_FRER_CTRL1_A) Identifies bottom of sequence number with OFFSET_VALUE.  */
+#define   GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_FRER_CTRL1_A) Identifies sequence number with redundancy tag.  */
+#define GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_0    (GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_0_Val << GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) Identifies bottom of sequence number with OFFSET_VALUE. Position  */
+#define GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_1    (GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_1_Val << GMAC_EMAC_FRER_CTRL1_A_USE_R_TAG_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) Identifies sequence number with redundancy tag. Position  */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_Pos _UINT32_(29)                                         /* (GMAC_EMAC_FRER_CTRL1_A) 802.1CB Sequence Recovery Reset Timer Enable Position */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_Msk (_UINT32_(0x1) << GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) 802.1CB Sequence Recovery Reset Timer Enable Mask */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER(value) (GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_Pos)) /* Assigment of value for EN_SEQRECRST_TIMER in the GMAC_EMAC_FRER_CTRL1_A register */
+#define   GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_FRER_CTRL1_A) Disables the sequence recovery reset timer.  */
+#define   GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_FRER_CTRL1_A) Enables the sequence recovery reset timer.  */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_0 (GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_0_Val << GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) Disables the sequence recovery reset timer. Position  */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_1 (GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_1_Val << GMAC_EMAC_FRER_CTRL1_A_EN_SEQRECRST_TIMER_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) Enables the sequence recovery reset timer. Position  */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_Pos _UINT32_(30)                                         /* (GMAC_EMAC_FRER_CTRL1_A) 802.1CB Vector Recovery Algorithm Enable Position */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_Msk (_UINT32_(0x1) << GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) 802.1CB Vector Recovery Algorithm Enable Mask */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG(value) (GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_Pos)) /* Assigment of value for EN_VECTOR_REC_ALG in the GMAC_EMAC_FRER_CTRL1_A register */
+#define   GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_FRER_CTRL1_A) Enables the match recovery algorithm.  */
+#define   GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_FRER_CTRL1_A) Enables the vector recovery algorithm.  */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_0 (GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_0_Val << GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) Enables the match recovery algorithm. Position  */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_1 (GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_1_Val << GMAC_EMAC_FRER_CTRL1_A_EN_VECTOR_REC_ALG_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) Enables the vector recovery algorithm. Position  */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_Pos _UINT32_(31)                                         /* (GMAC_EMAC_FRER_CTRL1_A) 802.1CB Elimination of Received Frames Enable Position */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_Msk (_UINT32_(0x1) << GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) 802.1CB Elimination of Received Frames Enable Mask */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION(value) (GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_Pos)) /* Assigment of value for EN_ELIMINATION in the GMAC_EMAC_FRER_CTRL1_A register */
+#define   GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_FRER_CTRL1_A) Disables the elimination of received frames.  */
+#define   GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_FRER_CTRL1_A) Enables the elimination of received frames.  */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_0 (GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_0_Val << GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) Disables the elimination of received frames. Position  */
+#define GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_1 (GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_1_Val << GMAC_EMAC_FRER_CTRL1_A_EN_ELIMINATION_Pos) /* (GMAC_EMAC_FRER_CTRL1_A) Enables the elimination of received frames. Position  */
+#define GMAC_EMAC_FRER_CTRL1_A_Msk            _UINT32_(0xF001FFFF)                                 /* (GMAC_EMAC_FRER_CTRL1_A) Register Mask  */
+
+
+/* -------- GMAC_EMAC_FRER_CTRL1_B : (GMAC Offset: 0x18C4) (R/W 32) Express MAC Frame Elimination Control1 B Register -------- */
+#define GMAC_EMAC_FRER_CTRL1_B_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_FRER_CTRL1_B) Express MAC Frame Elimination Control1 B Register  Reset Value */
+
+#define GMAC_EMAC_FRER_CTRL1_B_SEQ_REC_WINDOW_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_CTRL1_B) Vector Recovery Window Position */
+#define GMAC_EMAC_FRER_CTRL1_B_SEQ_REC_WINDOW_Msk (_UINT32_(0x3F) << GMAC_EMAC_FRER_CTRL1_B_SEQ_REC_WINDOW_Pos) /* (GMAC_EMAC_FRER_CTRL1_B) Vector Recovery Window Mask */
+#define GMAC_EMAC_FRER_CTRL1_B_SEQ_REC_WINDOW(value) (GMAC_EMAC_FRER_CTRL1_B_SEQ_REC_WINDOW_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL1_B_SEQ_REC_WINDOW_Pos)) /* Assigment of value for SEQ_REC_WINDOW in the GMAC_EMAC_FRER_CTRL1_B register */
+#define GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Pos _UINT32_(8)                                          /* (GMAC_EMAC_FRER_CTRL1_B) Number of Significants Bits of the 802.1CB Sequence Number Position */
+#define GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Msk (_UINT32_(0x1F) << GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Pos) /* (GMAC_EMAC_FRER_CTRL1_B) Number of Significants Bits of the 802.1CB Sequence Number Mask */
+#define GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH(value) (GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL1_B_SEQ_NUM_LENGTH_Pos)) /* Assigment of value for SEQ_NUM_LENGTH in the GMAC_EMAC_FRER_CTRL1_B register */
+#define GMAC_EMAC_FRER_CTRL1_B_Msk            _UINT32_(0x00001F3F)                                 /* (GMAC_EMAC_FRER_CTRL1_B) Register Mask  */
+
+
+/* -------- GMAC_EMAC_FRER_STAT1_A : (GMAC Offset: 0x18C8) (R/W 32) Express MAC Frame Elimination Statistics1 A Register -------- */
+#define GMAC_EMAC_FRER_STAT1_A_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_FRER_STAT1_A) Express MAC Frame Elimination Statistics1 A Register  Reset Value */
+
+#define GMAC_EMAC_FRER_STAT1_A_LATENT_ERRS_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_STAT1_A) Number of Sequence Numbers Seen Without a Duplicate (Clear on read) Position */
+#define GMAC_EMAC_FRER_STAT1_A_LATENT_ERRS_Msk (_UINT32_(0x3FF) << GMAC_EMAC_FRER_STAT1_A_LATENT_ERRS_Pos) /* (GMAC_EMAC_FRER_STAT1_A) Number of Sequence Numbers Seen Without a Duplicate (Clear on read) Mask */
+#define GMAC_EMAC_FRER_STAT1_A_LATENT_ERRS(value) (GMAC_EMAC_FRER_STAT1_A_LATENT_ERRS_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_STAT1_A_LATENT_ERRS_Pos)) /* Assigment of value for LATENT_ERRS in the GMAC_EMAC_FRER_STAT1_A register */
+#define GMAC_EMAC_FRER_STAT1_A_VEC_REC_ROGUE_Pos _UINT32_(16)                                         /* (GMAC_EMAC_FRER_STAT1_A) Number of Dropped Frames (Clear on read) Position */
+#define GMAC_EMAC_FRER_STAT1_A_VEC_REC_ROGUE_Msk (_UINT32_(0x3FF) << GMAC_EMAC_FRER_STAT1_A_VEC_REC_ROGUE_Pos) /* (GMAC_EMAC_FRER_STAT1_A) Number of Dropped Frames (Clear on read) Mask */
+#define GMAC_EMAC_FRER_STAT1_A_VEC_REC_ROGUE(value) (GMAC_EMAC_FRER_STAT1_A_VEC_REC_ROGUE_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_STAT1_A_VEC_REC_ROGUE_Pos)) /* Assigment of value for VEC_REC_ROGUE in the GMAC_EMAC_FRER_STAT1_A register */
+#define GMAC_EMAC_FRER_STAT1_A_Msk            _UINT32_(0x03FF03FF)                                 /* (GMAC_EMAC_FRER_STAT1_A) Register Mask  */
+
+
+/* -------- GMAC_EMAC_FRER_STAT1_B : (GMAC Offset: 0x18CC) (R/W 32) Express MAC Frame Elimination Statistics1 B Register -------- */
+#define GMAC_EMAC_FRER_STAT1_B_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_FRER_STAT1_B) Express MAC Frame Elimination Statistics1 B Register  Reset Value */
+
+#define GMAC_EMAC_FRER_STAT1_B_OUT_OF_ORDER_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_STAT1_B) Out of Order Sequence Numbers Received (Clear on read) Position */
+#define GMAC_EMAC_FRER_STAT1_B_OUT_OF_ORDER_Msk (_UINT32_(0x3FF) << GMAC_EMAC_FRER_STAT1_B_OUT_OF_ORDER_Pos) /* (GMAC_EMAC_FRER_STAT1_B) Out of Order Sequence Numbers Received (Clear on read) Mask */
+#define GMAC_EMAC_FRER_STAT1_B_OUT_OF_ORDER(value) (GMAC_EMAC_FRER_STAT1_B_OUT_OF_ORDER_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_STAT1_B_OUT_OF_ORDER_Pos)) /* Assigment of value for OUT_OF_ORDER in the GMAC_EMAC_FRER_STAT1_B register */
+#define GMAC_EMAC_FRER_STAT1_B_SEQRST_COUNT_Pos _UINT32_(16)                                         /* (GMAC_EMAC_FRER_STAT1_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Position */
+#define GMAC_EMAC_FRER_STAT1_B_SEQRST_COUNT_Msk (_UINT32_(0x3FF) << GMAC_EMAC_FRER_STAT1_B_SEQRST_COUNT_Pos) /* (GMAC_EMAC_FRER_STAT1_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Mask */
+#define GMAC_EMAC_FRER_STAT1_B_SEQRST_COUNT(value) (GMAC_EMAC_FRER_STAT1_B_SEQRST_COUNT_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_STAT1_B_SEQRST_COUNT_Pos)) /* Assigment of value for SEQRST_COUNT in the GMAC_EMAC_FRER_STAT1_B register */
+#define GMAC_EMAC_FRER_STAT1_B_Msk            _UINT32_(0x03FF03FF)                                 /* (GMAC_EMAC_FRER_STAT1_B) Register Mask  */
+
+
+/* -------- GMAC_EMAC_FRER_CTRL2_A : (GMAC Offset: 0x18D0) (R/W 32) Express MAC Frame Elimination Control2 A Register -------- */
+#define GMAC_EMAC_FRER_CTRL2_A_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_FRER_CTRL2_A) Express MAC Frame Elimination Control2 A Register  Reset Value */
+
+#define GMAC_EMAC_FRER_CTRL2_A_MEMBER_STREAM_1_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_CTRL2_A) Pointer to Screener Type 2 Register Position */
+#define GMAC_EMAC_FRER_CTRL2_A_MEMBER_STREAM_1_Msk (_UINT32_(0xF) << GMAC_EMAC_FRER_CTRL2_A_MEMBER_STREAM_1_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) Pointer to Screener Type 2 Register Mask */
+#define GMAC_EMAC_FRER_CTRL2_A_MEMBER_STREAM_1(value) (GMAC_EMAC_FRER_CTRL2_A_MEMBER_STREAM_1_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL2_A_MEMBER_STREAM_1_Pos)) /* Assigment of value for MEMBER_STREAM_1 in the GMAC_EMAC_FRER_CTRL2_A register */
+#define GMAC_EMAC_FRER_CTRL2_A_MEMBER_STREAM_2_Pos _UINT32_(4)                                          /* (GMAC_EMAC_FRER_CTRL2_A) Pointer to Screener Type 2 Register Position */
+#define GMAC_EMAC_FRER_CTRL2_A_MEMBER_STREAM_2_Msk (_UINT32_(0xF) << GMAC_EMAC_FRER_CTRL2_A_MEMBER_STREAM_2_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) Pointer to Screener Type 2 Register Mask */
+#define GMAC_EMAC_FRER_CTRL2_A_MEMBER_STREAM_2(value) (GMAC_EMAC_FRER_CTRL2_A_MEMBER_STREAM_2_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL2_A_MEMBER_STREAM_2_Pos)) /* Assigment of value for MEMBER_STREAM_2 in the GMAC_EMAC_FRER_CTRL2_A register */
+#define GMAC_EMAC_FRER_CTRL2_A_OFFSET_VALUE_Pos _UINT32_(8)                                          /* (GMAC_EMAC_FRER_CTRL2_A) Offset in Bytes from Start Packet Delimiter to MSB for 802.1CB Sequence Number Position */
+#define GMAC_EMAC_FRER_CTRL2_A_OFFSET_VALUE_Msk (_UINT32_(0x1FF) << GMAC_EMAC_FRER_CTRL2_A_OFFSET_VALUE_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) Offset in Bytes from Start Packet Delimiter to MSB for 802.1CB Sequence Number Mask */
+#define GMAC_EMAC_FRER_CTRL2_A_OFFSET_VALUE(value) (GMAC_EMAC_FRER_CTRL2_A_OFFSET_VALUE_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL2_A_OFFSET_VALUE_Pos)) /* Assigment of value for OFFSET_VALUE in the GMAC_EMAC_FRER_CTRL2_A register */
+#define GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_Pos  _UINT32_(28)                                         /* (GMAC_EMAC_FRER_CTRL2_A) Redundancy Tag Enable Position */
+#define GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_Msk  (_UINT32_(0x1) << GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) Redundancy Tag Enable Mask */
+#define GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG(value) (GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_Pos)) /* Assigment of value for USE_R_TAG in the GMAC_EMAC_FRER_CTRL2_A register */
+#define   GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_FRER_CTRL2_A) Identifies bottom of sequence number with OFFSET_VALUE.  */
+#define   GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_FRER_CTRL2_A) Identifies sequence number with redundancy tag.  */
+#define GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_0    (GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_0_Val << GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) Identifies bottom of sequence number with OFFSET_VALUE. Position  */
+#define GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_1    (GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_1_Val << GMAC_EMAC_FRER_CTRL2_A_USE_R_TAG_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) Identifies sequence number with redundancy tag. Position  */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_Pos _UINT32_(29)                                         /* (GMAC_EMAC_FRER_CTRL2_A) 802.1CB Sequence Recovery Reset Timer Enable Position */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_Msk (_UINT32_(0x1) << GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) 802.1CB Sequence Recovery Reset Timer Enable Mask */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER(value) (GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_Pos)) /* Assigment of value for EN_SEQRECRST_TIMER in the GMAC_EMAC_FRER_CTRL2_A register */
+#define   GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_FRER_CTRL2_A) Disables the sequence recovery reset timer.  */
+#define   GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_FRER_CTRL2_A) Enables the sequence recovery reset timer.  */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_0 (GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_0_Val << GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) Disables the sequence recovery reset timer. Position  */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_1 (GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_1_Val << GMAC_EMAC_FRER_CTRL2_A_EN_SEQRECRST_TIMER_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) Enables the sequence recovery reset timer. Position  */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_Pos _UINT32_(30)                                         /* (GMAC_EMAC_FRER_CTRL2_A) 802.1CB Vector Recovery Algorithm Enable Position */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_Msk (_UINT32_(0x1) << GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) 802.1CB Vector Recovery Algorithm Enable Mask */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG(value) (GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_Pos)) /* Assigment of value for EN_VECTOR_REC_ALG in the GMAC_EMAC_FRER_CTRL2_A register */
+#define   GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_FRER_CTRL2_A) Enables the match recovery algorithm.  */
+#define   GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_FRER_CTRL2_A) Enables the vector recovery algorithm.  */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_0 (GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_0_Val << GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) Enables the match recovery algorithm. Position  */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_1 (GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_1_Val << GMAC_EMAC_FRER_CTRL2_A_EN_VECTOR_REC_ALG_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) Enables the vector recovery algorithm. Position  */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_Pos _UINT32_(31)                                         /* (GMAC_EMAC_FRER_CTRL2_A) 802.1CB Elimination of Received Frames Enable Position */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_Msk (_UINT32_(0x1) << GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) 802.1CB Elimination of Received Frames Enable Mask */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION(value) (GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_Pos)) /* Assigment of value for EN_ELIMINATION in the GMAC_EMAC_FRER_CTRL2_A register */
+#define   GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_FRER_CTRL2_A) Disables the elimination of received frames.  */
+#define   GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_FRER_CTRL2_A) Enables the elimination of received frames.  */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_0 (GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_0_Val << GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) Disables the elimination of received frames. Position  */
+#define GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_1 (GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_1_Val << GMAC_EMAC_FRER_CTRL2_A_EN_ELIMINATION_Pos) /* (GMAC_EMAC_FRER_CTRL2_A) Enables the elimination of received frames. Position  */
+#define GMAC_EMAC_FRER_CTRL2_A_Msk            _UINT32_(0xF001FFFF)                                 /* (GMAC_EMAC_FRER_CTRL2_A) Register Mask  */
+
+
+/* -------- GMAC_EMAC_FRER_CTRL2_B : (GMAC Offset: 0x18D4) (R/W 32) Express MAC Frame Elimination Control2 B Register -------- */
+#define GMAC_EMAC_FRER_CTRL2_B_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_FRER_CTRL2_B) Express MAC Frame Elimination Control2 B Register  Reset Value */
+
+#define GMAC_EMAC_FRER_CTRL2_B_SEQ_REC_WINDOW_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_CTRL2_B) Vector Recovery Window Position */
+#define GMAC_EMAC_FRER_CTRL2_B_SEQ_REC_WINDOW_Msk (_UINT32_(0x3F) << GMAC_EMAC_FRER_CTRL2_B_SEQ_REC_WINDOW_Pos) /* (GMAC_EMAC_FRER_CTRL2_B) Vector Recovery Window Mask */
+#define GMAC_EMAC_FRER_CTRL2_B_SEQ_REC_WINDOW(value) (GMAC_EMAC_FRER_CTRL2_B_SEQ_REC_WINDOW_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL2_B_SEQ_REC_WINDOW_Pos)) /* Assigment of value for SEQ_REC_WINDOW in the GMAC_EMAC_FRER_CTRL2_B register */
+#define GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Pos _UINT32_(8)                                          /* (GMAC_EMAC_FRER_CTRL2_B) Number of Significants Bits of the 802.1CB Sequence Number Position */
+#define GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Msk (_UINT32_(0x1F) << GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Pos) /* (GMAC_EMAC_FRER_CTRL2_B) Number of Significants Bits of the 802.1CB Sequence Number Mask */
+#define GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH(value) (GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_CTRL2_B_SEQ_NUM_LENGTH_Pos)) /* Assigment of value for SEQ_NUM_LENGTH in the GMAC_EMAC_FRER_CTRL2_B register */
+#define GMAC_EMAC_FRER_CTRL2_B_Msk            _UINT32_(0x00001F3F)                                 /* (GMAC_EMAC_FRER_CTRL2_B) Register Mask  */
+
+
+/* -------- GMAC_EMAC_FRER_STAT2_A : (GMAC Offset: 0x18D8) (R/W 32) Express MAC Frame Elimination Statistics2 A Register -------- */
+#define GMAC_EMAC_FRER_STAT2_A_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_FRER_STAT2_A) Express MAC Frame Elimination Statistics2 A Register  Reset Value */
+
+#define GMAC_EMAC_FRER_STAT2_A_LATENT_ERRS_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_STAT2_A) Number of Sequence Numbers Seen Without a Duplicate (Clear on read) Position */
+#define GMAC_EMAC_FRER_STAT2_A_LATENT_ERRS_Msk (_UINT32_(0x3FF) << GMAC_EMAC_FRER_STAT2_A_LATENT_ERRS_Pos) /* (GMAC_EMAC_FRER_STAT2_A) Number of Sequence Numbers Seen Without a Duplicate (Clear on read) Mask */
+#define GMAC_EMAC_FRER_STAT2_A_LATENT_ERRS(value) (GMAC_EMAC_FRER_STAT2_A_LATENT_ERRS_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_STAT2_A_LATENT_ERRS_Pos)) /* Assigment of value for LATENT_ERRS in the GMAC_EMAC_FRER_STAT2_A register */
+#define GMAC_EMAC_FRER_STAT2_A_VEC_REC_ROGUE_Pos _UINT32_(16)                                         /* (GMAC_EMAC_FRER_STAT2_A) Number of Dropped Frames (Clear on read) Position */
+#define GMAC_EMAC_FRER_STAT2_A_VEC_REC_ROGUE_Msk (_UINT32_(0x3FF) << GMAC_EMAC_FRER_STAT2_A_VEC_REC_ROGUE_Pos) /* (GMAC_EMAC_FRER_STAT2_A) Number of Dropped Frames (Clear on read) Mask */
+#define GMAC_EMAC_FRER_STAT2_A_VEC_REC_ROGUE(value) (GMAC_EMAC_FRER_STAT2_A_VEC_REC_ROGUE_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_STAT2_A_VEC_REC_ROGUE_Pos)) /* Assigment of value for VEC_REC_ROGUE in the GMAC_EMAC_FRER_STAT2_A register */
+#define GMAC_EMAC_FRER_STAT2_A_Msk            _UINT32_(0x03FF03FF)                                 /* (GMAC_EMAC_FRER_STAT2_A) Register Mask  */
+
+
+/* -------- GMAC_EMAC_FRER_STAT2_B : (GMAC Offset: 0x18DC) (R/W 32) Express MAC Frame Elimination Statistics2 B Register -------- */
+#define GMAC_EMAC_FRER_STAT2_B_RESETVALUE     _UINT32_(0x00)                                       /*  (GMAC_EMAC_FRER_STAT2_B) Express MAC Frame Elimination Statistics2 B Register  Reset Value */
+
+#define GMAC_EMAC_FRER_STAT2_B_OUT_OF_ORDER_Pos _UINT32_(0)                                          /* (GMAC_EMAC_FRER_STAT2_B) Out of Order Sequence Numbers Received (Clear on read) Position */
+#define GMAC_EMAC_FRER_STAT2_B_OUT_OF_ORDER_Msk (_UINT32_(0x3FF) << GMAC_EMAC_FRER_STAT2_B_OUT_OF_ORDER_Pos) /* (GMAC_EMAC_FRER_STAT2_B) Out of Order Sequence Numbers Received (Clear on read) Mask */
+#define GMAC_EMAC_FRER_STAT2_B_OUT_OF_ORDER(value) (GMAC_EMAC_FRER_STAT2_B_OUT_OF_ORDER_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_STAT2_B_OUT_OF_ORDER_Pos)) /* Assigment of value for OUT_OF_ORDER in the GMAC_EMAC_FRER_STAT2_B register */
+#define GMAC_EMAC_FRER_STAT2_B_SEQRST_COUNT_Pos _UINT32_(16)                                         /* (GMAC_EMAC_FRER_STAT2_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Position */
+#define GMAC_EMAC_FRER_STAT2_B_SEQRST_COUNT_Msk (_UINT32_(0xFF) << GMAC_EMAC_FRER_STAT2_B_SEQRST_COUNT_Pos) /* (GMAC_EMAC_FRER_STAT2_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Mask */
+#define GMAC_EMAC_FRER_STAT2_B_SEQRST_COUNT(value) (GMAC_EMAC_FRER_STAT2_B_SEQRST_COUNT_Msk & (_UINT32_(value) << GMAC_EMAC_FRER_STAT2_B_SEQRST_COUNT_Pos)) /* Assigment of value for SEQRST_COUNT in the GMAC_EMAC_FRER_STAT2_B register */
+#define GMAC_EMAC_FRER_STAT2_B_Msk            _UINT32_(0x00FF03FF)                                 /* (GMAC_EMAC_FRER_STAT2_B) Register Mask  */
 
 
 /* -------- GMAC_EMAC_RX_FLUSH_Q : (GMAC Offset: 0x1B00) (R/W 32) Express MAC Receive Queue Flush Register -------- */
@@ -6160,8 +5947,8 @@
 #define GMAC_EMAC_RX_FLUSH_Q_Msk              _UINT32_(0xFFFF000F)                                 /* (GMAC_EMAC_RX_FLUSH_Q) Register Mask  */
 
 
-/* -------- GMAC_EMAC_SCR2_RATE_LIMIT : (GMAC Offset: 0x1B40) (R/W 32) Express MAC Screening 2 Rate Limit Register -------- */
-#define GMAC_EMAC_SCR2_RATE_LIMIT_RESETVALUE  _UINT32_(0x00)                                       /*  (GMAC_EMAC_SCR2_RATE_LIMIT) Express MAC Screening 2 Rate Limit Register  Reset Value */
+/* -------- GMAC_EMAC_SCR2_RATE_LIMIT : (GMAC Offset: 0x1B40) (R/W 32) Express MAC Screening 2 Rate Limit Register x -------- */
+#define GMAC_EMAC_SCR2_RATE_LIMIT_RESETVALUE  _UINT32_(0x00)                                       /*  (GMAC_EMAC_SCR2_RATE_LIMIT) Express MAC Screening 2 Rate Limit Register x  Reset Value */
 
 #define GMAC_EMAC_SCR2_RATE_LIMIT_INTERVAL_TIME_Pos _UINT32_(0)                                          /* (GMAC_EMAC_SCR2_RATE_LIMIT) Interval Time for Maximum Rate Checking Position */
 #define GMAC_EMAC_SCR2_RATE_LIMIT_INTERVAL_TIME_Msk (_UINT32_(0xFFFF) << GMAC_EMAC_SCR2_RATE_LIMIT_INTERVAL_TIME_Pos) /* (GMAC_EMAC_SCR2_RATE_LIMIT) Interval Time for Maximum Rate Checking Mask */
@@ -6175,75 +5962,29 @@
 /* -------- GMAC_EMAC_SCR2_RATE_STATUS : (GMAC Offset: 0x1B80) ( R/ 32) Express MAC Screening 2 Rate Status Register -------- */
 #define GMAC_EMAC_SCR2_RATE_STATUS_RESETVALUE _UINT32_(0x00)                                       /*  (GMAC_EMAC_SCR2_RATE_STATUS) Express MAC Screening 2 Rate Status Register  Reset Value */
 
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Pos _UINT32_(0)                                          /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 0 Position */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Msk (_UINT32_(0x1) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 0 Mask */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0(value) (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Msk & (_UINT32_(value) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Pos)) /* Assigment of value for EXCESS_RATE_Q0 in the GMAC_EMAC_SCR2_RATE_STATUS register */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_0 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_0_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_1 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_1_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q0_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Pos _UINT32_(1)                                          /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 1 Position */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Msk (_UINT32_(0x1) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 1 Mask */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1(value) (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Msk & (_UINT32_(value) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Pos)) /* Assigment of value for EXCESS_RATE_Q1 in the GMAC_EMAC_SCR2_RATE_STATUS register */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_0 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_0_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_1 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_1_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q1_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Pos _UINT32_(2)                                          /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 2 Position */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Msk (_UINT32_(0x1) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 2 Mask */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2(value) (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Msk & (_UINT32_(value) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Pos)) /* Assigment of value for EXCESS_RATE_Q2 in the GMAC_EMAC_SCR2_RATE_STATUS register */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_0 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_0_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_1 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_1_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q2_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Pos _UINT32_(3)                                          /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 3 Position */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Msk (_UINT32_(0x1) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 3 Mask */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3(value) (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Msk & (_UINT32_(value) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Pos)) /* Assigment of value for EXCESS_RATE_Q3 in the GMAC_EMAC_SCR2_RATE_STATUS register */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_0 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_0_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_1 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_1_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q3_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Pos _UINT32_(4)                                          /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 4 Position */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Msk (_UINT32_(0x1) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 4 Mask */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4(value) (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Msk & (_UINT32_(value) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Pos)) /* Assigment of value for EXCESS_RATE_Q4 in the GMAC_EMAC_SCR2_RATE_STATUS register */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_0 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_0_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_1 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_1_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q4_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Pos _UINT32_(5)                                          /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 5 Position */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Msk (_UINT32_(0x1) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 5 Mask */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5(value) (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Msk & (_UINT32_(value) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Pos)) /* Assigment of value for EXCESS_RATE_Q5 in the GMAC_EMAC_SCR2_RATE_STATUS register */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_0 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_0_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_1 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_1_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q5_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Pos _UINT32_(6)                                          /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 6 Position */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Msk (_UINT32_(0x1) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 6 Mask */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6(value) (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Msk & (_UINT32_(value) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Pos)) /* Assigment of value for EXCESS_RATE_Q6 in the GMAC_EMAC_SCR2_RATE_STATUS register */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_0 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_0_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_1 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_1_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q6_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Pos _UINT32_(7)                                          /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 7 Position */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Msk (_UINT32_(0x1) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Queue 7 Mask */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7(value) (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Msk & (_UINT32_(value) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Pos)) /* Assigment of value for EXCESS_RATE_Q7 in the GMAC_EMAC_SCR2_RATE_STATUS register */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_0 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_0_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_1 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_1_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q7_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
-#define GMAC_EMAC_SCR2_RATE_STATUS_Msk        _UINT32_(0x000000FF)                                 /* (GMAC_EMAC_SCR2_RATE_STATUS) Register Mask  */
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Pos _UINT32_(0)                                          /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register Position */
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Msk (_UINT32_(0x1) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register Mask */
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0(value) (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Msk & (_UINT32_(value) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Pos)) /* Assigment of value for EXCESS_RATE_R0 in the GMAC_EMAC_SCR2_RATE_STATUS register */
+#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
+#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_0 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_0_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_1 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_1_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R0_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Pos _UINT32_(1)                                          /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register Position */
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Msk (_UINT32_(0x1) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) Excessive Screener Rate Register Mask */
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1(value) (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Msk & (_UINT32_(value) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Pos)) /* Assigment of value for EXCESS_RATE_R1 in the GMAC_EMAC_SCR2_RATE_STATUS register */
+#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_0_Val _UINT32_(0x0)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
+#define   GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_1_Val _UINT32_(0x1)                                        /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS.  */
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_0 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_0_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) No excessive rate in screener since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_1 (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_1_Val << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R1_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS) A screener rate limiting mechanism has been triggered since the last read of GMAC_EMAC_SCR2_RATE_STATUS. Position  */
+#define GMAC_EMAC_SCR2_RATE_STATUS_Msk        _UINT32_(0x00000003)                                 /* (GMAC_EMAC_SCR2_RATE_STATUS) Register Mask  */
 
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q_Pos _UINT32_(0)                                          /* (GMAC_EMAC_SCR2_RATE_STATUS Position) Excessive Screener Rate Queue 7 */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q_Msk (_UINT32_(0xFF) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS Mask) EXCESS_RATE_Q */
-#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q(value) (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q_Msk & (_UINT32_(value) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_Q_Pos)) 
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R_Pos _UINT32_(0)                                          /* (GMAC_EMAC_SCR2_RATE_STATUS Position) Excessive Screener Rate Register */
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R_Msk (_UINT32_(0x3) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R_Pos) /* (GMAC_EMAC_SCR2_RATE_STATUS Mask) EXCESS_RATE_R */
+#define GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R(value) (GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R_Msk & (_UINT32_(value) << GMAC_EMAC_SCR2_RATE_STATUS_EXCESS_RATE_R_Pos)) 
 
 /** \brief GMAC register offsets definitions */
 #define GMAC_EMAC_ASAB_REG_OFST        _UINT32_(0x00)      /* (GMAC_EMAC_ASAB) Express MAC Additional Specific Address Bottom Register  Offset */
 #define GMAC_EMAC_ASAT_REG_OFST        _UINT32_(0x04)      /* (GMAC_EMAC_ASAT) Express MAC Additional Specific Address Top Register  Offset */
-#define GMAC_EMAC_FRER_CTRLx_A_REG_OFST _UINT32_(0x00)      /* (GMAC_EMAC_FRER_CTRLx_A) Express MAC Frame Elimination Control1 A Register Offset */
-#define GMAC_EMAC_FRER_CTRLx_B_REG_OFST _UINT32_(0x04)      /* (GMAC_EMAC_FRER_CTRLx_B) Express MAC Frame Elimination Control1 B Register Offset */
-#define GMAC_EMAC_FRER_STATx_A_REG_OFST _UINT32_(0x08)      /* (GMAC_EMAC_FRER_STATx_A) Express MAC Frame Elimination Statistics1 A Register Offset */
-#define GMAC_EMAC_FRER_STATx_B_REG_OFST _UINT32_(0x0C)      /* (GMAC_EMAC_FRER_STATx_B) Express MAC Frame Elimination Statistics1 B Register Offset */
 #define GMAC_EMAC_SAB_REG_OFST         _UINT32_(0x00)      /* (GMAC_EMAC_SAB) Express MAC Specific Address Bottom Register  Offset */
 #define GMAC_EMAC_SAT_REG_OFST         _UINT32_(0x04)      /* (GMAC_EMAC_SAT) Express MAC Specific Address Top Register  Offset */
 #define GMAC_EMAC_ST2CW0R_REG_OFST     _UINT32_(0x00)      /* (GMAC_EMAC_ST2CW0R) Express MAC Screening Type 2 Compare Word 0 Register  Offset */
@@ -6251,7 +5992,6 @@
 #define GMAC_FRER_CTRL_A_REG_OFST      _UINT32_(0x00)      /* (GMAC_FRER_CTRL_A) Frame Elimination Control A Register  Offset */
 #define GMAC_FRER_CTRL_B_REG_OFST      _UINT32_(0x04)      /* (GMAC_FRER_CTRL_B) Frame Elimination Control B Register  Offset */
 #define GMAC_FRER_STAT_A_REG_OFST      _UINT32_(0x08)      /* (GMAC_FRER_STAT_A) Frame Elimination Statistics A Register  Offset */
-#define GMAC_FRER_STAT_B_REG_OFST      _UINT32_(0x0C)      /* (GMAC_FRER_STAT_B) Frame Elimination Statistics B Register  Offset */
 #define GMAC_ST2CW0R_REG_OFST          _UINT32_(0x00)      /* (GMAC_ST2CW0R) Screening Type 2 Compare Word 0 Register  Offset */
 #define GMAC_ST2CW1R_REG_OFST          _UINT32_(0x04)      /* (GMAC_ST2CW1R) Screening Type 2 Compare Word 1 Register  Offset */
 #define GMAC_NCR_REG_OFST              _UINT32_(0x00)      /* (GMAC_NCR) Network Control Register Offset */
@@ -6284,6 +6024,7 @@
 #define GMAC_HRT_REG_OFST              _UINT32_(0x84)      /* (GMAC_HRT) Hash Register Top Offset */
 #define GMAC_SAB1_REG_OFST             _UINT32_(0x88)      /* (GMAC_SAB1) Specific Address 1 Bottom Register Offset */
 #define GMAC_SAT1_REG_OFST             _UINT32_(0x8C)      /* (GMAC_SAT1) Specific Address 1 Top Register Offset */
+#define GMAC_FRER_STAT_B_REG_OFST      _UINT32_(0x8C)      /* (GMAC_FRER_STAT_B) Frame Elimination Statistics B Register  Offset */
 #define GMAC_SAB2_REG_OFST             _UINT32_(0x90)      /* (GMAC_SAB2) Specific Address 2 Bottom Register Offset */
 #define GMAC_SAT2_REG_OFST             _UINT32_(0x94)      /* (GMAC_SAT2) Specific Address 2 Top Register Offset */
 #define GMAC_SAB3_REG_OFST             _UINT32_(0x98)      /* (GMAC_SAB3) Specific Address 3 Bottom Register Offset */
@@ -6371,7 +6112,7 @@
 #define GMAC_PEFRSL_REG_OFST           _UINT32_(0x1F8)     /* (GMAC_PEFRSL) PTP Peer Event Frame Received Seconds Low Register Offset */
 #define GMAC_PEFRN_REG_OFST            _UINT32_(0x1FC)     /* (GMAC_PEFRN) PTP Peer Event Frame Received Nanoseconds Register Offset */
 #define GMAC_TXPQUANT1_REG_OFST        _UINT32_(0x260)     /* (GMAC_TXPQUANT1) Transmit Pause Quantum 1 Register Offset */
-#define GMAC_TXPQUANT2_REG_OFST        _UINT32_(0x264)     /* (GMAC_TXPQUANT2) Transmit Pause Quantum 2 Register Offset */
+#define GMAC_TXPQUANT2_REG_OFST        _UINT32_(0x264)     /* (GMAC_TXPQUANT2) Transmit Pause Quantum 2 Register{*}0{*} Offset */
 #define GMAC_TXPQUANT3_REG_OFST        _UINT32_(0x268)     /* (GMAC_TXPQUANT3) Transmit Pause Quantum 3 Register Offset */
 #define GMAC_RXLPI_REG_OFST            _UINT32_(0x270)     /* (GMAC_RXLPI) Received LPI Transitions Offset */
 #define GMAC_RXLPITIME_REG_OFST        _UINT32_(0x274)     /* (GMAC_RXLPITIME) Received LPI Time Offset */
@@ -6489,6 +6230,8 @@
 #define GMAC_SCR2_RATE_LIMIT3_REG_OFST _UINT32_(0xB4C)     /* (GMAC_SCR2_RATE_LIMIT3) Screening 2 Rate Limit Register (index = 0) Offset */
 #define GMAC_SCR2_RATE_LIMIT4_REG_OFST _UINT32_(0xB50)     /* (GMAC_SCR2_RATE_LIMIT4) Screening 2 Rate Limit Register (index = 0) Offset */
 #define GMAC_SCR2_RATE_LIMIT5_REG_OFST _UINT32_(0xB54)     /* (GMAC_SCR2_RATE_LIMIT5) Screening 2 Rate Limit Register (index = 0) Offset */
+#define GMAC_SCR2_RATE_LIMIT6_REG_OFST _UINT32_(0xB58)     /* (GMAC_SCR2_RATE_LIMIT6) Screening 2 Rate Limit Register (index = 0) Offset */
+#define GMAC_SCR2_RATE_LIMIT7_REG_OFST _UINT32_(0xB5C)     /* (GMAC_SCR2_RATE_LIMIT7) Screening 2 Rate Limit Register (index = 0) Offset */
 #define GMAC_SCR2_RATE_STATUS_REG_OFST _UINT32_(0xB80)     /* (GMAC_SCR2_RATE_STATUS) Screening 2 Rate Status Register Offset */
 #define GMAC_MMSL_CR_REG_OFST          _UINT32_(0xF00)     /* (GMAC_MMSL_CR) MMSL Control Register Offset */
 #define GMAC_MMSL_SR_REG_OFST          _UINT32_(0xF04)     /* (GMAC_MMSL_SR) MMSL Status Register Offset */
@@ -6626,34 +6369,26 @@
 #define GMAC_EMAC_ST2R0_REG_OFST       _UINT32_(0x1540)    /* (GMAC_EMAC_ST2R0) Express MAC Screening Type 2 Register (index = 0) Offset */
 #define GMAC_EMAC_ST2R1_REG_OFST       _UINT32_(0x1544)    /* (GMAC_EMAC_ST2R1) Express MAC Screening Type 2 Register (index = 0) Offset */
 #define GMAC_EMAC_TSCTL_REG_OFST       _UINT32_(0x1580)    /* (GMAC_EMAC_TSCTL) Express MACTransmit Schedule Control Register Offset */
-#define GMAC_EMAC_TQBWRL0_REG_OFST     _UINT32_(0x1590)    /* (GMAC_EMAC_TQBWRL0) Express MAC Transmit Queue Bandwidth Rate Limit 0 Register Offset */
+#define GMAC_EMAC_TQBWRL_REG_OFST      _UINT32_(0x1590)    /* (GMAC_EMAC_TQBWRL) Express MAC Transmit Queue Bandwidth Rate Limit Register Offset */
 #define GMAC_EMAC_TQSA_REG_OFST        _UINT32_(0x15A0)    /* (GMAC_EMAC_TQSA) Express MAC Transmit Queue Segment Allocation Register Offset */
-#define GMAC_EMAC_ENST_START_Q_REG_OFST _UINT32_(0x1800)    /* (GMAC_EMAC_ENST_START_Q) Express MAC ENST Start Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_START_Q0_REG_OFST _UINT32_(0x1800)    /* (GMAC_EMAC_ENST_START_Q0) Express MAC ENST Start Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_START_Q1_REG_OFST _UINT32_(0x1804)    /* (GMAC_EMAC_ENST_START_Q1) Express MAC ENST Start Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_START_Q2_REG_OFST _UINT32_(0x1808)    /* (GMAC_EMAC_ENST_START_Q2) Express MAC ENST Start Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_START_Q3_REG_OFST _UINT32_(0x180C)    /* (GMAC_EMAC_ENST_START_Q3) Express MAC ENST Start Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_START_Q4_REG_OFST _UINT32_(0x1810)    /* (GMAC_EMAC_ENST_START_Q4) Express MAC ENST Start Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_START_Q5_REG_OFST _UINT32_(0x1814)    /* (GMAC_EMAC_ENST_START_Q5) Express MAC ENST Start Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_ON_Q_REG_OFST   _UINT32_(0x1820)    /* (GMAC_EMAC_ENST_ON_Q) Express MAC ENST On Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_ON_Q0_REG_OFST  _UINT32_(0x1820)    /* (GMAC_EMAC_ENST_ON_Q0) Express MAC ENST On Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_ON_Q1_REG_OFST  _UINT32_(0x1824)    /* (GMAC_EMAC_ENST_ON_Q1) Express MAC ENST On Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_ON_Q2_REG_OFST  _UINT32_(0x1828)    /* (GMAC_EMAC_ENST_ON_Q2) Express MAC ENST On Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_ON_Q3_REG_OFST  _UINT32_(0x182C)    /* (GMAC_EMAC_ENST_ON_Q3) Express MAC ENST On Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_ON_Q4_REG_OFST  _UINT32_(0x1830)    /* (GMAC_EMAC_ENST_ON_Q4) Express MAC ENST On Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_ON_Q5_REG_OFST  _UINT32_(0x1834)    /* (GMAC_EMAC_ENST_ON_Q5) Express MAC ENST On Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_OFF_Q_REG_OFST  _UINT32_(0x1840)    /* (GMAC_EMAC_ENST_OFF_Q) Express MAC ENST Off Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_OFF_Q0_REG_OFST _UINT32_(0x1840)    /* (GMAC_EMAC_ENST_OFF_Q0) Express MAC ENST Off Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_OFF_Q1_REG_OFST _UINT32_(0x1844)    /* (GMAC_EMAC_ENST_OFF_Q1) Express MAC ENST Off Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_OFF_Q2_REG_OFST _UINT32_(0x1848)    /* (GMAC_EMAC_ENST_OFF_Q2) Express MAC ENST Off Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_OFF_Q3_REG_OFST _UINT32_(0x184C)    /* (GMAC_EMAC_ENST_OFF_Q3) Express MAC ENST Off Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_OFF_Q4_REG_OFST _UINT32_(0x1850)    /* (GMAC_EMAC_ENST_OFF_Q4) Express MAC ENST Off Time Queue Register (index = 0) Offset */
-#define GMAC_EMAC_ENST_OFF_Q5_REG_OFST _UINT32_(0x1854)    /* (GMAC_EMAC_ENST_OFF_Q5) Express MAC ENST Off Time Queue Register (index = 0) Offset */
+#define GMAC_EMAC_ENST_START_REG_OFST  _UINT32_(0x1800)    /* (GMAC_EMAC_ENST_START) Express MAC ENST Start Time Queue Register Offset */
+#define GMAC_EMAC_ENST_ON_REG_OFST     _UINT32_(0x1820)    /* (GMAC_EMAC_ENST_ON) Express MAC ENST On Time Queue Register Offset */
+#define GMAC_EMAC_ENST_OFF_REG_OFST    _UINT32_(0x1840)    /* (GMAC_EMAC_ENST_OFF) Express MAC ENST Off Time Queue Register Offset */
 #define GMAC_EMAC_ENST_CR_REG_OFST     _UINT32_(0x1880)    /* (GMAC_EMAC_ENST_CR) Express MAC ENST Control Register Offset */
 #define GMAC_EMAC_FRER_TIMEOUT_REG_OFST _UINT32_(0x18A0)    /* (GMAC_EMAC_FRER_TIMEOUT) Express MAC Frame Elimination Timeout Register Offset */
 #define GMAC_EMAC_FRER_REDTAG_REG_OFST _UINT32_(0x18A4)    /* (GMAC_EMAC_FRER_REDTAG) Express MAC Frame Elimination Redundancy Tag Register Offset */
+#define GMAC_EMAC_FRER_CTRL1_A_REG_OFST _UINT32_(0x18C0)    /* (GMAC_EMAC_FRER_CTRL1_A) Express MAC Frame Elimination Control1 A Register Offset */
+#define GMAC_EMAC_FRER_CTRL1_B_REG_OFST _UINT32_(0x18C4)    /* (GMAC_EMAC_FRER_CTRL1_B) Express MAC Frame Elimination Control1 B Register Offset */
+#define GMAC_EMAC_FRER_STAT1_A_REG_OFST _UINT32_(0x18C8)    /* (GMAC_EMAC_FRER_STAT1_A) Express MAC Frame Elimination Statistics1 A Register Offset */
+#define GMAC_EMAC_FRER_STAT1_B_REG_OFST _UINT32_(0x18CC)    /* (GMAC_EMAC_FRER_STAT1_B) Express MAC Frame Elimination Statistics1 B Register Offset */
+#define GMAC_EMAC_FRER_CTRL2_A_REG_OFST _UINT32_(0x18D0)    /* (GMAC_EMAC_FRER_CTRL2_A) Express MAC Frame Elimination Control2 A Register Offset */
+#define GMAC_EMAC_FRER_CTRL2_B_REG_OFST _UINT32_(0x18D4)    /* (GMAC_EMAC_FRER_CTRL2_B) Express MAC Frame Elimination Control2 B Register Offset */
+#define GMAC_EMAC_FRER_STAT2_A_REG_OFST _UINT32_(0x18D8)    /* (GMAC_EMAC_FRER_STAT2_A) Express MAC Frame Elimination Statistics2 A Register Offset */
+#define GMAC_EMAC_FRER_STAT2_B_REG_OFST _UINT32_(0x18DC)    /* (GMAC_EMAC_FRER_STAT2_B) Express MAC Frame Elimination Statistics2 B Register Offset */
 #define GMAC_EMAC_RX_FLUSH_Q_REG_OFST  _UINT32_(0x1B00)    /* (GMAC_EMAC_RX_FLUSH_Q) Express MAC Receive Queue Flush Register Offset */
-#define GMAC_EMAC_SCR2_RATE_LIMIT_REG_OFST _UINT32_(0x1B40)    /* (GMAC_EMAC_SCR2_RATE_LIMIT) Express MAC Screening 2 Rate Limit Register Offset */
+#define GMAC_EMAC_SCR2_RATE_LIMIT_REG_OFST _UINT32_(0x1B40)    /* (GMAC_EMAC_SCR2_RATE_LIMIT) Express MAC Screening 2 Rate Limit Register x Offset */
+#define GMAC_EMAC_SCR2_RATE_LIMIT0_REG_OFST _UINT32_(0x1B40)    /* (GMAC_EMAC_SCR2_RATE_LIMIT0) Express MAC Screening 2 Rate Limit Register x Offset */
+#define GMAC_EMAC_SCR2_RATE_LIMIT1_REG_OFST _UINT32_(0x1B44)    /* (GMAC_EMAC_SCR2_RATE_LIMIT1) Express MAC Screening 2 Rate Limit Register x Offset */
 #define GMAC_EMAC_SCR2_RATE_STATUS_REG_OFST _UINT32_(0x1B80)    /* (GMAC_EMAC_SCR2_RATE_STATUS) Express MAC Screening 2 Rate Status Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
@@ -6663,15 +6398,6 @@ typedef struct
   __IO  uint32_t                       GMAC_EMAC_ASAB;     /**< Offset: 0x00 (R/W  32) Express MAC Additional Specific Address Bottom Register  */
   __IO  uint32_t                       GMAC_EMAC_ASAT;     /**< Offset: 0x04 (R/W  32) Express MAC Additional Specific Address Top Register  */
 } gmac_emac_asa_registers_t;
-
-/** \brief GMAC_EMAC_FRER register API structure */
-typedef struct
-{
-  __IO  uint32_t                       GMAC_EMAC_FRER_CTRLx_A; /**< Offset: 0x00 (R/W  32) Express MAC Frame Elimination Control1 A Register */
-  __IO  uint32_t                       GMAC_EMAC_FRER_CTRLx_B; /**< Offset: 0x04 (R/W  32) Express MAC Frame Elimination Control1 B Register */
-  __IO  uint32_t                       GMAC_EMAC_FRER_STATx_A; /**< Offset: 0x08 (R/W  32) Express MAC Frame Elimination Statistics1 A Register */
-  __IO  uint32_t                       GMAC_EMAC_FRER_STATx_B; /**< Offset: 0x0C (R/W  32) Express MAC Frame Elimination Statistics1 B Register */
-} gmac_emac_frer_registers_t;
 
 /** \brief GMAC_EMAC_SA register API structure */
 typedef struct
@@ -6693,7 +6419,7 @@ typedef struct
   __IO  uint32_t                       GMAC_FRER_CTRL_A;   /**< Offset: 0x00 (R/W  32) Frame Elimination Control A Register  */
   __IO  uint32_t                       GMAC_FRER_CTRL_B;   /**< Offset: 0x04 (R/W  32) Frame Elimination Control B Register  */
   __I   uint32_t                       GMAC_FRER_STAT_A;   /**< Offset: 0x08 (R/   32) Frame Elimination Statistics A Register  */
-  __I   uint32_t                       GMAC_FRER_STAT_B;   /**< Offset: 0x0C (R/   32) Frame Elimination Statistics B Register  */
+  __I   uint8_t                        Reserved1[0x04];
 } gmac_frer_registers_t;
 
 /** \brief GMAC_ST2CW register API structure */
@@ -6705,15 +6431,13 @@ typedef struct
 
 #define GMAC_ST2CW_NUMBER 24
 
-#define GMAC_FRER_NUMBER 6
+#define GMAC_FRER_NUMBER 1
 
 #define GMAC_EMAC_SA_NUMBER 4
 
 #define GMAC_EMAC_ASA_NUMBER 32
 
 #define GMAC_EMAC_ST2CW_NUMBER 6
-
-#define GMAC_EMAC_FRER_NUMBER 2
 
 /** \brief GMAC register API structure */
 typedef struct
@@ -6751,7 +6475,11 @@ typedef struct
   __IO  uint32_t                       GMAC_HRB;           /**< Offset: 0x80 (R/W  32) Hash Register Bottom */
   __IO  uint32_t                       GMAC_HRT;           /**< Offset: 0x84 (R/W  32) Hash Register Top */
   __IO  uint32_t                       GMAC_SAB1;          /**< Offset: 0x88 (R/W  32) Specific Address 1 Bottom Register */
-  __IO  uint32_t                       GMAC_SAT1;          /**< Offset: 0x8C (R/W  32) Specific Address 1 Top Register */
+  union
+  {
+      __I   uint32_t                       GMAC_FRER_STAT_B;   /**< Offset: 0x8C (R/   32) Frame Elimination Statistics B Register  */
+      __IO  uint32_t                       GMAC_SAT1;          /**< Offset: 0x8C (R/W  32) Specific Address 1 Top Register */
+  };
   __IO  uint32_t                       GMAC_SAB2;          /**< Offset: 0x90 (R/W  32) Specific Address 2 Bottom Register */
   __IO  uint32_t                       GMAC_SAT2;          /**< Offset: 0x94 (R/W  32) Specific Address 2 Top Register */
   __IO  uint32_t                       GMAC_SAB3;          /**< Offset: 0x98 (R/W  32) Specific Address 3 Bottom Register */
@@ -6843,7 +6571,7 @@ typedef struct
   __I   uint32_t                       GMAC_PEFRN;         /**< Offset: 0x1FC (R/   32) PTP Peer Event Frame Received Nanoseconds Register */
   __I   uint8_t                        Reserved8[0x60];
   __IO  uint32_t                       GMAC_TXPQUANT1;     /**< Offset: 0x260 (R/W  32) Transmit Pause Quantum 1 Register */
-  __IO  uint32_t                       GMAC_TXPQUANT2;     /**< Offset: 0x264 (R/W  32) Transmit Pause Quantum 2 Register */
+  __IO  uint32_t                       GMAC_TXPQUANT2;     /**< Offset: 0x264 (R/W  32) Transmit Pause Quantum 2 Register{*}0{*} */
   __IO  uint32_t                       GMAC_TXPQUANT3;     /**< Offset: 0x268 (R/W  32) Transmit Pause Quantum 3 Register */
   __I   uint8_t                        Reserved9[0x04];
   __I   uint32_t                       GMAC_RXLPI;         /**< Offset: 0x270 (R/   32) Received LPI Transitions */
@@ -6903,11 +6631,11 @@ typedef struct
   __IO  uint32_t                       GMAC_FRER_REDTAG;   /**< Offset: 0x8A4 (R/W  32) Frame Elimination Redundancy Tag Register */
   __I   uint8_t                        Reserved31[0x18];
         gmac_frer_registers_t          GMAC_FRER[GMAC_FRER_NUMBER]; /**< Offset: 0x8C0  */
-  __I   uint8_t                        Reserved32[0x1E0];
+  __I   uint8_t                        Reserved32[0x230];
   __IO  uint32_t                       GMAC_RX_FLUSH_Q[6]; /**< Offset: 0xB00 (R/W  32) Receive Queue Flush Register (index = 0) */
   __I   uint8_t                        Reserved33[0x28];
-  __IO  uint32_t                       GMAC_SCR2_RATE_LIMIT[6]; /**< Offset: 0xB40 (R/W  32) Screening 2 Rate Limit Register (index = 0) */
-  __I   uint8_t                        Reserved34[0x28];
+  __IO  uint32_t                       GMAC_SCR2_RATE_LIMIT[8]; /**< Offset: 0xB40 (R/W  32) Screening 2 Rate Limit Register (index = 0) */
+  __I   uint8_t                        Reserved34[0x20];
   __I   uint32_t                       GMAC_SCR2_RATE_STATUS; /**< Offset: 0xB80 (R/   32) Screening 2 Rate Status Register */
   __I   uint8_t                        Reserved35[0x37C];
   __IO  uint32_t                       GMAC_MMSL_CR;       /**< Offset: 0xF00 (R/W  32) MMSL Control Register */
@@ -7065,29 +6793,36 @@ typedef struct
   __I   uint8_t                        Reserved53[0x38];
   __IO  uint32_t                       GMAC_EMAC_TSCTL;    /**< Offset: 0x1580 (R/W  32) Express MACTransmit Schedule Control Register */
   __I   uint8_t                        Reserved54[0x0C];
-  __IO  uint32_t                       GMAC_EMAC_TQBWRL0;  /**< Offset: 0x1590 (R/W  32) Express MAC Transmit Queue Bandwidth Rate Limit 0 Register */
+  __IO  uint32_t                       GMAC_EMAC_TQBWRL;   /**< Offset: 0x1590 (R/W  32) Express MAC Transmit Queue Bandwidth Rate Limit Register */
   __I   uint8_t                        Reserved55[0x0C];
   __IO  uint32_t                       GMAC_EMAC_TQSA;     /**< Offset: 0x15A0 (R/W  32) Express MAC Transmit Queue Segment Allocation Register */
   __I   uint8_t                        Reserved56[0x15C];
         gmac_emac_st2cw_registers_t    GMAC_EMAC_ST2CW[GMAC_EMAC_ST2CW_NUMBER]; /**< Offset: 0x1700  */
   __I   uint8_t                        Reserved57[0xD0];
-  __IO  uint32_t                       GMAC_EMAC_ENST_START_Q[6]; /**< Offset: 0x1800 (R/W  32) Express MAC ENST Start Time Queue Register (index = 0) */
-  __I   uint8_t                        Reserved58[0x08];
-  __IO  uint32_t                       GMAC_EMAC_ENST_ON_Q[6]; /**< Offset: 0x1820 (R/W  32) Express MAC ENST On Time Queue Register (index = 0) */
-  __I   uint8_t                        Reserved59[0x08];
-  __IO  uint32_t                       GMAC_EMAC_ENST_OFF_Q[6]; /**< Offset: 0x1840 (R/W  32) Express MAC ENST Off Time Queue Register (index = 0) */
-  __I   uint8_t                        Reserved60[0x28];
+  __IO  uint32_t                       GMAC_EMAC_ENST_START; /**< Offset: 0x1800 (R/W  32) Express MAC ENST Start Time Queue Register */
+  __I   uint8_t                        Reserved58[0x1C];
+  __IO  uint32_t                       GMAC_EMAC_ENST_ON;  /**< Offset: 0x1820 (R/W  32) Express MAC ENST On Time Queue Register */
+  __I   uint8_t                        Reserved59[0x1C];
+  __IO  uint32_t                       GMAC_EMAC_ENST_OFF; /**< Offset: 0x1840 (R/W  32) Express MAC ENST Off Time Queue Register */
+  __I   uint8_t                        Reserved60[0x3C];
   __IO  uint32_t                       GMAC_EMAC_ENST_CR;  /**< Offset: 0x1880 (R/W  32) Express MAC ENST Control Register */
   __I   uint8_t                        Reserved61[0x1C];
   __IO  uint32_t                       GMAC_EMAC_FRER_TIMEOUT; /**< Offset: 0x18A0 (R/W  32) Express MAC Frame Elimination Timeout Register */
   __IO  uint32_t                       GMAC_EMAC_FRER_REDTAG; /**< Offset: 0x18A4 (R/W  32) Express MAC Frame Elimination Redundancy Tag Register */
   __I   uint8_t                        Reserved62[0x18];
-        gmac_emac_frer_registers_t     GMAC_EMAC_FRER[GMAC_EMAC_FRER_NUMBER]; /**< Offset: 0x18C0  */
+  __IO  uint32_t                       GMAC_EMAC_FRER_CTRL1_A; /**< Offset: 0x18C0 (R/W  32) Express MAC Frame Elimination Control1 A Register */
+  __IO  uint32_t                       GMAC_EMAC_FRER_CTRL1_B; /**< Offset: 0x18C4 (R/W  32) Express MAC Frame Elimination Control1 B Register */
+  __IO  uint32_t                       GMAC_EMAC_FRER_STAT1_A; /**< Offset: 0x18C8 (R/W  32) Express MAC Frame Elimination Statistics1 A Register */
+  __IO  uint32_t                       GMAC_EMAC_FRER_STAT1_B; /**< Offset: 0x18CC (R/W  32) Express MAC Frame Elimination Statistics1 B Register */
+  __IO  uint32_t                       GMAC_EMAC_FRER_CTRL2_A; /**< Offset: 0x18D0 (R/W  32) Express MAC Frame Elimination Control2 A Register */
+  __IO  uint32_t                       GMAC_EMAC_FRER_CTRL2_B; /**< Offset: 0x18D4 (R/W  32) Express MAC Frame Elimination Control2 B Register */
+  __IO  uint32_t                       GMAC_EMAC_FRER_STAT2_A; /**< Offset: 0x18D8 (R/W  32) Express MAC Frame Elimination Statistics2 A Register */
+  __IO  uint32_t                       GMAC_EMAC_FRER_STAT2_B; /**< Offset: 0x18DC (R/W  32) Express MAC Frame Elimination Statistics2 B Register */
   __I   uint8_t                        Reserved63[0x220];
   __IO  uint32_t                       GMAC_EMAC_RX_FLUSH_Q; /**< Offset: 0x1B00 (R/W  32) Express MAC Receive Queue Flush Register */
   __I   uint8_t                        Reserved64[0x3C];
-  __IO  uint32_t                       GMAC_EMAC_SCR2_RATE_LIMIT; /**< Offset: 0x1B40 (R/W  32) Express MAC Screening 2 Rate Limit Register */
-  __I   uint8_t                        Reserved65[0x3C];
+  __IO  uint32_t                       GMAC_EMAC_SCR2_RATE_LIMIT[2]; /**< Offset: 0x1B40 (R/W  32) Express MAC Screening 2 Rate Limit Register x */
+  __I   uint8_t                        Reserved65[0x38];
   __I   uint32_t                       GMAC_EMAC_SCR2_RATE_STATUS; /**< Offset: 0x1B80 (R/   32) Express MAC Screening 2 Rate Status Register */
 } gmac_registers_t;
 

@@ -55,16 +55,16 @@
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/generic_timer/plib_generic_timer.h"
-#include "peripheral/flexcom/usart/plib_flexcom6_usart.h"
 #include "peripheral/tc/plib_tc0.h"
+#include "peripheral/flexcom/usart/plib_flexcom6_usart.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "bsp/bsp.h"
+#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/time/sys_time.h"
 #include "app.h"
 
 
