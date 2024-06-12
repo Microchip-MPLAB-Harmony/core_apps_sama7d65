@@ -364,23 +364,7 @@ void MMU_Initialize(void)
                     | TTB_TYPE_SECT;
     }
 
-    /* 0xE1200000: SDMMC0 */
-    tlb[0xE12] = TTB_SECT_ADDR(0xE1200000U)
-                  |  TTB_SECT_AP_FULL_ACCESS
-                  | TTB_SECT_DOMAIN(0xFU)
-                  | TTB_SECT_EXEC_NEVER
-                  | TTB_SECT_STRONGLY_ORDERED
-                  | TTB_TYPE_SECT;
-
-    /* 0xE1200000: SDMMC1 */
-    tlb[0xE12] = TTB_SECT_ADDR(0xE1200000U)
-                  |  TTB_SECT_AP_FULL_ACCESS
-                  | TTB_SECT_DOMAIN(0xFU)
-                  | TTB_SECT_EXEC_NEVER
-                  | TTB_SECT_STRONGLY_ORDERED
-                  | TTB_TYPE_SECT;
-
-    /* 0xE1200000: SDMMC2 */
+    /* 0xE1200000: SDMMC */
     tlb[0xE12] = TTB_SECT_ADDR(0xE1200000U)
                   |  TTB_SECT_AP_FULL_ACCESS
                   | TTB_SECT_DOMAIN(0xFU)
