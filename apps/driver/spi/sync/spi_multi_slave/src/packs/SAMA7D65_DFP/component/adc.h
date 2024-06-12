@@ -636,9 +636,9 @@
 #define ADC_LCDR_NO_OSR_LDATA_Pos             _UINT32_(0)                                          /* (ADC_LCDR) Last Data Converted when No Oversampling Position */
 #define ADC_LCDR_NO_OSR_LDATA_Msk             (_UINT32_(0xFFF) << ADC_LCDR_NO_OSR_LDATA_Pos)       /* (ADC_LCDR) Last Data Converted when No Oversampling Mask */
 #define ADC_LCDR_NO_OSR_LDATA(value)          (ADC_LCDR_NO_OSR_LDATA_Msk & (_UINT32_(value) << ADC_LCDR_NO_OSR_LDATA_Pos))
-#define ADC_LCDR_NO_OSR_CHNB_Pos              _UINT32_(12)                                         /* (ADC_LCDR) Channel Number when No Oversampling Position */
-#define ADC_LCDR_NO_OSR_CHNB_Msk              (_UINT32_(0xF) << ADC_LCDR_NO_OSR_CHNB_Pos)          /* (ADC_LCDR) Channel Number when No Oversampling Mask */
-#define ADC_LCDR_NO_OSR_CHNB(value)           (ADC_LCDR_NO_OSR_CHNB_Msk & (_UINT32_(value) << ADC_LCDR_NO_OSR_CHNB_Pos))
+#define ADC_LCDR_NO_OSR_CHNBOSR_Pos           _UINT32_(12)                                         /* (ADC_LCDR) Channel Number when No Oversampling Position */
+#define ADC_LCDR_NO_OSR_CHNBOSR_Msk           (_UINT32_(0xF) << ADC_LCDR_NO_OSR_CHNBOSR_Pos)       /* (ADC_LCDR) Channel Number when No Oversampling Mask */
+#define ADC_LCDR_NO_OSR_CHNBOSR(value)        (ADC_LCDR_NO_OSR_CHNBOSR_Msk & (_UINT32_(value) << ADC_LCDR_NO_OSR_CHNBOSR_Pos))
 #define ADC_LCDR_NO_OSR_Msk                   _UINT32_(0x0000FFFF)                                  /* (ADC_LCDR_NO_OSR) Register Mask  */
 
 
