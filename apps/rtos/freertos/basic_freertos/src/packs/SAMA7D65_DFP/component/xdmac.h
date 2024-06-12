@@ -520,6 +520,46 @@
 #define XDMAC_CTCS_Msk                        _UINT32_(0x00FFFFFF)                                 /* (XDMAC_CTCS) Register Mask  */
 
 
+/* -------- XDMAC_MBR_NDA : (XDMAC Offset: 0x00) (R/W 32) Next Descriptor Address Member -------- */
+#define XDMAC_MBR_NDA_RESETVALUE              _UINT32_(0x00)                                       /*  (XDMAC_MBR_NDA) Next Descriptor Address Member  Reset Value */
+
+#define XDMAC_MBR_NDA_NDA_Pos                 _UINT32_(0)                                          /* (XDMAC_MBR_NDA) Next Descriptor Address Member Position */
+#define XDMAC_MBR_NDA_NDA_Msk                 (_UINT32_(0xFFFFFFFF) << XDMAC_MBR_NDA_NDA_Pos)      /* (XDMAC_MBR_NDA) Next Descriptor Address Member Mask */
+#define XDMAC_MBR_NDA_NDA(value)              (XDMAC_MBR_NDA_NDA_Msk & (_UINT32_(value) << XDMAC_MBR_NDA_NDA_Pos)) /* Assigment of value for NDA in the XDMAC_MBR_NDA register */
+#define XDMAC_MBR_NDA_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (XDMAC_MBR_NDA) Register Mask  */
+
+
+/* -------- XDMAC_MBR_UBC : (XDMAC Offset: 0x04) ( R/ 32) Descriptor Structure Microblock Control Member -------- */
+#define XDMAC_MBR_UBC_UBLEN_Pos               _UINT32_(0)                                          /* (XDMAC_MBR_UBC) Microblock Length Position */
+#define XDMAC_MBR_UBC_UBLEN_Msk               (_UINT32_(0xFFFFFF) << XDMAC_MBR_UBC_UBLEN_Pos)      /* (XDMAC_MBR_UBC) Microblock Length Mask */
+#define XDMAC_MBR_UBC_UBLEN(value)            (XDMAC_MBR_UBC_UBLEN_Msk & (_UINT32_(value) << XDMAC_MBR_UBC_UBLEN_Pos)) /* Assigment of value for UBLEN in the XDMAC_MBR_UBC register */
+#define XDMAC_MBR_UBC_NDE_Pos                 _UINT32_(24)                                         /* (XDMAC_MBR_UBC) Next Descriptor Enable Position */
+#define XDMAC_MBR_UBC_NDE_Msk                 (_UINT32_(0x1) << XDMAC_MBR_UBC_NDE_Pos)             /* (XDMAC_MBR_UBC) Next Descriptor Enable Mask */
+#define XDMAC_MBR_UBC_NDE(value)              (XDMAC_MBR_UBC_NDE_Msk & (_UINT32_(value) << XDMAC_MBR_UBC_NDE_Pos)) /* Assigment of value for NDE in the XDMAC_MBR_UBC register */
+#define XDMAC_MBR_UBC_NSEN_Pos                _UINT32_(25)                                         /* (XDMAC_MBR_UBC) Next Descriptor Source Update Position */
+#define XDMAC_MBR_UBC_NSEN_Msk                (_UINT32_(0x1) << XDMAC_MBR_UBC_NSEN_Pos)            /* (XDMAC_MBR_UBC) Next Descriptor Source Update Mask */
+#define XDMAC_MBR_UBC_NSEN(value)             (XDMAC_MBR_UBC_NSEN_Msk & (_UINT32_(value) << XDMAC_MBR_UBC_NSEN_Pos)) /* Assigment of value for NSEN in the XDMAC_MBR_UBC register */
+#define XDMAC_MBR_UBC_NDEN_Pos                _UINT32_(26)                                         /* (XDMAC_MBR_UBC) Next Descriptor Destination Update Position */
+#define XDMAC_MBR_UBC_NDEN_Msk                (_UINT32_(0x1) << XDMAC_MBR_UBC_NDEN_Pos)            /* (XDMAC_MBR_UBC) Next Descriptor Destination Update Mask */
+#define XDMAC_MBR_UBC_NDEN(value)             (XDMAC_MBR_UBC_NDEN_Msk & (_UINT32_(value) << XDMAC_MBR_UBC_NDEN_Pos)) /* Assigment of value for NDEN in the XDMAC_MBR_UBC register */
+#define XDMAC_MBR_UBC_NVIEW_Pos               _UINT32_(27)                                         /* (XDMAC_MBR_UBC) Next Descriptor View Position */
+#define XDMAC_MBR_UBC_NVIEW_Msk               (_UINT32_(0x3) << XDMAC_MBR_UBC_NVIEW_Pos)           /* (XDMAC_MBR_UBC) Next Descriptor View Mask */
+#define XDMAC_MBR_UBC_NVIEW(value)            (XDMAC_MBR_UBC_NVIEW_Msk & (_UINT32_(value) << XDMAC_MBR_UBC_NVIEW_Pos)) /* Assigment of value for NVIEW in the XDMAC_MBR_UBC register */
+#define XDMAC_MBR_UBC_QOS_Pos                 _UINT32_(29)                                         /* (XDMAC_MBR_UBC) Channel Quality of Service Level Position */
+#define XDMAC_MBR_UBC_QOS_Msk                 (_UINT32_(0x3) << XDMAC_MBR_UBC_QOS_Pos)             /* (XDMAC_MBR_UBC) Channel Quality of Service Level Mask */
+#define XDMAC_MBR_UBC_QOS(value)              (XDMAC_MBR_UBC_QOS_Msk & (_UINT32_(value) << XDMAC_MBR_UBC_QOS_Pos)) /* Assigment of value for QOS in the XDMAC_MBR_UBC register */
+#define XDMAC_MBR_UBC_Msk                     _UINT32_(0x7FFFFFFF)                                 /* (XDMAC_MBR_UBC) Register Mask  */
+
+
+/* -------- XDMAC_MBR_TA : (XDMAC Offset: 0x08) (R/W 32) Transfer Address Member -------- */
+#define XDMAC_MBR_TA_RESETVALUE               _UINT32_(0x00)                                       /*  (XDMAC_MBR_TA) Transfer Address Member  Reset Value */
+
+#define XDMAC_MBR_TA_NDA_Pos                  _UINT32_(0)                                          /* (XDMAC_MBR_TA) Transfer Address Member Position */
+#define XDMAC_MBR_TA_NDA_Msk                  (_UINT32_(0xFFFFFFFF) << XDMAC_MBR_TA_NDA_Pos)       /* (XDMAC_MBR_TA) Transfer Address Member Mask */
+#define XDMAC_MBR_TA_NDA(value)               (XDMAC_MBR_TA_NDA_Msk & (_UINT32_(value) << XDMAC_MBR_TA_NDA_Pos)) /* Assigment of value for NDA in the XDMAC_MBR_TA register */
+#define XDMAC_MBR_TA_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (XDMAC_MBR_TA) Register Mask  */
+
+
 /* -------- XDMAC_GTYPE : (XDMAC Offset: 0x00) ( R/ 32) Global Type Register -------- */
 #define XDMAC_GTYPE_NB_CH_Pos                 _UINT32_(0)                                          /* (XDMAC_GTYPE) Number of Channels Minus One Position */
 #define XDMAC_GTYPE_NB_CH_Msk                 (_UINT32_(0x1F) << XDMAC_GTYPE_NB_CH_Pos)            /* (XDMAC_GTYPE) Number of Channels Minus One Mask */
@@ -5258,6 +5298,9 @@
 #define XDMAC_CSUS_REG_OFST            _UINT32_(0x30)      /* (XDMAC_CSUS) Channel Source Microblock Stride  Offset */
 #define XDMAC_CDUS_REG_OFST            _UINT32_(0x34)      /* (XDMAC_CDUS) Channel Destination Microblock Stride  Offset */
 #define XDMAC_CTCS_REG_OFST            _UINT32_(0x38)      /* (XDMAC_CTCS) Channel Transfer Counter Status Register  Offset */
+#define XDMAC_MBR_NDA_REG_OFST         _UINT32_(0x00)      /* (XDMAC_MBR_NDA) Next Descriptor Address Member Offset */
+#define XDMAC_MBR_UBC_REG_OFST         _UINT32_(0x04)      /* (XDMAC_MBR_UBC) Descriptor Structure Microblock Control Member Offset */
+#define XDMAC_MBR_TA_REG_OFST          _UINT32_(0x08)      /* (XDMAC_MBR_TA) Transfer Address Member Offset */
 #define XDMAC_GTYPE_REG_OFST           _UINT32_(0x00)      /* (XDMAC_GTYPE) Global Type Register Offset */
 #define XDMAC_GCFG_REG_OFST            _UINT32_(0x04)      /* (XDMAC_GCFG) Global Configuration Register Offset */
 #define XDMAC_GWAC_REG_OFST            _UINT32_(0x08)      /* (XDMAC_GWAC) Global Weighted Arbiter Configuration Register Offset */
@@ -5303,6 +5346,18 @@ typedef struct
   __I   uint32_t                       XDMAC_CTCS;         /**< Offset: 0x38 (R/   32) Channel Transfer Counter Status Register  */
   __I   uint8_t                        Reserved1[0x04];
 } xdmac_chid_registers_t;
+
+/** \brief XDMAC_DSC register API structure */
+typedef struct
+{  /* XDMAC Descriptor */
+  __IO  uint32_t                       XDMAC_MBR_NDA;      /**< Offset: 0x00 (R/W  32) Next Descriptor Address Member */
+  __I   uint32_t                       XDMAC_MBR_UBC;      /**< Offset: 0x04 (R/   32) Descriptor Structure Microblock Control Member */
+  __IO  uint32_t                       XDMAC_MBR_TA;       /**< Offset: 0x08 (R/W  32) Transfer Address Member */
+} xdmac_dsc_registers_t
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
 
 #define XDMAC_CHID_NUMBER 32
 
