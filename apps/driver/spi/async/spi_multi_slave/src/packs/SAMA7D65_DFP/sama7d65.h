@@ -570,7 +570,7 @@ typedef enum IRQn
 #define ADC_REGS                         ((adc_registers_t*)0xe1000000)                /* ADC Registers Address        */
 #define AES_REGS                         ((aes_registers_t*)0xe1600000)                /* AES Registers Address        */
 #define ASRC_REGS                        ((asrc_registers_t*)0xe2808000)               /* ASRC Registers Address       */
-#define BSC_REGS                         ((bsc_registers_t*)0xe001d600)                /* BSC Registers Address        */
+#define BSC_REGS                         ((bsc_registers_t*)0xe001d604)                /* BSC Registers Address        */
 #define CHIPID_REGS                      ((chipid_registers_t*)0xe0020000)             /* CHIPID Registers Address     */
 #define CPKCC_REGS                       ((cpkcc_registers_t*)0xe000c000)              /* CPKCC Registers Address      */
 #define DDRPUBL_REGS                     ((ddr3phy_registers_t*)0xe3804000)            /* DDRPUBL Registers Address    */
@@ -668,7 +668,7 @@ typedef enum IRQn
 #define ADC_BASE_ADDRESS                 _UINT32_(0xe1000000)                          /* ADC Base Address */
 #define AES_BASE_ADDRESS                 _UINT32_(0xe1600000)                          /* AES Base Address */
 #define ASRC_BASE_ADDRESS                _UINT32_(0xe2808000)                          /* ASRC Base Address */
-#define BSC_BASE_ADDRESS                 _UINT32_(0xe001d600)                          /* BSC Base Address */
+#define BSC_BASE_ADDRESS                 _UINT32_(0xe001d604)                          /* BSC Base Address */
 #define CHIPID_BASE_ADDRESS              _UINT32_(0xe0020000)                          /* CHIPID Base Address */
 #define CPKCC_BASE_ADDRESS               _UINT32_(0xe000c000)                          /* CPKCC Base Address */
 #define DDRPUBL_BASE_ADDRESS             _UINT32_(0xe3804000)                          /* DDRPUBL Base Address */
