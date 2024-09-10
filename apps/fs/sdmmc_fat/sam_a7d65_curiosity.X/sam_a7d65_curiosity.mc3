@@ -686,7 +686,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;ENABLE_SYS_CACHE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; value=&quot;false&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -3304,7 +3304,7 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;SYS_CACHE_DEF&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -3317,7 +3317,7 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;SYS_CACHE_HEADER&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -3330,7 +3330,7 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;SYS_CACHE_SOURCE&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -3474,7 +3474,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;DATA_CACHE_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3485,7 +3485,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;INSTRUCTION_CACHE_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -7765,7 +7765,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\definitions.h</file>
-         <hash>8479f352af82a586aabd20f2bd7e110609eaaa1dc9348020bb04fa6bf36da59e</hash>
+         <hash>b2eb83b2f6877270169a0038940a153c59513e08c57c29d8a667eeb58b98b00f</hash>
       </entry>
       <entry>
          <file>..\src\config\default\device.h</file>
@@ -7773,7 +7773,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\device_cache.h</file>
-         <hash>554e5c179b8fb79fc3783af6b7e61d9c61cd2b75ad8b797c73190256951d32f6</hash>
+         <hash>ce94cf269fc251c24bb9e5a10bef856736681af405f0ac733e14610f9349cbfe</hash>
       </entry>
       <entry>
          <file>..\src\config\default\driver\driver.h</file>
@@ -7785,15 +7785,15 @@
       </entry>
       <entry>
          <file>..\src\config\default\driver\sdmmc\drv_sdmmc.h</file>
-         <hash>697acb93f32d8f9c5fb4987da5587233adf62a9b331fb30a195d1c788455339d</hash>
+         <hash>0ce1354b91b97a990165503d8901399ec41ac34125b2c7e7b3f417cfea0671cc</hash>
       </entry>
       <entry>
          <file>..\src\config\default\driver\sdmmc\drv_sdmmc_definitions.h</file>
-         <hash>4917f65a8afb9ae28e08fab862bfba969b892990b1d1039f1d03d66edcaa826e</hash>
+         <hash>f5439ea031b5d6eaa02e8db5d906827cde2484c5fc82fc94aae99e70fa3826c2</hash>
       </entry>
       <entry>
          <file>..\src\config\default\driver\sdmmc\src\drv_sdmmc.c</file>
-         <hash>7b391d4342bf251a67b8471aae5b4577543534a3d5d0b7ab3be8f447961e2264</hash>
+         <hash>fbc2806778ba6689ab5db96d760b431fc656490374a7a9b9fe131eb9a09a494a</hash>
       </entry>
       <entry>
          <file>..\src\config\default\driver\sdmmc\src\drv_sdmmc_file_system.c</file>
@@ -7805,7 +7805,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\driver\sdmmc\src\drv_sdmmc_local.h</file>
-         <hash>07a772675d632648815baef0ed90e60b3038a6aedf7dc989042357f93367b0c1</hash>
+         <hash>e0dcfdb949770b8b539a4786910e88cd8762a4b8b3c3247c885ae92b095bcd63</hash>
       </entry>
       <entry>
          <file>..\src\config\default\fault_handlers.c</file>
@@ -7853,19 +7853,19 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\gic\plib_gic.c</file>
-         <hash>dd2423d56e58816c9898e65e9a05586fc8397c9a97d971a70f21a51e8f99afe7</hash>
+         <hash>c7fcb65412188f343ff188a93e2e11ed0f42d8f19a4f807db02dd81d961bc84b</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\gic\plib_gic.h</file>
-         <hash>92e447d1cb7ee981d456921c05de673482ee64824249201bb7543836b59386bb</hash>
+         <hash>e6e611db30d9530c6a4e5ccebb8db8b342a5b9a41dd16cc73c63b1f74b20fdc5</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\mmu\plib_mmu.c</file>
-         <hash>056f98778a7f4aeb16a47d2e271d78e28c72c026ce48610fdd88ed8b9b64e61b</hash>
+         <hash>8674a5334cbc1b61438a3a0c0679b131a8424233a9f2f3eef823910501921378</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\mmu\plib_mmu.h</file>
-         <hash>cb4d9542a1b940dd7483d2ad911dd95f39de6b1b71ca722e4b12e239ae7fe894</hash>
+         <hash>6cd47e9a81702a54bbf922b56e09b165a481d61df9298be2e81611521c6c134c</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\pio\plib_pio.c</file>
@@ -7877,7 +7877,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sdmmc\plib_sdmmc1.c</file>
-         <hash>719863056d054a5974b228e776b41b293a948c42925d519d73061915231de6c3</hash>
+         <hash>03691170b12550cfbdc2f8e636cf4915e3ec2df91cac06b1b046e8ba7f5b7050</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sdmmc\plib_sdmmc1.h</file>
@@ -7885,7 +7885,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sdmmc\plib_sdmmc_common.h</file>
-         <hash>c8693c2b48d12e81468827118033749902c15d2ff29044c878587fd933322909</hash>
+         <hash>c39737be94a3d3f7699f87094bc5f65fc3a17bbe2da31a28e9e89d8da976b492</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\tc\plib_tc0.c</file>
@@ -7910,6 +7910,14 @@
       <entry>
          <file>..\src\config\default\sys_tasks.h</file>
          <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\system\cache\sys_cache.c</file>
+         <hash>f3e1b1a0784033dbb86eb289c81c3347398c08f65b18d09be0cfbf7d3a8f9bb6</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\system\cache\sys_cache.h</file>
+         <hash>b4b3a4e7434759c9bbcd3c6a0ab97558eb2a007f083a4eb76dbedcb2e2c3d86b</hash>
       </entry>
       <entry>
          <file>..\src\config\default\system\debug\sys_debug.h</file>
@@ -8041,7 +8049,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_gcc.h</file>
-         <hash>a720d18d2dd2921d8fe308d21c1f2e9c8174549ec1a34447927db3dcc9505aa9</hash>
+         <hash>2a47e8836d3e5dc5a02866021af0271a3cb7ae53ca9cd847ac90d3a5e4a3dc20</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_iccarm.h</file>

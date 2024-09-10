@@ -1,20 +1,17 @@
 /*******************************************************************************
-  L1, L2 Cache Header
+  Cache System Service Library Implementation Source File
 
-  File Name:
-    cache_cortex_a.h
+  Company
+    Microchip Technology Inc.
 
-  Summary:
-    Preprocessor definitions to provide L1 and L2 Cache control.
+  File Name
+    sys_cache.c
 
-  Description:
-    An MPLAB PLIB or Project can include this header to perform cache cleans,
-    invalidates etc. For the DCache and ICache.
+  Summary
+    Cache System Service Library interface implementation.
 
-  Remarks:
-    This header should not define any prototypes or data definitions, or
-    include any files that do.  The file only provides macro definitions for
-    build-time.
+  Description
+    This file implements the interface to the Cache System Service Library.
 
 *******************************************************************************/
 
@@ -43,59 +40,126 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef CACHE_CORTEX_A_H
-#define CACHE_CORTEX_A_H
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-/*  This section Includes other configuration headers necessary to completely
-    define this configuration.
-*/
-#include "peripheral/mmu/plib_mmu.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-extern "C" {
-
-#endif
-// DOM-IGNORE-END
+#include "device.h"
+#include "system/cache/sys_cache.h"
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: L1, L2 Cache Configuration
+// Section: System Cache Interface Functions
 // *****************************************************************************
 // *****************************************************************************
-#define L1_ICACHE_IN_USE                               true
-#define L1_ICACHE_ENABLE()                             icache_Enable()
-#define L1_ICACHE_DISABLE()                            icache_Disable()
-#define L1_ICACHE_INVALIDATE_ALL()                     L1C_InvalidateICacheAll()
 
- 
-#define L1_DCACHE_IN_USE                               true
-#define L1_DCACHE_ENABLE()                             dcache_Enable()
-#define L1_DCACHE_DISABLE()                            dcache_Disable()
-#define L1_DCACHE_CLEAN_ALL()                          dcache_CleanAll()
-#define L1_DCACHE_INVALIDATE_ALL()                     dcache_InvalidateAll()
-#define L1_DCACHE_CLEAN_INVALIDATE_ALL()               dcache_CleanInvalidateAll()
-
-#define DCACHE_CLEAN_BY_ADDR(addr,sz)                  dcache_CleanByAddr(addr,sz)
-#define DCACHE_INVALIDATE_BY_ADDR(addr,sz)             dcache_InvalidateByAddr(addr,sz)
-#define DCACHE_CLEAN_INVALIDATE_BY_ADDR(addr,sz)       dcache_CleanInvalidateByAddr(addr,sz)
-#define DCACHE_CLEAN_ALL()                             dcache_CleanAll()
-#define DCACHE_INVALIDATE_ALL()                        dcache_InvalidateAll()
-#define DCACHE_CLEAN_INVALIDATE_ALL()                  dcache_CleanInvalidateAll()
-//
- 
-#define DATA_CACHE_ENABLED                             true   
-
-//DOM-IGNORE-BEGIN
-#ifdef __cplusplus
+/*
+ * Enable both Data and Instruction Caches.
+ */
+void SYS_CACHE_EnableCaches (void)
+{
+    L1_ICACHE_ENABLE();
+    L1_DCACHE_ENABLE();
 }
-#endif
-//DOM-IGNORE-END
 
-#endif // end of header
+/*
+ * Disable both Data and Instruction Caches.
+ */
+void SYS_CACHE_DisableCaches (void)
+{
+    L1_ICACHE_DISABLE();
+    L1_DCACHE_DISABLE();
+}
+
+/*
+ * Enable Instruction Cache.
+ */
+void SYS_CACHE_EnableICache (void)
+{
+    L1_ICACHE_ENABLE();
+}
+
+/*
+ * Disable Instruction Cache.
+ */
+void SYS_CACHE_DisableICache (void)
+{
+    L1_ICACHE_DISABLE();
+}
+
+/*
+ * Invalidate Instruction Cache.
+ */
+void SYS_CACHE_InvalidateICache (void)
+{
+    L1_ICACHE_INVALIDATE_ALL();
+}
+
+/*
+ * Enable Data Cache.
+ */
+void SYS_CACHE_EnableDCache (void)
+{
+    L1_DCACHE_ENABLE();
+}
+
+/*
+ * Disable Data Cache.
+ */
+void SYS_CACHE_DisableDCache (void)
+{
+    L1_DCACHE_DISABLE();
+}
+
+/*
+ * Invalidate whole Data Cache.
+ */
+void SYS_CACHE_InvalidateDCache (void)
+{
+    DCACHE_INVALIDATE_ALL();
+}
+
+/*
+ * Clean whole Data Cache.
+ */
+void SYS_CACHE_CleanDCache (void)
+{
+    DCACHE_CLEAN_ALL();
+}
+
+/*
+ * Clean and Invalidate whole Data Cache.
+ */
+void SYS_CACHE_CleanInvalidateDCache (void)
+{
+    DCACHE_CLEAN_INVALIDATE_ALL();
+}
+
+/*
+ * Invalidate Data Cache by address.
+ */
+void SYS_CACHE_InvalidateDCache_by_Addr (void *addr, int32_t size)
+{
+    DCACHE_INVALIDATE_BY_ADDR(addr,size);
+}
+
+/*
+ * Clean Data Cache by address.
+ */
+void SYS_CACHE_CleanDCache_by_Addr (void *addr, int32_t size)
+{
+    DCACHE_CLEAN_BY_ADDR(addr,size);
+}
+
+/* MISRA C-2012 Rule 5.1 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_5_1_DR_1 */
+
+/*
+ * Clean and Invalidate Data Cache by address.
+ */
+void SYS_CACHE_CleanInvalidateDCache_by_Addr (void *addr, int32_t size)
+{
+    DCACHE_CLEAN_INVALIDATE_BY_ADDR(addr,size);
+}
+
+/* MISRAC 2012 deviation block end */
