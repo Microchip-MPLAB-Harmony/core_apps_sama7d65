@@ -55,23 +55,21 @@
 volatile static uint64_t compareDelta = 24000UL;
 
 
+
 void GENERIC_TIMER_Initialize(void)
 {
     PL1_SetCounterFrequency(GENERIC_TIMER_FREQUENCY);
 }
-
 
 uint64_t GENERIC_TIMER_CounterValueGet(void)
 {
     return PL1_GetCurrentPhysicalValue();
 }
 
-
 uint32_t GENERIC_TIMER_CounterFrequencyGet(void)
 {
     return GENERIC_TIMER_FREQUENCY;
 }
-
 
 void GENERIC_TIMER_DelayUs(uint32_t delay_us)
 {
@@ -83,7 +81,6 @@ void GENERIC_TIMER_DelayUs(uint32_t delay_us)
 
     }
 }
-
 
 void GENERIC_TIMER_DelayMs(uint32_t delay_ms)
 {
@@ -103,7 +100,6 @@ void GENERIC_TIMER_Start(void)
     PL1_SetControl(1U);
 }
 
-
 void GENERIC_TIMER_PeriodSet(uint64_t period)
 {
     uint32_t control = PL1_GetControl();
@@ -113,14 +109,13 @@ void GENERIC_TIMER_PeriodSet(uint64_t period)
     PL1_SetControl(control);
 }
 
-
 uint64_t GENERIC_TIMER_PeriodGet(void)
 {
     return compareDelta;
 }
 
-
 void GENERIC_TIMER_Stop(void)
 {
     PL1_SetControl(2U);
 }
+
