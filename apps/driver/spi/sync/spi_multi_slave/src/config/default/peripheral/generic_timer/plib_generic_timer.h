@@ -48,9 +48,17 @@
 #ifndef PLIB_GENERIC_TIMER_H
 #define PLIB_GENERIC_TIMER_H
 
+#include <stdbool.h>
+
 #ifdef __cplusplus  // Provide C++ Compatibility
 extern "C" {
 #endif //__cplusplus
+
+typedef struct
+{
+    uint32_t start;
+    uint32_t count;
+}GENERIC_TIMER_TIMEOUT;
 
 typedef void (*GENERIC_TIMER_CALLBACK) (uintptr_t context);
 
@@ -71,6 +79,7 @@ void GENERIC_TIMER_PeriodSet(uint64_t period);
 uint64_t GENERIC_TIMER_PeriodGet(void);
 
 void GENERIC_TIMER_Stop(void);
+
 
 #ifdef __cplusplus
 }
