@@ -223,6 +223,9 @@ typedef enum
 
 }SDMMC_CLK_MODE;
 
+/* MISRAC 2012 deviation block start */
+/* MISRA C-2012 Rule 5.2 deviated: 1 times  Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+
 typedef enum
 {
     SDMMC_DATA_TRANSFER_TYPE_SINGLE = 0,
@@ -232,6 +235,8 @@ typedef enum
     SDMMC_DATA_TRANSFER_TYPE_SDIO_BLOCK,
 
 }SDMMC_DATA_TRANSFER_TYPE;
+
+/* MISRAC 2012 deviation block end */
 
 typedef enum
 {

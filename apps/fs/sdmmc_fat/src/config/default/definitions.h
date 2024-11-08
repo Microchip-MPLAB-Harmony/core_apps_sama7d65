@@ -48,13 +48,13 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "driver/sdmmc/drv_sdmmc.h"
 #include "system/fs/sys_fs.h"
 #include "system/fs/sys_fs_media_manager.h"
 #include "system/fs/sys_fs_fat_interface.h"
 #include "system/fs/fat_fs/file_system/ff.h"
 #include "system/fs/fat_fs/file_system/ffconf.h"
 #include "system/fs/fat_fs/hardware_access/diskio.h"
-#include "driver/sdmmc/drv_sdmmc.h"
 #include "peripheral/dwdt/plib_dwdt.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gic/plib_gic.h"
@@ -81,13 +81,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "SAMA7D65"
-#define DEVICE_ARCH			 "CORTEX-A7"
-#define DEVICE_FAMILY		 "SAMA7"
-#define DEVICE_SERIES		 "SAMA7D6"
+#define DEVICE_NAME          "SAMA7D65"
+#define DEVICE_ARCH          "CORTEX-A7"
+#define DEVICE_FAMILY        "SAMA7"
+#define DEVICE_SERIES        "SAMA7D6"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 800000000
+#define CPU_CLOCK_FREQUENCY 800000000U
 
 // *****************************************************************************
 // *****************************************************************************

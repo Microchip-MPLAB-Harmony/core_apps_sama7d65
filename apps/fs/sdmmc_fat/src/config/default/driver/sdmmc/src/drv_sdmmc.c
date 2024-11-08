@@ -594,7 +594,7 @@ static uint8_t lDRV_SDMMC_SDIO_IO_ReadDirect(
 
     dObj->dataTransferFlags.isDataPresent = false;
 
-    lDRV_SDMMC_CommandSend (dObj, (uint8_t)DRV_SDMMC_CMD_IO_RW_DIR, DRV_SDMMC_CMD52_RD_DATA(fn, regAddr), (uint8_t)DRV_SDMMC_CMD_RESP_R5, &dObj->dataTransferFlags);
+    lDRV_SDMMC_CommandSend (dObj, (uint8_t)DRV_SDMMC_CMD_IO_RW_DIR, DRV_SDMMC_CMD52_RD_DATA((uint32_t)fn, regAddr), (uint8_t)DRV_SDMMC_CMD_RESP_R5, &dObj->dataTransferFlags);
 
     if (dObj->cmdState == DRV_SDMMC_CMD_EXEC_IS_COMPLETE)
     {
@@ -604,11 +604,11 @@ static uint8_t lDRV_SDMMC_SDIO_IO_ReadDirect(
 
             if (outResponseFlags != NULL)
             {
-                *outResponseFlags = DRV_SDMMC_SDIO_CMD52_RESP_FLAGS_GET(response);
+                *outResponseFlags = (uint8_t)DRV_SDMMC_SDIO_CMD52_RESP_FLAGS_GET(response);
             }
             if (outResponseData != NULL)
             {
-                *outResponseData = DRV_SDMMC_SDIO_CMD52_RESP_DATA_GET(response);
+                *outResponseData = (uint8_t)DRV_SDMMC_SDIO_CMD52_RESP_DATA_GET(response);
             }
 
             if ((DRV_SDMMC_SDIO_CMD52_RESP_FLAGS_GET(response) & DRV_SDMMC_SDIO_CMD52_RESP_ERR_MSK) == 0U)
@@ -644,7 +644,7 @@ static uint8_t lDRV_SDMMC_SDIO_IO_WriteDirect(
 
     dObj->dataTransferFlags.isDataPresent = false;
 
-    lDRV_SDMMC_CommandSend (dObj, (uint8_t)DRV_SDMMC_CMD_IO_RW_DIR, DRV_SDMMC_CMD52_WR_DATA(fn, regAddr, wrData, raw), (uint8_t)DRV_SDMMC_CMD_RESP_R5, &dObj->dataTransferFlags);
+    lDRV_SDMMC_CommandSend (dObj, (uint8_t)DRV_SDMMC_CMD_IO_RW_DIR, DRV_SDMMC_CMD52_WR_DATA((uint32_t)fn, regAddr, wrData, (uint32_t)raw), (uint8_t)DRV_SDMMC_CMD_RESP_R5, &dObj->dataTransferFlags);
 
     if (dObj->cmdState == DRV_SDMMC_CMD_EXEC_IS_COMPLETE)
     {
@@ -654,11 +654,11 @@ static uint8_t lDRV_SDMMC_SDIO_IO_WriteDirect(
 
             if (outResponseFlags != NULL)
             {
-                *outResponseFlags = DRV_SDMMC_SDIO_CMD52_RESP_FLAGS_GET(response);
+                *outResponseFlags = (uint8_t)DRV_SDMMC_SDIO_CMD52_RESP_FLAGS_GET(response);
             }
             if (raw == true && outReadData != NULL)
             {
-                *outReadData = DRV_SDMMC_SDIO_CMD52_RESP_DATA_GET(response);
+                *outReadData = (uint8_t)DRV_SDMMC_SDIO_CMD52_RESP_DATA_GET(response);
             }
 
             if ((DRV_SDMMC_SDIO_CMD52_RESP_FLAGS_GET(response) & DRV_SDMMC_SDIO_CMD52_RESP_ERR_MSK) == 0U)
@@ -690,7 +690,7 @@ static uint8_t lDRV_SDMMC_SDIO_CISP_Get(
     uint8_t status = DRV_SDMMC_COMMAND_STATUS_IN_PROGRESS;
     uint32_t response;
 
-    if (nBytesRead == 0)
+    if (nBytesRead == 0U)
     {
         sdioAddr = DRV_SDMMC_FBR_OFFSET(fn) + DRV_SDMMC_CCCR_ADDR_CSIP;
     }
@@ -705,11 +705,11 @@ static uint8_t lDRV_SDMMC_SDIO_CISP_Get(
         {
             dObj->sdmmcPlib->sdhostReadResponse(DRV_SDMMC_READ_RESP_REG_0, &response);
 
-            cisp[nBytesRead] = DRV_SDMMC_SDIO_CMD52_RESP_DATA_GET(response);
+            cisp[nBytesRead] = (uint8_t)DRV_SDMMC_SDIO_CMD52_RESP_DATA_GET(response);
 
             nBytesRead++;
 
-            if (nBytesRead == 3)
+            if (nBytesRead == 3U)
             {
                 nBytesRead = 0;
                 status = DRV_SDMMC_COMMAND_STATUS_SUCCESS;
@@ -749,7 +749,7 @@ static uint8_t lDRV_SDMMC_SDIO_CIS_Tuple_Rd(
 
     uint8_t status = DRV_SDMMC_COMMAND_STATUS_IN_PROGRESS;
 
-    if (addr == 0)
+    if (addr == 0U)
     {
         addr = cisp;
         *outNumTupleDataBytes = 0;
@@ -765,7 +765,7 @@ static uint8_t lDRV_SDMMC_SDIO_CIS_Tuple_Rd(
         {
             dObj->sdmmcPlib->sdhostReadResponse(DRV_SDMMC_READ_RESP_REG_0, &response);
 
-            data = DRV_SDMMC_SDIO_CMD52_RESP_DATA_GET(response);
+            data = (uint8_t)DRV_SDMMC_SDIO_CMD52_RESP_DATA_GET(response);
 
             switch(type)
             {
@@ -804,7 +804,7 @@ static uint8_t lDRV_SDMMC_SDIO_CIS_Tuple_Rd(
                     else
                     {
                         /* Skip to the next tuple in the chain */
-                        addr += (nTupleData + 1);
+                        addr += (uint32_t)((uint32_t)nTupleData + 1U);
                         type = DRV_SDMMC_TUPLE_CODE;
                     }
                 break;
@@ -817,13 +817,18 @@ static uint8_t lDRV_SDMMC_SDIO_CIS_Tuple_Rd(
                         addr++;
                     }
 
-                    if ((nTupleDataRead >= inTupleDataBuffLen) || ((addr - cisp) >= 257) || (nTupleDataRead >= nTupleData))
+                    if ((nTupleDataRead >= inTupleDataBuffLen) || ((addr - cisp) >= 257U) || (nTupleDataRead >= nTupleData))
                     {
                         /* Either we reached the end of the input buffer or we read 257 bytes which is the max tuple chain length allowed. */
                         /* In either case, exit. */
                         status = DRV_SDMMC_COMMAND_STATUS_SUCCESS;
                     }
 
+                break;
+                
+                default:
+                    //Do nothing
+                
                 break;
             }
         }
@@ -874,11 +879,11 @@ static uint8_t lDRV_SDMMC_SDIO_ReadBlkSize(
         {
             if (fn == DRV_SDMMC_FN0)
             {
-                *outBlockSize = (tupleData[2] << 8) | tupleData[1];
+                *outBlockSize = (uint32_t)(((uint32_t)tupleData[2] << 8U) | (uint32_t)tupleData[1]);
             }
             else
             {
-                *outBlockSize = (tupleData[13] << 8) | tupleData[12];
+                *outBlockSize = (uint32_t)(((uint32_t)tupleData[13] << 8U) | (uint32_t)tupleData[12]);
             }
         }
     }
@@ -903,13 +908,13 @@ static uint8_t lDRV_SDMMC_SDIO_SetBlkSize(
     uint8_t status = DRV_SDMMC_COMMAND_STATUS_IN_PROGRESS;
     uint32_t response;
 
-    if (nBytesWritten == 0)
+    if (nBytesWritten == 0U)
     {
         dObj->dataTransferFlags.isDataPresent = false;
         sdioAddr = DRV_SDMMC_FBR_OFFSET(fn) + DRV_SDMMC_CCCR_ADDR_FN0_BLK_SZ;
     }
 
-    lDRV_SDMMC_CommandSend (dObj, (uint8_t)DRV_SDMMC_CMD_IO_RW_DIR, DRV_SDMMC_CMD52_WR_DATA(DRV_SDMMC_FN0, (sdioAddr + nBytesWritten), ((uint8_t*)&blockSize)[nBytesWritten], 0), (uint8_t)DRV_SDMMC_CMD_RESP_R5, &dObj->dataTransferFlags);
+    lDRV_SDMMC_CommandSend (dObj, (uint8_t)DRV_SDMMC_CMD_IO_RW_DIR, DRV_SDMMC_CMD52_WR_DATA(DRV_SDMMC_FN0, (sdioAddr + nBytesWritten), ((uint8_t*)&blockSize)[nBytesWritten], 0UL), (uint8_t)DRV_SDMMC_CMD_RESP_R5, &dObj->dataTransferFlags);
 
     if (dObj->cmdState == DRV_SDMMC_CMD_EXEC_IS_COMPLETE)
     {
@@ -921,7 +926,7 @@ static uint8_t lDRV_SDMMC_SDIO_SetBlkSize(
             {
                 nBytesWritten++;
 
-                if (nBytesWritten == 2)
+                if (nBytesWritten == 2U)
                 {
                     status = DRV_SDMMC_COMMAND_STATUS_SUCCESS;
                 }
@@ -951,7 +956,7 @@ static uint8_t DRV_SDMMC_SDIO_Enable4BitBusWidth(DRV_SDMMC_OBJ* dObj)
     uint8_t status;
     uint8_t readData;
 
-    status = lDRV_SDMMC_SDIO_IO_WriteDirect(dObj, DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_BIC, DRV_SDMMC_CCCR_BUS_WIDTH_4B, true, &readData, NULL);
+    status = lDRV_SDMMC_SDIO_IO_WriteDirect(dObj, (uint8_t)DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_BIC, DRV_SDMMC_CCCR_BUS_WIDTH_4B, true, &readData, NULL);
 
     if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
     {
@@ -973,14 +978,13 @@ static uint8_t lDRV_SDMMC_SDIO_IOEnable(DRV_SDMMC_OBJ* dObj)
     static uint8_t state = DRV_SDMMC_SDIO_EN_IO;
     uint8_t status = DRV_SDMMC_COMMAND_STATUS_IN_PROGRESS;
     uint8_t readData;
-    uint8_t wrData = (((1 << dObj->cardCtxt.nf)-1)<<1);
+    uint8_t wrData = (((1U << dObj->cardCtxt.nf)-1U)<<1U);
 
     switch(state)
     {
-        default:
         case DRV_SDMMC_SDIO_EN_IO:
 
-            status = lDRV_SDMMC_SDIO_IO_WriteDirect(dObj, DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_IO_EN, wrData, true, &readData, NULL);
+            status = lDRV_SDMMC_SDIO_IO_WriteDirect(dObj, (uint8_t)DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_IO_EN, wrData, true, &readData, NULL);
 
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
             {
@@ -993,7 +997,7 @@ static uint8_t lDRV_SDMMC_SDIO_IOEnable(DRV_SDMMC_OBJ* dObj)
             break;
         case DRV_SDMMC_SDIO_EN_RDY_WAIT:
 
-            status = lDRV_SDMMC_SDIO_IO_ReadDirect(dObj, DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_IO_RDY, &readData, NULL);
+            status = lDRV_SDMMC_SDIO_IO_ReadDirect(dObj, (uint8_t)DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_IO_RDY, &readData, NULL);
 
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
             {
@@ -1002,6 +1006,9 @@ static uint8_t lDRV_SDMMC_SDIO_IOEnable(DRV_SDMMC_OBJ* dObj)
                     status = DRV_SDMMC_COMMAND_STATUS_ERROR;
                 }
             }
+            break;
+        default:
+            //Do Nothing
             break;
     }
 
@@ -1018,7 +1025,7 @@ static uint8_t lDRV_SDMMC_SDIO_EnableHSMode(DRV_SDMMC_OBJ* dObj)
     uint8_t status;
     uint8_t readData;
 
-    status = lDRV_SDMMC_SDIO_IO_WriteDirect(dObj, DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_BUS_SPD_SEL, DRV_SDMMC_CCCR_EHS_MSK, true, &readData, NULL);
+    status = lDRV_SDMMC_SDIO_IO_WriteDirect(dObj, (uint8_t)DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_BUS_SPD_SEL, DRV_SDMMC_CCCR_EHS_MSK, true, &readData, NULL);
 
     if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
     {
@@ -1068,7 +1075,7 @@ static uint8_t lDRV_SDMMC_SDIO_SendOpCond(
         cmdInit = false;
     }
 
-    lDRV_SDMMC_CommandSend (dObj, (uint8_t)DRV_SDMMC_CMD_SDIO_SEND_OP_COND, (dObj->cardCtxt.voltWindow << 16), (uint8_t)DRV_SDMMC_CMD_RESP_R4, &dObj->dataTransferFlags);
+    lDRV_SDMMC_CommandSend (dObj, (uint8_t)DRV_SDMMC_CMD_SDIO_SEND_OP_COND, ((uint32_t)dObj->cardCtxt.voltWindow << 16U), (uint8_t)DRV_SDMMC_CMD_RESP_R4, &dObj->dataTransferFlags);
 
     if (dObj->cmdState == DRV_SDMMC_CMD_EXEC_IS_COMPLETE)
     {
@@ -1076,8 +1083,8 @@ static uint8_t lDRV_SDMMC_SDIO_SendOpCond(
         {
             dObj->sdmmcPlib->sdhostReadResponse (DRV_SDMMC_READ_RESP_REG_0, &response);
 
-            dObj->cardCtxt.nf = (response & DRV_SDMMC_R4_NF_MSK) >> DRV_SDMMC_R4_NF_POS;
-            dObj->cardCtxt.mp = (response & DRV_SDMMC_R4_MP_MSK) >> DRV_SDMMC_R4_MP_POS;
+            dObj->cardCtxt.nf = (uint8_t)((response & DRV_SDMMC_R4_NF_MSK) >> DRV_SDMMC_R4_NF_POS);
+            dObj->cardCtxt.mp = (uint8_t)((response & DRV_SDMMC_R4_MP_MSK) >> DRV_SDMMC_R4_MP_POS);
 
             if ((response & 0x3C0000U) == 0U)
             {
@@ -1086,7 +1093,7 @@ static uint8_t lDRV_SDMMC_SDIO_SendOpCond(
 
                 (void) SYS_TIME_TimerDestroy(dObj->generalTimerHandle);
 
-                if (dObj->cardCtxt.mp == 1)
+                if (dObj->cardCtxt.mp == 1U)
                 {
                    status = DRV_SDMMC_COMMAND_STATUS_SUCCESS;
                 }
@@ -1105,7 +1112,7 @@ static uint8_t lDRV_SDMMC_SDIO_SendOpCond(
                     /* Card ready. Destroy the timeout timer */
                     (void) SYS_TIME_TimerDestroy(dObj->generalTimerHandle);
 
-                    if (dObj->cardCtxt.mp == 1 || dObj->cardCtxt.nf > 0)
+                    if ((dObj->cardCtxt.mp == 1U) || (dObj->cardCtxt.nf > 0U))
                     {
                        status = DRV_SDMMC_COMMAND_STATUS_SUCCESS;
                     }
@@ -1124,7 +1131,7 @@ static uint8_t lDRV_SDMMC_SDIO_SendOpCond(
                         /* The IO portion of the card did not initialize with 1 second. Hence set the nf to 0.*/
                         dObj->cardCtxt.nf = 0;
 
-                        if (dObj->cardCtxt.mp == 1)
+                        if (dObj->cardCtxt.mp == 1U)
                         {
                            status = DRV_SDMMC_COMMAND_STATUS_SUCCESS;
                         }
@@ -1302,7 +1309,6 @@ static uint8_t lDRV_SDMMC_ExtendedCSDRead(DRV_SDMMC_OBJ* dObj)
 
     switch(state)
     {
-        default:
         case DRV_SDMMC_EXT_CSD_INIT:
             dObj->dataTransferFlags.isDataPresent = true;
             dObj->dataTransferFlags.transferDir = DRV_SDMMC_DATA_TRANSFER_DIR_READ;
@@ -1355,6 +1361,9 @@ static uint8_t lDRV_SDMMC_ExtendedCSDRead(DRV_SDMMC_OBJ* dObj)
                 dObj->cardCtxt.discCapacity = DRV_SDMMC_EXT_CSD_GET_SEC_COUNT((uint32_t)dObj->cardCtxt.extCSDBuffer);
                 status = DRV_SDMMC_COMMAND_STATUS_SUCCESS;
             }
+            break;
+        default:
+            //Do Nothing
             break;
     }
 
@@ -1484,7 +1493,6 @@ static uint8_t lDRV_SDMMC_SendOPCond_CMD1(DRV_SDMMC_OBJ* dObj)
 
     switch (state)
     {
-        default:
         case DRV_SDMMC_INIT_CMD1:
             if (SYS_TIME_DelayMS (2000, &dObj->generalTimerHandle) == SYS_TIME_ERROR)
             {
@@ -1539,6 +1547,9 @@ static uint8_t lDRV_SDMMC_SendOPCond_CMD1(DRV_SDMMC_OBJ* dObj)
             }
 
             break;
+        default:
+            //Do Nothing
+            break;
     }
 
     if (status != DRV_SDMMC_COMMAND_STATUS_IN_PROGRESS)
@@ -1569,7 +1580,6 @@ static uint8_t lDRV_SDMMC_SendOpCond_ACMD41(DRV_SDMMC_OBJ* dObj)
 
     switch(state)
     {
-        default:
         case DRV_SDMMC_INIT_ACMD41:
             dObj->cardCtxt.voltWindow = 0x00;
 
@@ -1667,6 +1677,9 @@ static uint8_t lDRV_SDMMC_SendOpCond_ACMD41(DRV_SDMMC_OBJ* dObj)
                     status = DRV_SDMMC_COMMAND_STATUS_ERROR;
                 }
             }
+            break;
+        default:
+            //Do Nothing
             break;
     }
 
@@ -1769,7 +1782,6 @@ static uint8_t lDRV_SDMMC_SendSCR_ACMD51(DRV_SDMMC_OBJ* dObj, uint8_t* scrBuffer
 
     switch(state)
     {
-        default:
         case ACMD51_ISSUE_APP_CMD:
             status = lDRV_SDMMC_SendAppCmd_CMD55(dObj);
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
@@ -1868,6 +1880,10 @@ static uint8_t lDRV_SDMMC_SendSCR_ACMD51(DRV_SDMMC_OBJ* dObj, uint8_t* scrBuffer
                 }
             }
             break;
+            
+        default:
+            //Do Nothing
+            break;
     }
 
     if (status != DRV_SDMMC_COMMAND_STATUS_IN_PROGRESS)
@@ -1918,7 +1934,6 @@ static uint8_t lDRV_SDMMC_CheckSwitchHS_CMD6(DRV_SDMMC_OBJ* dObj, uint8_t mode, 
 
     switch(state)
     {
-        default:
         case DRV_SDMMC_CMD6_SETUP:
             //Response to CMD6 is 512 bits (64 bytes)
             //mode 0 - To query if the card supports a specific function
@@ -1998,6 +2013,9 @@ static uint8_t lDRV_SDMMC_CheckSwitchHS_CMD6(DRV_SDMMC_OBJ* dObj, uint8_t mode, 
                 }
             }
             break;
+        default:
+            //Do Nothing
+            break;
     }
 
     if (status != DRV_SDMMC_COMMAND_STATUS_IN_PROGRESS)
@@ -2055,7 +2073,7 @@ static void lDRV_SDMMC_MediaInitialize (
             break;
 
         case DRV_SDMMC_INIT_RESET_IO_CARD:
-            status = lDRV_SDMMC_SDIO_IO_WriteDirect(dObj, DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_IO_ABORT, DRV_SDMMC_CCCR_IO_ABORT_RES, false, NULL, NULL);
+            status = lDRV_SDMMC_SDIO_IO_WriteDirect(dObj, (uint8_t)DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_IO_ABORT, DRV_SDMMC_CCCR_IO_ABORT_RES, false, NULL, NULL);
             if (status != DRV_SDMMC_COMMAND_STATUS_IN_PROGRESS)
             {
                 if (SYS_TIME_DelayMS(100, &(dObj->tmrHandle)) == SYS_TIME_SUCCESS)
@@ -2114,6 +2132,10 @@ static void lDRV_SDMMC_MediaInitialize (
                 /* Cannot initialize the SD Card. */
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
             }
+            else
+            {
+                //Do nothing
+            }
 
             break;
 
@@ -2123,13 +2145,13 @@ static void lDRV_SDMMC_MediaInitialize (
 
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
             {
-                if (dObj->cardCtxt.nf > 0)
+                if (dObj->cardCtxt.nf > 0U)
                 {
                     /* IO initialization */
                     dObj->initState = DRV_SDMMC_INIT_GET_RCA;
                     dObj->sdCardType |= CARD_TYPE_SD_IO;
                 }
-                if (dObj->cardCtxt.mp == 1)
+                if (dObj->cardCtxt.mp == 1U)
                 {
                     /* Memory initialization is done first if it is a combo card */
                     dObj->initState = DRV_SDMMC_INIT_SEND_ACMD41;
@@ -2146,6 +2168,10 @@ static void lDRV_SDMMC_MediaInitialize (
             {
                 /* Cannot initialize this card. */
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
+            }
+            else
+            {
+                //Do nothing
             }
 
             break;
@@ -2164,6 +2190,10 @@ static void lDRV_SDMMC_MediaInitialize (
                 /* Cannot initialize the SD Card. */
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
             }
+            else
+            {
+                //Do nothing
+            }
 
             break;
 
@@ -2179,6 +2209,10 @@ static void lDRV_SDMMC_MediaInitialize (
             {
                 /* Cannot initialize the SD Card. */
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
+            }
+            else
+            {
+                //Do nothing
             }
             break;
 
@@ -2202,6 +2236,10 @@ static void lDRV_SDMMC_MediaInitialize (
                 /* Cannot initialize the SD Card. */
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
             }
+            else
+            {
+                //Do nothing
+            }
 
             break;
 
@@ -2211,18 +2249,26 @@ static void lDRV_SDMMC_MediaInitialize (
 
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
             {
-                if (dObj->sdCardType & CARD_TYPE_SD_MEM)
+                if ((dObj->sdCardType & CARD_TYPE_SD_MEM) != 0U)
                 {
                     dObj->initState = DRV_SDMMC_INIT_READ_CSD;
                 }
-                else if (dObj->sdCardType & CARD_TYPE_SD_IO)
+                else if ((dObj->sdCardType & CARD_TYPE_SD_IO) != 0U)
                 {
                     dObj->initState = DRV_SDMMC_INIT_SELECT_CARD;
+                }
+                else
+                {
+                    //Do nothing
                 }
             }
             else if (status == DRV_SDMMC_COMMAND_STATUS_ERROR)
             {
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
+            }
+            else
+            {
+                //Do nothing
             }
 
             break;
@@ -2240,6 +2286,10 @@ static void lDRV_SDMMC_MediaInitialize (
             {
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
             }
+            else
+            {
+                //Do nothing
+            }
             break;
 
         case DRV_SDMMC_INIT_READ_CSD:
@@ -2253,6 +2303,10 @@ static void lDRV_SDMMC_MediaInitialize (
             else if (status == DRV_SDMMC_COMMAND_STATUS_ERROR)
             {
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
+            }
+            else
+            {
+                //Do nothing
             }
 
             break;
@@ -2278,13 +2332,17 @@ static void lDRV_SDMMC_MediaInitialize (
 
                         if(dObj->protocol == DRV_SDMMC_PROTOCOL_SD)
                         {
-                            if (dObj->sdCardType & CARD_TYPE_SD_IO)
+                            if ((dObj->sdCardType & CARD_TYPE_SD_IO) != 0U)
                             {
                                 dObj->nextInitState = DRV_SDMMC_INIT_SDIO_READ_SDIO_CCCR_REV;
                             }
-                            else if (dObj->sdCardType & CARD_TYPE_SD_MEM)
+                            else if ((dObj->sdCardType & CARD_TYPE_SD_MEM) != 0U)
                             {
                                 dObj->nextInitState = DRV_SDMMC_INIT_SCR_READ;
+                            }
+                            else
+                            {
+                                //Do nothing
                             }
                         }
                         else
@@ -2306,7 +2364,7 @@ static void lDRV_SDMMC_MediaInitialize (
 
         case DRV_SDMMC_INIT_SDIO_READ_SDIO_CCCR_REV:
 
-            status = lDRV_SDMMC_SDIO_IO_ReadDirect(dObj, DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_SDIO_REV, &dObj->cardCtxt.sdioCCCRRev, NULL);
+            status = lDRV_SDMMC_SDIO_IO_ReadDirect(dObj, (uint8_t)DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_SDIO_REV, &dObj->cardCtxt.sdioCCCRRev, NULL);
 
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
             {
@@ -2316,26 +2374,38 @@ static void lDRV_SDMMC_MediaInitialize (
             {
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
             }
+            else
+            {
+                //Do nothing
+            }
             break;
 
         case DRV_SDMMC_INIT_RD_CARD_CAP_SDIO:
 
-            status = lDRV_SDMMC_SDIO_IO_ReadDirect(dObj, DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_CARD_CAP, &dObj->cardCtxt.sdioCardCapability, NULL);
+            status = lDRV_SDMMC_SDIO_IO_ReadDirect(dObj, (uint8_t)DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_CARD_CAP, &dObj->cardCtxt.sdioCardCapability, NULL);
 
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
             {
-                if (dObj->sdCardType & CARD_TYPE_SD_MEM)
+                if ((dObj->sdCardType & CARD_TYPE_SD_MEM) != 0U)
                 {
                     dObj->initState = DRV_SDMMC_INIT_SCR_READ;
                 }
-                else if (dObj->sdCardType & CARD_TYPE_SD_IO)
+                else if ((dObj->sdCardType & CARD_TYPE_SD_IO) != 0U)
                 {
                     dObj->initState = DRV_SDMMC_INIT_DECIDE_BUS_WIDTH;
+                }
+                else
+                {
+                    //Do nothing
                 }
             }
             else if (status == DRV_SDMMC_COMMAND_STATUS_ERROR)
             {
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
+            }
+            else
+            {
+                //Do nothing
             }
             break;
 
@@ -2360,6 +2430,10 @@ static void lDRV_SDMMC_MediaInitialize (
                     dObj->initState = DRV_SDMMC_INIT_ERROR;
                 }
             }
+            else
+            {
+                //Do nothing
+            }
             break;
 
         case DRV_SDMMC_INIT_DECIDE_BUS_WIDTH:
@@ -2371,11 +2445,11 @@ static void lDRV_SDMMC_MediaInitialize (
                     bool sdio4B = false;
                     bool sdmem4B = false;
 
-                    if (dObj->sdCardType & CARD_TYPE_SD_IO)
+                    if ((dObj->sdCardType & CARD_TYPE_SD_IO) != 0U)
                     {
                         sdio4B = ((dObj->cardCtxt.sdioCardCapability & DRV_SDMMC_CCCR_LSC_MSK) == 0U) ? true : (((dObj->cardCtxt.sdioCardCapability & DRV_SDMMC_CCCR_4BLS_MSK) != 0U) ? true : false);
                     }
-                    if (dObj->sdCardType & CARD_TYPE_SD_MEM)
+                    if ((dObj->sdCardType & CARD_TYPE_SD_MEM) != 0U)
                     {
                         sdmem4B = ((dObj->cardCtxt.scrBuffer[1] & 0x04U) != 0U) ? true : false;
                     }
@@ -2384,13 +2458,17 @@ static void lDRV_SDMMC_MediaInitialize (
                     {
                         dObj->cardCtxt.busWidth = (sdio4B == true && sdmem4B == true)? DRV_SDMMC_BUS_WIDTH_4_BIT: DRV_SDMMC_BUS_WIDTH_1_BIT;
                     }
-                    else if (dObj->sdCardType & CARD_TYPE_SD_IO)
+                    else if ((dObj->sdCardType & CARD_TYPE_SD_IO) != 0U)
                     {
                         dObj->cardCtxt.busWidth = sdio4B == true? DRV_SDMMC_BUS_WIDTH_4_BIT: DRV_SDMMC_BUS_WIDTH_1_BIT;
                     }
-                    else if (dObj->sdCardType & CARD_TYPE_SD_MEM)
+                    else if ((dObj->sdCardType & CARD_TYPE_SD_MEM) != 0U)
                     {
                         dObj->cardCtxt.busWidth = sdmem4B == true? DRV_SDMMC_BUS_WIDTH_4_BIT: DRV_SDMMC_BUS_WIDTH_1_BIT;
+                    }
+                    else
+                    {
+                        //Do nothing
                     }
                 }
             }
@@ -2401,14 +2479,14 @@ static void lDRV_SDMMC_MediaInitialize (
 
             if (dObj->cardCtxt.busWidth == DRV_SDMMC_BUS_WIDTH_4_BIT)
             {
-                dObj->initState = (dObj->sdCardType & CARD_TYPE_SD_IO) ? DRV_SDMMC_INIT_SET_BUS_WIDTH_SDIO : DRV_SDMMC_INIT_SET_BUS_WIDTH_SDMEM;
+                dObj->initState = ((dObj->sdCardType & CARD_TYPE_SD_IO)!= 0U) ? DRV_SDMMC_INIT_SET_SDIO_BUS_WIDTH : DRV_SDMMC_INIT_SET_SDMEM_BUS_WIDTH;
             }
             else
             {
-                dObj->initState = DRV_SDMMC_INIT_SET_BUS_WIDTH_HOST;
+                dObj->initState = DRV_SDMMC_INIT_SET_HOST_BUS_WIDTH;
             }
             break;
-        case DRV_SDMMC_INIT_SET_BUS_WIDTH_SDIO:
+        case DRV_SDMMC_INIT_SET_SDIO_BUS_WIDTH:
 
             //Set 4-bit bus mode for SDIO
 
@@ -2416,38 +2494,42 @@ static void lDRV_SDMMC_MediaInitialize (
 
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
             {
-                if (dObj->sdCardType & CARD_TYPE_SD_MEM)
+                if ((dObj->sdCardType & CARD_TYPE_SD_MEM) != 0U)
                 {
-                    dObj->initState = DRV_SDMMC_INIT_SET_BUS_WIDTH_SDMEM;
+                    dObj->initState = DRV_SDMMC_INIT_SET_SDMEM_BUS_WIDTH;
                 }
                 else
                 {
-                    dObj->initState = DRV_SDMMC_INIT_SET_BUS_WIDTH_HOST;
+                    dObj->initState = DRV_SDMMC_INIT_SET_HOST_BUS_WIDTH;
                 }
             }
             else if (status == DRV_SDMMC_COMMAND_STATUS_ERROR)
             {
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
             }
+            else
+            {
+                //Do nothing
+            }
             break;
 
-        case DRV_SDMMC_INIT_CHK_HS_SPEED_SUP_SDIO:
+        case DRV_SDMMC_INIT_CHK_SDIO_HS_SPEED_SUP:
 
             /* Check if HS mode is supported by SDIO*/
-            status = lDRV_SDMMC_SDIO_IO_ReadDirect(dObj, DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_BUS_SPD_SEL, &readData, NULL);
+            status = lDRV_SDMMC_SDIO_IO_ReadDirect(dObj, (uint8_t)DRV_SDMMC_FN0, DRV_SDMMC_CCCR_ADDR_BUS_SPD_SEL, &readData, NULL);
 
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
             {
                 if ((readData & DRV_SDMMC_CCCR_SHS_MSK) != 0U)
                 {
                     /* HS (50 MHz) supported */
-                    if (dObj->sdCardType & CARD_TYPE_SD_MEM)
+                    if ((dObj->sdCardType & CARD_TYPE_SD_MEM) != 0U)
                     {
                         if ((dObj->cardCtxt.scrBuffer[0] & 0x0FU) != 0U)
                         {
                             /* Card follows SD Spec version 1.10 or higher */
                             dObj->cardCtxt.cmd6Mode = 0;
-                            dObj->initState = DRV_SDMMC_INIT_CHK_HS_SPEED_SUP_SDMEM;
+                            dObj->initState = DRV_SDMMC_INIT_CHK_SDMEM_HS_SPEED_SUP;
                         }
                         else
                         {
@@ -2469,6 +2551,10 @@ static void lDRV_SDMMC_MediaInitialize (
             {
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
             }
+            else
+            {
+                //Do nothing
+            }
             break;
 
         case DRV_SDMMC_INIT_SET_HS_SPEED_SDIO:
@@ -2477,7 +2563,7 @@ static void lDRV_SDMMC_MediaInitialize (
 
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
             {
-                if (dObj->sdCardType & CARD_TYPE_SD_MEM)
+                if ((dObj->sdCardType & CARD_TYPE_SD_MEM) != 0U)
                 {
                     dObj->initState = DRV_SDMMC_INIT_SET_HS_SPEED_SDMEM;
                 }
@@ -2490,10 +2576,14 @@ static void lDRV_SDMMC_MediaInitialize (
             {
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
             }
+            else
+            {
+                //Do nothing
+            }
             break;
 
         case DRV_SDMMC_INIT_RD_MAX_BLK_SIZE_SDIO:
-            if (dObj->cardCtxt.sdioCardCapability & DRV_SDMMC_CCCR_SMB_MSK)
+            if ((dObj->cardCtxt.sdioCardCapability & DRV_SDMMC_CCCR_SMB_MSK) != 0U)
             {
                 /* Multi-block transfer (CMD53) is supported */
                 uint32_t blockSize = 0;
@@ -2501,7 +2591,7 @@ static void lDRV_SDMMC_MediaInitialize (
 
                 if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
                 {
-                    if (blockSize >= 512)
+                    if (blockSize >= 512U)
                     {
                         dObj->cardCtxt.blockSize = 512;
                         dObj->initState = DRV_SDMMC_INIT_SET_BLK_LEN_SDIO;
@@ -2510,6 +2600,10 @@ static void lDRV_SDMMC_MediaInitialize (
                 else if (status == DRV_SDMMC_COMMAND_STATUS_ERROR)
                 {
                     dObj->initState = DRV_SDMMC_INIT_ERROR;
+                }
+                else
+                {
+                    //Do nothing
                 }
             }
             else
@@ -2520,7 +2614,7 @@ static void lDRV_SDMMC_MediaInitialize (
 
         case DRV_SDMMC_INIT_SET_BLK_LEN_SDIO:
 
-            status = lDRV_SDMMC_SDIO_SetBlkSize(dObj, dObj->cardCtxt.currentFn, dObj->cardCtxt.blockSize);
+            status = lDRV_SDMMC_SDIO_SetBlkSize(dObj, dObj->cardCtxt.currentFn, (uint16_t)dObj->cardCtxt.blockSize);
 
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
             {
@@ -2539,6 +2633,10 @@ static void lDRV_SDMMC_MediaInitialize (
                 dObj->cardCtxt.blockSize = 0;
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
             }
+            else
+            {
+                //Do nothing
+            }
             break;
 
         case DRV_SDMMC_INIT_FN_EN_SDIO:
@@ -2546,7 +2644,7 @@ static void lDRV_SDMMC_MediaInitialize (
 
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
             {
-                if (dObj->sdCardType & CARD_TYPE_SD_MEM)
+                if ((dObj->sdCardType & CARD_TYPE_SD_MEM) != 0U)
                 {
                     dObj->initState = DRV_SDMMC_INIT_SET_BLK_LEN_SDMEM;
                 }
@@ -2559,6 +2657,10 @@ static void lDRV_SDMMC_MediaInitialize (
             {
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
             }
+            else
+            {
+                //Do nothing
+            }
             break;
 
         case DRV_SDMMC_INIT_READ_EXT_CSD:
@@ -2566,15 +2668,19 @@ static void lDRV_SDMMC_MediaInitialize (
 
             if (status == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
             {
-                dObj->initState = DRV_SDMMC_INIT_SET_BUS_WIDTH_SDMEM;
+                dObj->initState = DRV_SDMMC_INIT_SET_SDMEM_BUS_WIDTH;
             }
             else if (status == DRV_SDMMC_COMMAND_STATUS_ERROR)
             {
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
             }
+            else
+            {
+                //Do nothing
+            }
             break;
 
-        case DRV_SDMMC_INIT_SET_BUS_WIDTH_SDMEM:
+        case DRV_SDMMC_INIT_SET_SDMEM_BUS_WIDTH:
             if(dObj->protocol == DRV_SDMMC_PROTOCOL_SD)
             {
                 status = lDRV_SDMMC_SetBusWidth_ACMD6(dObj);
@@ -2590,22 +2696,26 @@ static void lDRV_SDMMC_MediaInitialize (
                 {
                     dObj->cardCtxt.busWidth = dObj->busWidth;
                 }
-                dObj->initState = DRV_SDMMC_INIT_SET_BUS_WIDTH_HOST;
+                dObj->initState = DRV_SDMMC_INIT_SET_HOST_BUS_WIDTH;
             }
             else if (status == DRV_SDMMC_COMMAND_STATUS_ERROR)
             {
                 dObj->initState = DRV_SDMMC_INIT_ERROR;
             }
+            else
+            {
+                //Do nothing
+            }
             break;
 
-        case DRV_SDMMC_INIT_SET_BUS_WIDTH_HOST:
+        case DRV_SDMMC_INIT_SET_HOST_BUS_WIDTH:
 
             /* Configure the host controller to use 4-bit bus from now on. */
             dObj->sdmmcPlib->sdhostSetBusWidth (dObj->cardCtxt.busWidth);
 
             if (dObj->protocol == DRV_SDMMC_PROTOCOL_SD)
             {
-                if (dObj->sdCardType & CARD_TYPE_SD_IO)
+                if ((dObj->sdCardType & CARD_TYPE_SD_IO) != 0U)
                 {
                     if ((dObj->cardCtxt.sdioCardCapability & DRV_SDMMC_CCCR_LSC_MSK) == 0U)
                     {
@@ -2640,9 +2750,9 @@ static void lDRV_SDMMC_MediaInitialize (
                 {
                     if (dObj->speedMode == DRV_SDMMC_SPEED_MODE_HIGH)
                     {
-                        if (dObj->sdCardType & CARD_TYPE_SD_IO)
+                        if ((dObj->sdCardType & CARD_TYPE_SD_IO) != 0U)
                         {
-                            dObj->initState = DRV_SDMMC_INIT_CHK_HS_SPEED_SUP_SDIO;
+                            dObj->initState = DRV_SDMMC_INIT_CHK_SDIO_HS_SPEED_SUP;
                         }
                         else
                         {
@@ -2650,7 +2760,7 @@ static void lDRV_SDMMC_MediaInitialize (
                             {
                                 /* Card follows SD Spec version 1.10 or higher */
                                 dObj->cardCtxt.cmd6Mode = 0;
-                                dObj->initState = DRV_SDMMC_INIT_CHK_HS_SPEED_SUP_SDMEM;
+                                dObj->initState = DRV_SDMMC_INIT_CHK_SDMEM_HS_SPEED_SUP;
                             }
                             else
                             {
@@ -2660,7 +2770,7 @@ static void lDRV_SDMMC_MediaInitialize (
                     }
                     else
                     {
-                        dObj->initState = (dObj->sdCardType & CARD_TYPE_SD_IO)? DRV_SDMMC_INIT_RD_MAX_BLK_SIZE_SDIO : DRV_SDMMC_INIT_SET_BLK_LEN_SDMEM;
+                        dObj->initState = ((dObj->sdCardType & CARD_TYPE_SD_IO)!= 0U)? DRV_SDMMC_INIT_RD_MAX_BLK_SIZE_SDIO : DRV_SDMMC_INIT_SET_BLK_LEN_SDMEM;
                     }
                 }
                 else
@@ -2688,7 +2798,7 @@ static void lDRV_SDMMC_MediaInitialize (
             }
             break;
 
-        case DRV_SDMMC_INIT_CHK_HS_SPEED_SUP_SDMEM:
+        case DRV_SDMMC_INIT_CHK_SDMEM_HS_SPEED_SUP:
             {
                 bool isSupported;
 
@@ -2698,7 +2808,7 @@ static void lDRV_SDMMC_MediaInitialize (
                 {
                     if (isSupported)
                     {
-                        if (dObj->sdCardType & CARD_TYPE_SD_IO)
+                        if ((dObj->sdCardType & CARD_TYPE_SD_IO) != 0U)
                         {
                             dObj->initState = DRV_SDMMC_INIT_SET_HS_SPEED_SDIO;
                         }
@@ -2709,7 +2819,7 @@ static void lDRV_SDMMC_MediaInitialize (
                     }
                     else
                     {
-                        if (dObj->sdCardType & CARD_TYPE_SD_IO)
+                        if ((dObj->sdCardType & CARD_TYPE_SD_IO) != 0U)
                         {
                             /* HS not supported, check if block mode is supported */
                             dObj->initState = DRV_SDMMC_INIT_RD_MAX_BLK_SIZE_SDIO;
@@ -2723,6 +2833,10 @@ static void lDRV_SDMMC_MediaInitialize (
                 else if (status == DRV_SDMMC_COMMAND_STATUS_ERROR)
                 {
                     dObj->initState = DRV_SDMMC_INIT_ERROR;
+                }
+                else
+                {
+                    //Do nothing
                 }
             }
             break;
@@ -2745,6 +2859,10 @@ static void lDRV_SDMMC_MediaInitialize (
             {
                 dObj->initState = DRV_SDMMC_INIT_DONE;
             }
+            else
+            {
+                //Do nothing
+            }
 
             break;
 
@@ -2764,7 +2882,7 @@ static void lDRV_SDMMC_MediaInitialize (
                 {
                     dObj->cardCtxt.currentSpeed = hs_speed;
                     dObj->sdmmcPlib->sdhostSetSpeedMode (DRV_SDMMC_SPEED_MODE_HIGH);
-                    if (dObj->sdCardType & CARD_TYPE_SD_IO)
+                    if ((dObj->sdCardType & CARD_TYPE_SD_IO) != 0U)
                     {
                         dObj->initState = DRV_SDMMC_INIT_RD_MAX_BLK_SIZE_SDIO;
                     }
@@ -3079,7 +3197,7 @@ static void DRV_SDMMC_SetupXfer(
         return;
     }
 
-    if (opType == DRV_SDMMC_OPERATION_TYPE_SD_MEM_READ)
+    if (opType == DRV_SDMMC_OP_TYP_SD_MEM_READ)
     {
         if (((uint32_t)clientObj->intent & (uint32_t)DRV_IO_INTENT_READ) == 0U)
         {
@@ -3090,7 +3208,7 @@ static void DRV_SDMMC_SetupXfer(
             return;
         }
     }
-    else if (opType == DRV_SDMMC_OPERATION_TYPE_SD_MEM_WRITE)
+    else if (opType == DRV_SDMMC_OP_TYP_SD_MEM_WRITE)
     {
         if (((uint32_t)clientObj->intent & (uint32_t)DRV_IO_INTENT_WRITE) == 0U)
         {
@@ -3100,6 +3218,10 @@ static void DRV_SDMMC_SetupXfer(
         {
             return;
         }
+    }
+    else
+    {
+        //Do Nothing
     }
 
     if (OSAL_MUTEX_Lock(&dObj->mutex, OSAL_WAIT_FOREVER) != OSAL_RESULT_SUCCESS)
@@ -3147,7 +3269,7 @@ void DRV_SDMMC_AsyncRead (
         nBlocks,
         0,
         false,
-        DRV_SDMMC_OPERATION_TYPE_SD_MEM_READ
+        DRV_SDMMC_OP_TYP_SD_MEM_READ
     );
 }
 
@@ -3168,7 +3290,7 @@ void DRV_SDMMC_AsyncWrite
         nBlocks,
         0,
         false,
-        DRV_SDMMC_OPERATION_TYPE_SD_MEM_WRITE
+        DRV_SDMMC_OP_TYP_SD_MEM_WRITE
     );
 }
 
@@ -3182,7 +3304,7 @@ void DRV_SDMMC_Async_SDIO_ExtBlockWrite (
     bool isAddrInc
 )
 {
-    if ((nBlocks == 0) || (nBlocks > 511))
+    if ((nBlocks == 0U) || (nBlocks > 511U))
     {
         if (commandHandle != NULL)
         {
@@ -3199,7 +3321,7 @@ void DRV_SDMMC_Async_SDIO_ExtBlockWrite (
             nBlocks,
             fn,
             isAddrInc,
-            DRV_SDMMC_OPERATION_TYPE_SDIO_WR_BLK
+            DRV_SDMMC_OP_TYP_SDIO_WR_BLK
         );
     }
 }
@@ -3214,7 +3336,7 @@ void DRV_SDMMC_Async_SDIO_ExtBlockRead (
     bool isAddrInc
 )
 {
-    if ((nBlocks == 0) || (nBlocks > 511))
+    if ((nBlocks == 0U) || (nBlocks > 511U))
     {
         if (commandHandle != NULL)
         {
@@ -3231,7 +3353,7 @@ void DRV_SDMMC_Async_SDIO_ExtBlockRead (
             nBlocks,
             fn,
             isAddrInc,
-            DRV_SDMMC_OPERATION_TYPE_SDIO_RD_BLK
+            DRV_SDMMC_OP_TYP_SDIO_RD_BLK
         );
     }
 }
@@ -3246,7 +3368,7 @@ void DRV_SDMMC_Async_SDIO_ExtBytesWrite (
     bool isAddrInc
 )
 {
-    if ((nBytes == 0) || (nBytes > 511))
+    if ((nBytes == 0U) || (nBytes > 511U))
     {
         if (commandHandle != NULL)
         {
@@ -3263,7 +3385,7 @@ void DRV_SDMMC_Async_SDIO_ExtBytesWrite (
             nBytes,
             fn,
             isAddrInc,
-            DRV_SDMMC_OPERATION_TYPE_SDIO_WR_BYTES
+            DRV_SDMMC_OP_TYP_SDIO_WR_BYTES
         );
     }
 }
@@ -3278,7 +3400,7 @@ void DRV_SDMMC_Async_SDIO_ExtBytesRead (
     bool isAddrInc
 )
 {
-    if ((nBytes == 0) || (nBytes > 511))
+    if ((nBytes == 0U) || (nBytes > 511U))
     {
         if (commandHandle != NULL)
         {
@@ -3295,7 +3417,7 @@ void DRV_SDMMC_Async_SDIO_ExtBytesRead (
             nBytes,
             fn,
             isAddrInc,
-            DRV_SDMMC_OPERATION_TYPE_SDIO_RD_BYTES
+            DRV_SDMMC_OP_TYP_SDIO_RD_BYTES
         );
     }
 }
@@ -3317,7 +3439,7 @@ void DRV_SDMMC_Async_SDIO_DirByteWrite (
         1,
         fn,
         raw,
-        DRV_SDMMC_OPERATION_TYPE_SDIO_WR_DIR
+        DRV_SDMMC_OP_TYP_SDIO_WR_DIR
     );
 }
 
@@ -3337,7 +3459,7 @@ void DRV_SDMMC_Async_SDIO_DirByteRead (
         1,
         fn,
         false,
-        DRV_SDMMC_OPERATION_TYPE_SDIO_RD_DIR
+        DRV_SDMMC_OP_TYP_SDIO_RD_DIR
     );
 }
 
@@ -3368,17 +3490,17 @@ void DRV_SDMMC_Async_SDIO_Read (
 
     blockSize = dObj->cardCtxt.blockSize;
 
-    if (nBytes == 0)
+    if (nBytes == 0U)
     {
         err = true;
     }
-    else if (nBytes == 1)
+    else if (nBytes == 1U)
     {
-        opType = DRV_SDMMC_OPERATION_TYPE_SDIO_RD_DIR;
+        opType = DRV_SDMMC_OP_TYP_SDIO_RD_DIR;
     }
     else
     {
-        if (nBytes > 511)
+        if (nBytes > 511U)
         {
             if ((nBytes % blockSize) != 0U)
             {
@@ -3388,12 +3510,12 @@ void DRV_SDMMC_Async_SDIO_Read (
             else
             {
                 nBytes = nBytes/blockSize;
-                opType = DRV_SDMMC_OPERATION_TYPE_SDIO_RD_BLK;
+                opType = DRV_SDMMC_OP_TYP_SDIO_RD_BLK;
             }
         }
         else
         {
-            opType = DRV_SDMMC_OPERATION_TYPE_SDIO_RD_BYTES;
+            opType = DRV_SDMMC_OP_TYP_SDIO_RD_BYTES;
         }
     }
     
@@ -3447,17 +3569,17 @@ void DRV_SDMMC_Async_SDIO_Write (
 
     blockSize = dObj->cardCtxt.blockSize;
 
-    if (nBytes == 0)
+    if (nBytes == 0U)
     {
         err = true;
     }
-    else if (nBytes == 1)
+    else if (nBytes == 1U)
     {
-        opType = DRV_SDMMC_OPERATION_TYPE_SDIO_WR_DIR;
+        opType = DRV_SDMMC_OP_TYP_SDIO_WR_DIR;
     }
     else
     {
-        if (nBytes > 511)
+        if (nBytes > 511U)
         {
             if ((nBytes % blockSize) != 0U)
             {
@@ -3467,12 +3589,12 @@ void DRV_SDMMC_Async_SDIO_Write (
             else
             {
                 nBytes = nBytes/blockSize;
-                opType = DRV_SDMMC_OPERATION_TYPE_SDIO_WR_BLK;
+                opType = DRV_SDMMC_OP_TYP_SDIO_WR_BLK;
             }
         }
         else
         {
-            opType = DRV_SDMMC_OPERATION_TYPE_SDIO_WR_BYTES;
+            opType = DRV_SDMMC_OP_TYP_SDIO_WR_BYTES;
         }
     }
     if (err == true)
@@ -3852,7 +3974,7 @@ void DRV_SDMMC_Tasks( SYS_MODULE_OBJ object )
                             /* Polling timeout has expired. Now check if the card is still attached. */
                             if ((dObj->sdCardType & CARD_TYPE_SD_IO) == CARD_TYPE_SD_IO)
                             {
-                                dObj->taskState = DRV_SDMMC_TASK_CHECK_CARD_DETACH_SDIO_SEL;
+                                dObj->taskState = DRV_SDMMC_TASK_CHECK_SDIO_SEL_CARD_DETACH;
                             }
                             else
                             {
@@ -3905,7 +4027,7 @@ void DRV_SDMMC_Tasks( SYS_MODULE_OBJ object )
             }
             break;
 
-        case DRV_SDMMC_TASK_CHECK_CARD_DETACH_SDIO_SEL:
+        case DRV_SDMMC_TASK_CHECK_SDIO_SEL_CARD_DETACH:
 
             lDRV_SDMMC_CommandSend (dObj, (uint8_t)DRV_SDMMC_CMD_SELECT_DESELECT_CARD, ((uint32_t)dObj->cardCtxt.rca << 16), (uint8_t)DRV_SDMMC_CMD_RESP_R1B, &dObj->dataTransferFlags);
             if (dObj->cmdState == DRV_SDMMC_CMD_EXEC_IS_COMPLETE)
@@ -3922,7 +4044,7 @@ void DRV_SDMMC_Tasks( SYS_MODULE_OBJ object )
                     else
                     {
                         /* Card is present */
-                        dObj->taskState = DRV_SDMMC_TASK_CHECK_CARD_DETACH_SDIO_DESEL;
+                        dObj->taskState = DRV_SDMMC_TASK_CHECK_SDIO_DESEL_CARD_DETACH;
                     }
                 }
                 else
@@ -3932,7 +4054,7 @@ void DRV_SDMMC_Tasks( SYS_MODULE_OBJ object )
             }
             break;
 
-        case DRV_SDMMC_TASK_CHECK_CARD_DETACH_SDIO_DESEL:
+        case DRV_SDMMC_TASK_CHECK_SDIO_DESEL_CARD_DETACH:
 
             lDRV_SDMMC_CommandSend (dObj, (uint8_t)DRV_SDMMC_CMD_SELECT_DESELECT_CARD, 0, (uint8_t)DRV_SDMMC_CMD_RESP_NONE, &dObj->dataTransferFlags);
             if (dObj->cmdState == DRV_SDMMC_CMD_EXEC_IS_COMPLETE)
@@ -3994,73 +4116,73 @@ void DRV_SDMMC_Tasks( SYS_MODULE_OBJ object )
                 break;
             }
 
-            if (currentBufObj->opType == DRV_SDMMC_OPERATION_TYPE_SDIO_WR_BLK)
+            if (currentBufObj->opType == DRV_SDMMC_OP_TYP_SDIO_WR_BLK)
             {
                 dObj->sdmmcPlib->sdhostSetBlockCount(currentBufObj->nBlocks);
                 dObj->sdmmcPlib->sdhostSetBlockSize(512);
 
                 dObj->dataTransferFlags.transferDir = DRV_SDMMC_DATA_TRANSFER_DIR_WRITE;
                 dObj->dataTransferFlags.isDataPresent = true;
-                dObj->dataTransferFlags.transferType = DRV_SDMMC_DATA_TRANSFER_TYPE_SDIO_BLOCK;
+                dObj->dataTransferFlags.transferType = DRV_SDMMC_DATA_TRANSFER_TYPE_BLOCK_SDIO;
 
                 currentBufObj->opCode = (uint8_t)DRV_SDMMC_CMD_IO_RW_EXT;
-                currentBufObj->arg = DRV_SDMMC_CMD53_WR_DATA(currentBufObj->fn, currentBufObj->blockStart, true, currentBufObj->nBlocks, currentBufObj->isAddrInc);
-                currentBufObj->respType = DRV_SDMMC_CMD_RESP_R5;
+                currentBufObj->arg = DRV_SDMMC_CMD53_WR_DATA((uint32_t)currentBufObj->fn, currentBufObj->blockStart, 1UL, currentBufObj->nBlocks, (uint32_t)currentBufObj->isAddrInc);
+                currentBufObj->respType = (uint8_t)DRV_SDMMC_CMD_RESP_R5;
 
-                SYS_CACHE_CleanDCache_by_Addr(currentBufObj->buffer, (int32_t)(currentBufObj->nBlocks << 9));
+                SYS_CACHE_CleanDCache_by_Addr(currentBufObj->buffer, (int32_t)(uint32_t)(currentBufObj->nBlocks << 9));
 
                 dObj->sdmmcPlib->sdhostSetupDma (currentBufObj->buffer, (currentBufObj->nBlocks << 9), DRV_SDMMC_DATA_XFER_DIR_WR);
             }
-            else if (currentBufObj->opType == DRV_SDMMC_OPERATION_TYPE_SDIO_WR_BYTES)
+            else if (currentBufObj->opType == DRV_SDMMC_OP_TYP_SDIO_WR_BYTES)
             {
                 dObj->sdmmcPlib->sdhostSetBlockSize(currentBufObj->nBlocks);
 
                 dObj->dataTransferFlags.transferDir = DRV_SDMMC_DATA_TRANSFER_DIR_WRITE;
                 dObj->dataTransferFlags.isDataPresent = true;
-                dObj->dataTransferFlags.transferType = DRV_SDMMC_DATA_TRANSFER_TYPE_SDIO_BYTE;
+                dObj->dataTransferFlags.transferType = DRV_SDMMC_DATA_TRANSFER_TYPE_BYTE_SDIO;
 
                 currentBufObj->opCode = (uint8_t)DRV_SDMMC_CMD_IO_RW_EXT;
-                currentBufObj->arg = DRV_SDMMC_CMD53_WR_DATA(currentBufObj->fn, currentBufObj->blockStart, false, currentBufObj->nBlocks, currentBufObj->isAddrInc);
-                currentBufObj->respType = DRV_SDMMC_CMD_RESP_R5;
+                currentBufObj->arg = DRV_SDMMC_CMD53_WR_DATA((uint32_t)currentBufObj->fn, currentBufObj->blockStart, 0UL, currentBufObj->nBlocks, (uint32_t)currentBufObj->isAddrInc);
+                currentBufObj->respType = (uint8_t)DRV_SDMMC_CMD_RESP_R5;
 
-                SYS_CACHE_CleanDCache_by_Addr(currentBufObj->buffer, currentBufObj->nBlocks);
+                SYS_CACHE_CleanDCache_by_Addr(currentBufObj->buffer, (int32_t)currentBufObj->nBlocks);
 
                 dObj->sdmmcPlib->sdhostSetupDma (currentBufObj->buffer, currentBufObj->nBlocks, DRV_SDMMC_DATA_XFER_DIR_WR);
             }
-            else if (currentBufObj->opType == DRV_SDMMC_OPERATION_TYPE_SDIO_RD_BLK)
+            else if (currentBufObj->opType == DRV_SDMMC_OP_TYP_SDIO_RD_BLK)
             {
                 dObj->sdmmcPlib->sdhostSetBlockCount(currentBufObj->nBlocks);
                 dObj->sdmmcPlib->sdhostSetBlockSize(512);
 
                 dObj->dataTransferFlags.transferDir = DRV_SDMMC_DATA_TRANSFER_DIR_READ;
                 dObj->dataTransferFlags.isDataPresent = true;
-                dObj->dataTransferFlags.transferType = DRV_SDMMC_DATA_TRANSFER_TYPE_SDIO_BLOCK;
+                dObj->dataTransferFlags.transferType = DRV_SDMMC_DATA_TRANSFER_TYPE_BLOCK_SDIO;
 
                 currentBufObj->opCode = (uint8_t)DRV_SDMMC_CMD_IO_RW_EXT;
-                currentBufObj->arg = DRV_SDMMC_CMD53_RD_DATA(currentBufObj->fn, currentBufObj->blockStart, true, currentBufObj->nBlocks, currentBufObj->isAddrInc);
-                currentBufObj->respType = DRV_SDMMC_CMD_RESP_R5;
+                currentBufObj->arg = DRV_SDMMC_CMD53_RD_DATA((uint32_t)currentBufObj->fn, currentBufObj->blockStart, 1UL, currentBufObj->nBlocks, (uint32_t)currentBufObj->isAddrInc);
+                currentBufObj->respType = (uint8_t)DRV_SDMMC_CMD_RESP_R5;
 
-                SYS_CACHE_InvalidateDCache_by_Addr(currentBufObj->buffer, (int32_t)(currentBufObj->nBlocks << 9));
+                SYS_CACHE_InvalidateDCache_by_Addr(currentBufObj->buffer, (int32_t)(uint32_t)(currentBufObj->nBlocks << 9));
 
                 dObj->sdmmcPlib->sdhostSetupDma (currentBufObj->buffer, (currentBufObj->nBlocks << 9), DRV_SDMMC_DATA_XFER_DIR_RD);
             }
-            else if (currentBufObj->opType == DRV_SDMMC_OPERATION_TYPE_SDIO_RD_BYTES)
+            else if (currentBufObj->opType == DRV_SDMMC_OP_TYP_SDIO_RD_BYTES)
             {
                 dObj->sdmmcPlib->sdhostSetBlockSize(currentBufObj->nBlocks);
 
                 dObj->dataTransferFlags.transferDir = DRV_SDMMC_DATA_TRANSFER_DIR_READ;
                 dObj->dataTransferFlags.isDataPresent = true;
-                dObj->dataTransferFlags.transferType = DRV_SDMMC_DATA_TRANSFER_TYPE_SDIO_BYTE;
+                dObj->dataTransferFlags.transferType = DRV_SDMMC_DATA_TRANSFER_TYPE_BYTE_SDIO;
 
                 currentBufObj->opCode = (uint8_t)DRV_SDMMC_CMD_IO_RW_EXT;
-                currentBufObj->arg = DRV_SDMMC_CMD53_RD_DATA(currentBufObj->fn, currentBufObj->blockStart, false, currentBufObj->nBlocks, currentBufObj->isAddrInc);
-                currentBufObj->respType = DRV_SDMMC_CMD_RESP_R5;
+                currentBufObj->arg = DRV_SDMMC_CMD53_RD_DATA((uint32_t)currentBufObj->fn, currentBufObj->blockStart, 0UL, currentBufObj->nBlocks, (uint32_t)currentBufObj->isAddrInc);
+                currentBufObj->respType = (uint8_t)DRV_SDMMC_CMD_RESP_R5;
 
                 SYS_CACHE_InvalidateDCache_by_Addr(currentBufObj->buffer, (int32_t)(currentBufObj->nBlocks));
 
                 dObj->sdmmcPlib->sdhostSetupDma (currentBufObj->buffer, currentBufObj->nBlocks, DRV_SDMMC_DATA_XFER_DIR_RD);
             }
-            else if (currentBufObj->opType == DRV_SDMMC_OPERATION_TYPE_SD_MEM_READ)
+            else if (currentBufObj->opType == DRV_SDMMC_OP_TYP_SD_MEM_READ)
             {
                 dObj->dataTransferFlags.transferDir = DRV_SDMMC_DATA_TRANSFER_DIR_READ;
                 dObj->dataTransferFlags.isDataPresent = true;
@@ -4079,16 +4201,16 @@ void DRV_SDMMC_Tasks( SYS_MODULE_OBJ object )
                 }
 
                 currentBufObj->arg = (dObj->cardCtxt.cardType == DRV_SDMMC_CARD_TYPE_STANDARD)? currentBufObj->blockStart << 9 : currentBufObj->blockStart;
-                currentBufObj->respType = DRV_SDMMC_CMD_RESP_R1;
+                currentBufObj->respType = (uint8_t)DRV_SDMMC_CMD_RESP_R1;
 
                 dObj->sdmmcPlib->sdhostSetBlockSize(512);
 
-                SYS_CACHE_InvalidateDCache_by_Addr(currentBufObj->buffer, (int32_t)(currentBufObj->nBlocks << 9));
+                SYS_CACHE_InvalidateDCache_by_Addr(currentBufObj->buffer, (int32_t)(uint32_t)(currentBufObj->nBlocks << 9));
 
                 dObj->sdmmcPlib->sdhostSetupDma (currentBufObj->buffer, (currentBufObj->nBlocks << 9), DRV_SDMMC_DATA_XFER_DIR_RD);
 
             }
-            else if (currentBufObj->opType == DRV_SDMMC_OPERATION_TYPE_SD_MEM_WRITE)
+            else if (currentBufObj->opType == DRV_SDMMC_OP_TYP_SD_MEM_WRITE)
             {
                 dObj->dataTransferFlags.transferDir = DRV_SDMMC_DATA_TRANSFER_DIR_WRITE;
                 dObj->dataTransferFlags.isDataPresent = true;
@@ -4106,33 +4228,37 @@ void DRV_SDMMC_Tasks( SYS_MODULE_OBJ object )
                     dObj->dataTransferFlags.transferType = DRV_SDMMC_DATA_TRANSFER_TYPE_MULTI;
                 }
                 currentBufObj->arg = (dObj->cardCtxt.cardType == DRV_SDMMC_CARD_TYPE_STANDARD)? currentBufObj->blockStart << 9 : currentBufObj->blockStart;
-                currentBufObj->respType = DRV_SDMMC_CMD_RESP_R1;
+                currentBufObj->respType = (uint8_t)DRV_SDMMC_CMD_RESP_R1;
 
                 dObj->sdmmcPlib->sdhostSetBlockSize(512);
 
-                SYS_CACHE_CleanDCache_by_Addr(currentBufObj->buffer, (int32_t)(currentBufObj->nBlocks << 9));
+                SYS_CACHE_CleanDCache_by_Addr(currentBufObj->buffer, (int32_t)(uint32_t)(currentBufObj->nBlocks << 9));
 
                 dObj->sdmmcPlib->sdhostSetupDma (currentBufObj->buffer, (currentBufObj->nBlocks << 9), DRV_SDMMC_DATA_XFER_DIR_WR);
             }
-            else if (currentBufObj->opType == DRV_SDMMC_OPERATION_TYPE_SDIO_WR_DIR)
+            else if (currentBufObj->opType == DRV_SDMMC_OP_TYP_SDIO_WR_DIR)
             {
                 currentBufObj->opCode = (uint8_t)DRV_SDMMC_CMD_IO_RW_DIR;
-                currentBufObj->arg = DRV_SDMMC_CMD52_WR_DATA(currentBufObj->fn, currentBufObj->blockStart, *((uint8_t*)(currentBufObj->buffer)), currentBufObj->isAddrInc);
-                currentBufObj->respType = DRV_SDMMC_CMD_RESP_R5;
+                currentBufObj->arg = DRV_SDMMC_CMD52_WR_DATA((uint32_t)currentBufObj->fn, currentBufObj->blockStart, *((uint8_t*)(currentBufObj->buffer)), (uint32_t)currentBufObj->isAddrInc);
+                currentBufObj->respType = (uint8_t)DRV_SDMMC_CMD_RESP_R5;
 
                 dObj->dataTransferFlags.isDataPresent = false;
 
                 SYS_CACHE_CleanDCache_by_Addr(currentBufObj->buffer, (int32_t)(currentBufObj->nBlocks));
             }
-            else if (currentBufObj->opType == DRV_SDMMC_OPERATION_TYPE_SDIO_RD_DIR)
+            else if (currentBufObj->opType == DRV_SDMMC_OP_TYP_SDIO_RD_DIR)
             {
                 currentBufObj->opCode = (uint8_t)DRV_SDMMC_CMD_IO_RW_DIR;
-                currentBufObj->arg = DRV_SDMMC_CMD52_RD_DATA(currentBufObj->fn, currentBufObj->blockStart);
-                currentBufObj->respType = DRV_SDMMC_CMD_RESP_R5;
+                currentBufObj->arg = DRV_SDMMC_CMD52_RD_DATA((uint32_t)currentBufObj->fn, currentBufObj->blockStart);
+                currentBufObj->respType = (uint8_t)DRV_SDMMC_CMD_RESP_R5;
 
                 dObj->dataTransferFlags.isDataPresent = false;
 
                 SYS_CACHE_InvalidateDCache_by_Addr(currentBufObj->buffer, (int32_t)(currentBufObj->nBlocks));
+            }
+            else
+            {
+                //Do nothing
             }
 
 
@@ -4148,7 +4274,7 @@ void DRV_SDMMC_Tasks( SYS_MODULE_OBJ object )
             {
                 if (dObj->commandStatus == DRV_SDMMC_COMMAND_STATUS_SUCCESS)
                 {
-                    if (currentBufObj->respType == DRV_SDMMC_CMD_RESP_R5)
+                    if (currentBufObj->respType == (uint8_t)DRV_SDMMC_CMD_RESP_R5)
                     {
                         dObj->sdmmcPlib->sdhostReadResponse(DRV_SDMMC_READ_RESP_REG_0, &response);
 
@@ -4156,10 +4282,14 @@ void DRV_SDMMC_Tasks( SYS_MODULE_OBJ object )
                         {
                             dObj->taskState = DRV_SDMMC_TASK_ERROR;
                         }
-                        else if (currentBufObj->opType == DRV_SDMMC_OPERATION_TYPE_SDIO_RD_DIR)
+                        else if (currentBufObj->opType == DRV_SDMMC_OP_TYP_SDIO_RD_DIR)
                         {
-                            *((uint8_t*)(currentBufObj->buffer)) = DRV_SDMMC_SDIO_CMD52_RESP_DATA_GET(response);
+                            *((uint8_t*)(currentBufObj->buffer)) = (uint8_t)DRV_SDMMC_SDIO_CMD52_RESP_DATA_GET(response);
                         }
+                        else
+                        {
+                            //Do noting
+                        }        
                     }
 
                     if (dObj->dataTransferFlags.isDataPresent == true)
