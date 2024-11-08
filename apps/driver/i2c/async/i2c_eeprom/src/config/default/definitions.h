@@ -55,11 +55,11 @@
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/pio/plib_pio.h"
 #include "bsp/bsp.h"
+#include "driver/i2c/drv_i2c.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "driver/i2c/drv_i2c.h"
 #include "app.h"
 
 
@@ -73,13 +73,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "SAMA7D65"
-#define DEVICE_ARCH			 "CORTEX-A7"
-#define DEVICE_FAMILY		 "SAMA7"
-#define DEVICE_SERIES		 "SAMA7D6"
+#define DEVICE_NAME          "SAMA7D65"
+#define DEVICE_ARCH          "CORTEX-A7"
+#define DEVICE_FAMILY        "SAMA7"
+#define DEVICE_SERIES        "SAMA7D6"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 800000000
+#define CPU_CLOCK_FREQUENCY 800000000U
 
 // *****************************************************************************
 // *****************************************************************************
