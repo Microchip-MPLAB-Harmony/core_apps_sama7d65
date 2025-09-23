@@ -1,7 +1,7 @@
 /*
  * Component description for FLEXCOM
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_FLEXCOM_COMPONENT_H_
 #define _SAMA7D6_FLEXCOM_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                    SOFTWARE API DEFINITION FOR FLEXCOM                     */
@@ -214,13 +216,9 @@
 #define FLEX_US_CR_REQCLR_Msk                 (_UINT32_(0x1) << FLEX_US_CR_REQCLR_Pos)             /* (FLEX_US_CR) Request to Clear the Comparison Trigger Mask */
 #define FLEX_US_CR_REQCLR(value)              (FLEX_US_CR_REQCLR_Msk & (_UINT32_(value) << FLEX_US_CR_REQCLR_Pos)) /* Assignment of value for REQCLR in the FLEX_US_CR register */
 #define   FLEX_US_CR_REQCLR_0_Val             _UINT32_(0x0)                                        /* (FLEX_US_CR) No effect.  */
-#define   FLEX_US_CR_REQCLR_0_Val             _UINT32_(0x0)                                        /* (FLEX_US_CR) No effect.  */
-#define   FLEX_US_CR_REQCLR_1_Val             _UINT32_(0x1)                                        /* (FLEX_US_CR) Clears the potential clock request currently issued by USART, thus the potential system wake-up is cancelled.  */
-#define   FLEX_US_CR_REQCLR_1_Val             _UINT32_(0x1)                                        /* (FLEX_US_CR) Restarts the comparison trigger to enable FLEX_US_RHR loading.  */
+#define   FLEX_US_CR_REQCLR_1_Val             _UINT32_(0x1)                                        /* (FLEX_US_CR) Clears the potential clock request currently issued by USART, thus the potential system wake-up is cancelled. ; Restarts the comparison trigger to enable FLEX_US_RHR loading.  */
 #define FLEX_US_CR_REQCLR_0                   (FLEX_US_CR_REQCLR_0_Val << FLEX_US_CR_REQCLR_Pos)   /* (FLEX_US_CR) No effect. Position */
-#define FLEX_US_CR_REQCLR_0                   (FLEX_US_CR_REQCLR_0_Val << FLEX_US_CR_REQCLR_Pos)   /* (FLEX_US_CR) No effect. Position */
-#define FLEX_US_CR_REQCLR_1                   (FLEX_US_CR_REQCLR_1_Val << FLEX_US_CR_REQCLR_Pos)   /* (FLEX_US_CR) Clears the potential clock request currently issued by USART, thus the potential system wake-up is cancelled. Position */
-#define FLEX_US_CR_REQCLR_1                   (FLEX_US_CR_REQCLR_1_Val << FLEX_US_CR_REQCLR_Pos)   /* (FLEX_US_CR) Restarts the comparison trigger to enable FLEX_US_RHR loading. Position */
+#define FLEX_US_CR_REQCLR_1                   (FLEX_US_CR_REQCLR_1_Val << FLEX_US_CR_REQCLR_Pos)   /* (FLEX_US_CR) Clears the potential clock request currently issued by USART, thus the potential system wake-up is cancelled. ; Restarts the comparison trigger to enable FLEX_US_RHR loading. Position */
 #define FLEX_US_CR_FIFOEN_Pos                 _UINT32_(30)                                         /* (FLEX_US_CR) FIFO Enable Position */
 #define FLEX_US_CR_FIFOEN_Msk                 (_UINT32_(0x1) << FLEX_US_CR_FIFOEN_Pos)             /* (FLEX_US_CR) FIFO Enable Mask */
 #define FLEX_US_CR_FIFOEN(value)              (FLEX_US_CR_FIFOEN_Msk & (_UINT32_(value) << FLEX_US_CR_FIFOEN_Pos)) /* Assignment of value for FIFOEN in the FLEX_US_CR register */
@@ -247,8 +245,8 @@
 #define   FLEX_US_MR_USART_MODE_NORMAL_Val    _UINT32_(0x0)                                        /* (FLEX_US_MR) Normal mode  */
 #define   FLEX_US_MR_USART_MODE_RS485_Val     _UINT32_(0x1)                                        /* (FLEX_US_MR) RS485  */
 #define   FLEX_US_MR_USART_MODE_HW_HANDSHAKING_Val _UINT32_(0x2)                                        /* (FLEX_US_MR) Hardware handshaking  */
-#define   FLEX_US_MR_USART_MODE_IS07816_T_0_Val _UINT32_(0x4)                                        /* (FLEX_US_MR) IS07816 Protocol: T = 0  */
-#define   FLEX_US_MR_USART_MODE_IS07816_T_1_Val _UINT32_(0x6)                                        /* (FLEX_US_MR) IS07816 Protocol: T = 1  */
+#define   FLEX_US_MR_USART_MODE_ISO7816_T_0_Val _UINT32_(0x4)                                        /* (FLEX_US_MR) ISO7816 Protocol: T = 0  */
+#define   FLEX_US_MR_USART_MODE_ISO7816_T_1_Val _UINT32_(0x6)                                        /* (FLEX_US_MR) ISO7816 Protocol: T = 1  */
 #define   FLEX_US_MR_USART_MODE_IRDA_Val      _UINT32_(0x8)                                        /* (FLEX_US_MR) IrDA  */
 #define   FLEX_US_MR_USART_MODE_LIN_MASTER_Val _UINT32_(0xA)                                        /* (FLEX_US_MR) LIN Host mode  */
 #define   FLEX_US_MR_USART_MODE_LIN_SLAVE_Val _UINT32_(0xB)                                        /* (FLEX_US_MR) LIN Client mode  */
@@ -257,8 +255,8 @@
 #define FLEX_US_MR_USART_MODE_NORMAL          (FLEX_US_MR_USART_MODE_NORMAL_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) Normal mode Position */
 #define FLEX_US_MR_USART_MODE_RS485           (FLEX_US_MR_USART_MODE_RS485_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) RS485 Position */
 #define FLEX_US_MR_USART_MODE_HW_HANDSHAKING  (FLEX_US_MR_USART_MODE_HW_HANDSHAKING_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) Hardware handshaking Position */
-#define FLEX_US_MR_USART_MODE_IS07816_T_0     (FLEX_US_MR_USART_MODE_IS07816_T_0_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) IS07816 Protocol: T = 0 Position */
-#define FLEX_US_MR_USART_MODE_IS07816_T_1     (FLEX_US_MR_USART_MODE_IS07816_T_1_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) IS07816 Protocol: T = 1 Position */
+#define FLEX_US_MR_USART_MODE_ISO7816_T_0     (FLEX_US_MR_USART_MODE_ISO7816_T_0_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) ISO7816 Protocol: T = 0 Position */
+#define FLEX_US_MR_USART_MODE_ISO7816_T_1     (FLEX_US_MR_USART_MODE_ISO7816_T_1_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) ISO7816 Protocol: T = 1 Position */
 #define FLEX_US_MR_USART_MODE_IRDA            (FLEX_US_MR_USART_MODE_IRDA_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) IrDA Position */
 #define FLEX_US_MR_USART_MODE_LIN_MASTER      (FLEX_US_MR_USART_MODE_LIN_MASTER_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) LIN Host mode Position */
 #define FLEX_US_MR_USART_MODE_LIN_SLAVE       (FLEX_US_MR_USART_MODE_LIN_SLAVE_Val << FLEX_US_MR_USART_MODE_Pos) /* (FLEX_US_MR) LIN Client mode Position */
@@ -465,6 +463,27 @@
 #define FLEX_US_IER_Msk                       _UINT32_(0x016827E7)                                 /* (FLEX_US_IER) Register Mask  */
 
 /* LIN mode */
+#define FLEX_US_IER_LIN_RXRDY_Pos             _UINT32_(0)                                          /* (FLEX_US_IER) RXRDY Interrupt Enable Position */
+#define FLEX_US_IER_LIN_RXRDY_Msk             (_UINT32_(0x1) << FLEX_US_IER_LIN_RXRDY_Pos)         /* (FLEX_US_IER) RXRDY Interrupt Enable Mask */
+#define FLEX_US_IER_LIN_RXRDY(value)          (FLEX_US_IER_LIN_RXRDY_Msk & (_UINT32_(value) << FLEX_US_IER_LIN_RXRDY_Pos))
+#define FLEX_US_IER_LIN_TXRDY_Pos             _UINT32_(1)                                          /* (FLEX_US_IER) TXRDY Interrupt Enable Position */
+#define FLEX_US_IER_LIN_TXRDY_Msk             (_UINT32_(0x1) << FLEX_US_IER_LIN_TXRDY_Pos)         /* (FLEX_US_IER) TXRDY Interrupt Enable Mask */
+#define FLEX_US_IER_LIN_TXRDY(value)          (FLEX_US_IER_LIN_TXRDY_Msk & (_UINT32_(value) << FLEX_US_IER_LIN_TXRDY_Pos))
+#define FLEX_US_IER_LIN_OVRE_Pos              _UINT32_(5)                                          /* (FLEX_US_IER) Overrun Error Interrupt Enable Position */
+#define FLEX_US_IER_LIN_OVRE_Msk              (_UINT32_(0x1) << FLEX_US_IER_LIN_OVRE_Pos)          /* (FLEX_US_IER) Overrun Error Interrupt Enable Mask */
+#define FLEX_US_IER_LIN_OVRE(value)           (FLEX_US_IER_LIN_OVRE_Msk & (_UINT32_(value) << FLEX_US_IER_LIN_OVRE_Pos))
+#define FLEX_US_IER_LIN_FRAME_Pos             _UINT32_(6)                                          /* (FLEX_US_IER) Framing Error Interrupt Enable Position */
+#define FLEX_US_IER_LIN_FRAME_Msk             (_UINT32_(0x1) << FLEX_US_IER_LIN_FRAME_Pos)         /* (FLEX_US_IER) Framing Error Interrupt Enable Mask */
+#define FLEX_US_IER_LIN_FRAME(value)          (FLEX_US_IER_LIN_FRAME_Msk & (_UINT32_(value) << FLEX_US_IER_LIN_FRAME_Pos))
+#define FLEX_US_IER_LIN_PARE_Pos              _UINT32_(7)                                          /* (FLEX_US_IER) Parity Error Interrupt Enable Position */
+#define FLEX_US_IER_LIN_PARE_Msk              (_UINT32_(0x1) << FLEX_US_IER_LIN_PARE_Pos)          /* (FLEX_US_IER) Parity Error Interrupt Enable Mask */
+#define FLEX_US_IER_LIN_PARE(value)           (FLEX_US_IER_LIN_PARE_Msk & (_UINT32_(value) << FLEX_US_IER_LIN_PARE_Pos))
+#define FLEX_US_IER_LIN_TIMEOUT_Pos           _UINT32_(8)                                          /* (FLEX_US_IER) Timeout Interrupt Enable Position */
+#define FLEX_US_IER_LIN_TIMEOUT_Msk           (_UINT32_(0x1) << FLEX_US_IER_LIN_TIMEOUT_Pos)       /* (FLEX_US_IER) Timeout Interrupt Enable Mask */
+#define FLEX_US_IER_LIN_TIMEOUT(value)        (FLEX_US_IER_LIN_TIMEOUT_Msk & (_UINT32_(value) << FLEX_US_IER_LIN_TIMEOUT_Pos))
+#define FLEX_US_IER_LIN_TXEMPTY_Pos           _UINT32_(9)                                          /* (FLEX_US_IER) TXEMPTY Interrupt Enable Position */
+#define FLEX_US_IER_LIN_TXEMPTY_Msk           (_UINT32_(0x1) << FLEX_US_IER_LIN_TXEMPTY_Pos)       /* (FLEX_US_IER) TXEMPTY Interrupt Enable Mask */
+#define FLEX_US_IER_LIN_TXEMPTY(value)        (FLEX_US_IER_LIN_TXEMPTY_Msk & (_UINT32_(value) << FLEX_US_IER_LIN_TXEMPTY_Pos))
 #define FLEX_US_IER_LIN_LINBK_Pos             _UINT32_(13)                                         /* (FLEX_US_IER) LIN Break Sent or LIN Break Received Interrupt Enable Position */
 #define FLEX_US_IER_LIN_LINBK_Msk             (_UINT32_(0x1) << FLEX_US_IER_LIN_LINBK_Pos)         /* (FLEX_US_IER) LIN Break Sent or LIN Break Received Interrupt Enable Mask */
 #define FLEX_US_IER_LIN_LINBK(value)          (FLEX_US_IER_LIN_LINBK_Msk & (_UINT32_(value) << FLEX_US_IER_LIN_LINBK_Pos))
@@ -474,6 +493,9 @@
 #define FLEX_US_IER_LIN_LINTC_Pos             _UINT32_(15)                                         /* (FLEX_US_IER) LIN Transfer Completed Interrupt Enable Position */
 #define FLEX_US_IER_LIN_LINTC_Msk             (_UINT32_(0x1) << FLEX_US_IER_LIN_LINTC_Pos)         /* (FLEX_US_IER) LIN Transfer Completed Interrupt Enable Mask */
 #define FLEX_US_IER_LIN_LINTC(value)          (FLEX_US_IER_LIN_LINTC_Msk & (_UINT32_(value) << FLEX_US_IER_LIN_LINTC_Pos))
+#define FLEX_US_IER_LIN_SECE_Pos              _UINT32_(21)                                         /* (FLEX_US_IER) Security/Safety Error Interrupt Enable Position */
+#define FLEX_US_IER_LIN_SECE_Msk              (_UINT32_(0x1) << FLEX_US_IER_LIN_SECE_Pos)          /* (FLEX_US_IER) Security/Safety Error Interrupt Enable Mask */
+#define FLEX_US_IER_LIN_SECE(value)           (FLEX_US_IER_LIN_SECE_Msk & (_UINT32_(value) << FLEX_US_IER_LIN_SECE_Pos))
 #define FLEX_US_IER_LIN_LINBE_Pos             _UINT32_(25)                                         /* (FLEX_US_IER) LIN Bus Error Interrupt Enable Position */
 #define FLEX_US_IER_LIN_LINBE_Msk             (_UINT32_(0x1) << FLEX_US_IER_LIN_LINBE_Pos)         /* (FLEX_US_IER) LIN Bus Error Interrupt Enable Mask */
 #define FLEX_US_IER_LIN_LINBE(value)          (FLEX_US_IER_LIN_LINBE_Msk & (_UINT32_(value) << FLEX_US_IER_LIN_LINBE_Pos))
@@ -495,7 +517,7 @@
 #define FLEX_US_IER_LIN_LINHTE_Pos            _UINT32_(31)                                         /* (FLEX_US_IER) LIN Header Timeout Error Interrupt Enable Position */
 #define FLEX_US_IER_LIN_LINHTE_Msk            (_UINT32_(0x1) << FLEX_US_IER_LIN_LINHTE_Pos)        /* (FLEX_US_IER) LIN Header Timeout Error Interrupt Enable Mask */
 #define FLEX_US_IER_LIN_LINHTE(value)         (FLEX_US_IER_LIN_LINHTE_Msk & (_UINT32_(value) << FLEX_US_IER_LIN_LINHTE_Pos))
-#define FLEX_US_IER_LIN_Msk                   _UINT32_(0xFE00E000)                                 /* (FLEX_US_IER_LIN) Register Mask  */
+#define FLEX_US_IER_LIN_Msk                   _UINT32_(0xFE20E3E3)                                 /* (FLEX_US_IER_LIN) Register Mask  */
 
 
 /* -------- FLEX_US_IDR : (FLEXCOM Offset: 0x20C) ( /W 32) USART Interrupt Disable Register -------- */
@@ -544,6 +566,27 @@
 #define FLEX_US_IDR_Msk                       _UINT32_(0x016827E7)                                 /* (FLEX_US_IDR) Register Mask  */
 
 /* LIN mode */
+#define FLEX_US_IDR_LIN_RXRDY_Pos             _UINT32_(0)                                          /* (FLEX_US_IDR) RXRDY Interrupt Disable Position */
+#define FLEX_US_IDR_LIN_RXRDY_Msk             (_UINT32_(0x1) << FLEX_US_IDR_LIN_RXRDY_Pos)         /* (FLEX_US_IDR) RXRDY Interrupt Disable Mask */
+#define FLEX_US_IDR_LIN_RXRDY(value)          (FLEX_US_IDR_LIN_RXRDY_Msk & (_UINT32_(value) << FLEX_US_IDR_LIN_RXRDY_Pos))
+#define FLEX_US_IDR_LIN_TXRDY_Pos             _UINT32_(1)                                          /* (FLEX_US_IDR) TXRDY Interrupt Disable Position */
+#define FLEX_US_IDR_LIN_TXRDY_Msk             (_UINT32_(0x1) << FLEX_US_IDR_LIN_TXRDY_Pos)         /* (FLEX_US_IDR) TXRDY Interrupt Disable Mask */
+#define FLEX_US_IDR_LIN_TXRDY(value)          (FLEX_US_IDR_LIN_TXRDY_Msk & (_UINT32_(value) << FLEX_US_IDR_LIN_TXRDY_Pos))
+#define FLEX_US_IDR_LIN_OVRE_Pos              _UINT32_(5)                                          /* (FLEX_US_IDR) Overrun Error Interrupt Disable Position */
+#define FLEX_US_IDR_LIN_OVRE_Msk              (_UINT32_(0x1) << FLEX_US_IDR_LIN_OVRE_Pos)          /* (FLEX_US_IDR) Overrun Error Interrupt Disable Mask */
+#define FLEX_US_IDR_LIN_OVRE(value)           (FLEX_US_IDR_LIN_OVRE_Msk & (_UINT32_(value) << FLEX_US_IDR_LIN_OVRE_Pos))
+#define FLEX_US_IDR_LIN_FRAME_Pos             _UINT32_(6)                                          /* (FLEX_US_IDR) Framing Error Interrupt Disable Position */
+#define FLEX_US_IDR_LIN_FRAME_Msk             (_UINT32_(0x1) << FLEX_US_IDR_LIN_FRAME_Pos)         /* (FLEX_US_IDR) Framing Error Interrupt Disable Mask */
+#define FLEX_US_IDR_LIN_FRAME(value)          (FLEX_US_IDR_LIN_FRAME_Msk & (_UINT32_(value) << FLEX_US_IDR_LIN_FRAME_Pos))
+#define FLEX_US_IDR_LIN_PARE_Pos              _UINT32_(7)                                          /* (FLEX_US_IDR) Parity Error Interrupt Disable Position */
+#define FLEX_US_IDR_LIN_PARE_Msk              (_UINT32_(0x1) << FLEX_US_IDR_LIN_PARE_Pos)          /* (FLEX_US_IDR) Parity Error Interrupt Disable Mask */
+#define FLEX_US_IDR_LIN_PARE(value)           (FLEX_US_IDR_LIN_PARE_Msk & (_UINT32_(value) << FLEX_US_IDR_LIN_PARE_Pos))
+#define FLEX_US_IDR_LIN_TIMEOUT_Pos           _UINT32_(8)                                          /* (FLEX_US_IDR) Timeout Interrupt Disable Position */
+#define FLEX_US_IDR_LIN_TIMEOUT_Msk           (_UINT32_(0x1) << FLEX_US_IDR_LIN_TIMEOUT_Pos)       /* (FLEX_US_IDR) Timeout Interrupt Disable Mask */
+#define FLEX_US_IDR_LIN_TIMEOUT(value)        (FLEX_US_IDR_LIN_TIMEOUT_Msk & (_UINT32_(value) << FLEX_US_IDR_LIN_TIMEOUT_Pos))
+#define FLEX_US_IDR_LIN_TXEMPTY_Pos           _UINT32_(9)                                          /* (FLEX_US_IDR) TXEMPTY Interrupt Disable Position */
+#define FLEX_US_IDR_LIN_TXEMPTY_Msk           (_UINT32_(0x1) << FLEX_US_IDR_LIN_TXEMPTY_Pos)       /* (FLEX_US_IDR) TXEMPTY Interrupt Disable Mask */
+#define FLEX_US_IDR_LIN_TXEMPTY(value)        (FLEX_US_IDR_LIN_TXEMPTY_Msk & (_UINT32_(value) << FLEX_US_IDR_LIN_TXEMPTY_Pos))
 #define FLEX_US_IDR_LIN_LINBK_Pos             _UINT32_(13)                                         /* (FLEX_US_IDR) LIN Break Sent or LIN Break Received Interrupt Disable Position */
 #define FLEX_US_IDR_LIN_LINBK_Msk             (_UINT32_(0x1) << FLEX_US_IDR_LIN_LINBK_Pos)         /* (FLEX_US_IDR) LIN Break Sent or LIN Break Received Interrupt Disable Mask */
 #define FLEX_US_IDR_LIN_LINBK(value)          (FLEX_US_IDR_LIN_LINBK_Msk & (_UINT32_(value) << FLEX_US_IDR_LIN_LINBK_Pos))
@@ -553,6 +596,9 @@
 #define FLEX_US_IDR_LIN_LINTC_Pos             _UINT32_(15)                                         /* (FLEX_US_IDR) LIN Transfer Completed Interrupt Disable Position */
 #define FLEX_US_IDR_LIN_LINTC_Msk             (_UINT32_(0x1) << FLEX_US_IDR_LIN_LINTC_Pos)         /* (FLEX_US_IDR) LIN Transfer Completed Interrupt Disable Mask */
 #define FLEX_US_IDR_LIN_LINTC(value)          (FLEX_US_IDR_LIN_LINTC_Msk & (_UINT32_(value) << FLEX_US_IDR_LIN_LINTC_Pos))
+#define FLEX_US_IDR_LIN_SECE_Pos              _UINT32_(21)                                         /* (FLEX_US_IDR) Security/Safety Error Interrupt Disable Position */
+#define FLEX_US_IDR_LIN_SECE_Msk              (_UINT32_(0x1) << FLEX_US_IDR_LIN_SECE_Pos)          /* (FLEX_US_IDR) Security/Safety Error Interrupt Disable Mask */
+#define FLEX_US_IDR_LIN_SECE(value)           (FLEX_US_IDR_LIN_SECE_Msk & (_UINT32_(value) << FLEX_US_IDR_LIN_SECE_Pos))
 #define FLEX_US_IDR_LIN_LINBE_Pos             _UINT32_(25)                                         /* (FLEX_US_IDR) LIN Bus Error Interrupt Disable Position */
 #define FLEX_US_IDR_LIN_LINBE_Msk             (_UINT32_(0x1) << FLEX_US_IDR_LIN_LINBE_Pos)         /* (FLEX_US_IDR) LIN Bus Error Interrupt Disable Mask */
 #define FLEX_US_IDR_LIN_LINBE(value)          (FLEX_US_IDR_LIN_LINBE_Msk & (_UINT32_(value) << FLEX_US_IDR_LIN_LINBE_Pos))
@@ -574,7 +620,7 @@
 #define FLEX_US_IDR_LIN_LINHTE_Pos            _UINT32_(31)                                         /* (FLEX_US_IDR) LIN Header Timeout Error Interrupt Disable Position */
 #define FLEX_US_IDR_LIN_LINHTE_Msk            (_UINT32_(0x1) << FLEX_US_IDR_LIN_LINHTE_Pos)        /* (FLEX_US_IDR) LIN Header Timeout Error Interrupt Disable Mask */
 #define FLEX_US_IDR_LIN_LINHTE(value)         (FLEX_US_IDR_LIN_LINHTE_Msk & (_UINT32_(value) << FLEX_US_IDR_LIN_LINHTE_Pos))
-#define FLEX_US_IDR_LIN_Msk                   _UINT32_(0xFE00E000)                                 /* (FLEX_US_IDR_LIN) Register Mask  */
+#define FLEX_US_IDR_LIN_Msk                   _UINT32_(0xFE20E3E3)                                 /* (FLEX_US_IDR_LIN) Register Mask  */
 
 
 /* -------- FLEX_US_IMR : (FLEXCOM Offset: 0x210) ( R/ 32) USART Interrupt Mask Register -------- */
@@ -625,6 +671,27 @@
 #define FLEX_US_IMR_Msk                       _UINT32_(0x016827E7)                                 /* (FLEX_US_IMR) Register Mask  */
 
 /* LIN mode */
+#define FLEX_US_IMR_LIN_RXRDY_Pos             _UINT32_(0)                                          /* (FLEX_US_IMR) RXRDY Interrupt Mask Position */
+#define FLEX_US_IMR_LIN_RXRDY_Msk             (_UINT32_(0x1) << FLEX_US_IMR_LIN_RXRDY_Pos)         /* (FLEX_US_IMR) RXRDY Interrupt Mask Mask */
+#define FLEX_US_IMR_LIN_RXRDY(value)          (FLEX_US_IMR_LIN_RXRDY_Msk & (_UINT32_(value) << FLEX_US_IMR_LIN_RXRDY_Pos))
+#define FLEX_US_IMR_LIN_TXRDY_Pos             _UINT32_(1)                                          /* (FLEX_US_IMR) TXRDY Interrupt Mask Position */
+#define FLEX_US_IMR_LIN_TXRDY_Msk             (_UINT32_(0x1) << FLEX_US_IMR_LIN_TXRDY_Pos)         /* (FLEX_US_IMR) TXRDY Interrupt Mask Mask */
+#define FLEX_US_IMR_LIN_TXRDY(value)          (FLEX_US_IMR_LIN_TXRDY_Msk & (_UINT32_(value) << FLEX_US_IMR_LIN_TXRDY_Pos))
+#define FLEX_US_IMR_LIN_OVRE_Pos              _UINT32_(5)                                          /* (FLEX_US_IMR) Overrun Error Interrupt Mask Position */
+#define FLEX_US_IMR_LIN_OVRE_Msk              (_UINT32_(0x1) << FLEX_US_IMR_LIN_OVRE_Pos)          /* (FLEX_US_IMR) Overrun Error Interrupt Mask Mask */
+#define FLEX_US_IMR_LIN_OVRE(value)           (FLEX_US_IMR_LIN_OVRE_Msk & (_UINT32_(value) << FLEX_US_IMR_LIN_OVRE_Pos))
+#define FLEX_US_IMR_LIN_FRAME_Pos             _UINT32_(6)                                          /* (FLEX_US_IMR) Framing Error Interrupt Mask Position */
+#define FLEX_US_IMR_LIN_FRAME_Msk             (_UINT32_(0x1) << FLEX_US_IMR_LIN_FRAME_Pos)         /* (FLEX_US_IMR) Framing Error Interrupt Mask Mask */
+#define FLEX_US_IMR_LIN_FRAME(value)          (FLEX_US_IMR_LIN_FRAME_Msk & (_UINT32_(value) << FLEX_US_IMR_LIN_FRAME_Pos))
+#define FLEX_US_IMR_LIN_PARE_Pos              _UINT32_(7)                                          /* (FLEX_US_IMR) Parity Error Interrupt Mask Position */
+#define FLEX_US_IMR_LIN_PARE_Msk              (_UINT32_(0x1) << FLEX_US_IMR_LIN_PARE_Pos)          /* (FLEX_US_IMR) Parity Error Interrupt Mask Mask */
+#define FLEX_US_IMR_LIN_PARE(value)           (FLEX_US_IMR_LIN_PARE_Msk & (_UINT32_(value) << FLEX_US_IMR_LIN_PARE_Pos))
+#define FLEX_US_IMR_LIN_TIMEOUT_Pos           _UINT32_(8)                                          /* (FLEX_US_IMR) Timeout Interrupt Mask Position */
+#define FLEX_US_IMR_LIN_TIMEOUT_Msk           (_UINT32_(0x1) << FLEX_US_IMR_LIN_TIMEOUT_Pos)       /* (FLEX_US_IMR) Timeout Interrupt Mask Mask */
+#define FLEX_US_IMR_LIN_TIMEOUT(value)        (FLEX_US_IMR_LIN_TIMEOUT_Msk & (_UINT32_(value) << FLEX_US_IMR_LIN_TIMEOUT_Pos))
+#define FLEX_US_IMR_LIN_TXEMPTY_Pos           _UINT32_(9)                                          /* (FLEX_US_IMR) TXEMPTY Interrupt Mask Position */
+#define FLEX_US_IMR_LIN_TXEMPTY_Msk           (_UINT32_(0x1) << FLEX_US_IMR_LIN_TXEMPTY_Pos)       /* (FLEX_US_IMR) TXEMPTY Interrupt Mask Mask */
+#define FLEX_US_IMR_LIN_TXEMPTY(value)        (FLEX_US_IMR_LIN_TXEMPTY_Msk & (_UINT32_(value) << FLEX_US_IMR_LIN_TXEMPTY_Pos))
 #define FLEX_US_IMR_LIN_LINBK_Pos             _UINT32_(13)                                         /* (FLEX_US_IMR) LIN Break Sent or LIN Break Received Interrupt Mask Position */
 #define FLEX_US_IMR_LIN_LINBK_Msk             (_UINT32_(0x1) << FLEX_US_IMR_LIN_LINBK_Pos)         /* (FLEX_US_IMR) LIN Break Sent or LIN Break Received Interrupt Mask Mask */
 #define FLEX_US_IMR_LIN_LINBK(value)          (FLEX_US_IMR_LIN_LINBK_Msk & (_UINT32_(value) << FLEX_US_IMR_LIN_LINBK_Pos))
@@ -658,7 +725,7 @@
 #define FLEX_US_IMR_LIN_LINHTE_Pos            _UINT32_(31)                                         /* (FLEX_US_IMR) LIN Header Timeout Error Interrupt Mask Position */
 #define FLEX_US_IMR_LIN_LINHTE_Msk            (_UINT32_(0x1) << FLEX_US_IMR_LIN_LINHTE_Pos)        /* (FLEX_US_IMR) LIN Header Timeout Error Interrupt Mask Mask */
 #define FLEX_US_IMR_LIN_LINHTE(value)         (FLEX_US_IMR_LIN_LINHTE_Msk & (_UINT32_(value) << FLEX_US_IMR_LIN_LINHTE_Pos))
-#define FLEX_US_IMR_LIN_Msk                   _UINT32_(0xFE20E000)                                 /* (FLEX_US_IMR_LIN) Register Mask  */
+#define FLEX_US_IMR_LIN_Msk                   _UINT32_(0xFE20E3E3)                                 /* (FLEX_US_IMR_LIN) Register Mask  */
 
 
 /* -------- FLEX_US_CSR : (FLEXCOM Offset: 0x214) ( R/ 32) USART Channel Status Register -------- */
@@ -784,6 +851,27 @@
 #define   FLEX_US_CSR_LIN_TXRDY_1_Val         _UINT32_(0x1)                                        /* (FLEX_US_CSR) There is no character in FLEX_US_THR.  */
 #define FLEX_US_CSR_LIN_TXRDY_0               (FLEX_US_CSR_LIN_TXRDY_0_Val << FLEX_US_CSR_LIN_TXRDY_Pos) /* (FLEX_US_CSR) A character in FLEX_US_THR is waiting to be transferred to the Transmit Shift Register, or the transmitter is disabled. As soon as the transmitter is enabled, TXRDY becomes 1. Position */
 #define FLEX_US_CSR_LIN_TXRDY_1               (FLEX_US_CSR_LIN_TXRDY_1_Val << FLEX_US_CSR_LIN_TXRDY_Pos) /* (FLEX_US_CSR) There is no character in FLEX_US_THR. Position */
+#define FLEX_US_CSR_LIN_OVRE_Pos              _UINT32_(5)                                          /* (FLEX_US_CSR) Overrun Error Position */
+#define FLEX_US_CSR_LIN_OVRE_Msk              (_UINT32_(0x1) << FLEX_US_CSR_LIN_OVRE_Pos)          /* (FLEX_US_CSR) Overrun Error Mask */
+#define FLEX_US_CSR_LIN_OVRE(value)           (FLEX_US_CSR_LIN_OVRE_Msk & (_UINT32_(value) << FLEX_US_CSR_LIN_OVRE_Pos))
+#define   FLEX_US_CSR_LIN_OVRE_0_Val          _UINT32_(0x0)                                        /* (FLEX_US_CSR) No overrun error has occurred since the last RSTSTA command was issued.  */
+#define   FLEX_US_CSR_LIN_OVRE_1_Val          _UINT32_(0x1)                                        /* (FLEX_US_CSR) At least one overrun error has occurred since the last RSTSTA command was issued.  */
+#define FLEX_US_CSR_LIN_OVRE_0                (FLEX_US_CSR_LIN_OVRE_0_Val << FLEX_US_CSR_LIN_OVRE_Pos) /* (FLEX_US_CSR) No overrun error has occurred since the last RSTSTA command was issued. Position */
+#define FLEX_US_CSR_LIN_OVRE_1                (FLEX_US_CSR_LIN_OVRE_1_Val << FLEX_US_CSR_LIN_OVRE_Pos) /* (FLEX_US_CSR) At least one overrun error has occurred since the last RSTSTA command was issued. Position */
+#define FLEX_US_CSR_LIN_FRAME_Pos             _UINT32_(6)                                          /* (FLEX_US_CSR) Framing Error Position */
+#define FLEX_US_CSR_LIN_FRAME_Msk             (_UINT32_(0x1) << FLEX_US_CSR_LIN_FRAME_Pos)         /* (FLEX_US_CSR) Framing Error Mask */
+#define FLEX_US_CSR_LIN_FRAME(value)          (FLEX_US_CSR_LIN_FRAME_Msk & (_UINT32_(value) << FLEX_US_CSR_LIN_FRAME_Pos))
+#define   FLEX_US_CSR_LIN_FRAME_0_Val         _UINT32_(0x0)                                        /* (FLEX_US_CSR) No stop bit has been detected low since the last RSTSTA command was issued.  */
+#define   FLEX_US_CSR_LIN_FRAME_1_Val         _UINT32_(0x1)                                        /* (FLEX_US_CSR) At least one stop bit has been detected low since the last RSTSTA command was issued.  */
+#define FLEX_US_CSR_LIN_FRAME_0               (FLEX_US_CSR_LIN_FRAME_0_Val << FLEX_US_CSR_LIN_FRAME_Pos) /* (FLEX_US_CSR) No stop bit has been detected low since the last RSTSTA command was issued. Position */
+#define FLEX_US_CSR_LIN_FRAME_1               (FLEX_US_CSR_LIN_FRAME_1_Val << FLEX_US_CSR_LIN_FRAME_Pos) /* (FLEX_US_CSR) At least one stop bit has been detected low since the last RSTSTA command was issued. Position */
+#define FLEX_US_CSR_LIN_PARE_Pos              _UINT32_(7)                                          /* (FLEX_US_CSR) Parity Error Position */
+#define FLEX_US_CSR_LIN_PARE_Msk              (_UINT32_(0x1) << FLEX_US_CSR_LIN_PARE_Pos)          /* (FLEX_US_CSR) Parity Error Mask */
+#define FLEX_US_CSR_LIN_PARE(value)           (FLEX_US_CSR_LIN_PARE_Msk & (_UINT32_(value) << FLEX_US_CSR_LIN_PARE_Pos))
+#define   FLEX_US_CSR_LIN_PARE_0_Val          _UINT32_(0x0)                                        /* (FLEX_US_CSR) No parity error has been detected since the last RSTSTA command was issued.  */
+#define   FLEX_US_CSR_LIN_PARE_1_Val          _UINT32_(0x1)                                        /* (FLEX_US_CSR) At least one parity error has been detected since the last RSTSTA command was issued.  */
+#define FLEX_US_CSR_LIN_PARE_0                (FLEX_US_CSR_LIN_PARE_0_Val << FLEX_US_CSR_LIN_PARE_Pos) /* (FLEX_US_CSR) No parity error has been detected since the last RSTSTA command was issued. Position */
+#define FLEX_US_CSR_LIN_PARE_1                (FLEX_US_CSR_LIN_PARE_1_Val << FLEX_US_CSR_LIN_PARE_Pos) /* (FLEX_US_CSR) At least one parity error has been detected since the last RSTSTA command was issued. Position */
 #define FLEX_US_CSR_LIN_TIMEOUT_Pos           _UINT32_(8)                                          /* (FLEX_US_CSR) Receiver Timeout Position */
 #define FLEX_US_CSR_LIN_TIMEOUT_Msk           (_UINT32_(0x1) << FLEX_US_CSR_LIN_TIMEOUT_Pos)       /* (FLEX_US_CSR) Receiver Timeout Mask */
 #define FLEX_US_CSR_LIN_TIMEOUT(value)        (FLEX_US_CSR_LIN_TIMEOUT_Msk & (_UINT32_(value) << FLEX_US_CSR_LIN_TIMEOUT_Pos))
@@ -791,6 +879,13 @@
 #define   FLEX_US_CSR_LIN_TIMEOUT_1_Val       _UINT32_(0x1)                                        /* (FLEX_US_CSR) There has been a timeout since the last start timeout command (FLEX_US_CR.STTTO).  */
 #define FLEX_US_CSR_LIN_TIMEOUT_0             (FLEX_US_CSR_LIN_TIMEOUT_0_Val << FLEX_US_CSR_LIN_TIMEOUT_Pos) /* (FLEX_US_CSR) There has not been a timeout since the last start timeout command (FLEX_US_CR.STTTO) or the Timeout Register is 0. Position */
 #define FLEX_US_CSR_LIN_TIMEOUT_1             (FLEX_US_CSR_LIN_TIMEOUT_1_Val << FLEX_US_CSR_LIN_TIMEOUT_Pos) /* (FLEX_US_CSR) There has been a timeout since the last start timeout command (FLEX_US_CR.STTTO). Position */
+#define FLEX_US_CSR_LIN_TXEMPTY_Pos           _UINT32_(9)                                          /* (FLEX_US_CSR) Transmitter Empty (cleared by writing FLEX_US_THR) Position */
+#define FLEX_US_CSR_LIN_TXEMPTY_Msk           (_UINT32_(0x1) << FLEX_US_CSR_LIN_TXEMPTY_Pos)       /* (FLEX_US_CSR) Transmitter Empty (cleared by writing FLEX_US_THR) Mask */
+#define FLEX_US_CSR_LIN_TXEMPTY(value)        (FLEX_US_CSR_LIN_TXEMPTY_Msk & (_UINT32_(value) << FLEX_US_CSR_LIN_TXEMPTY_Pos))
+#define   FLEX_US_CSR_LIN_TXEMPTY_0_Val       _UINT32_(0x0)                                        /* (FLEX_US_CSR) There are characters in either FLEX_US_THR or the Transmit Shift Register, or the transmitter is disabled.  */
+#define   FLEX_US_CSR_LIN_TXEMPTY_1_Val       _UINT32_(0x1)                                        /* (FLEX_US_CSR) There are no characters in FLEX_US_THR, nor in the Transmit Shift Register.  */
+#define FLEX_US_CSR_LIN_TXEMPTY_0             (FLEX_US_CSR_LIN_TXEMPTY_0_Val << FLEX_US_CSR_LIN_TXEMPTY_Pos) /* (FLEX_US_CSR) There are characters in either FLEX_US_THR or the Transmit Shift Register, or the transmitter is disabled. Position */
+#define FLEX_US_CSR_LIN_TXEMPTY_1             (FLEX_US_CSR_LIN_TXEMPTY_1_Val << FLEX_US_CSR_LIN_TXEMPTY_Pos) /* (FLEX_US_CSR) There are no characters in FLEX_US_THR, nor in the Transmit Shift Register. Position */
 #define FLEX_US_CSR_LIN_LINBK_Pos             _UINT32_(13)                                         /* (FLEX_US_CSR) LIN Break Sent or LIN Break Received Position */
 #define FLEX_US_CSR_LIN_LINBK_Msk             (_UINT32_(0x1) << FLEX_US_CSR_LIN_LINBK_Pos)         /* (FLEX_US_CSR) LIN Break Sent or LIN Break Received Mask */
 #define FLEX_US_CSR_LIN_LINBK(value)          (FLEX_US_CSR_LIN_LINBK_Msk & (_UINT32_(value) << FLEX_US_CSR_LIN_LINBK_Pos))
@@ -812,6 +907,13 @@
 #define   FLEX_US_CSR_LIN_LINTC_1_Val         _UINT32_(0x1)                                        /* (FLEX_US_CSR) A LIN transfer has been completed since the last RSTSTA command was issued.  */
 #define FLEX_US_CSR_LIN_LINTC_0               (FLEX_US_CSR_LIN_LINTC_0_Val << FLEX_US_CSR_LIN_LINTC_Pos) /* (FLEX_US_CSR) The USART is idle or a LIN transfer is ongoing. Position */
 #define FLEX_US_CSR_LIN_LINTC_1               (FLEX_US_CSR_LIN_LINTC_1_Val << FLEX_US_CSR_LIN_LINTC_Pos) /* (FLEX_US_CSR) A LIN transfer has been completed since the last RSTSTA command was issued. Position */
+#define FLEX_US_CSR_LIN_SECE_Pos              _UINT32_(21)                                         /* (FLEX_US_CSR) Security/Safety Error (cleared on read) Position */
+#define FLEX_US_CSR_LIN_SECE_Msk              (_UINT32_(0x1) << FLEX_US_CSR_LIN_SECE_Pos)          /* (FLEX_US_CSR) Security/Safety Error (cleared on read) Mask */
+#define FLEX_US_CSR_LIN_SECE(value)           (FLEX_US_CSR_LIN_SECE_Msk & (_UINT32_(value) << FLEX_US_CSR_LIN_SECE_Pos))
+#define   FLEX_US_CSR_LIN_SECE_0_Val          _UINT32_(0x0)                                        /* (FLEX_US_CSR) No error detected on TXD and/or SCK pad output and no access violation of a write-protected register since the last read of FLEX_US_CSR.  */
+#define   FLEX_US_CSR_LIN_SECE_1_Val          _UINT32_(0x1)                                        /* (FLEX_US_CSR) An error has been detected on TXD and/or SCK pad output (FLEX_US_WPSR.PADERR=1) and/or a violation of a write-protected register (FLEX_US_WPSR.WPVS=1) since the last read of FLEX_US_CSR.  */
+#define FLEX_US_CSR_LIN_SECE_0                (FLEX_US_CSR_LIN_SECE_0_Val << FLEX_US_CSR_LIN_SECE_Pos) /* (FLEX_US_CSR) No error detected on TXD and/or SCK pad output and no access violation of a write-protected register since the last read of FLEX_US_CSR. Position */
+#define FLEX_US_CSR_LIN_SECE_1                (FLEX_US_CSR_LIN_SECE_1_Val << FLEX_US_CSR_LIN_SECE_Pos) /* (FLEX_US_CSR) An error has been detected on TXD and/or SCK pad output (FLEX_US_WPSR.PADERR=1) and/or a violation of a write-protected register (FLEX_US_WPSR.WPVS=1) since the last read of FLEX_US_CSR. Position */
 #define FLEX_US_CSR_LIN_LINBLS_Pos            _UINT32_(23)                                         /* (FLEX_US_CSR) LIN Bus Line Status Position */
 #define FLEX_US_CSR_LIN_LINBLS_Msk            (_UINT32_(0x1) << FLEX_US_CSR_LIN_LINBLS_Pos)        /* (FLEX_US_CSR) LIN Bus Line Status Mask */
 #define FLEX_US_CSR_LIN_LINBLS(value)         (FLEX_US_CSR_LIN_LINBLS_Msk & (_UINT32_(value) << FLEX_US_CSR_LIN_LINBLS_Pos))
@@ -868,7 +970,7 @@
 #define   FLEX_US_CSR_LIN_LINHTE_1_Val        _UINT32_(0x1)                                        /* (FLEX_US_CSR) A LIN header timeout error has been detected since the last RSTSTA command was issued.  */
 #define FLEX_US_CSR_LIN_LINHTE_0              (FLEX_US_CSR_LIN_LINHTE_0_Val << FLEX_US_CSR_LIN_LINHTE_Pos) /* (FLEX_US_CSR) No LIN header timeout error has been detected since the last RSTSTA command was issued. Position */
 #define FLEX_US_CSR_LIN_LINHTE_1              (FLEX_US_CSR_LIN_LINHTE_1_Val << FLEX_US_CSR_LIN_LINHTE_Pos) /* (FLEX_US_CSR) A LIN header timeout error has been detected since the last RSTSTA command was issued. Position */
-#define FLEX_US_CSR_LIN_Msk                   _UINT32_(0xFE80E103)                                 /* (FLEX_US_CSR_LIN) Register Mask  */
+#define FLEX_US_CSR_LIN_Msk                   _UINT32_(0xFEA0E3E3)                                 /* (FLEX_US_CSR_LIN) Register Mask  */
 
 
 /* -------- FLEX_US_RHR : (FLEXCOM Offset: 0x218) ( R/ 32) USART Receive Holding Register -------- */
@@ -1197,22 +1299,22 @@
 #define   FLEX_US_FMR_TXRDYM_ONE_DATA_Val     _UINT32_(0x0)                                        /* (FLEX_US_FMR) TXRDY will be at level '1' when at least one data can be written in the transmit FIFO. When DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits to transfer on the line), the chunk of 1 byte must be configured in the DMA. If the transfer is performed by software, the access type must be defined as a byte.  */
 #define   FLEX_US_FMR_TXRDYM_TWO_DATA_Val     _UINT32_(0x1)                                        /* (FLEX_US_FMR) TXRDY will be at level '1' when at least two data can be written in the transmit FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits to transfer on the line), the chunk of 1 halfword (1 halfword carries 2 bytes) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 2 accesses) or halfword (2 bytes per access, 1 single access).  */
 #define   FLEX_US_FMR_TXRDYM_FOUR_DATA_Val    _UINT32_(0x2)                                        /* (FLEX_US_FMR) TXRDY will be at level '1' when at least four data can be written in the transmit FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits to transfer on the line), the chunk of 1 word (1 word carries 4 bytes) must be configured in the DMA (chunk size=1 and word access). If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 4 accesses), halfword (2 bytes per access, 2 accesses) or word (4 bytes per access, 1 single access).  */
-#define   FLEX_US_FMR_TXRDYM_EIGHT_DATA_Val   _UINT32_(0x3)                                        /* (FLEX_US_FMR) TXRDY will be at level '1' when at least eight data can be written in the Transmit FIFO.  To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits transfered on the line), the chunk of 2 words (1 word carries 4 bytes) must be configured in the DMA (chunk size=2 and word access). If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 8 accesses), halfword (2 bytes per access, 4 accesses) or word (4 bytes per access, 2 accesses).  */
+#define   FLEX_US_FMR_TXRDYM_EIGHT_DATA_Val   _UINT32_(0x3)                                        /* (FLEX_US_FMR) TXRDY will be at level '1' when at least eight data can be written in the Transmit FIFO.  To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits transferred on the line), the chunk of 2 words (1 word carries 4 bytes) must be configured in the DMA (chunk size=2 and word access). If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 8 accesses), halfword (2 bytes per access, 4 accesses) or word (4 bytes per access, 2 accesses).  */
 #define FLEX_US_FMR_TXRDYM_ONE_DATA           (FLEX_US_FMR_TXRDYM_ONE_DATA_Val << FLEX_US_FMR_TXRDYM_Pos) /* (FLEX_US_FMR) TXRDY will be at level '1' when at least one data can be written in the transmit FIFO. When DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits to transfer on the line), the chunk of 1 byte must be configured in the DMA. If the transfer is performed by software, the access type must be defined as a byte. Position */
 #define FLEX_US_FMR_TXRDYM_TWO_DATA           (FLEX_US_FMR_TXRDYM_TWO_DATA_Val << FLEX_US_FMR_TXRDYM_Pos) /* (FLEX_US_FMR) TXRDY will be at level '1' when at least two data can be written in the transmit FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits to transfer on the line), the chunk of 1 halfword (1 halfword carries 2 bytes) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 2 accesses) or halfword (2 bytes per access, 1 single access). Position */
 #define FLEX_US_FMR_TXRDYM_FOUR_DATA          (FLEX_US_FMR_TXRDYM_FOUR_DATA_Val << FLEX_US_FMR_TXRDYM_Pos) /* (FLEX_US_FMR) TXRDY will be at level '1' when at least four data can be written in the transmit FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits to transfer on the line), the chunk of 1 word (1 word carries 4 bytes) must be configured in the DMA (chunk size=1 and word access). If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 4 accesses), halfword (2 bytes per access, 2 accesses) or word (4 bytes per access, 1 single access). Position */
-#define FLEX_US_FMR_TXRDYM_EIGHT_DATA         (FLEX_US_FMR_TXRDYM_EIGHT_DATA_Val << FLEX_US_FMR_TXRDYM_Pos) /* (FLEX_US_FMR) TXRDY will be at level '1' when at least eight data can be written in the Transmit FIFO.  To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits transfered on the line), the chunk of 2 words (1 word carries 4 bytes) must be configured in the DMA (chunk size=2 and word access). If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 8 accesses), halfword (2 bytes per access, 4 accesses) or word (4 bytes per access, 2 accesses). Position */
+#define FLEX_US_FMR_TXRDYM_EIGHT_DATA         (FLEX_US_FMR_TXRDYM_EIGHT_DATA_Val << FLEX_US_FMR_TXRDYM_Pos) /* (FLEX_US_FMR) TXRDY will be at level '1' when at least eight data can be written in the Transmit FIFO.  To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits transferred on the line), the chunk of 2 words (1 word carries 4 bytes) must be configured in the DMA (chunk size=2 and word access). If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 8 accesses), halfword (2 bytes per access, 4 accesses) or word (4 bytes per access, 2 accesses). Position */
 #define FLEX_US_FMR_RXRDYM_Pos                _UINT32_(4)                                          /* (FLEX_US_FMR) Receiver Ready Mode Position */
 #define FLEX_US_FMR_RXRDYM_Msk                (_UINT32_(0x3) << FLEX_US_FMR_RXRDYM_Pos)            /* (FLEX_US_FMR) Receiver Ready Mode Mask */
 #define FLEX_US_FMR_RXRDYM(value)             (FLEX_US_FMR_RXRDYM_Msk & (_UINT32_(value) << FLEX_US_FMR_RXRDYM_Pos)) /* Assignment of value for RXRDYM in the FLEX_US_FMR register */
 #define   FLEX_US_FMR_RXRDYM_ONE_DATA_Val     _UINT32_(0x0)                                        /* (FLEX_US_FMR) RXRDY will be at level '1' when at least one unread data is in the receive FIFO. When DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits to transfer on the line), the chunk of 1 byte must be configured in the DMA. If the transfer is performed by software, the access type must be defined as a byte.  */
 #define   FLEX_US_FMR_RXRDYM_TWO_DATA_Val     _UINT32_(0x1)                                        /* (FLEX_US_FMR) RXRDY will be at level '1' when at least two unread data are in the receive FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits to transfer on the line), the chunk of 1 halfword (1 halfword carries 2 bytes) must be configured in the DMA (chunk size=1 and halfword access). If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 2 accesses) or halfword (2 bytes per access, 1 single access).  */
 #define   FLEX_US_FMR_RXRDYM_FOUR_DATA_Val    _UINT32_(0x2)                                        /* (FLEX_US_FMR) RXRDY will be at level '1' when at least four unread data are in the receive FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits to transfer on the line), the chunk of 1 word (1 word carries 4 bytes) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 4 accesses), halfword (2 bytes per access, 2 accesses) or word (4 bytes per access, 1 single access).  */
-#define   FLEX_US_FMR_RXRDYM_EIGHT_DATA_Val   _UINT32_(0x3)                                        /* (FLEX_US_FMR) RXRDY will be at level '1' when at least eight unread data are in the receive FIFO.  To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits transfered on the line), the chunk of 2 words (1 word carries 4 bytes) must be configured in the DMA (chunk size=2 and word access). If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 8 accesses), halfword (2 bytes per access, 4 accesses) or word (4 bytes per access, 2 accesses).  */
+#define   FLEX_US_FMR_RXRDYM_EIGHT_DATA_Val   _UINT32_(0x3)                                        /* (FLEX_US_FMR) RXRDY will be at level '1' when at least eight unread data are in the receive FIFO.  To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits transferred on the line), the chunk of 2 words (1 word carries 4 bytes) must be configured in the DMA (chunk size=2 and word access). If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 8 accesses), halfword (2 bytes per access, 4 accesses) or word (4 bytes per access, 2 accesses).  */
 #define FLEX_US_FMR_RXRDYM_ONE_DATA           (FLEX_US_FMR_RXRDYM_ONE_DATA_Val << FLEX_US_FMR_RXRDYM_Pos) /* (FLEX_US_FMR) RXRDY will be at level '1' when at least one unread data is in the receive FIFO. When DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits to transfer on the line), the chunk of 1 byte must be configured in the DMA. If the transfer is performed by software, the access type must be defined as a byte. Position */
 #define FLEX_US_FMR_RXRDYM_TWO_DATA           (FLEX_US_FMR_RXRDYM_TWO_DATA_Val << FLEX_US_FMR_RXRDYM_Pos) /* (FLEX_US_FMR) RXRDY will be at level '1' when at least two unread data are in the receive FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits to transfer on the line), the chunk of 1 halfword (1 halfword carries 2 bytes) must be configured in the DMA (chunk size=1 and halfword access). If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 2 accesses) or halfword (2 bytes per access, 1 single access). Position */
 #define FLEX_US_FMR_RXRDYM_FOUR_DATA          (FLEX_US_FMR_RXRDYM_FOUR_DATA_Val << FLEX_US_FMR_RXRDYM_Pos) /* (FLEX_US_FMR) RXRDY will be at level '1' when at least four unread data are in the receive FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits to transfer on the line), the chunk of 1 word (1 word carries 4 bytes) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 4 accesses), halfword (2 bytes per access, 2 accesses) or word (4 bytes per access, 1 single access). Position */
-#define FLEX_US_FMR_RXRDYM_EIGHT_DATA         (FLEX_US_FMR_RXRDYM_EIGHT_DATA_Val << FLEX_US_FMR_RXRDYM_Pos) /* (FLEX_US_FMR) RXRDY will be at level '1' when at least eight unread data are in the receive FIFO.  To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits transfered on the line), the chunk of 2 words (1 word carries 4 bytes) must be configured in the DMA (chunk size=2 and word access). If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 8 accesses), halfword (2 bytes per access, 4 accesses) or word (4 bytes per access, 2 accesses). Position */
+#define FLEX_US_FMR_RXRDYM_EIGHT_DATA         (FLEX_US_FMR_RXRDYM_EIGHT_DATA_Val << FLEX_US_FMR_RXRDYM_Pos) /* (FLEX_US_FMR) RXRDY will be at level '1' when at least eight unread data are in the receive FIFO.  To minimize system bus load, when DMA is enabled to transfer data and FLEX_US_MR.MODE9=0 (up to 8 bits transferred on the line), the chunk of 2 words (1 word carries 4 bytes) must be configured in the DMA (chunk size=2 and word access). If the transfer is performed by software, the access type can be defined as byte (1 byte per access, 8 accesses), halfword (2 bytes per access, 4 accesses) or word (4 bytes per access, 2 accesses). Position */
 #define FLEX_US_FMR_FRTSC_Pos                 _UINT32_(7)                                          /* (FLEX_US_FMR) FIFO RTS Pin Control enable (Hardware Handshaking mode only) Position */
 #define FLEX_US_FMR_FRTSC_Msk                 (_UINT32_(0x1) << FLEX_US_FMR_FRTSC_Pos)             /* (FLEX_US_FMR) FIFO RTS Pin Control enable (Hardware Handshaking mode only) Mask */
 #define FLEX_US_FMR_FRTSC(value)              (FLEX_US_FMR_FRTSC_Msk & (_UINT32_(value) << FLEX_US_FMR_FRTSC_Pos)) /* Assignment of value for FRTSC in the FLEX_US_FMR register */
@@ -1388,20 +1490,20 @@
 #define   FLEX_US_FESR_RXFTHF_1_Val           _UINT32_(0x1)                                        /* (FLEX_US_FESR) Number of unread data in Receive FIFO has reached RXFTHRES threshold since the last RSTSTA command was issued.  */
 #define FLEX_US_FESR_RXFTHF_0                 (FLEX_US_FESR_RXFTHF_0_Val << FLEX_US_FESR_RXFTHF_Pos) /* (FLEX_US_FESR) Number of unread data in Receive FIFO is below RXFTHRES threshold. Position */
 #define FLEX_US_FESR_RXFTHF_1                 (FLEX_US_FESR_RXFTHF_1_Val << FLEX_US_FESR_RXFTHF_Pos) /* (FLEX_US_FESR) Number of unread data in Receive FIFO has reached RXFTHRES threshold since the last RSTSTA command was issued. Position */
-#define FLEX_US_FESR_TXFPTEF_Pos              _UINT32_(6)                                          /* (FLEX_US_FESR) Transmit FIFO Pointer Error Flag Position */
-#define FLEX_US_FESR_TXFPTEF_Msk              (_UINT32_(0x1) << FLEX_US_FESR_TXFPTEF_Pos)          /* (FLEX_US_FESR) Transmit FIFO Pointer Error Flag Mask */
+#define FLEX_US_FESR_TXFPTEF_Pos              _UINT32_(6)                                          /* (FLEX_US_FESR) Transmit FIFO Overflow Error Flag Position */
+#define FLEX_US_FESR_TXFPTEF_Msk              (_UINT32_(0x1) << FLEX_US_FESR_TXFPTEF_Pos)          /* (FLEX_US_FESR) Transmit FIFO Overflow Error Flag Mask */
 #define FLEX_US_FESR_TXFPTEF(value)           (FLEX_US_FESR_TXFPTEF_Msk & (_UINT32_(value) << FLEX_US_FESR_TXFPTEF_Pos)) /* Assignment of value for TXFPTEF in the FLEX_US_FESR register */
-#define   FLEX_US_FESR_TXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_US_FESR) No Transmit FIFO pointer occurred  */
-#define   FLEX_US_FESR_TXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_US_FESR) Transmit FIFO pointer error occurred. Transceiver must be reset  */
-#define FLEX_US_FESR_TXFPTEF_0                (FLEX_US_FESR_TXFPTEF_0_Val << FLEX_US_FESR_TXFPTEF_Pos) /* (FLEX_US_FESR) No Transmit FIFO pointer occurred Position */
-#define FLEX_US_FESR_TXFPTEF_1                (FLEX_US_FESR_TXFPTEF_1_Val << FLEX_US_FESR_TXFPTEF_Pos) /* (FLEX_US_FESR) Transmit FIFO pointer error occurred. Transceiver must be reset Position */
-#define FLEX_US_FESR_RXFPTEF_Pos              _UINT32_(7)                                          /* (FLEX_US_FESR) Receive FIFO Pointer Error Flag Position */
-#define FLEX_US_FESR_RXFPTEF_Msk              (_UINT32_(0x1) << FLEX_US_FESR_RXFPTEF_Pos)          /* (FLEX_US_FESR) Receive FIFO Pointer Error Flag Mask */
+#define   FLEX_US_FESR_TXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_US_FESR) No Transmit FIFO overflow occurred.  */
+#define   FLEX_US_FESR_TXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_US_FESR) Transmit FIFO overflow error occurred due to an incorrect software access (written data exceeding available space). Transceiver must be reset by writing FLEX_SPI_CR.SWRST=1.  */
+#define FLEX_US_FESR_TXFPTEF_0                (FLEX_US_FESR_TXFPTEF_0_Val << FLEX_US_FESR_TXFPTEF_Pos) /* (FLEX_US_FESR) No Transmit FIFO overflow occurred. Position */
+#define FLEX_US_FESR_TXFPTEF_1                (FLEX_US_FESR_TXFPTEF_1_Val << FLEX_US_FESR_TXFPTEF_Pos) /* (FLEX_US_FESR) Transmit FIFO overflow error occurred due to an incorrect software access (written data exceeding available space). Transceiver must be reset by writing FLEX_SPI_CR.SWRST=1. Position */
+#define FLEX_US_FESR_RXFPTEF_Pos              _UINT32_(7)                                          /* (FLEX_US_FESR) Receive FIFO Underflow Error Flag Position */
+#define FLEX_US_FESR_RXFPTEF_Msk              (_UINT32_(0x1) << FLEX_US_FESR_RXFPTEF_Pos)          /* (FLEX_US_FESR) Receive FIFO Underflow Error Flag Mask */
 #define FLEX_US_FESR_RXFPTEF(value)           (FLEX_US_FESR_RXFPTEF_Msk & (_UINT32_(value) << FLEX_US_FESR_RXFPTEF_Pos)) /* Assignment of value for RXFPTEF in the FLEX_US_FESR register */
-#define   FLEX_US_FESR_RXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_US_FESR) No Receive FIFO pointer occurred  */
-#define   FLEX_US_FESR_RXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_US_FESR) Receive FIFO pointer error occurred. Receiver must be reset  */
-#define FLEX_US_FESR_RXFPTEF_0                (FLEX_US_FESR_RXFPTEF_0_Val << FLEX_US_FESR_RXFPTEF_Pos) /* (FLEX_US_FESR) No Receive FIFO pointer occurred Position */
-#define FLEX_US_FESR_RXFPTEF_1                (FLEX_US_FESR_RXFPTEF_1_Val << FLEX_US_FESR_RXFPTEF_Pos) /* (FLEX_US_FESR) Receive FIFO pointer error occurred. Receiver must be reset Position */
+#define   FLEX_US_FESR_RXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_US_FESR) No Receive FIFO underflow occurred.  */
+#define   FLEX_US_FESR_RXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_US_FESR) Receive FIFO underflow error occurred due to an incorrect software access (read data exceeding available data in FIFO). Receiver must be reset by writing FLEX_SPI_CR.SWRST=1.  */
+#define FLEX_US_FESR_RXFPTEF_0                (FLEX_US_FESR_RXFPTEF_0_Val << FLEX_US_FESR_RXFPTEF_Pos) /* (FLEX_US_FESR) No Receive FIFO underflow occurred. Position */
+#define FLEX_US_FESR_RXFPTEF_1                (FLEX_US_FESR_RXFPTEF_1_Val << FLEX_US_FESR_RXFPTEF_Pos) /* (FLEX_US_FESR) Receive FIFO underflow error occurred due to an incorrect software access (read data exceeding available data in FIFO). Receiver must be reset by writing FLEX_SPI_CR.SWRST=1. Position */
 #define FLEX_US_FESR_TXFLOCK_Pos              _UINT32_(8)                                          /* (FLEX_US_FESR) Transmit FIFO Lock Position */
 #define FLEX_US_FESR_TXFLOCK_Msk              (_UINT32_(0x1) << FLEX_US_FESR_TXFLOCK_Pos)          /* (FLEX_US_FESR) Transmit FIFO Lock Mask */
 #define FLEX_US_FESR_TXFLOCK(value)           (FLEX_US_FESR_TXFLOCK_Msk & (_UINT32_(value) << FLEX_US_FESR_TXFLOCK_Pos)) /* Assignment of value for TXFLOCK in the FLEX_US_FESR register */
@@ -1807,20 +1909,20 @@
 #define   FLEX_SPI_SR_RXFTHF_1_Val            _UINT32_(0x1)                                        /* (FLEX_SPI_SR) Number of unread data in Receive FIFO has reached RXFTHRES threshold (changing states from "below threshold" to "equal to or above threshold").  */
 #define FLEX_SPI_SR_RXFTHF_0                  (FLEX_SPI_SR_RXFTHF_0_Val << FLEX_SPI_SR_RXFTHF_Pos) /* (FLEX_SPI_SR) Number of unread data in Receive FIFO is below RXFTHRES threshold or RXFTH flag has been cleared. Position */
 #define FLEX_SPI_SR_RXFTHF_1                  (FLEX_SPI_SR_RXFTHF_1_Val << FLEX_SPI_SR_RXFTHF_Pos) /* (FLEX_SPI_SR) Number of unread data in Receive FIFO has reached RXFTHRES threshold (changing states from "below threshold" to "equal to or above threshold"). Position */
-#define FLEX_SPI_SR_TXFPTEF_Pos               _UINT32_(30)                                         /* (FLEX_SPI_SR) Transmit FIFO Pointer Error Flag Position */
-#define FLEX_SPI_SR_TXFPTEF_Msk               (_UINT32_(0x1) << FLEX_SPI_SR_TXFPTEF_Pos)           /* (FLEX_SPI_SR) Transmit FIFO Pointer Error Flag Mask */
+#define FLEX_SPI_SR_TXFPTEF_Pos               _UINT32_(30)                                         /* (FLEX_SPI_SR) Transmit FIFO Overflow Error Flag Position */
+#define FLEX_SPI_SR_TXFPTEF_Msk               (_UINT32_(0x1) << FLEX_SPI_SR_TXFPTEF_Pos)           /* (FLEX_SPI_SR) Transmit FIFO Overflow Error Flag Mask */
 #define FLEX_SPI_SR_TXFPTEF(value)            (FLEX_SPI_SR_TXFPTEF_Msk & (_UINT32_(value) << FLEX_SPI_SR_TXFPTEF_Pos)) /* Assignment of value for TXFPTEF in the FLEX_SPI_SR register */
-#define   FLEX_SPI_SR_TXFPTEF_0_Val           _UINT32_(0x0)                                        /* (FLEX_SPI_SR) No Transmit FIFO pointer occurred  */
-#define   FLEX_SPI_SR_TXFPTEF_1_Val           _UINT32_(0x1)                                        /* (FLEX_SPI_SR) Transmit FIFO pointer error occurred. Transceiver must be reset  */
-#define FLEX_SPI_SR_TXFPTEF_0                 (FLEX_SPI_SR_TXFPTEF_0_Val << FLEX_SPI_SR_TXFPTEF_Pos) /* (FLEX_SPI_SR) No Transmit FIFO pointer occurred Position */
-#define FLEX_SPI_SR_TXFPTEF_1                 (FLEX_SPI_SR_TXFPTEF_1_Val << FLEX_SPI_SR_TXFPTEF_Pos) /* (FLEX_SPI_SR) Transmit FIFO pointer error occurred. Transceiver must be reset Position */
-#define FLEX_SPI_SR_RXFPTEF_Pos               _UINT32_(31)                                         /* (FLEX_SPI_SR) Receive FIFO Pointer Error Flag Position */
-#define FLEX_SPI_SR_RXFPTEF_Msk               (_UINT32_(0x1) << FLEX_SPI_SR_RXFPTEF_Pos)           /* (FLEX_SPI_SR) Receive FIFO Pointer Error Flag Mask */
+#define   FLEX_SPI_SR_TXFPTEF_0_Val           _UINT32_(0x0)                                        /* (FLEX_SPI_SR) No Transmit FIFO overflow occurred.  */
+#define   FLEX_SPI_SR_TXFPTEF_1_Val           _UINT32_(0x1)                                        /* (FLEX_SPI_SR) Transmit FIFO overflow error occurred due to an incorrect software access (written data exceeding available space). Transceiver must be reset by writing FLEX_SPI_CR.SWRST=1.  */
+#define FLEX_SPI_SR_TXFPTEF_0                 (FLEX_SPI_SR_TXFPTEF_0_Val << FLEX_SPI_SR_TXFPTEF_Pos) /* (FLEX_SPI_SR) No Transmit FIFO overflow occurred. Position */
+#define FLEX_SPI_SR_TXFPTEF_1                 (FLEX_SPI_SR_TXFPTEF_1_Val << FLEX_SPI_SR_TXFPTEF_Pos) /* (FLEX_SPI_SR) Transmit FIFO overflow error occurred due to an incorrect software access (written data exceeding available space). Transceiver must be reset by writing FLEX_SPI_CR.SWRST=1. Position */
+#define FLEX_SPI_SR_RXFPTEF_Pos               _UINT32_(31)                                         /* (FLEX_SPI_SR) Receive FIFO Underflow Error Flag Position */
+#define FLEX_SPI_SR_RXFPTEF_Msk               (_UINT32_(0x1) << FLEX_SPI_SR_RXFPTEF_Pos)           /* (FLEX_SPI_SR) Receive FIFO Underflow Error Flag Mask */
 #define FLEX_SPI_SR_RXFPTEF(value)            (FLEX_SPI_SR_RXFPTEF_Msk & (_UINT32_(value) << FLEX_SPI_SR_RXFPTEF_Pos)) /* Assignment of value for RXFPTEF in the FLEX_SPI_SR register */
-#define   FLEX_SPI_SR_RXFPTEF_0_Val           _UINT32_(0x0)                                        /* (FLEX_SPI_SR) No Receive FIFO pointer occurred  */
-#define   FLEX_SPI_SR_RXFPTEF_1_Val           _UINT32_(0x1)                                        /* (FLEX_SPI_SR) Receive FIFO pointer error occurred. Receiver must be reset  */
-#define FLEX_SPI_SR_RXFPTEF_0                 (FLEX_SPI_SR_RXFPTEF_0_Val << FLEX_SPI_SR_RXFPTEF_Pos) /* (FLEX_SPI_SR) No Receive FIFO pointer occurred Position */
-#define FLEX_SPI_SR_RXFPTEF_1                 (FLEX_SPI_SR_RXFPTEF_1_Val << FLEX_SPI_SR_RXFPTEF_Pos) /* (FLEX_SPI_SR) Receive FIFO pointer error occurred. Receiver must be reset Position */
+#define   FLEX_SPI_SR_RXFPTEF_0_Val           _UINT32_(0x0)                                        /* (FLEX_SPI_SR) No Receive FIFO underflow occurred.  */
+#define   FLEX_SPI_SR_RXFPTEF_1_Val           _UINT32_(0x1)                                        /* (FLEX_SPI_SR) Receive FIFO underflow error occurred due to an incorrect software access (read data exceeding available data in FIFO). Receiver must be reset by writing FLEX_SPI_CR.SWRST=1.  */
+#define FLEX_SPI_SR_RXFPTEF_0                 (FLEX_SPI_SR_RXFPTEF_0_Val << FLEX_SPI_SR_RXFPTEF_Pos) /* (FLEX_SPI_SR) No Receive FIFO underflow occurred. Position */
+#define FLEX_SPI_SR_RXFPTEF_1                 (FLEX_SPI_SR_RXFPTEF_1_Val << FLEX_SPI_SR_RXFPTEF_Pos) /* (FLEX_SPI_SR) Receive FIFO underflow error occurred due to an incorrect software access (read data exceeding available data in FIFO). Receiver must be reset by writing FLEX_SPI_CR.SWRST=1. Position */
 #define FLEX_SPI_SR_Msk                       _UINT32_(0xFF015F0F)                                 /* (FLEX_SPI_SR) Register Mask  */
 
 
@@ -2071,24 +2173,24 @@
 #define FLEX_SPI_FMR_TXRDYM_Msk               (_UINT32_(0x3) << FLEX_SPI_FMR_TXRDYM_Pos)           /* (FLEX_SPI_FMR) Transmit Data Register Empty Mode Mask */
 #define FLEX_SPI_FMR_TXRDYM(value)            (FLEX_SPI_FMR_TXRDYM_Msk & (_UINT32_(value) << FLEX_SPI_FMR_TXRDYM_Pos)) /* Assignment of value for TXRDYM in the FLEX_SPI_FMR register */
 #define   FLEX_SPI_FMR_TXRDYM_ONE_DATA_Val    _UINT32_(0x0)                                        /* (FLEX_SPI_FMR) TDRE will be at level '1' when at least one data can be written in the transmit FIFO. When DMA is enabled to transfer data, the chunk of 1 data (byte or halfword) must be configured in the DMA depending on FLEX_SPI_CSR0.BITS. If the transfer is performed by software, the access type (byte, halfword) must be defined depending on FLEX_SPI_CSR0.BITS.  */
-#define   FLEX_SPI_FMR_TXRDYM_TWO_DATA_Val    _UINT32_(0x1)                                        /* (FLEX_SPI_FMR) TDRE will be at level '1' when at least two data can be written in the transmit FIFO. FIFO. To minimize system bus load, when DMA is enabled to transfer data, the chunk of 1 word (1 word carries 2 data) must be configured in the DMA.  If the transfer is performed by software, the access type must be defined as word (2 data per access, 1 access).  */
+#define   FLEX_SPI_FMR_TXRDYM_TWO_DATA_Val    _UINT32_(0x1)                                        /* (FLEX_SPI_FMR) TDRE will be at level '1' when at least two data can be written in the transmit FIFO. To minimize system bus load, when DMA is enabled to transfer data, the chunk of 1 word (1 word carries 2 data) must be configured in the DMA.  If the transfer is performed by software, the access type must be defined as word (2 data per access, 1 access).  */
 #define   FLEX_SPI_FMR_TXRDYM_FOUR_DATA_Val   _UINT32_(0x2)                                        /* (FLEX_SPI_FMR) TDRE will be at level '1' when at least four unread data can be written in the transmit FIFO. To minimize system bus load, when DMA is enabled to transfer data, the chunk of 2 words (1 word carries 2 data) must be configured in the DMA. If the transfer is performed by software, the access type must be defined as word (2 data per access, 2 accesses).  */
 #define   FLEX_SPI_FMR_TXRDYM_EIGHT_DATA_Val  _UINT32_(0x3)                                        /* (FLEX_SPI_FMR) TDRE will be at level '1' when at least eight data can be written in the transmit FIFO. To minimize system bus load, when DMA is enabled to transfer data, the chunk of 4 words (1 word carries 2 data) must be configured in the DMA. If the transfer is performed by software, the access type must be defined as word (2 data per access, 4 accesses).  */
 #define FLEX_SPI_FMR_TXRDYM_ONE_DATA          (FLEX_SPI_FMR_TXRDYM_ONE_DATA_Val << FLEX_SPI_FMR_TXRDYM_Pos) /* (FLEX_SPI_FMR) TDRE will be at level '1' when at least one data can be written in the transmit FIFO. When DMA is enabled to transfer data, the chunk of 1 data (byte or halfword) must be configured in the DMA depending on FLEX_SPI_CSR0.BITS. If the transfer is performed by software, the access type (byte, halfword) must be defined depending on FLEX_SPI_CSR0.BITS. Position */
-#define FLEX_SPI_FMR_TXRDYM_TWO_DATA          (FLEX_SPI_FMR_TXRDYM_TWO_DATA_Val << FLEX_SPI_FMR_TXRDYM_Pos) /* (FLEX_SPI_FMR) TDRE will be at level '1' when at least two data can be written in the transmit FIFO. FIFO. To minimize system bus load, when DMA is enabled to transfer data, the chunk of 1 word (1 word carries 2 data) must be configured in the DMA.  If the transfer is performed by software, the access type must be defined as word (2 data per access, 1 access). Position */
+#define FLEX_SPI_FMR_TXRDYM_TWO_DATA          (FLEX_SPI_FMR_TXRDYM_TWO_DATA_Val << FLEX_SPI_FMR_TXRDYM_Pos) /* (FLEX_SPI_FMR) TDRE will be at level '1' when at least two data can be written in the transmit FIFO. To minimize system bus load, when DMA is enabled to transfer data, the chunk of 1 word (1 word carries 2 data) must be configured in the DMA.  If the transfer is performed by software, the access type must be defined as word (2 data per access, 1 access). Position */
 #define FLEX_SPI_FMR_TXRDYM_FOUR_DATA         (FLEX_SPI_FMR_TXRDYM_FOUR_DATA_Val << FLEX_SPI_FMR_TXRDYM_Pos) /* (FLEX_SPI_FMR) TDRE will be at level '1' when at least four unread data can be written in the transmit FIFO. To minimize system bus load, when DMA is enabled to transfer data, the chunk of 2 words (1 word carries 2 data) must be configured in the DMA. If the transfer is performed by software, the access type must be defined as word (2 data per access, 2 accesses). Position */
 #define FLEX_SPI_FMR_TXRDYM_EIGHT_DATA        (FLEX_SPI_FMR_TXRDYM_EIGHT_DATA_Val << FLEX_SPI_FMR_TXRDYM_Pos) /* (FLEX_SPI_FMR) TDRE will be at level '1' when at least eight data can be written in the transmit FIFO. To minimize system bus load, when DMA is enabled to transfer data, the chunk of 4 words (1 word carries 2 data) must be configured in the DMA. If the transfer is performed by software, the access type must be defined as word (2 data per access, 4 accesses). Position */
 #define FLEX_SPI_FMR_RXRDYM_Pos               _UINT32_(4)                                          /* (FLEX_SPI_FMR) Receive Data Register Full Mode Position */
 #define FLEX_SPI_FMR_RXRDYM_Msk               (_UINT32_(0x3) << FLEX_SPI_FMR_RXRDYM_Pos)           /* (FLEX_SPI_FMR) Receive Data Register Full Mode Mask */
 #define FLEX_SPI_FMR_RXRDYM(value)            (FLEX_SPI_FMR_RXRDYM_Msk & (_UINT32_(value) << FLEX_SPI_FMR_RXRDYM_Pos)) /* Assignment of value for RXRDYM in the FLEX_SPI_FMR register */
-#define   FLEX_SPI_FMR_RXRDYM_ONE_DATA_Val    _UINT32_(0x0)                                        /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least one unread data is in the receive FIFO. When DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transfered on SPI line), the chunk of 1 byte must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transfered on SPI line), the chunk of 1 halfword must be configured in the DMA. If the transfer is performed by software, the access type can be defined as byte or halfword depending on FLEX_SPI_CSR0.BITS.  */
-#define   FLEX_SPI_FMR_RXRDYM_TWO_DATA_Val    _UINT32_(0x1)                                        /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least two unread data are in the receive FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transfered on SPI line), the chunk of 1 halfword (1 halfword carries 2 bytes) must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transfered on SPI line), the chunk of 1 word (1 word carries 2 halfwords) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as halfword (2 bytes per access, 1 access when FLEX_SPI_CSR0.BITS=0), or word (2 halfwords per access, 2 accesses when FLEX_SPI_CSR0.BITS>0).  */
-#define   FLEX_SPI_FMR_RXRDYM_FOUR_DATA_Val   _UINT32_(0x2)                                        /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least four unread data are in the receive FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transfered on SPI line), the chunk of 1 word (1 halfword carries 4 bytes) must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transfered on SPI line), the chunk of 2 words (1 word carries 4 bytes) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as word (4 bytes per access, 1 access when FLEX_SPI_CSR0.BITS=0 or 2 halfwords per access, 2 accesses when FLEX_SPI_CSR0.BITS>0).  */
-#define   FLEX_SPI_FMR_RXRDYM_EIGHT_DATA_Val  _UINT32_(0x3)                                        /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least eight unread data are in the receive FIFO.  To minimize system bus load, when DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transfered on SPI line), the chunk of 2 words (1 halfword carries 4 bytes) must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transfered on SPI line), the chunk of 4 words (1 word carries 4 bytes) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as word (4 bytes per access, 2 accesses when FLEX_SPI_CSR0.BITS=0 or 2 halfwords per access, 4 accesses when FLEX_SPI_CSR0.BITS>0).  */
-#define FLEX_SPI_FMR_RXRDYM_ONE_DATA          (FLEX_SPI_FMR_RXRDYM_ONE_DATA_Val << FLEX_SPI_FMR_RXRDYM_Pos) /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least one unread data is in the receive FIFO. When DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transfered on SPI line), the chunk of 1 byte must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transfered on SPI line), the chunk of 1 halfword must be configured in the DMA. If the transfer is performed by software, the access type can be defined as byte or halfword depending on FLEX_SPI_CSR0.BITS. Position */
-#define FLEX_SPI_FMR_RXRDYM_TWO_DATA          (FLEX_SPI_FMR_RXRDYM_TWO_DATA_Val << FLEX_SPI_FMR_RXRDYM_Pos) /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least two unread data are in the receive FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transfered on SPI line), the chunk of 1 halfword (1 halfword carries 2 bytes) must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transfered on SPI line), the chunk of 1 word (1 word carries 2 halfwords) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as halfword (2 bytes per access, 1 access when FLEX_SPI_CSR0.BITS=0), or word (2 halfwords per access, 2 accesses when FLEX_SPI_CSR0.BITS>0). Position */
-#define FLEX_SPI_FMR_RXRDYM_FOUR_DATA         (FLEX_SPI_FMR_RXRDYM_FOUR_DATA_Val << FLEX_SPI_FMR_RXRDYM_Pos) /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least four unread data are in the receive FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transfered on SPI line), the chunk of 1 word (1 halfword carries 4 bytes) must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transfered on SPI line), the chunk of 2 words (1 word carries 4 bytes) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as word (4 bytes per access, 1 access when FLEX_SPI_CSR0.BITS=0 or 2 halfwords per access, 2 accesses when FLEX_SPI_CSR0.BITS>0). Position */
-#define FLEX_SPI_FMR_RXRDYM_EIGHT_DATA        (FLEX_SPI_FMR_RXRDYM_EIGHT_DATA_Val << FLEX_SPI_FMR_RXRDYM_Pos) /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least eight unread data are in the receive FIFO.  To minimize system bus load, when DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transfered on SPI line), the chunk of 2 words (1 halfword carries 4 bytes) must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transfered on SPI line), the chunk of 4 words (1 word carries 4 bytes) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as word (4 bytes per access, 2 accesses when FLEX_SPI_CSR0.BITS=0 or 2 halfwords per access, 4 accesses when FLEX_SPI_CSR0.BITS>0). Position */
+#define   FLEX_SPI_FMR_RXRDYM_ONE_DATA_Val    _UINT32_(0x0)                                        /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least one unread data is in the receive FIFO. When DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transferred on SPI line), the chunk of 1 byte must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transferred on SPI line), the chunk of 1 halfword must be configured in the DMA. If the transfer is performed by software, the access type can be defined as byte or halfword depending on FLEX_SPI_CSR0.BITS.  */
+#define   FLEX_SPI_FMR_RXRDYM_TWO_DATA_Val    _UINT32_(0x1)                                        /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least two unread data are in the receive FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transferred on SPI line), the chunk of 1 halfword (1 halfword carries 2 bytes) must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transferred on SPI line), the chunk of 1 word (1 word carries 2 halfwords) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as halfword (2 bytes per access, 1 access when FLEX_SPI_CSR0.BITS=0), or word (2 halfwords per access, 2 accesses when FLEX_SPI_CSR0.BITS>0).  */
+#define   FLEX_SPI_FMR_RXRDYM_FOUR_DATA_Val   _UINT32_(0x2)                                        /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least four unread data are in the receive FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transferred on SPI line), the chunk of 1 word (1 halfword carries 4 bytes) must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transferred on SPI line), the chunk of 2 words (1 word carries 4 bytes) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as word (4 bytes per access, 1 access when FLEX_SPI_CSR0.BITS=0 or 2 halfwords per access, 2 accesses when FLEX_SPI_CSR0.BITS>0).  */
+#define   FLEX_SPI_FMR_RXRDYM_EIGHT_DATA_Val  _UINT32_(0x3)                                        /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least eight unread data are in the receive FIFO.  To minimize system bus load, when DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transferred on SPI line), the chunk of 2 words (1 halfword carries 4 bytes) must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transferred on SPI line), the chunk of 4 words (1 word carries 4 bytes) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as word (4 bytes per access, 2 accesses when FLEX_SPI_CSR0.BITS=0 or 2 halfwords per access, 4 accesses when FLEX_SPI_CSR0.BITS>0).  */
+#define FLEX_SPI_FMR_RXRDYM_ONE_DATA          (FLEX_SPI_FMR_RXRDYM_ONE_DATA_Val << FLEX_SPI_FMR_RXRDYM_Pos) /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least one unread data is in the receive FIFO. When DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transferred on SPI line), the chunk of 1 byte must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transferred on SPI line), the chunk of 1 halfword must be configured in the DMA. If the transfer is performed by software, the access type can be defined as byte or halfword depending on FLEX_SPI_CSR0.BITS. Position */
+#define FLEX_SPI_FMR_RXRDYM_TWO_DATA          (FLEX_SPI_FMR_RXRDYM_TWO_DATA_Val << FLEX_SPI_FMR_RXRDYM_Pos) /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least two unread data are in the receive FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transferred on SPI line), the chunk of 1 halfword (1 halfword carries 2 bytes) must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transferred on SPI line), the chunk of 1 word (1 word carries 2 halfwords) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as halfword (2 bytes per access, 1 access when FLEX_SPI_CSR0.BITS=0), or word (2 halfwords per access, 2 accesses when FLEX_SPI_CSR0.BITS>0). Position */
+#define FLEX_SPI_FMR_RXRDYM_FOUR_DATA         (FLEX_SPI_FMR_RXRDYM_FOUR_DATA_Val << FLEX_SPI_FMR_RXRDYM_Pos) /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least four unread data are in the receive FIFO. To minimize system bus load, when DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transferred on SPI line), the chunk of 1 word (1 halfword carries 4 bytes) must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transferred on SPI line), the chunk of 2 words (1 word carries 4 bytes) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as word (4 bytes per access, 1 access when FLEX_SPI_CSR0.BITS=0 or 2 halfwords per access, 2 accesses when FLEX_SPI_CSR0.BITS>0). Position */
+#define FLEX_SPI_FMR_RXRDYM_EIGHT_DATA        (FLEX_SPI_FMR_RXRDYM_EIGHT_DATA_Val << FLEX_SPI_FMR_RXRDYM_Pos) /* (FLEX_SPI_FMR) RDRF will be at level '1' when at least eight unread data are in the receive FIFO.  To minimize system bus load, when DMA is enabled to transfer data and FLEX_SPI_CSR0.BITS=0 (8 bits transferred on SPI line), the chunk of 2 words (1 halfword carries 4 bytes) must be configured in the DMA. When FLEX_SPI_CSR0.BITS>0 (9 to 16 bits transferred on SPI line), the chunk of 4 words (1 word carries 4 bytes) must be configured in the DMA. If the transfer is performed by software, the access type can be defined as word (4 bytes per access, 2 accesses when FLEX_SPI_CSR0.BITS=0 or 2 halfwords per access, 4 accesses when FLEX_SPI_CSR0.BITS>0). Position */
 #define FLEX_SPI_FMR_TXFTHRES_Pos             _UINT32_(16)                                         /* (FLEX_SPI_FMR) Transmit FIFO Threshold Position */
 #define FLEX_SPI_FMR_TXFTHRES_Msk             (_UINT32_(0x3F) << FLEX_SPI_FMR_TXFTHRES_Pos)        /* (FLEX_SPI_FMR) Transmit FIFO Threshold Mask */
 #define FLEX_SPI_FMR_TXFTHRES(value)          (FLEX_SPI_FMR_TXFTHRES_Msk & (_UINT32_(value) << FLEX_SPI_FMR_TXFTHRES_Pos)) /* Assignment of value for TXFTHRES in the FLEX_SPI_FMR register */
@@ -2353,6 +2455,111 @@
 #define FLEX_TWI_CR_Msk                       _UINT32_(0x350FFFFF)                                 /* (FLEX_TWI_CR) Register Mask  */
 
 /* FIFO_ENABLED mode */
+#define FLEX_TWI_CR_FIFO_ENABLED_START_Pos    _UINT32_(0)                                          /* (FLEX_TWI_CR) Send a START Condition Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_START_Msk    (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_START_Pos) /* (FLEX_TWI_CR) Send a START Condition Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_START(value) (FLEX_TWI_CR_FIFO_ENABLED_START_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_START_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_START_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_START_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) A frame beginning with a START bit is transmitted according to the features defined in the TWI Host Mode Register (FLEX_TWI_MMR).  */
+#define FLEX_TWI_CR_FIFO_ENABLED_START_0      (FLEX_TWI_CR_FIFO_ENABLED_START_0_Val << FLEX_TWI_CR_FIFO_ENABLED_START_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_START_1      (FLEX_TWI_CR_FIFO_ENABLED_START_1_Val << FLEX_TWI_CR_FIFO_ENABLED_START_Pos) /* (FLEX_TWI_CR) A frame beginning with a START bit is transmitted according to the features defined in the TWI Host Mode Register (FLEX_TWI_MMR). Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_STOP_Pos     _UINT32_(1)                                          /* (FLEX_TWI_CR) Send a STOP Condition Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_STOP_Msk     (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_STOP_Pos) /* (FLEX_TWI_CR) Send a STOP Condition Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_STOP(value)  (FLEX_TWI_CR_FIFO_ENABLED_STOP_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_STOP_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_STOP_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_STOP_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) STOP condition is sent just after completing the current byte transmission in Host Read mode.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_STOP_0       (FLEX_TWI_CR_FIFO_ENABLED_STOP_0_Val << FLEX_TWI_CR_FIFO_ENABLED_STOP_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_STOP_1       (FLEX_TWI_CR_FIFO_ENABLED_STOP_1_Val << FLEX_TWI_CR_FIFO_ENABLED_STOP_Pos) /* (FLEX_TWI_CR) STOP condition is sent just after completing the current byte transmission in Host Read mode. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_MSEN_Pos     _UINT32_(2)                                          /* (FLEX_TWI_CR) TWI Host Mode Enabled Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_MSEN_Msk     (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_MSEN_Pos) /* (FLEX_TWI_CR) TWI Host Mode Enabled Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_MSEN(value)  (FLEX_TWI_CR_FIFO_ENABLED_MSEN_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_MSEN_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_MSEN_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_MSEN_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) Enables Host mode (MSDIS must be written to 0).  */
+#define FLEX_TWI_CR_FIFO_ENABLED_MSEN_0       (FLEX_TWI_CR_FIFO_ENABLED_MSEN_0_Val << FLEX_TWI_CR_FIFO_ENABLED_MSEN_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_MSEN_1       (FLEX_TWI_CR_FIFO_ENABLED_MSEN_1_Val << FLEX_TWI_CR_FIFO_ENABLED_MSEN_Pos) /* (FLEX_TWI_CR) Enables Host mode (MSDIS must be written to 0). Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_MSDIS_Pos    _UINT32_(3)                                          /* (FLEX_TWI_CR) TWI Host Mode Disabled Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_MSDIS_Msk    (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_MSDIS_Pos) /* (FLEX_TWI_CR) TWI Host Mode Disabled Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_MSDIS(value) (FLEX_TWI_CR_FIFO_ENABLED_MSDIS_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_MSDIS_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_MSDIS_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_MSDIS_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) Host mode is disabled, all pending data is transmitted. The shifter and holding characters (if it contains data) are transmitted in case of write operation. In read operation, the character being transferred must be completely received before disabling.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_MSDIS_0      (FLEX_TWI_CR_FIFO_ENABLED_MSDIS_0_Val << FLEX_TWI_CR_FIFO_ENABLED_MSDIS_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_MSDIS_1      (FLEX_TWI_CR_FIFO_ENABLED_MSDIS_1_Val << FLEX_TWI_CR_FIFO_ENABLED_MSDIS_Pos) /* (FLEX_TWI_CR) Host mode is disabled, all pending data is transmitted. The shifter and holding characters (if it contains data) are transmitted in case of write operation. In read operation, the character being transferred must be completely received before disabling. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SVEN_Pos     _UINT32_(4)                                          /* (FLEX_TWI_CR) TWI Client Mode Enabled Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SVEN_Msk     (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_SVEN_Pos) /* (FLEX_TWI_CR) TWI Client Mode Enabled Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_SVEN(value)  (FLEX_TWI_CR_FIFO_ENABLED_SVEN_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_SVEN_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_SVEN_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_SVEN_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) Enables Client mode (SVDIS must be written to 0).  */
+#define FLEX_TWI_CR_FIFO_ENABLED_SVEN_0       (FLEX_TWI_CR_FIFO_ENABLED_SVEN_0_Val << FLEX_TWI_CR_FIFO_ENABLED_SVEN_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SVEN_1       (FLEX_TWI_CR_FIFO_ENABLED_SVEN_1_Val << FLEX_TWI_CR_FIFO_ENABLED_SVEN_Pos) /* (FLEX_TWI_CR) Enables Client mode (SVDIS must be written to 0). Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SVDIS_Pos    _UINT32_(5)                                          /* (FLEX_TWI_CR) TWI Client Mode Disabled Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SVDIS_Msk    (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_SVDIS_Pos) /* (FLEX_TWI_CR) TWI Client Mode Disabled Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_SVDIS(value) (FLEX_TWI_CR_FIFO_ENABLED_SVDIS_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_SVDIS_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_SVDIS_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_SVDIS_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) Client mode is disabled. The shifter and holding characters (if it contains data) are transmitted in case of read operation. In write operation, the character being transferred must be completely received before disabling.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_SVDIS_0      (FLEX_TWI_CR_FIFO_ENABLED_SVDIS_0_Val << FLEX_TWI_CR_FIFO_ENABLED_SVDIS_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SVDIS_1      (FLEX_TWI_CR_FIFO_ENABLED_SVDIS_1_Val << FLEX_TWI_CR_FIFO_ENABLED_SVDIS_Pos) /* (FLEX_TWI_CR) Client mode is disabled. The shifter and holding characters (if it contains data) are transmitted in case of read operation. In write operation, the character being transferred must be completely received before disabling. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_QUICK_Pos    _UINT32_(6)                                          /* (FLEX_TWI_CR) SMBus Quick Command Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_QUICK_Msk    (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_QUICK_Pos) /* (FLEX_TWI_CR) SMBus Quick Command Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_QUICK(value) (FLEX_TWI_CR_FIFO_ENABLED_QUICK_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_QUICK_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_QUICK_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_QUICK_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) If Host mode is enabled, a SMBus Quick Command is sent.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_QUICK_0      (FLEX_TWI_CR_FIFO_ENABLED_QUICK_0_Val << FLEX_TWI_CR_FIFO_ENABLED_QUICK_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_QUICK_1      (FLEX_TWI_CR_FIFO_ENABLED_QUICK_1_Val << FLEX_TWI_CR_FIFO_ENABLED_QUICK_Pos) /* (FLEX_TWI_CR) If Host mode is enabled, a SMBus Quick Command is sent. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SWRST_Pos    _UINT32_(7)                                          /* (FLEX_TWI_CR) Software Reset Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SWRST_Msk    (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_SWRST_Pos) /* (FLEX_TWI_CR) Software Reset Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_SWRST(value) (FLEX_TWI_CR_FIFO_ENABLED_SWRST_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_SWRST_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_SWRST_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_SWRST_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) Equivalent to a system reset.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_SWRST_0      (FLEX_TWI_CR_FIFO_ENABLED_SWRST_0_Val << FLEX_TWI_CR_FIFO_ENABLED_SWRST_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SWRST_1      (FLEX_TWI_CR_FIFO_ENABLED_SWRST_1_Val << FLEX_TWI_CR_FIFO_ENABLED_SWRST_Pos) /* (FLEX_TWI_CR) Equivalent to a system reset. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_HSEN_Pos     _UINT32_(8)                                          /* (FLEX_TWI_CR) TWI High-Speed Mode Enabled Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_HSEN_Msk     (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_HSEN_Pos) /* (FLEX_TWI_CR) TWI High-Speed Mode Enabled Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_HSEN(value)  (FLEX_TWI_CR_FIFO_ENABLED_HSEN_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_HSEN_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_HSEN_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_HSEN_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) High-speed mode enabled.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_HSEN_0       (FLEX_TWI_CR_FIFO_ENABLED_HSEN_0_Val << FLEX_TWI_CR_FIFO_ENABLED_HSEN_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_HSEN_1       (FLEX_TWI_CR_FIFO_ENABLED_HSEN_1_Val << FLEX_TWI_CR_FIFO_ENABLED_HSEN_Pos) /* (FLEX_TWI_CR) High-speed mode enabled. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_HSDIS_Pos    _UINT32_(9)                                          /* (FLEX_TWI_CR) TWI High-Speed Mode Disabled Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_HSDIS_Msk    (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_HSDIS_Pos) /* (FLEX_TWI_CR) TWI High-Speed Mode Disabled Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_HSDIS(value) (FLEX_TWI_CR_FIFO_ENABLED_HSDIS_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_HSDIS_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_HSDIS_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_HSDIS_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) High-speed mode disabled.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_HSDIS_0      (FLEX_TWI_CR_FIFO_ENABLED_HSDIS_0_Val << FLEX_TWI_CR_FIFO_ENABLED_HSDIS_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_HSDIS_1      (FLEX_TWI_CR_FIFO_ENABLED_HSDIS_1_Val << FLEX_TWI_CR_FIFO_ENABLED_HSDIS_Pos) /* (FLEX_TWI_CR) High-speed mode disabled. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SMBEN_Pos    _UINT32_(10)                                         /* (FLEX_TWI_CR) SMBus Mode Enabled Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SMBEN_Msk    (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_SMBEN_Pos) /* (FLEX_TWI_CR) SMBus Mode Enabled Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_SMBEN(value) (FLEX_TWI_CR_FIFO_ENABLED_SMBEN_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_SMBEN_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_SMBEN_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_SMBEN_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) If SMBDIS = 0, SMBus mode enabled.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_SMBEN_0      (FLEX_TWI_CR_FIFO_ENABLED_SMBEN_0_Val << FLEX_TWI_CR_FIFO_ENABLED_SMBEN_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SMBEN_1      (FLEX_TWI_CR_FIFO_ENABLED_SMBEN_1_Val << FLEX_TWI_CR_FIFO_ENABLED_SMBEN_Pos) /* (FLEX_TWI_CR) If SMBDIS = 0, SMBus mode enabled. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_Pos   _UINT32_(11)                                         /* (FLEX_TWI_CR) SMBus Mode Disabled Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_Msk   (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_Pos) /* (FLEX_TWI_CR) SMBus Mode Disabled Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_SMBDIS(value) (FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) SMBus mode disabled.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_0     (FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_0_Val << FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_1     (FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_1_Val << FLEX_TWI_CR_FIFO_ENABLED_SMBDIS_Pos) /* (FLEX_TWI_CR) SMBus mode disabled. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECEN_Pos    _UINT32_(12)                                         /* (FLEX_TWI_CR) Packet Error Checking Enable Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECEN_Msk    (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_PECEN_Pos) /* (FLEX_TWI_CR) Packet Error Checking Enable Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECEN(value) (FLEX_TWI_CR_FIFO_ENABLED_PECEN_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_PECEN_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_PECEN_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_PECEN_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) SMBus PEC (CRC) generation and check enabled.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECEN_0      (FLEX_TWI_CR_FIFO_ENABLED_PECEN_0_Val << FLEX_TWI_CR_FIFO_ENABLED_PECEN_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECEN_1      (FLEX_TWI_CR_FIFO_ENABLED_PECEN_1_Val << FLEX_TWI_CR_FIFO_ENABLED_PECEN_Pos) /* (FLEX_TWI_CR) SMBus PEC (CRC) generation and check enabled. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECDIS_Pos   _UINT32_(13)                                         /* (FLEX_TWI_CR) Packet Error Checking Disable Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECDIS_Msk   (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_PECDIS_Pos) /* (FLEX_TWI_CR) Packet Error Checking Disable Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECDIS(value) (FLEX_TWI_CR_FIFO_ENABLED_PECDIS_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_PECDIS_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_PECDIS_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_PECDIS_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) SMBus PEC (CRC) generation and check disabled.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECDIS_0     (FLEX_TWI_CR_FIFO_ENABLED_PECDIS_0_Val << FLEX_TWI_CR_FIFO_ENABLED_PECDIS_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECDIS_1     (FLEX_TWI_CR_FIFO_ENABLED_PECDIS_1_Val << FLEX_TWI_CR_FIFO_ENABLED_PECDIS_Pos) /* (FLEX_TWI_CR) SMBus PEC (CRC) generation and check disabled. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECRQ_Pos    _UINT32_(14)                                         /* (FLEX_TWI_CR) PEC Request Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECRQ_Msk    (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_PECRQ_Pos) /* (FLEX_TWI_CR) PEC Request Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECRQ(value) (FLEX_TWI_CR_FIFO_ENABLED_PECRQ_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_PECRQ_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_PECRQ_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_PECRQ_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) A PEC check or transmission is requested.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECRQ_0      (FLEX_TWI_CR_FIFO_ENABLED_PECRQ_0_Val << FLEX_TWI_CR_FIFO_ENABLED_PECRQ_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_PECRQ_1      (FLEX_TWI_CR_FIFO_ENABLED_PECRQ_1_Val << FLEX_TWI_CR_FIFO_ENABLED_PECRQ_Pos) /* (FLEX_TWI_CR) A PEC check or transmission is requested. Position */
 #define FLEX_TWI_CR_FIFO_ENABLED_CLEAR_Pos    _UINT32_(15)                                         /* (FLEX_TWI_CR) Bus CLEAR Command Position */
 #define FLEX_TWI_CR_FIFO_ENABLED_CLEAR_Msk    (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_CLEAR_Pos) /* (FLEX_TWI_CR) Bus CLEAR Command Mask */
 #define FLEX_TWI_CR_FIFO_ENABLED_CLEAR(value) (FLEX_TWI_CR_FIFO_ENABLED_CLEAR_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_CLEAR_Pos))
@@ -2360,6 +2567,20 @@
 #define   FLEX_TWI_CR_FIFO_ENABLED_CLEAR_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) If Host mode is enabled, send a bus clear command.  */
 #define FLEX_TWI_CR_FIFO_ENABLED_CLEAR_0      (FLEX_TWI_CR_FIFO_ENABLED_CLEAR_0_Val << FLEX_TWI_CR_FIFO_ENABLED_CLEAR_Pos) /* (FLEX_TWI_CR) No effect. Position */
 #define FLEX_TWI_CR_FIFO_ENABLED_CLEAR_1      (FLEX_TWI_CR_FIFO_ENABLED_CLEAR_1_Val << FLEX_TWI_CR_FIFO_ENABLED_CLEAR_Pos) /* (FLEX_TWI_CR) If Host mode is enabled, send a bus clear command. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_ACMEN_Pos    _UINT32_(16)                                         /* (FLEX_TWI_CR) Alternative Command Mode Enable Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_ACMEN_Msk    (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_ACMEN_Pos) /* (FLEX_TWI_CR) Alternative Command Mode Enable Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_ACMEN(value) (FLEX_TWI_CR_FIFO_ENABLED_ACMEN_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_ACMEN_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_ACMEN_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_ACMEN_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) Alternative Command mode enabled.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_ACMEN_0      (FLEX_TWI_CR_FIFO_ENABLED_ACMEN_0_Val << FLEX_TWI_CR_FIFO_ENABLED_ACMEN_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_ACMEN_1      (FLEX_TWI_CR_FIFO_ENABLED_ACMEN_1_Val << FLEX_TWI_CR_FIFO_ENABLED_ACMEN_Pos) /* (FLEX_TWI_CR) Alternative Command mode enabled. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_Pos   _UINT32_(17)                                         /* (FLEX_TWI_CR) Alternative Command Mode Disable Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_Msk   (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_Pos) /* (FLEX_TWI_CR) Alternative Command Mode Disable Mask */
+#define FLEX_TWI_CR_FIFO_ENABLED_ACMDIS(value) (FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_Pos))
+#define   FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_CR) No effect.  */
+#define   FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) Alternative Command mode disabled.  */
+#define FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_0     (FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_0_Val << FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_Pos) /* (FLEX_TWI_CR) No effect. Position */
+#define FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_1     (FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_1_Val << FLEX_TWI_CR_FIFO_ENABLED_ACMDIS_Pos) /* (FLEX_TWI_CR) Alternative Command mode disabled. Position */
 #define FLEX_TWI_CR_FIFO_ENABLED_TXFCLR_Pos   _UINT32_(24)                                         /* (FLEX_TWI_CR) Transmit FIFO Clear Position */
 #define FLEX_TWI_CR_FIFO_ENABLED_TXFCLR_Msk   (_UINT32_(0x1) << FLEX_TWI_CR_FIFO_ENABLED_TXFCLR_Pos) /* (FLEX_TWI_CR) Transmit FIFO Clear Mask */
 #define FLEX_TWI_CR_FIFO_ENABLED_TXFCLR(value) (FLEX_TWI_CR_FIFO_ENABLED_TXFCLR_Msk & (_UINT32_(value) << FLEX_TWI_CR_FIFO_ENABLED_TXFCLR_Pos))
@@ -2395,7 +2616,7 @@
 #define   FLEX_TWI_CR_FIFO_ENABLED_FIFODIS_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_CR) Disable the Transmit and Receive FIFOs.  */
 #define FLEX_TWI_CR_FIFO_ENABLED_FIFODIS_0    (FLEX_TWI_CR_FIFO_ENABLED_FIFODIS_0_Val << FLEX_TWI_CR_FIFO_ENABLED_FIFODIS_Pos) /* (FLEX_TWI_CR) No effect. Position */
 #define FLEX_TWI_CR_FIFO_ENABLED_FIFODIS_1    (FLEX_TWI_CR_FIFO_ENABLED_FIFODIS_1_Val << FLEX_TWI_CR_FIFO_ENABLED_FIFODIS_Pos) /* (FLEX_TWI_CR) Disable the Transmit and Receive FIFOs. Position */
-#define FLEX_TWI_CR_FIFO_ENABLED_Msk          _UINT32_(0x37008000)                                 /* (FLEX_TWI_CR_FIFO_ENABLED) Register Mask  */
+#define FLEX_TWI_CR_FIFO_ENABLED_Msk          _UINT32_(0x3703FFFF)                                 /* (FLEX_TWI_CR_FIFO_ENABLED) Register Mask  */
 
 
 /* -------- FLEX_TWI_MMR : (FLEXCOM Offset: 0x604) (R/W 32) TWI Host Mode Register -------- */
@@ -2737,6 +2958,41 @@
 #define   FLEX_TWI_SR_FIFO_ENABLED_TXRDY_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) Transmit FIFO is not full; one or more data can be written according to TXRDYM field configuration.  */
 #define FLEX_TWI_SR_FIFO_ENABLED_TXRDY_0      (FLEX_TWI_SR_FIFO_ENABLED_TXRDY_0_Val << FLEX_TWI_SR_FIFO_ENABLED_TXRDY_Pos) /* (FLEX_TWI_SR) Transmit FIFO is full and cannot accept more data. Position */
 #define FLEX_TWI_SR_FIFO_ENABLED_TXRDY_1      (FLEX_TWI_SR_FIFO_ENABLED_TXRDY_1_Val << FLEX_TWI_SR_FIFO_ENABLED_TXRDY_Pos) /* (FLEX_TWI_SR) Transmit FIFO is not full; one or more data can be written according to TXRDYM field configuration. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SVREAD_Pos   _UINT32_(3)                                          /* (FLEX_TWI_SR) Client Read Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SVREAD_Msk   (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_SVREAD_Pos) /* (FLEX_TWI_SR) Client Read Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_SVREAD(value) (FLEX_TWI_SR_FIFO_ENABLED_SVREAD_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_SVREAD_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_SVREAD_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) Indicates that a write access is performed by a host.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_SVREAD_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) Indicates that a read access is performed by a host.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_SVREAD_0     (FLEX_TWI_SR_FIFO_ENABLED_SVREAD_0_Val << FLEX_TWI_SR_FIFO_ENABLED_SVREAD_Pos) /* (FLEX_TWI_SR) Indicates that a write access is performed by a host. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SVREAD_1     (FLEX_TWI_SR_FIFO_ENABLED_SVREAD_1_Val << FLEX_TWI_SR_FIFO_ENABLED_SVREAD_Pos) /* (FLEX_TWI_SR) Indicates that a read access is performed by a host. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SVACC_Pos    _UINT32_(4)                                          /* (FLEX_TWI_SR) Client Access Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SVACC_Msk    (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_SVACC_Pos) /* (FLEX_TWI_SR) Client Access Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_SVACC(value) (FLEX_TWI_SR_FIFO_ENABLED_SVACC_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_SVACC_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_SVACC_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) TWI is not addressed. SVACC is automatically cleared after a NACK or a STOP condition is detected.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_SVACC_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) Indicates that the address decoding sequence has matched (a host has sent SADR). SVACC remains high until a NACK or a STOP condition is detected.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_SVACC_0      (FLEX_TWI_SR_FIFO_ENABLED_SVACC_0_Val << FLEX_TWI_SR_FIFO_ENABLED_SVACC_Pos) /* (FLEX_TWI_SR) TWI is not addressed. SVACC is automatically cleared after a NACK or a STOP condition is detected. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SVACC_1      (FLEX_TWI_SR_FIFO_ENABLED_SVACC_1_Val << FLEX_TWI_SR_FIFO_ENABLED_SVACC_Pos) /* (FLEX_TWI_SR) Indicates that the address decoding sequence has matched (a host has sent SADR). SVACC remains high until a NACK or a STOP condition is detected. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_GACC_Pos     _UINT32_(5)                                          /* (FLEX_TWI_SR) General Call Access (cleared on read) Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_GACC_Msk     (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_GACC_Pos) /* (FLEX_TWI_SR) General Call Access (cleared on read) Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_GACC(value)  (FLEX_TWI_SR_FIFO_ENABLED_GACC_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_GACC_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_GACC_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) No general call has been detected.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_GACC_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) A general call has been detected. After the detection of general call, if need be, the user may acknowledge this access and decode the following bytes and respond according to the value of the bytes.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_GACC_0       (FLEX_TWI_SR_FIFO_ENABLED_GACC_0_Val << FLEX_TWI_SR_FIFO_ENABLED_GACC_Pos) /* (FLEX_TWI_SR) No general call has been detected. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_GACC_1       (FLEX_TWI_SR_FIFO_ENABLED_GACC_1_Val << FLEX_TWI_SR_FIFO_ENABLED_GACC_Pos) /* (FLEX_TWI_SR) A general call has been detected. After the detection of general call, if need be, the user may acknowledge this access and decode the following bytes and respond according to the value of the bytes. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_OVRE_Pos     _UINT32_(6)                                          /* (FLEX_TWI_SR) Overrun Error (cleared on read) Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_OVRE_Msk     (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_OVRE_Pos) /* (FLEX_TWI_SR) Overrun Error (cleared on read) Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_OVRE(value)  (FLEX_TWI_SR_FIFO_ENABLED_OVRE_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_OVRE_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_OVRE_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) FLEX_TWI_RHR has not been loaded while RXRDY was set.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_OVRE_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) FLEX_TWI_RHR has been loaded while RXRDY was set. Reset by read in FLEX_TWI_SR when TXCOMP is set.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_OVRE_0       (FLEX_TWI_SR_FIFO_ENABLED_OVRE_0_Val << FLEX_TWI_SR_FIFO_ENABLED_OVRE_Pos) /* (FLEX_TWI_SR) FLEX_TWI_RHR has not been loaded while RXRDY was set. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_OVRE_1       (FLEX_TWI_SR_FIFO_ENABLED_OVRE_1_Val << FLEX_TWI_SR_FIFO_ENABLED_OVRE_Pos) /* (FLEX_TWI_SR) FLEX_TWI_RHR has been loaded while RXRDY was set. Reset by read in FLEX_TWI_SR when TXCOMP is set. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_UNRE_Pos     _UINT32_(7)                                          /* (FLEX_TWI_SR) Underrun Error (cleared on read) Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_UNRE_Msk     (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_UNRE_Pos) /* (FLEX_TWI_SR) Underrun Error (cleared on read) Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_UNRE(value)  (FLEX_TWI_SR_FIFO_ENABLED_UNRE_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_UNRE_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_UNRE_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) FLEX_TWI_THR has been filled on time.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_UNRE_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) FLEX_TWI_THR has not been filled on time.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_UNRE_0       (FLEX_TWI_SR_FIFO_ENABLED_UNRE_0_Val << FLEX_TWI_SR_FIFO_ENABLED_UNRE_Pos) /* (FLEX_TWI_SR) FLEX_TWI_THR has been filled on time. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_UNRE_1       (FLEX_TWI_SR_FIFO_ENABLED_UNRE_1_Val << FLEX_TWI_SR_FIFO_ENABLED_UNRE_Pos) /* (FLEX_TWI_SR) FLEX_TWI_THR has not been filled on time. Position */
 #define FLEX_TWI_SR_FIFO_ENABLED_NACK_Pos     _UINT32_(8)                                          /* (FLEX_TWI_SR) Not Acknowledged (cleared on read) Position */
 #define FLEX_TWI_SR_FIFO_ENABLED_NACK_Msk     (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_NACK_Pos) /* (FLEX_TWI_SR) Not Acknowledged (cleared on read) Mask */
 #define FLEX_TWI_SR_FIFO_ENABLED_NACK(value)  (FLEX_TWI_SR_FIFO_ENABLED_NACK_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_NACK_Pos))
@@ -2744,6 +3000,62 @@
 #define   FLEX_TWI_SR_FIFO_ENABLED_NACK_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) NACK used in Host mode: A data or address byte has not been acknowledged by the client component. Set at the same time as TXCOMP. NACK used in Client Read mode: In Read mode, a data byte has not been acknowledged by the host. When NACK is set the user must not fill FLEX_TWI_THR even if TXRDY is set, because it means that the host will stop the data transfer or re initiate it.  */
 #define FLEX_TWI_SR_FIFO_ENABLED_NACK_0       (FLEX_TWI_SR_FIFO_ENABLED_NACK_0_Val << FLEX_TWI_SR_FIFO_ENABLED_NACK_Pos) /* (FLEX_TWI_SR) NACK used in Host mode: Each data byte has been correctly received by the far-end side TWI client component. NACK used in Client Read mode: Each data byte has been correctly received by the host. Position */
 #define FLEX_TWI_SR_FIFO_ENABLED_NACK_1       (FLEX_TWI_SR_FIFO_ENABLED_NACK_1_Val << FLEX_TWI_SR_FIFO_ENABLED_NACK_Pos) /* (FLEX_TWI_SR) NACK used in Host mode: A data or address byte has not been acknowledged by the client component. Set at the same time as TXCOMP. NACK used in Client Read mode: In Read mode, a data byte has not been acknowledged by the host. When NACK is set the user must not fill FLEX_TWI_THR even if TXRDY is set, because it means that the host will stop the data transfer or re initiate it. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_ARBLST_Pos   _UINT32_(9)                                          /* (FLEX_TWI_SR) Arbitration Lost (cleared on read) Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_ARBLST_Msk   (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_ARBLST_Pos) /* (FLEX_TWI_SR) Arbitration Lost (cleared on read) Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_ARBLST(value) (FLEX_TWI_SR_FIFO_ENABLED_ARBLST_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_ARBLST_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_ARBLST_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) Arbitration won.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_ARBLST_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) Arbitration lost. Another host of the TWI bus has won the multi-host arbitration. TXCOMP is set at the same time.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_ARBLST_0     (FLEX_TWI_SR_FIFO_ENABLED_ARBLST_0_Val << FLEX_TWI_SR_FIFO_ENABLED_ARBLST_Pos) /* (FLEX_TWI_SR) Arbitration won. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_ARBLST_1     (FLEX_TWI_SR_FIFO_ENABLED_ARBLST_1_Val << FLEX_TWI_SR_FIFO_ENABLED_ARBLST_Pos) /* (FLEX_TWI_SR) Arbitration lost. Another host of the TWI bus has won the multi-host arbitration. TXCOMP is set at the same time. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SCLWS_Pos    _UINT32_(10)                                         /* (FLEX_TWI_SR) Clock Wait State Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SCLWS_Msk    (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_SCLWS_Pos) /* (FLEX_TWI_SR) Clock Wait State Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_SCLWS(value) (FLEX_TWI_SR_FIFO_ENABLED_SCLWS_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_SCLWS_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_SCLWS_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) The clock is not stretched.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_SCLWS_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) The clock is stretched. FLEX_TWI_THR / FLEX_TWI_RHR buffer is not filled / emptied before the transmission / reception of a new character.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_SCLWS_0      (FLEX_TWI_SR_FIFO_ENABLED_SCLWS_0_Val << FLEX_TWI_SR_FIFO_ENABLED_SCLWS_Pos) /* (FLEX_TWI_SR) The clock is not stretched. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SCLWS_1      (FLEX_TWI_SR_FIFO_ENABLED_SCLWS_1_Val << FLEX_TWI_SR_FIFO_ENABLED_SCLWS_Pos) /* (FLEX_TWI_SR) The clock is stretched. FLEX_TWI_THR / FLEX_TWI_RHR buffer is not filled / emptied before the transmission / reception of a new character. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_EOSACC_Pos   _UINT32_(11)                                         /* (FLEX_TWI_SR) End Of Client Access (cleared on read) Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_EOSACC_Msk   (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_EOSACC_Pos) /* (FLEX_TWI_SR) End Of Client Access (cleared on read) Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_EOSACC(value) (FLEX_TWI_SR_FIFO_ENABLED_EOSACC_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_EOSACC_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_EOSACC_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) A client access is being performed.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_EOSACC_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) Client Access is finished. End Of Client Access is automatically set as soon as SVACC is reset.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_EOSACC_0     (FLEX_TWI_SR_FIFO_ENABLED_EOSACC_0_Val << FLEX_TWI_SR_FIFO_ENABLED_EOSACC_Pos) /* (FLEX_TWI_SR) A client access is being performed. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_EOSACC_1     (FLEX_TWI_SR_FIFO_ENABLED_EOSACC_1_Val << FLEX_TWI_SR_FIFO_ENABLED_EOSACC_Pos) /* (FLEX_TWI_SR) Client Access is finished. End Of Client Access is automatically set as soon as SVACC is reset. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_MCACK_Pos    _UINT32_(16)                                         /* (FLEX_TWI_SR) Host Code Acknowledge (cleared on read) Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_MCACK_Msk    (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_MCACK_Pos) /* (FLEX_TWI_SR) Host Code Acknowledge (cleared on read) Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_MCACK(value) (FLEX_TWI_SR_FIFO_ENABLED_MCACK_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_MCACK_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_MCACK_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) No host code has been received.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_MCACK_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) A host code has been received.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_MCACK_0      (FLEX_TWI_SR_FIFO_ENABLED_MCACK_0_Val << FLEX_TWI_SR_FIFO_ENABLED_MCACK_Pos) /* (FLEX_TWI_SR) No host code has been received. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_MCACK_1      (FLEX_TWI_SR_FIFO_ENABLED_MCACK_1_Val << FLEX_TWI_SR_FIFO_ENABLED_MCACK_Pos) /* (FLEX_TWI_SR) A host code has been received. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_TOUT_Pos     _UINT32_(18)                                         /* (FLEX_TWI_SR) Timeout Error (cleared on read) Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_TOUT_Msk     (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_TOUT_Pos) /* (FLEX_TWI_SR) Timeout Error (cleared on read) Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_TOUT(value)  (FLEX_TWI_SR_FIFO_ENABLED_TOUT_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_TOUT_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_TOUT_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) No SMBus timeout occurred.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_TOUT_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) SMBus timeout occurred.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_TOUT_0       (FLEX_TWI_SR_FIFO_ENABLED_TOUT_0_Val << FLEX_TWI_SR_FIFO_ENABLED_TOUT_Pos) /* (FLEX_TWI_SR) No SMBus timeout occurred. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_TOUT_1       (FLEX_TWI_SR_FIFO_ENABLED_TOUT_1_Val << FLEX_TWI_SR_FIFO_ENABLED_TOUT_Pos) /* (FLEX_TWI_SR) SMBus timeout occurred. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_PECERR_Pos   _UINT32_(19)                                         /* (FLEX_TWI_SR) PEC Error (cleared on read) Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_PECERR_Msk   (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_PECERR_Pos) /* (FLEX_TWI_SR) PEC Error (cleared on read) Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_PECERR(value) (FLEX_TWI_SR_FIFO_ENABLED_PECERR_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_PECERR_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_PECERR_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) No SMBus PEC error occurred.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_PECERR_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) A SMBus PEC error occurred.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_PECERR_0     (FLEX_TWI_SR_FIFO_ENABLED_PECERR_0_Val << FLEX_TWI_SR_FIFO_ENABLED_PECERR_Pos) /* (FLEX_TWI_SR) No SMBus PEC error occurred. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_PECERR_1     (FLEX_TWI_SR_FIFO_ENABLED_PECERR_1_Val << FLEX_TWI_SR_FIFO_ENABLED_PECERR_Pos) /* (FLEX_TWI_SR) A SMBus PEC error occurred. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_Pos   _UINT32_(20)                                         /* (FLEX_TWI_SR) SMBus Default Address Match (cleared on read) Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_Msk   (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_Pos) /* (FLEX_TWI_SR) SMBus Default Address Match (cleared on read) Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_SMBDAM(value) (FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) No SMBus Default Address received.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) A SMBus Default Address was received.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_0     (FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_0_Val << FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_Pos) /* (FLEX_TWI_SR) No SMBus Default Address received. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_1     (FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_1_Val << FLEX_TWI_SR_FIFO_ENABLED_SMBDAM_Pos) /* (FLEX_TWI_SR) A SMBus Default Address was received. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_Pos   _UINT32_(21)                                         /* (FLEX_TWI_SR) SMBus Host Header Address Match (cleared on read) Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_Msk   (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_Pos) /* (FLEX_TWI_SR) SMBus Host Header Address Match (cleared on read) Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_SMBHHM(value) (FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) No SMBus Host Header Address received.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) A SMBus Host Header Address was received.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_0     (FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_0_Val << FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_Pos) /* (FLEX_TWI_SR) No SMBus Host Header Address received. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_1     (FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_1_Val << FLEX_TWI_SR_FIFO_ENABLED_SMBHHM_Pos) /* (FLEX_TWI_SR) A SMBus Host Header Address was received. Position */
 #define FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK_Pos  _UINT32_(23)                                         /* (FLEX_TWI_SR) Transmit FIFO Lock Position */
 #define FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK_Msk  (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK_Pos) /* (FLEX_TWI_SR) Transmit FIFO Lock Mask */
 #define FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK(value) (FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK_Pos))
@@ -2751,7 +3063,35 @@
 #define   FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) The Transmit FIFO is locked.  */
 #define FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK_0    (FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK_0_Val << FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK_Pos) /* (FLEX_TWI_SR) The Transmit FIFO is not locked. Position */
 #define FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK_1    (FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK_1_Val << FLEX_TWI_SR_FIFO_ENABLED_TXFLOCK_Pos) /* (FLEX_TWI_SR) The Transmit FIFO is locked. Position */
-#define FLEX_TWI_SR_FIFO_ENABLED_Msk          _UINT32_(0x00800107)                                 /* (FLEX_TWI_SR_FIFO_ENABLED) Register Mask  */
+#define FLEX_TWI_SR_FIFO_ENABLED_SCL_Pos      _UINT32_(24)                                         /* (FLEX_TWI_SR) SCL Line Value Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SCL_Msk      (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_SCL_Pos)  /* (FLEX_TWI_SR) SCL Line Value Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_SCL(value)   (FLEX_TWI_SR_FIFO_ENABLED_SCL_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_SCL_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_SCL_0_Val  _UINT32_(0x0)                                        /* (FLEX_TWI_SR) SCL line sampled value is '0'.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_SCL_1_Val  _UINT32_(0x1)                                        /* (FLEX_TWI_SR) SCL line sampled value is '1.'  */
+#define FLEX_TWI_SR_FIFO_ENABLED_SCL_0        (FLEX_TWI_SR_FIFO_ENABLED_SCL_0_Val << FLEX_TWI_SR_FIFO_ENABLED_SCL_Pos) /* (FLEX_TWI_SR) SCL line sampled value is '0'. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SCL_1        (FLEX_TWI_SR_FIFO_ENABLED_SCL_1_Val << FLEX_TWI_SR_FIFO_ENABLED_SCL_Pos) /* (FLEX_TWI_SR) SCL line sampled value is '1.' Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SDA_Pos      _UINT32_(25)                                         /* (FLEX_TWI_SR) SDA Line Value Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SDA_Msk      (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_SDA_Pos)  /* (FLEX_TWI_SR) SDA Line Value Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_SDA(value)   (FLEX_TWI_SR_FIFO_ENABLED_SDA_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_SDA_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_SDA_0_Val  _UINT32_(0x0)                                        /* (FLEX_TWI_SR) SDA line sampled value is '0'.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_SDA_1_Val  _UINT32_(0x1)                                        /* (FLEX_TWI_SR) SDA line sampled value is '1'.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_SDA_0        (FLEX_TWI_SR_FIFO_ENABLED_SDA_0_Val << FLEX_TWI_SR_FIFO_ENABLED_SDA_Pos) /* (FLEX_TWI_SR) SDA line sampled value is '0'. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SDA_1        (FLEX_TWI_SR_FIFO_ENABLED_SDA_1_Val << FLEX_TWI_SR_FIFO_ENABLED_SDA_Pos) /* (FLEX_TWI_SR) SDA line sampled value is '1'. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SR_Pos       _UINT32_(26)                                         /* (FLEX_TWI_SR) Start Repeated Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SR_Msk       (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_SR_Pos)   /* (FLEX_TWI_SR) Start Repeated Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_SR(value)    (FLEX_TWI_SR_FIFO_ENABLED_SR_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_SR_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_SR_0_Val   _UINT32_(0x0)                                        /* (FLEX_TWI_SR) No repeated start has been detected since last FLEX_TWI_SR read.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_SR_1_Val   _UINT32_(0x1)                                        /* (FLEX_TWI_SR) At least one repeated start has been detected since last FLEX_TWI_SR read.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_SR_0         (FLEX_TWI_SR_FIFO_ENABLED_SR_0_Val << FLEX_TWI_SR_FIFO_ENABLED_SR_Pos) /* (FLEX_TWI_SR) No repeated start has been detected since last FLEX_TWI_SR read. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SR_1         (FLEX_TWI_SR_FIFO_ENABLED_SR_1_Val << FLEX_TWI_SR_FIFO_ENABLED_SR_Pos) /* (FLEX_TWI_SR) At least one repeated start has been detected since last FLEX_TWI_SR read. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SECE_Pos     _UINT32_(28)                                         /* (FLEX_TWI_SR) Security/Safety Error (cleared on read) Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SECE_Msk     (_UINT32_(0x1) << FLEX_TWI_SR_FIFO_ENABLED_SECE_Pos) /* (FLEX_TWI_SR) Security/Safety Error (cleared on read) Mask */
+#define FLEX_TWI_SR_FIFO_ENABLED_SECE(value)  (FLEX_TWI_SR_FIFO_ENABLED_SECE_Msk & (_UINT32_(value) << FLEX_TWI_SR_FIFO_ENABLED_SECE_Pos))
+#define   FLEX_TWI_SR_FIFO_ENABLED_SECE_0_Val _UINT32_(0x0)                                        /* (FLEX_TWI_SR) No error detected on TWD and/or TWCK pad output and no access violation of a write-protected register since the last read of FLEX_TWI_SR.  */
+#define   FLEX_TWI_SR_FIFO_ENABLED_SECE_1_Val _UINT32_(0x1)                                        /* (FLEX_TWI_SR) An error has been detected on TWD and/or TWCK pad output (FLEX_TWI_WPSR.PADERR=1) and/or a violation of a write-protected register (FLEX_TWI_WPSR.WPVS=1) since the last read of FLEX_TWI_SR.  */
+#define FLEX_TWI_SR_FIFO_ENABLED_SECE_0       (FLEX_TWI_SR_FIFO_ENABLED_SECE_0_Val << FLEX_TWI_SR_FIFO_ENABLED_SECE_Pos) /* (FLEX_TWI_SR) No error detected on TWD and/or TWCK pad output and no access violation of a write-protected register since the last read of FLEX_TWI_SR. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_SECE_1       (FLEX_TWI_SR_FIFO_ENABLED_SECE_1_Val << FLEX_TWI_SR_FIFO_ENABLED_SECE_Pos) /* (FLEX_TWI_SR) An error has been detected on TWD and/or TWCK pad output (FLEX_TWI_WPSR.PADERR=1) and/or a violation of a write-protected register (FLEX_TWI_WPSR.WPVS=1) since the last read of FLEX_TWI_SR. Position */
+#define FLEX_TWI_SR_FIFO_ENABLED_Msk          _UINT32_(0x17BD0FFF)                                 /* (FLEX_TWI_SR_FIFO_ENABLED) Register Mask  */
 
 
 /* -------- FLEX_TWI_IER : (FLEXCOM Offset: 0x624) ( /W 32) TWI Interrupt Enable Register -------- */
@@ -3260,20 +3600,20 @@
 #define   FLEX_TWI_FSR_RXFTHF_1_Val           _UINT32_(0x1)                                        /* (FLEX_TWI_FSR) Number of unread data in Receive FIFO has reached RXFTHRES threshold since the last read of FLEX_TWI_FSR.  */
 #define FLEX_TWI_FSR_RXFTHF_0                 (FLEX_TWI_FSR_RXFTHF_0_Val << FLEX_TWI_FSR_RXFTHF_Pos) /* (FLEX_TWI_FSR) Number of unread data in Receive FIFO is below RXFTHRES threshold. Position */
 #define FLEX_TWI_FSR_RXFTHF_1                 (FLEX_TWI_FSR_RXFTHF_1_Val << FLEX_TWI_FSR_RXFTHF_Pos) /* (FLEX_TWI_FSR) Number of unread data in Receive FIFO has reached RXFTHRES threshold since the last read of FLEX_TWI_FSR. Position */
-#define FLEX_TWI_FSR_TXFPTEF_Pos              _UINT32_(6)                                          /* (FLEX_TWI_FSR) Transmit FIFO Pointer Error Flag Position */
-#define FLEX_TWI_FSR_TXFPTEF_Msk              (_UINT32_(0x1) << FLEX_TWI_FSR_TXFPTEF_Pos)          /* (FLEX_TWI_FSR) Transmit FIFO Pointer Error Flag Mask */
+#define FLEX_TWI_FSR_TXFPTEF_Pos              _UINT32_(6)                                          /* (FLEX_TWI_FSR) Transmit FIFO Overflow Error Flag Position */
+#define FLEX_TWI_FSR_TXFPTEF_Msk              (_UINT32_(0x1) << FLEX_TWI_FSR_TXFPTEF_Pos)          /* (FLEX_TWI_FSR) Transmit FIFO Overflow Error Flag Mask */
 #define FLEX_TWI_FSR_TXFPTEF(value)           (FLEX_TWI_FSR_TXFPTEF_Msk & (_UINT32_(value) << FLEX_TWI_FSR_TXFPTEF_Pos)) /* Assignment of value for TXFPTEF in the FLEX_TWI_FSR register */
-#define   FLEX_TWI_FSR_TXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_TWI_FSR) No Transmit FIFO pointer occurred  */
-#define   FLEX_TWI_FSR_TXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_TWI_FSR) Transmit FIFO pointer error occurred. Transceiver must be reset  */
-#define FLEX_TWI_FSR_TXFPTEF_0                (FLEX_TWI_FSR_TXFPTEF_0_Val << FLEX_TWI_FSR_TXFPTEF_Pos) /* (FLEX_TWI_FSR) No Transmit FIFO pointer occurred Position */
-#define FLEX_TWI_FSR_TXFPTEF_1                (FLEX_TWI_FSR_TXFPTEF_1_Val << FLEX_TWI_FSR_TXFPTEF_Pos) /* (FLEX_TWI_FSR) Transmit FIFO pointer error occurred. Transceiver must be reset Position */
-#define FLEX_TWI_FSR_RXFPTEF_Pos              _UINT32_(7)                                          /* (FLEX_TWI_FSR) Receive FIFO Pointer Error Flag Position */
-#define FLEX_TWI_FSR_RXFPTEF_Msk              (_UINT32_(0x1) << FLEX_TWI_FSR_RXFPTEF_Pos)          /* (FLEX_TWI_FSR) Receive FIFO Pointer Error Flag Mask */
+#define   FLEX_TWI_FSR_TXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_TWI_FSR) No Transmit FIFO overflow occurred.  */
+#define   FLEX_TWI_FSR_TXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_TWI_FSR) Transmit FIFO overflow error occurred due to an incorrect software access (written data exceeding available space). Transceiver must be reset by writing FLEX_SPI_CR.SWRST=1.  */
+#define FLEX_TWI_FSR_TXFPTEF_0                (FLEX_TWI_FSR_TXFPTEF_0_Val << FLEX_TWI_FSR_TXFPTEF_Pos) /* (FLEX_TWI_FSR) No Transmit FIFO overflow occurred. Position */
+#define FLEX_TWI_FSR_TXFPTEF_1                (FLEX_TWI_FSR_TXFPTEF_1_Val << FLEX_TWI_FSR_TXFPTEF_Pos) /* (FLEX_TWI_FSR) Transmit FIFO overflow error occurred due to an incorrect software access (written data exceeding available space). Transceiver must be reset by writing FLEX_SPI_CR.SWRST=1. Position */
+#define FLEX_TWI_FSR_RXFPTEF_Pos              _UINT32_(7)                                          /* (FLEX_TWI_FSR) Receive FIFO Underflow Error Flag Position */
+#define FLEX_TWI_FSR_RXFPTEF_Msk              (_UINT32_(0x1) << FLEX_TWI_FSR_RXFPTEF_Pos)          /* (FLEX_TWI_FSR) Receive FIFO Underflow Error Flag Mask */
 #define FLEX_TWI_FSR_RXFPTEF(value)           (FLEX_TWI_FSR_RXFPTEF_Msk & (_UINT32_(value) << FLEX_TWI_FSR_RXFPTEF_Pos)) /* Assignment of value for RXFPTEF in the FLEX_TWI_FSR register */
-#define   FLEX_TWI_FSR_RXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_TWI_FSR) No Receive FIFO pointer occurred  */
-#define   FLEX_TWI_FSR_RXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_TWI_FSR) Receive FIFO pointer error occurred. Receiver must be reset  */
-#define FLEX_TWI_FSR_RXFPTEF_0                (FLEX_TWI_FSR_RXFPTEF_0_Val << FLEX_TWI_FSR_RXFPTEF_Pos) /* (FLEX_TWI_FSR) No Receive FIFO pointer occurred Position */
-#define FLEX_TWI_FSR_RXFPTEF_1                (FLEX_TWI_FSR_RXFPTEF_1_Val << FLEX_TWI_FSR_RXFPTEF_Pos) /* (FLEX_TWI_FSR) Receive FIFO pointer error occurred. Receiver must be reset Position */
+#define   FLEX_TWI_FSR_RXFPTEF_0_Val          _UINT32_(0x0)                                        /* (FLEX_TWI_FSR) No Receive FIFO underflow occurred.  */
+#define   FLEX_TWI_FSR_RXFPTEF_1_Val          _UINT32_(0x1)                                        /* (FLEX_TWI_FSR) Receive FIFO underflow error occurred due to an incorrect software access (read data exceeding available data in FIFO). Receiver must be reset by writing FLEX_SPI_CR.SWRST=1.  */
+#define FLEX_TWI_FSR_RXFPTEF_0                (FLEX_TWI_FSR_RXFPTEF_0_Val << FLEX_TWI_FSR_RXFPTEF_Pos) /* (FLEX_TWI_FSR) No Receive FIFO underflow occurred. Position */
+#define FLEX_TWI_FSR_RXFPTEF_1                (FLEX_TWI_FSR_RXFPTEF_1_Val << FLEX_TWI_FSR_RXFPTEF_Pos) /* (FLEX_TWI_FSR) Receive FIFO underflow error occurred due to an incorrect software access (read data exceeding available data in FIFO). Receiver must be reset by writing FLEX_SPI_CR.SWRST=1. Position */
 #define FLEX_TWI_FSR_Msk                      _UINT32_(0x000000FF)                                 /* (FLEX_TWI_FSR) Register Mask  */
 
 

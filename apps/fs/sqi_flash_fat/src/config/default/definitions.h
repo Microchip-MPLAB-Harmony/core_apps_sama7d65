@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -56,9 +56,9 @@
 #include "system/fs/fat_fs/file_system/ffconf.h"
 #include "system/fs/fat_fs/hardware_access/diskio.h"
 #include "peripheral/dwdt/plib_dwdt.h"
+#include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gic/plib_gic.h"
-#include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/pio/plib_pio.h"
 #include "driver/memory/drv_memory.h"
 #include "driver/sst26/drv_sst26.h"

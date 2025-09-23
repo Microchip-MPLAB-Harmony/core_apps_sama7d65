@@ -1,0 +1,657 @@
+configVersion: 1.0.0
+componentName: core
+coreVersion: 5.8.2
+device: SAMA7D65
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: core
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: bsp
+  type: package
+  version: v3.23.0
+- dependencyPackage: ''
+  name: core
+  type: package
+  version: v3.15.5
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+- dependencyPackage: ''
+  name: filex
+  type: package
+  version: v6.4.0_rel
+- dependencyPackage: ''
+  name: littlefs
+  type: package
+  version: v2.9.3
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: core
+          x: '240'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CLK_QSPI0_GCLKCSS:
+      attributes:
+        id: CLK_QSPI0_GCLKCSS
+      children:
+      - children:
+        - attributes:
+            value: '5'
+          type: User
+        type: Values
+      type: KeyValueSet
+    CLK_QSPI0_GCLKDIV:
+      attributes:
+        id: CLK_QSPI0_GCLKDIV
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: Integer
+    CLK_QSPI0_GCLKEN:
+      attributes:
+        id: CLK_QSPI0_GCLKEN
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    PIN_146_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_146_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: SWITCH_AL
+          type: User
+        type: Values
+      type: String
+    PIN_204_LAT:
+      attributes:
+        id: PIN_204_LAT
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_204_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_204_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: LED_AH
+          type: User
+        type: Values
+      type: String
+    PIN_205_LAT:
+      attributes:
+        id: PIN_205_LAT
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_205_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_205_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: LED_AH
+          type: User
+        type: Values
+      type: String
+    PIN_217_FUNCTION_TYPE:
+      attributes:
+        id: PIN_217_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: QSPI0_SCK
+          type: User
+        type: Values
+      type: String
+    PIN_217_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_217_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_238_FUNCTION_TYPE:
+      attributes:
+        id: PIN_238_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: QSPI0_IO1
+          type: User
+        type: Values
+      type: String
+    PIN_238_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_238_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_239_FUNCTION_TYPE:
+      attributes:
+        id: PIN_239_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: QSPI0_CS
+          type: User
+        type: Values
+      type: String
+    PIN_239_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_239_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_259_FUNCTION_TYPE:
+      attributes:
+        id: PIN_259_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: QSPI0_IO2
+          type: User
+        type: Values
+      type: String
+    PIN_259_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_259_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_260_FUNCTION_TYPE:
+      attributes:
+        id: PIN_260_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: QSPI0_IO0
+          type: User
+        type: Values
+      type: String
+    PIN_260_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_260_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_278_FUNCTION_TYPE:
+      attributes:
+        id: PIN_278_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: QSPI0_IO3
+          type: User
+        type: Values
+      type: String
+    PIN_278_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_278_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_327_LAT:
+      attributes:
+        id: PIN_327_LAT
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_327_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_327_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: LED_AH
+          type: User
+        type: Values
+      type: String
+    PORT_A_CFGR_Value21:
+      attributes:
+        id: PORT_A_CFGR_Value21
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_LATCH:
+      attributes:
+        id: PORT_A_LATCH
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueA:
+      attributes:
+        id: PORT_A_MSKR_ValueA
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueB:
+      attributes:
+        id: PORT_A_MSKR_ValueB
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueC:
+      attributes:
+        id: PORT_A_MSKR_ValueC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueD:
+      attributes:
+        id: PORT_A_MSKR_ValueD
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueE:
+      attributes:
+        id: PORT_A_MSKR_ValueE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueF:
+      attributes:
+        id: PORT_A_MSKR_ValueF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueG:
+      attributes:
+        id: PORT_A_MSKR_ValueG
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueGPIO:
+      attributes:
+        id: PORT_A_MSKR_ValueGPIO
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x200000'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_CFGR_Value15:
+      attributes:
+        id: PORT_B_CFGR_Value15
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_CFGR_Value17:
+      attributes:
+        id: PORT_B_CFGR_Value17
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_LATCH:
+      attributes:
+        id: PORT_B_LATCH
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueA:
+      attributes:
+        id: PORT_B_MSKR_ValueA
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x3f00'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueB:
+      attributes:
+        id: PORT_B_MSKR_ValueB
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueC:
+      attributes:
+        id: PORT_B_MSKR_ValueC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueD:
+      attributes:
+        id: PORT_B_MSKR_ValueD
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueE:
+      attributes:
+        id: PORT_B_MSKR_ValueE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueF:
+      attributes:
+        id: PORT_B_MSKR_ValueF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueG:
+      attributes:
+        id: PORT_B_MSKR_ValueG
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueGPIO:
+      attributes:
+        id: PORT_B_MSKR_ValueGPIO
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x28000'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_CFGR_Value10:
+      attributes:
+        id: PORT_C_CFGR_Value10
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x200'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueA:
+      attributes:
+        id: PORT_C_MSKR_ValueA
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueB:
+      attributes:
+        id: PORT_C_MSKR_ValueB
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueC:
+      attributes:
+        id: PORT_C_MSKR_ValueC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueD:
+      attributes:
+        id: PORT_C_MSKR_ValueD
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueE:
+      attributes:
+        id: PORT_C_MSKR_ValueE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueF:
+      attributes:
+        id: PORT_C_MSKR_ValueF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueG:
+      attributes:
+        id: PORT_C_MSKR_ValueG
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueGPIO:
+      attributes:
+        id: PORT_C_MSKR_ValueGPIO
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x400'
+          type: Dynamic
+        type: Values
+      type: String
+    QSPI0_CLOCK_ENABLE:
+      attributes:
+        id: QSPI0_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: qspi0
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    QSPI0_GCLK_FREQUENCY:
+      attributes:
+        id: QSPI0_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '133333350'
+          type: Dynamic
+        type: Values
+      type: Integer
+    QSPI0_INTERRUPT_ENABLE:
+      attributes:
+        id: QSPI0_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: qspi0
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    QSPI0_INTERRUPT_HANDLER:
+      attributes:
+        id: QSPI0_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: qspi0
+            value: QSPI0_Handler
+          type: Dynamic
+        type: Values
+      type: String
+  userData:
+    children:
+    - attributes:
+        canvasHeight: '432'
+        canvasWidth: '453'
+      type: GraphSettings
+    - children:
+      - attributes:
+          id: profile0
+          name: Main
+        type: Profile
+      type: PowerProfiles
+    type: UserData

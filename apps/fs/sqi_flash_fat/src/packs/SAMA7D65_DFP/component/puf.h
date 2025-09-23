@@ -1,7 +1,7 @@
 /*
  * Component description for PUF
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_PUF_COMPONENT_H_
 #define _SAMA7D6_PUF_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                      SOFTWARE API DEFINITION FOR PUF                       */
@@ -784,7 +786,14 @@
 #define   PUF_ASIER_SECE_1_Val                _UINT32_(0x1)                                        /* (PUF_ASIER) Enables triggering of the interrupt line on incorrect/abnormal access to the PUF user interface.  */
 #define PUF_ASIER_SECE_0                      (PUF_ASIER_SECE_0_Val << PUF_ASIER_SECE_Pos)         /* (PUF_ASIER) Disables triggering of the interrupt line on incorrect/abnormal access to the PUF user interface. Position */
 #define PUF_ASIER_SECE_1                      (PUF_ASIER_SECE_1_Val << PUF_ASIER_SECE_Pos)         /* (PUF_ASIER) Enables triggering of the interrupt line on incorrect/abnormal access to the PUF user interface. Position */
-#define PUF_ASIER_Msk                         _UINT32_(0x00000001)                                 /* (PUF_ASIER) Register Mask  */
+#define PUF_ASIER_KELEE_Pos                   _UINT32_(1)                                          /* (PUF_ASIER) Key Length Error Interrupt Enable Position */
+#define PUF_ASIER_KELEE_Msk                   (_UINT32_(0x1) << PUF_ASIER_KELEE_Pos)               /* (PUF_ASIER) Key Length Error Interrupt Enable Mask */
+#define PUF_ASIER_KELEE(value)                (PUF_ASIER_KELEE_Msk & (_UINT32_(value) << PUF_ASIER_KELEE_Pos)) /* Assignment of value for KELEE in the PUF_ASIER register */
+#define   PUF_ASIER_KELEE_0_Val               _UINT32_(0x0)                                        /* (PUF_ASIER) Disables triggering of the interrupt line on key length error detection.  */
+#define   PUF_ASIER_KELEE_1_Val               _UINT32_(0x1)                                        /* (PUF_ASIER) Enables triggering of the interrupt line on key length error detection.  */
+#define PUF_ASIER_KELEE_0                     (PUF_ASIER_KELEE_0_Val << PUF_ASIER_KELEE_Pos)       /* (PUF_ASIER) Disables triggering of the interrupt line on key length error detection. Position */
+#define PUF_ASIER_KELEE_1                     (PUF_ASIER_KELEE_1_Val << PUF_ASIER_KELEE_Pos)       /* (PUF_ASIER) Enables triggering of the interrupt line on key length error detection. Position */
+#define PUF_ASIER_Msk                         _UINT32_(0x00000003)                                 /* (PUF_ASIER) Register Mask  */
 
 
 /* -------- PUF_ASISR : (PUF Offset: 0x1D4) ( R/ 32) Access Security Interrupt Status Register -------- */
@@ -797,7 +806,14 @@
 #define   PUF_ASISR_SECE_1_Val                _UINT32_(0x1)                                        /* (PUF_ASISR) Enables triggering of the interrupt line on incorrect/abnormal access to user interface.  */
 #define PUF_ASISR_SECE_0                      (PUF_ASISR_SECE_0_Val << PUF_ASISR_SECE_Pos)         /* (PUF_ASISR) Disables triggering of the interrupt line on incorrect/abnormal access to user interface. Position */
 #define PUF_ASISR_SECE_1                      (PUF_ASISR_SECE_1_Val << PUF_ASISR_SECE_Pos)         /* (PUF_ASISR) Enables triggering of the interrupt line on incorrect/abnormal access to user interface. Position */
-#define PUF_ASISR_Msk                         _UINT32_(0x00000001)                                 /* (PUF_ASISR) Register Mask  */
+#define PUF_ASISR_KELEE_Pos                   _UINT32_(1)                                          /* (PUF_ASISR) Key Length Error Position */
+#define PUF_ASISR_KELEE_Msk                   (_UINT32_(0x1) << PUF_ASISR_KELEE_Pos)               /* (PUF_ASISR) Key Length Error Mask */
+#define PUF_ASISR_KELEE(value)                (PUF_ASISR_KELEE_Msk & (_UINT32_(value) << PUF_ASISR_KELEE_Pos)) /* Assignment of value for KELEE in the PUF_ASISR register */
+#define   PUF_ASISR_KELEE_0_Val               _UINT32_(0x0)                                        /* (PUF_ASISR) The length of the key corresponds to the expected value.  */
+#define   PUF_ASISR_KELEE_1_Val               _UINT32_(0x1)                                        /* (PUF_ASISR) The length of the key does not correspond to the expected value.  */
+#define PUF_ASISR_KELEE_0                     (PUF_ASISR_KELEE_0_Val << PUF_ASISR_KELEE_Pos)       /* (PUF_ASISR) The length of the key corresponds to the expected value. Position */
+#define PUF_ASISR_KELEE_1                     (PUF_ASISR_KELEE_1_Val << PUF_ASISR_KELEE_Pos)       /* (PUF_ASISR) The length of the key does not correspond to the expected value. Position */
+#define PUF_ASISR_Msk                         _UINT32_(0x00000003)                                 /* (PUF_ASISR) Register Mask  */
 
 
 /* -------- PUF_WPMR : (PUF Offset: 0x1E4) (R/W 32) Write Protection Mode Register -------- */
