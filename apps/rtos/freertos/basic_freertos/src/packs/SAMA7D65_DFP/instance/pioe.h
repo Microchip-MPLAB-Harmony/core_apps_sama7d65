@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,7 +19,7 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_PIOE_INSTANCE_
 #define _SAMA7D6_PIOE_INSTANCE_
 
@@ -30,8 +30,8 @@
 #define PIOE_ABCDSR3_DEFAULT_VAL                 (0x00000000) /* Register value at reset */
 #define PIOE_ABCDSR4_DEFAULT_VAL                 (0x00000000) /* Register value at reset */
 #define PIOE_FILTRS_DEFAULT_VAL                  (0x00000000) /* Register value at reset */
-#define PIOE_INSTANCE_ID                         (14)       /* For PIO 128 to xxx (TBD - PIO MUX) */
-#define PIOE_INSTANCE_ID_SINT                    (123)      /* For PIO 128 to 147, Secure Interrupt */
+#define PIOE_INSTANCE_ID                         (14)       /* For PIO 128 to 141 */
+#define PIOE_INSTANCE_ID_SINT                    (123)      /* For PIO 128 to 141, Secure Interrupt */
 #define PIOE_OSR_DEFAULT_VAL                     (0x00000000) /* Register value at reset */
 #define PIOE_PPDSR_DEFAULT_VAL                   (0xFFFFFFFF) /* Register value at reset */
 #define PIOE_PSR_DEFAULT_VAL                     (0xFFFFFFFF) /* Register value at reset */

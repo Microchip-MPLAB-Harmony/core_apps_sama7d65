@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,13 +19,13 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_LVDSC_INSTANCE_
 #define _SAMA7D6_LVDSC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for LVDSC peripheral ========== */
-#define LVDSC_CLOCK_ID                           (104)      
+#define LVDSC_CLOCK_ID                           (104)
 #define LVDSC_INSTANCE_ID                        (104)      /* Display Serial Interface between LCDC and LVDS interface. Instance include LVDSC and LVDSPHY. */
 
 #endif /* _SAMA7D6_LVDSC_INSTANCE_ */

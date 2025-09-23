@@ -52,7 +52,7 @@
 
 #define GENERIC_TIMER_FREQUENCY 24000000U
 
-volatile static uint64_t compareDelta = 24000UL;
+static volatile uint64_t compareDelta = 24000UL;
 
 
 

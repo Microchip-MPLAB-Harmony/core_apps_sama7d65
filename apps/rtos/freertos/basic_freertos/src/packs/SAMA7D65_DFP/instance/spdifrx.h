@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,14 +19,14 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_SPDIFRX_INSTANCE_
 #define _SAMA7D6_SPDIFRX_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SPDIFRX peripheral ========== */
-#define SPDIFRX_CLOCK_ID                         (79)       
-#define SPDIFRX_DMAC_ID_RX                       (49)       
+#define SPDIFRX_CLOCK_ID                         (79)
+#define SPDIFRX_DMAC_ID_RX                       (49)
 #define SPDIFRX_INSTANCE_ID                      (79)       /* Sony Philips Digital Interface RX */
 
 #endif /* _SAMA7D6_SPDIFRX_INSTANCE_ */

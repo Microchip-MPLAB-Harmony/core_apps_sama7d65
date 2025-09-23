@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,13 +19,13 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_DDRUMCTL_INSTANCE_
 #define _SAMA7D6_DDRUMCTL_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for DDRUMCTL peripheral ========== */
-#define DDRUMCTL_CLOCK_ID                        (32)       
+#define DDRUMCTL_CLOCK_ID                        (32)
 #define DDRUMCTL_INSTANCE_ID                     (32)       /* Universal DDR Memory Controller */
 
 #endif /* _SAMA7D6_DDRUMCTL_INSTANCE_ */

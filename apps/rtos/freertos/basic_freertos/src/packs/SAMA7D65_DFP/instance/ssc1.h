@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,15 +19,15 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_SSC1_INSTANCE_
 #define _SAMA7D6_SSC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SSC1 peripheral ========== */
-#define SSC1_CLOCK_ID                            (82)       
-#define SSC1_DMAC_ID_RX                          (46)       
-#define SSC1_DMAC_ID_TX                          (47)       
+#define SSC1_CLOCK_ID                            (82)
+#define SSC1_DMAC_ID_RX                          (46)
+#define SSC1_DMAC_ID_TX                          (47)
 #define SSC1_INSTANCE_ID                         (82)       /* Synchronous Serial Interface 1 */
 
 #endif /* _SAMA7D6_SSC1_INSTANCE_ */

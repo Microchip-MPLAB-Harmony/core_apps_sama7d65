@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,14 +19,14 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_OTPC_INSTANCE_
 #define _SAMA7D6_OTPC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for OTPC peripheral ========== */
-#define OTPC_EMULATION_ADDRESS                   (0xE0000000) 
-#define OTPC_EMULATION_SIZE                      (0x00001000) 
+#define OTPC_EMULATION_ADDRESS                   (0xE0000000) /* Base address of emulation area */
+#define OTPC_EMULATION_SIZE                      (0x00001000) /* Size of emulation area */
 #define OTPC_INSTANCE_ID                         (63)       /* One Time Programmable Memory Controller */
 
 #endif /* _SAMA7D6_OTPC_INSTANCE_ */

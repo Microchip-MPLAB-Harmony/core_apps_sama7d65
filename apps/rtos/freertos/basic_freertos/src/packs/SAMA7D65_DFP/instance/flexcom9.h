@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,18 +19,18 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_FLEXCOM9_INSTANCE_
 #define _SAMA7D6_FLEXCOM9_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for FLEXCOM9 peripheral ========== */
-#define FLEXCOM9_CLOCK_ID                        (43)       
-#define FLEXCOM9_DMAC_ID_RX                      (23)       
-#define FLEXCOM9_DMAC_ID_TX                      (24)       
+#define FLEXCOM9_CLOCK_ID                        (43)
+#define FLEXCOM9_DMAC_ID_RX                      (23)
+#define FLEXCOM9_DMAC_ID_TX                      (24)
 #define FLEXCOM9_INSTANCE_ID                     (43)       /* FLEXCOM9. Max Generic Clock Frequency = FPCLOCK  3. */
-#define FLEXCOM9_SPI_FIFO_SIZE                   (32)       
-#define FLEXCOM9_TWI_FIFO_SIZE                   (32)       
-#define FLEXCOM9_USART_FIFO_SIZE                 (32)       
+#define FLEXCOM9_SPI_FIFO_SIZE                   (32)       /* SPI FIFO size */
+#define FLEXCOM9_TWI_FIFO_SIZE                   (32)       /* TWI FIFO size */
+#define FLEXCOM9_USART_FIFO_SIZE                 (32)       /* USART FIFO size */
 
 #endif /* _SAMA7D6_FLEXCOM9_INSTANCE_ */
