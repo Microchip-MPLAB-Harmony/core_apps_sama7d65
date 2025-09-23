@@ -1,7 +1,7 @@
 /*
  * Component description for SECUMOD
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_SECUMOD_COMPONENT_H_
 #define _SAMA7D6_SECUMOD_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                    SOFTWARE API DEFINITION FOR SECUMOD                     */
@@ -859,10 +861,10 @@
 #define SECUMOD_GPSBR_TSRANGE_Pos             _UINT32_(1)                                          /* (SECUMOD_GPSBR) Temperature Sensor Range Position */
 #define SECUMOD_GPSBR_TSRANGE_Msk             (_UINT32_(0x1) << SECUMOD_GPSBR_TSRANGE_Pos)         /* (SECUMOD_GPSBR) Temperature Sensor Range Mask */
 #define SECUMOD_GPSBR_TSRANGE(value)          (SECUMOD_GPSBR_TSRANGE_Msk & (_UINT32_(value) << SECUMOD_GPSBR_TSRANGE_Pos)) /* Assignment of value for TSRANGE in the SECUMOD_GPSBR register */
-#define   SECUMOD_GPSBR_TSRANGE_0_Val         _UINT32_(0x0)                                        /* (SECUMOD_GPSBR) Sets temperature sensor high threshold to 105\xfb C.  */
-#define   SECUMOD_GPSBR_TSRANGE_1_Val         _UINT32_(0x1)                                        /* (SECUMOD_GPSBR) Sets temperature sensor high threshold to 120\xfb C.  */
-#define SECUMOD_GPSBR_TSRANGE_0               (SECUMOD_GPSBR_TSRANGE_0_Val << SECUMOD_GPSBR_TSRANGE_Pos) /* (SECUMOD_GPSBR) Sets temperature sensor high threshold to 105\xfb C. Position */
-#define SECUMOD_GPSBR_TSRANGE_1               (SECUMOD_GPSBR_TSRANGE_1_Val << SECUMOD_GPSBR_TSRANGE_Pos) /* (SECUMOD_GPSBR) Sets temperature sensor high threshold to 120\xfb C. Position */
+#define   SECUMOD_GPSBR_TSRANGE_0_Val         _UINT32_(0x0)                                        /* (SECUMOD_GPSBR) Sets temperature sensor high threshold to 105° C.  */
+#define   SECUMOD_GPSBR_TSRANGE_1_Val         _UINT32_(0x1)                                        /* (SECUMOD_GPSBR) Sets temperature sensor high threshold to 120° C.  */
+#define SECUMOD_GPSBR_TSRANGE_0               (SECUMOD_GPSBR_TSRANGE_0_Val << SECUMOD_GPSBR_TSRANGE_Pos) /* (SECUMOD_GPSBR) Sets temperature sensor high threshold to 105° C. Position */
+#define SECUMOD_GPSBR_TSRANGE_1               (SECUMOD_GPSBR_TSRANGE_1_Val << SECUMOD_GPSBR_TSRANGE_Pos) /* (SECUMOD_GPSBR) Sets temperature sensor high threshold to 120° C. Position */
 #define SECUMOD_GPSBR_SMCPURANGE_Pos          _UINT32_(2)                                          /* (SECUMOD_GPSBR) VDDCPU Supply Monitor Range Position */
 #define SECUMOD_GPSBR_SMCPURANGE_Msk          (_UINT32_(0x1) << SECUMOD_GPSBR_SMCPURANGE_Pos)      /* (SECUMOD_GPSBR) VDDCPU Supply Monitor Range Mask */
 #define SECUMOD_GPSBR_SMCPURANGE(value)       (SECUMOD_GPSBR_SMCPURANGE_Msk & (_UINT32_(value) << SECUMOD_GPSBR_SMCPURANGE_Pos)) /* Assignment of value for SMCPURANGE in the SECUMOD_GPSBR register */
