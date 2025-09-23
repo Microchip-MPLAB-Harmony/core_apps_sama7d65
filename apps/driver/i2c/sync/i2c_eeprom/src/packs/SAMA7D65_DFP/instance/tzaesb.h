@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,14 +19,14 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_TZAESB_INSTANCE_
 #define _SAMA7D6_TZAESB_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for TZAESB peripheral ========== */
-#define TZAESB_CLOCK_ID_NS                       (93)       
-#define TZAESB_INSTANCE_ID_NS                    (93)       /* TrustZone Advanced Encryption Standard Bridge Non-Secure (Clocks & Interrupt) */
+#define TZAESB_CLOCK_ID_NS                       (93)
+#define TZAESB_INSTANCE_ID_NS                    (93)       /* TrustZone Advanced Encryption Standard Bridge Non-Secure (Clocks and Interrupt) */
 #define TZAESB_INSTANCE_ID_NS_SINT               (94)       /* TrustZone Advanced Encryption Standard Bridge Non-Secure (Interrupt only) */
 #define TZAESB_INSTANCE_ID_S                     (95)       /* TrustZone Advanced Encryption Standard Bridge Secure (Interrupt only) */
 #define TZAESB_INSTANCE_ID_S_SINT                (96)       /* TrustZone Advanced Encryption Standard Bridge Secure (Interrupt only) */
