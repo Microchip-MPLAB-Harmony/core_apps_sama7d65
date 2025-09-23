@@ -1,7 +1,7 @@
 /*
  * Component description for LVDSC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_LVDSC_COMPONENT_H_
 #define _SAMA7D6_LVDSC_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                     SOFTWARE API DEFINITION FOR LVDSC                      */
@@ -50,28 +52,21 @@
 #define   LVDSC_CFGR_LCDC_PIXSIZE_18BITS_Val  _UINT32_(0x1)                                        /* (LVDSC_CFGR) LCD controller provides 18 bits per pixel.  */
 #define LVDSC_CFGR_LCDC_PIXSIZE_24BITS        (LVDSC_CFGR_LCDC_PIXSIZE_24BITS_Val << LVDSC_CFGR_LCDC_PIXSIZE_Pos) /* (LVDSC_CFGR) LCD controller provides 24 bits per pixel. Position */
 #define LVDSC_CFGR_LCDC_PIXSIZE_18BITS        (LVDSC_CFGR_LCDC_PIXSIZE_18BITS_Val << LVDSC_CFGR_LCDC_PIXSIZE_Pos) /* (LVDSC_CFGR) LCD controller provides 18 bits per pixel. Position */
-#define LVDSC_CFGR_LCDC_DEN_POL_Pos           _UINT32_(1)                                          /* (LVDSC_CFGR) LCDC Controller Data Enable Polarity Position */
-#define LVDSC_CFGR_LCDC_DEN_POL_Msk           (_UINT32_(0x1) << LVDSC_CFGR_LCDC_DEN_POL_Pos)       /* (LVDSC_CFGR) LCDC Controller Data Enable Polarity Mask */
-#define LVDSC_CFGR_LCDC_DEN_POL(value)        (LVDSC_CFGR_LCDC_DEN_POL_Msk & (_UINT32_(value) << LVDSC_CFGR_LCDC_DEN_POL_Pos)) /* Assignment of value for LCDC_DEN_POL in the LVDSC_CFGR register */
-#define   LVDSC_CFGR_LCDC_DEN_POL_HIGH_Val    _UINT32_(0x0)                                        /* (LVDSC_CFGR) LCD_DEN input is active high  */
-#define   LVDSC_CFGR_LCDC_DEN_POL_LOW_Val     _UINT32_(0x1)                                        /* (LVDSC_CFGR) LCD_DEN input is active low  */
-#define LVDSC_CFGR_LCDC_DEN_POL_HIGH          (LVDSC_CFGR_LCDC_DEN_POL_HIGH_Val << LVDSC_CFGR_LCDC_DEN_POL_Pos) /* (LVDSC_CFGR) LCD_DEN input is active high Position */
-#define LVDSC_CFGR_LCDC_DEN_POL_LOW           (LVDSC_CFGR_LCDC_DEN_POL_LOW_Val << LVDSC_CFGR_LCDC_DEN_POL_Pos) /* (LVDSC_CFGR) LCD_DEN input is active low Position */
 #define LVDSC_CFGR_DC_BAL_Pos                 _UINT32_(5)                                          /* (LVDSC_CFGR) DC Mode Position */
 #define LVDSC_CFGR_DC_BAL_Msk                 (_UINT32_(0x1) << LVDSC_CFGR_DC_BAL_Pos)             /* (LVDSC_CFGR) DC Mode Mask */
 #define LVDSC_CFGR_DC_BAL(value)              (LVDSC_CFGR_DC_BAL_Msk & (_UINT32_(value) << LVDSC_CFGR_DC_BAL_Pos)) /* Assignment of value for DC_BAL in the LVDSC_CFGR register */
-#define   LVDSC_CFGR_DC_BAL_UNBALANCED_Val    _UINT32_(0x0)                                        /* (LVDSC_CFGR) LVDS lane is DC-unbalanced  */
-#define   LVDSC_CFGR_DC_BAL_BALANCED_Val      _UINT32_(0x1)                                        /* (LVDSC_CFGR) LVDS lane is DC-balanced  */
-#define LVDSC_CFGR_DC_BAL_UNBALANCED          (LVDSC_CFGR_DC_BAL_UNBALANCED_Val << LVDSC_CFGR_DC_BAL_Pos) /* (LVDSC_CFGR) LVDS lane is DC-unbalanced Position */
-#define LVDSC_CFGR_DC_BAL_BALANCED            (LVDSC_CFGR_DC_BAL_BALANCED_Val << LVDSC_CFGR_DC_BAL_Pos) /* (LVDSC_CFGR) LVDS lane is DC-balanced Position */
+#define   LVDSC_CFGR_DC_BAL_UNBALANCED_Val    _UINT32_(0x0)                                        /* (LVDSC_CFGR) LVDS lane is DC-unbalanced.  */
+#define   LVDSC_CFGR_DC_BAL_BALANCED_Val      _UINT32_(0x1)                                        /* (LVDSC_CFGR) LVDS lane is DC-balanced.  */
+#define LVDSC_CFGR_DC_BAL_UNBALANCED          (LVDSC_CFGR_DC_BAL_UNBALANCED_Val << LVDSC_CFGR_DC_BAL_Pos) /* (LVDSC_CFGR) LVDS lane is DC-unbalanced. Position */
+#define LVDSC_CFGR_DC_BAL_BALANCED            (LVDSC_CFGR_DC_BAL_BALANCED_Val << LVDSC_CFGR_DC_BAL_Pos) /* (LVDSC_CFGR) LVDS lane is DC-balanced. Position */
 #define LVDSC_CFGR_MAPPING_Pos                _UINT32_(6)                                          /* (LVDSC_CFGR) LVDS mapping format (unbalanced mode only) Position */
 #define LVDSC_CFGR_MAPPING_Msk                (_UINT32_(0x1) << LVDSC_CFGR_MAPPING_Pos)            /* (LVDSC_CFGR) LVDS mapping format (unbalanced mode only) Mask */
 #define LVDSC_CFGR_MAPPING(value)             (LVDSC_CFGR_MAPPING_Msk & (_UINT32_(value) << LVDSC_CFGR_MAPPING_Pos)) /* Assignment of value for MAPPING in the LVDSC_CFGR register */
-#define   LVDSC_CFGR_MAPPING_VESA_Val         _UINT32_(0x0)                                        /* (LVDSC_CFGR) Maps LVDS lanes to VESA format  */
-#define   LVDSC_CFGR_MAPPING_JEIDA_Val        _UINT32_(0x1)                                        /* (LVDSC_CFGR) Maps LVDS lanes to JEIDA format  */
-#define LVDSC_CFGR_MAPPING_VESA               (LVDSC_CFGR_MAPPING_VESA_Val << LVDSC_CFGR_MAPPING_Pos) /* (LVDSC_CFGR) Maps LVDS lanes to VESA format Position */
-#define LVDSC_CFGR_MAPPING_JEIDA              (LVDSC_CFGR_MAPPING_JEIDA_Val << LVDSC_CFGR_MAPPING_Pos) /* (LVDSC_CFGR) Maps LVDS lanes to JEIDA format Position */
-#define LVDSC_CFGR_Msk                        _UINT32_(0x00000063)                                 /* (LVDSC_CFGR) Register Mask  */
+#define   LVDSC_CFGR_MAPPING_VESA_Val         _UINT32_(0x0)                                        /* (LVDSC_CFGR) Maps LVDS lanes to VESA format.  */
+#define   LVDSC_CFGR_MAPPING_JEIDA_Val        _UINT32_(0x1)                                        /* (LVDSC_CFGR) Maps LVDS lanes to JEIDA format.  */
+#define LVDSC_CFGR_MAPPING_VESA               (LVDSC_CFGR_MAPPING_VESA_Val << LVDSC_CFGR_MAPPING_Pos) /* (LVDSC_CFGR) Maps LVDS lanes to VESA format. Position */
+#define LVDSC_CFGR_MAPPING_JEIDA              (LVDSC_CFGR_MAPPING_JEIDA_Val << LVDSC_CFGR_MAPPING_Pos) /* (LVDSC_CFGR) Maps LVDS lanes to JEIDA format. Position */
+#define LVDSC_CFGR_Msk                        _UINT32_(0x00000061)                                 /* (LVDSC_CFGR) Register Mask  */
 
 
 /* -------- LVDSC_UCBR : (LVDSC Offset: 0x08) (R/W 32) User Control Bits Register -------- */

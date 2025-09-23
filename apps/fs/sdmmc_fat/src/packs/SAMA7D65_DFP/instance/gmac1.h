@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,13 +19,13 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_GMAC1_INSTANCE_
 #define _SAMA7D6_GMAC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for GMAC1 peripheral ========== */
-#define GMAC1_CLOCK_ID                           (47)       
+#define GMAC1_CLOCK_ID                           (47)
 #define GMAC1_INSTANCE_ID                        (47)       /* Gigabit Ethernet MAC + TSN support */
 #define GMAC1_INSTANCE_ID_EMAC                   (156)      /* GMAC1: Express MAC */
 #define GMAC1_INSTANCE_ID_MMSL                   (157)      /* GMAC1: MAC Merge Sublayer */
