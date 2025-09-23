@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,21 +19,21 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_ASRC_INSTANCE_
 #define _SAMA7D6_ASRC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ASRC peripheral ========== */
-#define ASRC_CLOCK_ID                            (29)       
-#define ASRC_DMAC_ID_CH0_RX                      (55)       
-#define ASRC_DMAC_ID_CH0_TX                      (56)       
-#define ASRC_DMAC_ID_CH1_RX                      (57)       
-#define ASRC_DMAC_ID_CH1_TX                      (58)       
-#define ASRC_DMAC_ID_CH2_RX                      (59)       
-#define ASRC_DMAC_ID_CH2_TX                      (60)       
-#define ASRC_DMAC_ID_CH3_RX                      (61)       
-#define ASRC_DMAC_ID_CH3_TX                      (62)       
+#define ASRC_CLOCK_ID                            (29)
+#define ASRC_DMAC_ID_CH0_RX                      (55)
+#define ASRC_DMAC_ID_CH0_TX                      (56)
+#define ASRC_DMAC_ID_CH1_RX                      (57)
+#define ASRC_DMAC_ID_CH1_TX                      (58)
+#define ASRC_DMAC_ID_CH2_RX                      (59)
+#define ASRC_DMAC_ID_CH2_TX                      (60)
+#define ASRC_DMAC_ID_CH3_RX                      (61)
+#define ASRC_DMAC_ID_CH3_TX                      (62)
 #define ASRC_INSTANCE_ID                         (29)       /* Asynchronous Sample Rate Converter */
 
 #endif /* _SAMA7D6_ASRC_INSTANCE_ */

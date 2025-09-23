@@ -1,7 +1,7 @@
 /*
  * Component description for TC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_TC_COMPONENT_H_
 #define _SAMA7D6_TC_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                       SOFTWARE API DEFINITION FOR TC                       */
@@ -95,6 +97,43 @@
 #define TC_CMR_Msk                            _UINT32_(0x0000003F)                                 /* (TC_CMR) Register Mask  */
 
 /* CAPTURE mode */
+#define TC_CMR_CAPTURE_TCCLKS_Pos             _UINT32_(0)                                          /* (TC_CMR) Clock Selection Position */
+#define TC_CMR_CAPTURE_TCCLKS_Msk             (_UINT32_(0x7) << TC_CMR_CAPTURE_TCCLKS_Pos)         /* (TC_CMR) Clock Selection Mask */
+#define TC_CMR_CAPTURE_TCCLKS(value)          (TC_CMR_CAPTURE_TCCLKS_Msk & (_UINT32_(value) << TC_CMR_CAPTURE_TCCLKS_Pos))
+#define   TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK1_Val _UINT32_(0x0)                                        /* (TC_CMR) Clock selected: internal GCLK [TC_ID] clock signal (from PMC)  */
+#define   TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK2_Val _UINT32_(0x1)                                        /* (TC_CMR) Clock selected: internal MCK0/8 clock signal (from PMC)  */
+#define   TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK3_Val _UINT32_(0x2)                                        /* (TC_CMR) Clock selected: internal MCK0/32 clock signal (from PMC)  */
+#define   TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK4_Val _UINT32_(0x3)                                        /* (TC_CMR) Clock selected: internal MCK0/128 clock signal (from PMC)  */
+#define   TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK5_Val _UINT32_(0x4)                                        /* (TC_CMR) Clock selected: internal TD_SLCK clock signal (from PMC)  */
+#define   TC_CMR_CAPTURE_TCCLKS_XC0_Val       _UINT32_(0x5)                                        /* (TC_CMR) Clock selected: XC0  */
+#define   TC_CMR_CAPTURE_TCCLKS_XC1_Val       _UINT32_(0x6)                                        /* (TC_CMR) Clock selected: XC1  */
+#define   TC_CMR_CAPTURE_TCCLKS_XC2_Val       _UINT32_(0x7)                                        /* (TC_CMR) Clock selected: XC2  */
+#define TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK1    (TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK1_Val << TC_CMR_CAPTURE_TCCLKS_Pos) /* (TC_CMR) Clock selected: internal GCLK [TC_ID] clock signal (from PMC) Position */
+#define TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK2    (TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK2_Val << TC_CMR_CAPTURE_TCCLKS_Pos) /* (TC_CMR) Clock selected: internal MCK0/8 clock signal (from PMC) Position */
+#define TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK3    (TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK3_Val << TC_CMR_CAPTURE_TCCLKS_Pos) /* (TC_CMR) Clock selected: internal MCK0/32 clock signal (from PMC) Position */
+#define TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK4    (TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK4_Val << TC_CMR_CAPTURE_TCCLKS_Pos) /* (TC_CMR) Clock selected: internal MCK0/128 clock signal (from PMC) Position */
+#define TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK5    (TC_CMR_CAPTURE_TCCLKS_TIMER_CLOCK5_Val << TC_CMR_CAPTURE_TCCLKS_Pos) /* (TC_CMR) Clock selected: internal TD_SLCK clock signal (from PMC) Position */
+#define TC_CMR_CAPTURE_TCCLKS_XC0             (TC_CMR_CAPTURE_TCCLKS_XC0_Val << TC_CMR_CAPTURE_TCCLKS_Pos) /* (TC_CMR) Clock selected: XC0 Position */
+#define TC_CMR_CAPTURE_TCCLKS_XC1             (TC_CMR_CAPTURE_TCCLKS_XC1_Val << TC_CMR_CAPTURE_TCCLKS_Pos) /* (TC_CMR) Clock selected: XC1 Position */
+#define TC_CMR_CAPTURE_TCCLKS_XC2             (TC_CMR_CAPTURE_TCCLKS_XC2_Val << TC_CMR_CAPTURE_TCCLKS_Pos) /* (TC_CMR) Clock selected: XC2 Position */
+#define TC_CMR_CAPTURE_CLKI_Pos               _UINT32_(3)                                          /* (TC_CMR) Clock Invert Position */
+#define TC_CMR_CAPTURE_CLKI_Msk               (_UINT32_(0x1) << TC_CMR_CAPTURE_CLKI_Pos)           /* (TC_CMR) Clock Invert Mask */
+#define TC_CMR_CAPTURE_CLKI(value)            (TC_CMR_CAPTURE_CLKI_Msk & (_UINT32_(value) << TC_CMR_CAPTURE_CLKI_Pos))
+#define   TC_CMR_CAPTURE_CLKI_0_Val           _UINT32_(0x0)                                        /* (TC_CMR) Counter is incremented on rising edge of the clock.  */
+#define   TC_CMR_CAPTURE_CLKI_1_Val           _UINT32_(0x1)                                        /* (TC_CMR) Counter is incremented on falling edge of the clock.  */
+#define TC_CMR_CAPTURE_CLKI_0                 (TC_CMR_CAPTURE_CLKI_0_Val << TC_CMR_CAPTURE_CLKI_Pos) /* (TC_CMR) Counter is incremented on rising edge of the clock. Position */
+#define TC_CMR_CAPTURE_CLKI_1                 (TC_CMR_CAPTURE_CLKI_1_Val << TC_CMR_CAPTURE_CLKI_Pos) /* (TC_CMR) Counter is incremented on falling edge of the clock. Position */
+#define TC_CMR_CAPTURE_BURST_Pos              _UINT32_(4)                                          /* (TC_CMR) Burst Signal Selection Position */
+#define TC_CMR_CAPTURE_BURST_Msk              (_UINT32_(0x3) << TC_CMR_CAPTURE_BURST_Pos)          /* (TC_CMR) Burst Signal Selection Mask */
+#define TC_CMR_CAPTURE_BURST(value)           (TC_CMR_CAPTURE_BURST_Msk & (_UINT32_(value) << TC_CMR_CAPTURE_BURST_Pos))
+#define   TC_CMR_CAPTURE_BURST_NONE_Val       _UINT32_(0x0)                                        /* (TC_CMR) The clock is not gated by an external signal.  */
+#define   TC_CMR_CAPTURE_BURST_XC0_Val        _UINT32_(0x1)                                        /* (TC_CMR) XC0 is ANDed with the selected clock.  */
+#define   TC_CMR_CAPTURE_BURST_XC1_Val        _UINT32_(0x2)                                        /* (TC_CMR) XC1 is ANDed with the selected clock.  */
+#define   TC_CMR_CAPTURE_BURST_XC2_Val        _UINT32_(0x3)                                        /* (TC_CMR) XC2 is ANDed with the selected clock.  */
+#define TC_CMR_CAPTURE_BURST_NONE             (TC_CMR_CAPTURE_BURST_NONE_Val << TC_CMR_CAPTURE_BURST_Pos) /* (TC_CMR) The clock is not gated by an external signal. Position */
+#define TC_CMR_CAPTURE_BURST_XC0              (TC_CMR_CAPTURE_BURST_XC0_Val << TC_CMR_CAPTURE_BURST_Pos) /* (TC_CMR) XC0 is ANDed with the selected clock. Position */
+#define TC_CMR_CAPTURE_BURST_XC1              (TC_CMR_CAPTURE_BURST_XC1_Val << TC_CMR_CAPTURE_BURST_Pos) /* (TC_CMR) XC1 is ANDed with the selected clock. Position */
+#define TC_CMR_CAPTURE_BURST_XC2              (TC_CMR_CAPTURE_BURST_XC2_Val << TC_CMR_CAPTURE_BURST_Pos) /* (TC_CMR) XC2 is ANDed with the selected clock. Position */
 #define TC_CMR_CAPTURE_LDBSTOP_Pos            _UINT32_(6)                                          /* (TC_CMR) Counter Clock Stopped with RB Loading Position */
 #define TC_CMR_CAPTURE_LDBSTOP_Msk            (_UINT32_(0x1) << TC_CMR_CAPTURE_LDBSTOP_Pos)        /* (TC_CMR) Counter Clock Stopped with RB Loading Mask */
 #define TC_CMR_CAPTURE_LDBSTOP(value)         (TC_CMR_CAPTURE_LDBSTOP_Msk & (_UINT32_(value) << TC_CMR_CAPTURE_LDBSTOP_Pos))
@@ -176,9 +215,46 @@
 #define TC_CMR_CAPTURE_SBSMPLR_FOURTH         (TC_CMR_CAPTURE_SBSMPLR_FOURTH_Val << TC_CMR_CAPTURE_SBSMPLR_Pos) /* (TC_CMR) Load a Capture register every 4 selected edges Position */
 #define TC_CMR_CAPTURE_SBSMPLR_EIGHTH         (TC_CMR_CAPTURE_SBSMPLR_EIGHTH_Val << TC_CMR_CAPTURE_SBSMPLR_Pos) /* (TC_CMR) Load a Capture register every 8 selected edges Position */
 #define TC_CMR_CAPTURE_SBSMPLR_SIXTEENTH      (TC_CMR_CAPTURE_SBSMPLR_SIXTEENTH_Val << TC_CMR_CAPTURE_SBSMPLR_Pos) /* (TC_CMR) Load a Capture register every 16 selected edges Position */
-#define TC_CMR_CAPTURE_Msk                    _UINT32_(0x007FC7C0)                                 /* (TC_CMR_CAPTURE) Register Mask  */
+#define TC_CMR_CAPTURE_Msk                    _UINT32_(0x007FC7FF)                                 /* (TC_CMR_CAPTURE) Register Mask  */
 
 /* WAVEFORM mode */
+#define TC_CMR_WAVEFORM_TCCLKS_Pos            _UINT32_(0)                                          /* (TC_CMR) Clock Selection Position */
+#define TC_CMR_WAVEFORM_TCCLKS_Msk            (_UINT32_(0x7) << TC_CMR_WAVEFORM_TCCLKS_Pos)        /* (TC_CMR) Clock Selection Mask */
+#define TC_CMR_WAVEFORM_TCCLKS(value)         (TC_CMR_WAVEFORM_TCCLKS_Msk & (_UINT32_(value) << TC_CMR_WAVEFORM_TCCLKS_Pos))
+#define   TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK1_Val _UINT32_(0x0)                                        /* (TC_CMR) Clock selected: internal GCLK [TC_ID] clock signal (from PMC)  */
+#define   TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK2_Val _UINT32_(0x1)                                        /* (TC_CMR) Clock selected: internal MCK0/8 clock signal (from PMC)  */
+#define   TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK3_Val _UINT32_(0x2)                                        /* (TC_CMR) Clock selected: internal MCK0/32 clock signal (from PMC)  */
+#define   TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK4_Val _UINT32_(0x3)                                        /* (TC_CMR) Clock selected: internal MCK0/128 clock signal (from PMC)  */
+#define   TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK5_Val _UINT32_(0x4)                                        /* (TC_CMR) Clock selected: internal TD_SLCK clock signal (from PMC)  */
+#define   TC_CMR_WAVEFORM_TCCLKS_XC0_Val      _UINT32_(0x5)                                        /* (TC_CMR) Clock selected: XC0  */
+#define   TC_CMR_WAVEFORM_TCCLKS_XC1_Val      _UINT32_(0x6)                                        /* (TC_CMR) Clock selected: XC1  */
+#define   TC_CMR_WAVEFORM_TCCLKS_XC2_Val      _UINT32_(0x7)                                        /* (TC_CMR) Clock selected: XC2  */
+#define TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK1   (TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK1_Val << TC_CMR_WAVEFORM_TCCLKS_Pos) /* (TC_CMR) Clock selected: internal GCLK [TC_ID] clock signal (from PMC) Position */
+#define TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK2   (TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK2_Val << TC_CMR_WAVEFORM_TCCLKS_Pos) /* (TC_CMR) Clock selected: internal MCK0/8 clock signal (from PMC) Position */
+#define TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK3   (TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK3_Val << TC_CMR_WAVEFORM_TCCLKS_Pos) /* (TC_CMR) Clock selected: internal MCK0/32 clock signal (from PMC) Position */
+#define TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK4   (TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK4_Val << TC_CMR_WAVEFORM_TCCLKS_Pos) /* (TC_CMR) Clock selected: internal MCK0/128 clock signal (from PMC) Position */
+#define TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK5   (TC_CMR_WAVEFORM_TCCLKS_TIMER_CLOCK5_Val << TC_CMR_WAVEFORM_TCCLKS_Pos) /* (TC_CMR) Clock selected: internal TD_SLCK clock signal (from PMC) Position */
+#define TC_CMR_WAVEFORM_TCCLKS_XC0            (TC_CMR_WAVEFORM_TCCLKS_XC0_Val << TC_CMR_WAVEFORM_TCCLKS_Pos) /* (TC_CMR) Clock selected: XC0 Position */
+#define TC_CMR_WAVEFORM_TCCLKS_XC1            (TC_CMR_WAVEFORM_TCCLKS_XC1_Val << TC_CMR_WAVEFORM_TCCLKS_Pos) /* (TC_CMR) Clock selected: XC1 Position */
+#define TC_CMR_WAVEFORM_TCCLKS_XC2            (TC_CMR_WAVEFORM_TCCLKS_XC2_Val << TC_CMR_WAVEFORM_TCCLKS_Pos) /* (TC_CMR) Clock selected: XC2 Position */
+#define TC_CMR_WAVEFORM_CLKI_Pos              _UINT32_(3)                                          /* (TC_CMR) Clock Invert Position */
+#define TC_CMR_WAVEFORM_CLKI_Msk              (_UINT32_(0x1) << TC_CMR_WAVEFORM_CLKI_Pos)          /* (TC_CMR) Clock Invert Mask */
+#define TC_CMR_WAVEFORM_CLKI(value)           (TC_CMR_WAVEFORM_CLKI_Msk & (_UINT32_(value) << TC_CMR_WAVEFORM_CLKI_Pos))
+#define   TC_CMR_WAVEFORM_CLKI_0_Val          _UINT32_(0x0)                                        /* (TC_CMR) Counter is incremented on rising edge of the clock.  */
+#define   TC_CMR_WAVEFORM_CLKI_1_Val          _UINT32_(0x1)                                        /* (TC_CMR) Counter is incremented on falling edge of the clock.  */
+#define TC_CMR_WAVEFORM_CLKI_0                (TC_CMR_WAVEFORM_CLKI_0_Val << TC_CMR_WAVEFORM_CLKI_Pos) /* (TC_CMR) Counter is incremented on rising edge of the clock. Position */
+#define TC_CMR_WAVEFORM_CLKI_1                (TC_CMR_WAVEFORM_CLKI_1_Val << TC_CMR_WAVEFORM_CLKI_Pos) /* (TC_CMR) Counter is incremented on falling edge of the clock. Position */
+#define TC_CMR_WAVEFORM_BURST_Pos             _UINT32_(4)                                          /* (TC_CMR) Burst Signal Selection Position */
+#define TC_CMR_WAVEFORM_BURST_Msk             (_UINT32_(0x3) << TC_CMR_WAVEFORM_BURST_Pos)         /* (TC_CMR) Burst Signal Selection Mask */
+#define TC_CMR_WAVEFORM_BURST(value)          (TC_CMR_WAVEFORM_BURST_Msk & (_UINT32_(value) << TC_CMR_WAVEFORM_BURST_Pos))
+#define   TC_CMR_WAVEFORM_BURST_NONE_Val      _UINT32_(0x0)                                        /* (TC_CMR) The clock is not gated by an external signal.  */
+#define   TC_CMR_WAVEFORM_BURST_XC0_Val       _UINT32_(0x1)                                        /* (TC_CMR) XC0 is ANDed with the selected clock.  */
+#define   TC_CMR_WAVEFORM_BURST_XC1_Val       _UINT32_(0x2)                                        /* (TC_CMR) XC1 is ANDed with the selected clock.  */
+#define   TC_CMR_WAVEFORM_BURST_XC2_Val       _UINT32_(0x3)                                        /* (TC_CMR) XC2 is ANDed with the selected clock.  */
+#define TC_CMR_WAVEFORM_BURST_NONE            (TC_CMR_WAVEFORM_BURST_NONE_Val << TC_CMR_WAVEFORM_BURST_Pos) /* (TC_CMR) The clock is not gated by an external signal. Position */
+#define TC_CMR_WAVEFORM_BURST_XC0             (TC_CMR_WAVEFORM_BURST_XC0_Val << TC_CMR_WAVEFORM_BURST_Pos) /* (TC_CMR) XC0 is ANDed with the selected clock. Position */
+#define TC_CMR_WAVEFORM_BURST_XC1             (TC_CMR_WAVEFORM_BURST_XC1_Val << TC_CMR_WAVEFORM_BURST_Pos) /* (TC_CMR) XC1 is ANDed with the selected clock. Position */
+#define TC_CMR_WAVEFORM_BURST_XC2             (TC_CMR_WAVEFORM_BURST_XC2_Val << TC_CMR_WAVEFORM_BURST_Pos) /* (TC_CMR) XC2 is ANDed with the selected clock. Position */
 #define TC_CMR_WAVEFORM_CPCSTOP_Pos           _UINT32_(6)                                          /* (TC_CMR) Counter Clock Stopped with RC Compare Position */
 #define TC_CMR_WAVEFORM_CPCSTOP_Msk           (_UINT32_(0x1) << TC_CMR_WAVEFORM_CPCSTOP_Pos)       /* (TC_CMR) Counter Clock Stopped with RC Compare Mask */
 #define TC_CMR_WAVEFORM_CPCSTOP(value)        (TC_CMR_WAVEFORM_CPCSTOP_Msk & (_UINT32_(value) << TC_CMR_WAVEFORM_CPCSTOP_Pos))
@@ -328,7 +404,7 @@
 #define TC_CMR_WAVEFORM_BSWTRG_SET            (TC_CMR_WAVEFORM_BSWTRG_SET_Val << TC_CMR_WAVEFORM_BSWTRG_Pos) /* (TC_CMR) Set Position */
 #define TC_CMR_WAVEFORM_BSWTRG_CLEAR          (TC_CMR_WAVEFORM_BSWTRG_CLEAR_Val << TC_CMR_WAVEFORM_BSWTRG_Pos) /* (TC_CMR) Clear Position */
 #define TC_CMR_WAVEFORM_BSWTRG_TOGGLE         (TC_CMR_WAVEFORM_BSWTRG_TOGGLE_Val << TC_CMR_WAVEFORM_BSWTRG_Pos) /* (TC_CMR) Toggle Position */
-#define TC_CMR_WAVEFORM_Msk                   _UINT32_(0xFFFFFFC0)                                 /* (TC_CMR_WAVEFORM) Register Mask  */
+#define TC_CMR_WAVEFORM_Msk                   _UINT32_(0xFFFFFFFF)                                 /* (TC_CMR_WAVEFORM) Register Mask  */
 
 
 /* -------- TC_SMMR : (TC Offset: 0x08) (R/W 32) Stepper Motor Mode Register  -------- */
@@ -588,9 +664,9 @@
 #define TC_EMR_TRIGSRCA_Msk                   (_UINT32_(0x3) << TC_EMR_TRIGSRCA_Pos)               /* (TC_EMR) Trigger Source for Input A Mask */
 #define TC_EMR_TRIGSRCA(value)                (TC_EMR_TRIGSRCA_Msk & (_UINT32_(value) << TC_EMR_TRIGSRCA_Pos)) /* Assignment of value for TRIGSRCA in the TC_EMR register */
 #define   TC_EMR_TRIGSRCA_EXTERNAL_TIOAx_Val  _UINT32_(0x0)                                        /* (TC_EMR) The trigger/capture input A is driven by external pin TIOAx  */
-#define   TC_EMR_TRIGSRCA_PWMx_Val            _UINT32_(0x1)                                        /* (TC_EMR) For TC0: The trigger/capture input A is driven internally by PWMx. For TC1.TIOA1, TC1.TIOA2: The trigger/capture input B is driven internally by the GTSUCOMP signal of the Ethernet MAC (GMAC).  */
+#define   TC_EMR_TRIGSRCA_PWMx_Val            _UINT32_(0x1)                                        /* (TC_EMR) For TC0: The trigger/capture input A is driven internally by PWMx. For TC1.TIOA1, TC1.TIOA2: The trigger/capture input A is driven internally by the GTSUCOMP signal of the Ethernet MAC (GMAC).  */
 #define TC_EMR_TRIGSRCA_EXTERNAL_TIOAx        (TC_EMR_TRIGSRCA_EXTERNAL_TIOAx_Val << TC_EMR_TRIGSRCA_Pos) /* (TC_EMR) The trigger/capture input A is driven by external pin TIOAx Position */
-#define TC_EMR_TRIGSRCA_PWMx                  (TC_EMR_TRIGSRCA_PWMx_Val << TC_EMR_TRIGSRCA_Pos)    /* (TC_EMR) For TC0: The trigger/capture input A is driven internally by PWMx. For TC1.TIOA1, TC1.TIOA2: The trigger/capture input B is driven internally by the GTSUCOMP signal of the Ethernet MAC (GMAC). Position */
+#define TC_EMR_TRIGSRCA_PWMx                  (TC_EMR_TRIGSRCA_PWMx_Val << TC_EMR_TRIGSRCA_Pos)    /* (TC_EMR) For TC0: The trigger/capture input A is driven internally by PWMx. For TC1.TIOA1, TC1.TIOA2: The trigger/capture input A is driven internally by the GTSUCOMP signal of the Ethernet MAC (GMAC). Position */
 #define TC_EMR_TRIGSRCB_Pos                   _UINT32_(4)                                          /* (TC_EMR) Trigger Source for Input B Position */
 #define TC_EMR_TRIGSRCB_Msk                   (_UINT32_(0x3) << TC_EMR_TRIGSRCB_Pos)               /* (TC_EMR) Trigger Source for Input B Mask */
 #define TC_EMR_TRIGSRCB(value)                (TC_EMR_TRIGSRCB_Msk & (_UINT32_(value) << TC_EMR_TRIGSRCB_Pos)) /* Assignment of value for TRIGSRCB in the TC_EMR register */
@@ -704,33 +780,33 @@
 /* -------- TC_BMR : (TC Offset: 0xC4) (R/W 32) Block Mode Register -------- */
 #define TC_BMR_RESETVALUE                     _UINT32_(0x00)                                       /*  (TC_BMR) Block Mode Register  Reset Value */
 
-#define TC_BMR_TC0XC0S_Pos                    _UINT32_(0)                                          /* (TC_BMR) External Clock Signal 0 Selection Position */
-#define TC_BMR_TC0XC0S_Msk                    (_UINT32_(0x3) << TC_BMR_TC0XC0S_Pos)                /* (TC_BMR) External Clock Signal 0 Selection Mask */
+#define TC_BMR_TC0XC0S_Pos                    _UINT32_(0)                                          /* (TC_BMR) External Clock Signal 0 (XC0) Selection Position */
+#define TC_BMR_TC0XC0S_Msk                    (_UINT32_(0x3) << TC_BMR_TC0XC0S_Pos)                /* (TC_BMR) External Clock Signal 0 (XC0) Selection Mask */
 #define TC_BMR_TC0XC0S(value)                 (TC_BMR_TC0XC0S_Msk & (_UINT32_(value) << TC_BMR_TC0XC0S_Pos)) /* Assignment of value for TC0XC0S in the TC_BMR register */
 #define   TC_BMR_TC0XC0S_TCLK0_Val            _UINT32_(0x0)                                        /* (TC_BMR) Signal connected to XC0: TCLK0  */
-#define   TC_BMR_TC0XC0S_TIOA1_Val            _UINT32_(0x2)                                        /* (TC_BMR) Signal connected to XC0: TIOA1  */
-#define   TC_BMR_TC0XC0S_TIOA2_Val            _UINT32_(0x3)                                        /* (TC_BMR) Signal connected to XC0: TIOA2  */
+#define   TC_BMR_TC0XC0S_TIOA1_Val            _UINT32_(0x2)                                        /* (TC_BMR) Signal connected to XC0: internal TIOA1 for chaining  */
+#define   TC_BMR_TC0XC0S_TIOA2_Val            _UINT32_(0x3)                                        /* (TC_BMR) Signal connected to XC0: internal TIOA2 for chaining  */
 #define TC_BMR_TC0XC0S_TCLK0                  (TC_BMR_TC0XC0S_TCLK0_Val << TC_BMR_TC0XC0S_Pos)     /* (TC_BMR) Signal connected to XC0: TCLK0 Position */
-#define TC_BMR_TC0XC0S_TIOA1                  (TC_BMR_TC0XC0S_TIOA1_Val << TC_BMR_TC0XC0S_Pos)     /* (TC_BMR) Signal connected to XC0: TIOA1 Position */
-#define TC_BMR_TC0XC0S_TIOA2                  (TC_BMR_TC0XC0S_TIOA2_Val << TC_BMR_TC0XC0S_Pos)     /* (TC_BMR) Signal connected to XC0: TIOA2 Position */
-#define TC_BMR_TC1XC1S_Pos                    _UINT32_(2)                                          /* (TC_BMR) External Clock Signal 1 Selection Position */
-#define TC_BMR_TC1XC1S_Msk                    (_UINT32_(0x3) << TC_BMR_TC1XC1S_Pos)                /* (TC_BMR) External Clock Signal 1 Selection Mask */
+#define TC_BMR_TC0XC0S_TIOA1                  (TC_BMR_TC0XC0S_TIOA1_Val << TC_BMR_TC0XC0S_Pos)     /* (TC_BMR) Signal connected to XC0: internal TIOA1 for chaining Position */
+#define TC_BMR_TC0XC0S_TIOA2                  (TC_BMR_TC0XC0S_TIOA2_Val << TC_BMR_TC0XC0S_Pos)     /* (TC_BMR) Signal connected to XC0: internal TIOA2 for chaining Position */
+#define TC_BMR_TC1XC1S_Pos                    _UINT32_(2)                                          /* (TC_BMR) External Clock Signal 1 (XC1) Selection Position */
+#define TC_BMR_TC1XC1S_Msk                    (_UINT32_(0x3) << TC_BMR_TC1XC1S_Pos)                /* (TC_BMR) External Clock Signal 1 (XC1) Selection Mask */
 #define TC_BMR_TC1XC1S(value)                 (TC_BMR_TC1XC1S_Msk & (_UINT32_(value) << TC_BMR_TC1XC1S_Pos)) /* Assignment of value for TC1XC1S in the TC_BMR register */
 #define   TC_BMR_TC1XC1S_TCLK1_Val            _UINT32_(0x0)                                        /* (TC_BMR) Signal connected to XC1: TCLK1  */
-#define   TC_BMR_TC1XC1S_TIOA0_Val            _UINT32_(0x2)                                        /* (TC_BMR) Signal connected to XC1: TIOA0  */
-#define   TC_BMR_TC1XC1S_TIOA2_Val            _UINT32_(0x3)                                        /* (TC_BMR) Signal connected to XC1: TIOA2  */
+#define   TC_BMR_TC1XC1S_TIOA0_Val            _UINT32_(0x2)                                        /* (TC_BMR) Signal connected to XC1: internal TIOA0 for chaining  */
+#define   TC_BMR_TC1XC1S_TIOA2_Val            _UINT32_(0x3)                                        /* (TC_BMR) Signal connected to XC1: internal TIOA2 for chaining  */
 #define TC_BMR_TC1XC1S_TCLK1                  (TC_BMR_TC1XC1S_TCLK1_Val << TC_BMR_TC1XC1S_Pos)     /* (TC_BMR) Signal connected to XC1: TCLK1 Position */
-#define TC_BMR_TC1XC1S_TIOA0                  (TC_BMR_TC1XC1S_TIOA0_Val << TC_BMR_TC1XC1S_Pos)     /* (TC_BMR) Signal connected to XC1: TIOA0 Position */
-#define TC_BMR_TC1XC1S_TIOA2                  (TC_BMR_TC1XC1S_TIOA2_Val << TC_BMR_TC1XC1S_Pos)     /* (TC_BMR) Signal connected to XC1: TIOA2 Position */
-#define TC_BMR_TC2XC2S_Pos                    _UINT32_(4)                                          /* (TC_BMR) External Clock Signal 2 Selection Position */
-#define TC_BMR_TC2XC2S_Msk                    (_UINT32_(0x3) << TC_BMR_TC2XC2S_Pos)                /* (TC_BMR) External Clock Signal 2 Selection Mask */
+#define TC_BMR_TC1XC1S_TIOA0                  (TC_BMR_TC1XC1S_TIOA0_Val << TC_BMR_TC1XC1S_Pos)     /* (TC_BMR) Signal connected to XC1: internal TIOA0 for chaining Position */
+#define TC_BMR_TC1XC1S_TIOA2                  (TC_BMR_TC1XC1S_TIOA2_Val << TC_BMR_TC1XC1S_Pos)     /* (TC_BMR) Signal connected to XC1: internal TIOA2 for chaining Position */
+#define TC_BMR_TC2XC2S_Pos                    _UINT32_(4)                                          /* (TC_BMR) External Clock Signal 2 (XC2) Selection Position */
+#define TC_BMR_TC2XC2S_Msk                    (_UINT32_(0x3) << TC_BMR_TC2XC2S_Pos)                /* (TC_BMR) External Clock Signal 2 (XC2) Selection Mask */
 #define TC_BMR_TC2XC2S(value)                 (TC_BMR_TC2XC2S_Msk & (_UINT32_(value) << TC_BMR_TC2XC2S_Pos)) /* Assignment of value for TC2XC2S in the TC_BMR register */
 #define   TC_BMR_TC2XC2S_TCLK2_Val            _UINT32_(0x0)                                        /* (TC_BMR) Signal connected to XC2: TCLK2  */
-#define   TC_BMR_TC2XC2S_TIOA0_Val            _UINT32_(0x2)                                        /* (TC_BMR) Signal connected to XC2: TIOA0  */
-#define   TC_BMR_TC2XC2S_TIOA1_Val            _UINT32_(0x3)                                        /* (TC_BMR) Signal connected to XC2: TIOA1  */
+#define   TC_BMR_TC2XC2S_TIOA0_Val            _UINT32_(0x2)                                        /* (TC_BMR) Signal connected to XC2: internal TIOA0 for chaining  */
+#define   TC_BMR_TC2XC2S_TIOA1_Val            _UINT32_(0x3)                                        /* (TC_BMR) Signal connected to XC2: internal TIOA1 for chaining  */
 #define TC_BMR_TC2XC2S_TCLK2                  (TC_BMR_TC2XC2S_TCLK2_Val << TC_BMR_TC2XC2S_Pos)     /* (TC_BMR) Signal connected to XC2: TCLK2 Position */
-#define TC_BMR_TC2XC2S_TIOA0                  (TC_BMR_TC2XC2S_TIOA0_Val << TC_BMR_TC2XC2S_Pos)     /* (TC_BMR) Signal connected to XC2: TIOA0 Position */
-#define TC_BMR_TC2XC2S_TIOA1                  (TC_BMR_TC2XC2S_TIOA1_Val << TC_BMR_TC2XC2S_Pos)     /* (TC_BMR) Signal connected to XC2: TIOA1 Position */
+#define TC_BMR_TC2XC2S_TIOA0                  (TC_BMR_TC2XC2S_TIOA0_Val << TC_BMR_TC2XC2S_Pos)     /* (TC_BMR) Signal connected to XC2: internal TIOA0 for chaining Position */
+#define TC_BMR_TC2XC2S_TIOA1                  (TC_BMR_TC2XC2S_TIOA1_Val << TC_BMR_TC2XC2S_Pos)     /* (TC_BMR) Signal connected to XC2: internal TIOA1 for chaining Position */
 #define TC_BMR_QDEN_Pos                       _UINT32_(8)                                          /* (TC_BMR) Quadrature Decoder Enabled Position */
 #define TC_BMR_QDEN_Msk                       (_UINT32_(0x1) << TC_BMR_QDEN_Pos)                   /* (TC_BMR) Quadrature Decoder Enabled Mask */
 #define TC_BMR_QDEN(value)                    (TC_BMR_QDEN_Msk & (_UINT32_(value) << TC_BMR_QDEN_Pos)) /* Assignment of value for QDEN in the TC_BMR register */
@@ -801,8 +877,8 @@
 #define   TC_BMR_IDXPHB_1_Val                 _UINT32_(0x1)                                        /* (TC_BMR) IDX pin of the rotary sensor must drive TIOB0.  */
 #define TC_BMR_IDXPHB_0                       (TC_BMR_IDXPHB_0_Val << TC_BMR_IDXPHB_Pos)           /* (TC_BMR) IDX pin of the rotary sensor must drive TIOA1. Position */
 #define TC_BMR_IDXPHB_1                       (TC_BMR_IDXPHB_1_Val << TC_BMR_IDXPHB_Pos)           /* (TC_BMR) IDX pin of the rotary sensor must drive TIOB0. Position */
-#define TC_BMR_AUTOC_Pos                      _UINT32_(18)                                         /* (TC_BMR) AutoCorrection of missing pulses Position */
-#define TC_BMR_AUTOC_Msk                      (_UINT32_(0x1) << TC_BMR_AUTOC_Pos)                  /* (TC_BMR) AutoCorrection of missing pulses Mask */
+#define TC_BMR_AUTOC_Pos                      _UINT32_(18)                                         /* (TC_BMR) AutoCorrection of Missing Pulses Position */
+#define TC_BMR_AUTOC_Msk                      (_UINT32_(0x1) << TC_BMR_AUTOC_Pos)                  /* (TC_BMR) AutoCorrection of Missing Pulses Mask */
 #define TC_BMR_AUTOC(value)                   (TC_BMR_AUTOC_Msk & (_UINT32_(value) << TC_BMR_AUTOC_Pos)) /* Assignment of value for AUTOC in the TC_BMR register */
 #define   TC_BMR_AUTOC_DISABLED_Val           _UINT32_(0x0)                                        /* (TC_BMR) The detection and autocorrection function is disabled.  */
 #define   TC_BMR_AUTOC_ENABLED_Val            _UINT32_(0x1)                                        /* (TC_BMR) The detection and autocorrection function is enabled.  */

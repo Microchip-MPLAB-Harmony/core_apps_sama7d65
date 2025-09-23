@@ -1,7 +1,7 @@
 /*
  * Component description for RTC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_RTC_COMPONENT_H_
 #define _SAMA7D6_RTC_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                      SOFTWARE API DEFINITION FOR RTC                       */
@@ -80,9 +82,9 @@
 #define RTC_MR_UTC_Pos                        _UINT32_(2)                                          /* (RTC_MR) UTC Time Format Position */
 #define RTC_MR_UTC_Msk                        (_UINT32_(0x1) << RTC_MR_UTC_Pos)                    /* (RTC_MR) UTC Time Format Mask */
 #define RTC_MR_UTC(value)                     (RTC_MR_UTC_Msk & (_UINT32_(value) << RTC_MR_UTC_Pos)) /* Assignment of value for UTC in the RTC_MR register */
-#define   RTC_MR_UTC_DISABLED_Val             _UINT32_(0x0)                                        /* (RTC_MR) Gregorian or Persian calendar.  */
+#define   RTC_MR_UTC_DISABLED_Val             _UINT32_(0x0)                                        /* (RTC_MR) Gregorian calendar.  */
 #define   RTC_MR_UTC_ENABLED_Val              _UINT32_(0x1)                                        /* (RTC_MR) UTC format.  */
-#define RTC_MR_UTC_DISABLED                   (RTC_MR_UTC_DISABLED_Val << RTC_MR_UTC_Pos)          /* (RTC_MR) Gregorian or Persian calendar. Position */
+#define RTC_MR_UTC_DISABLED                   (RTC_MR_UTC_DISABLED_Val << RTC_MR_UTC_Pos)          /* (RTC_MR) Gregorian calendar. Position */
 #define RTC_MR_UTC_ENABLED                    (RTC_MR_UTC_ENABLED_Val << RTC_MR_UTC_Pos)           /* (RTC_MR) UTC format. Position */
 #define RTC_MR_NEGPPM_Pos                     _UINT32_(4)                                          /* (RTC_MR) NEGative PPM Correction Position */
 #define RTC_MR_NEGPPM_Msk                     (_UINT32_(0x1) << RTC_MR_NEGPPM_Pos)                 /* (RTC_MR) NEGative PPM Correction Mask */
@@ -510,6 +512,9 @@
 #define RTC_TSTR0_Msk                         _UINT32_(0x8F7F7F7F)                                 /* (RTC_TSTR0) Register Mask  */
 
 /* UTC mode */
+#define RTC_TSTR0_UTC_TEVCNT_Pos              _UINT32_(24)                                         /* (RTC_TSTR0) Tamper Events Counter (cleared by reading RTC_TSSR0) Position */
+#define RTC_TSTR0_UTC_TEVCNT_Msk              (_UINT32_(0xF) << RTC_TSTR0_UTC_TEVCNT_Pos)          /* (RTC_TSTR0) Tamper Events Counter (cleared by reading RTC_TSSR0) Mask */
+#define RTC_TSTR0_UTC_TEVCNT(value)           (RTC_TSTR0_UTC_TEVCNT_Msk & (_UINT32_(value) << RTC_TSTR0_UTC_TEVCNT_Pos))
 #define RTC_TSTR0_UTC_BACKUP_Pos              _UINT32_(31)                                         /* (RTC_TSTR0) System Mode of the Tamper (cleared by reading RTC_TSSR0) Position */
 #define RTC_TSTR0_UTC_BACKUP_Msk              (_UINT32_(0x1) << RTC_TSTR0_UTC_BACKUP_Pos)          /* (RTC_TSTR0) System Mode of the Tamper (cleared by reading RTC_TSSR0) Mask */
 #define RTC_TSTR0_UTC_BACKUP(value)           (RTC_TSTR0_UTC_BACKUP_Msk & (_UINT32_(value) << RTC_TSTR0_UTC_BACKUP_Pos))
@@ -517,7 +522,7 @@
 #define   RTC_TSTR0_UTC_BACKUP_1_Val          _UINT32_(0x1)                                        /* (RTC_TSTR0) The system is in Backup mode when the tamper event occurs.  */
 #define RTC_TSTR0_UTC_BACKUP_0                (RTC_TSTR0_UTC_BACKUP_0_Val << RTC_TSTR0_UTC_BACKUP_Pos) /* (RTC_TSTR0) The state of the system is different from Backup mode when the tamper event occurs. Position */
 #define RTC_TSTR0_UTC_BACKUP_1                (RTC_TSTR0_UTC_BACKUP_1_Val << RTC_TSTR0_UTC_BACKUP_Pos) /* (RTC_TSTR0) The system is in Backup mode when the tamper event occurs. Position */
-#define RTC_TSTR0_UTC_Msk                     _UINT32_(0x80000000)                                 /* (RTC_TSTR0_UTC) Register Mask  */
+#define RTC_TSTR0_UTC_Msk                     _UINT32_(0x8F000000)                                 /* (RTC_TSTR0_UTC) Register Mask  */
 
 
 /* -------- RTC_TSDR0 : (RTC Offset: 0xB4) ( R/ 32) Timestamp Date Register 0 -------- */
@@ -602,7 +607,14 @@
 #define RTC_TSTR1_Msk                         _UINT32_(0x807F7F7F)                                 /* (RTC_TSTR1) Register Mask  */
 
 /* UTC mode */
-#define RTC_TSTR1_UTC_Msk                     _UINT32_(0x00000000)                                 /* (RTC_TSTR1_UTC) Register Mask  */
+#define RTC_TSTR1_UTC_BACKUP_Pos              _UINT32_(31)                                         /* (RTC_TSTR1) System Mode of the Tamper (cleared by reading RTC_TSSR1) Position */
+#define RTC_TSTR1_UTC_BACKUP_Msk              (_UINT32_(0x1) << RTC_TSTR1_UTC_BACKUP_Pos)          /* (RTC_TSTR1) System Mode of the Tamper (cleared by reading RTC_TSSR1) Mask */
+#define RTC_TSTR1_UTC_BACKUP(value)           (RTC_TSTR1_UTC_BACKUP_Msk & (_UINT32_(value) << RTC_TSTR1_UTC_BACKUP_Pos))
+#define   RTC_TSTR1_UTC_BACKUP_0_Val          _UINT32_(0x0)                                        /* (RTC_TSTR1) The state of the system is different from Backup mode when the tamper event occurs.  */
+#define   RTC_TSTR1_UTC_BACKUP_1_Val          _UINT32_(0x1)                                        /* (RTC_TSTR1) The system is in Backup mode when the tamper event occurs.  */
+#define RTC_TSTR1_UTC_BACKUP_0                (RTC_TSTR1_UTC_BACKUP_0_Val << RTC_TSTR1_UTC_BACKUP_Pos) /* (RTC_TSTR1) The state of the system is different from Backup mode when the tamper event occurs. Position */
+#define RTC_TSTR1_UTC_BACKUP_1                (RTC_TSTR1_UTC_BACKUP_1_Val << RTC_TSTR1_UTC_BACKUP_Pos) /* (RTC_TSTR1) The system is in Backup mode when the tamper event occurs. Position */
+#define RTC_TSTR1_UTC_Msk                     _UINT32_(0x80000000)                                 /* (RTC_TSTR1_UTC) Register Mask  */
 
 
 /* -------- RTC_TSDR1 : (RTC Offset: 0xC0) ( R/ 32) Timestamp Date Register 1 -------- */
