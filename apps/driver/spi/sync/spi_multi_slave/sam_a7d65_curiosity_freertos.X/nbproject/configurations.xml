@@ -170,7 +170,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/component/dsi.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/aes.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/otpc.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/component/pmonc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/shdwc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/trng.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/spdiftx.h</itemPath>
@@ -195,7 +194,6 @@
           <logicalFolder name="instance" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/SAMA7D65_DFP/instance/flexcom8.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/i2smcc0.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/pmonc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/sfrbu.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/mcan0.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/matrix.h</itemPath>
@@ -214,7 +212,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/tcpca.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/flexcom0.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/spdifrx.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/uhphs_ohci.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/udphsb.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/qspi0.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/mcan2.h</itemPath>
@@ -238,7 +235,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/shdwc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/gmac1.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/dwdt.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/tzaesbs.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/xdmac1.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/tc0.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pit64b0.h</itemPath>
@@ -256,7 +252,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pdmc1.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pit64b1.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/flexcom3.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/uhphs_ehci.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/eic.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/ddrpubl.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/mcan3.h</itemPath>
@@ -285,7 +280,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/sdmmc1.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/ssc0.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pit64b4.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/tzaesbns.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/tzaesb.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pioa.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/uhphs.h</itemPath>
@@ -294,6 +288,7 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pioe.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/piob.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/piod.h</itemPath>
+            <itemPath>../src/packs/SAMA7D65_DFP/instance/uhpfs.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAMA7D65_DFP/pio/sama7d65.h</itemPath>
@@ -306,8 +301,21 @@
       <itemPath>../src/app_eeprom1.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+      <logicalFolder name="sam_a7d65_curiosity_freertos_default" displayName="sam_a7d65_curiosity_freertos_default" projectFiles="true">
+        <itemPath>sam_a7d65_curiosity_freertos_default/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>sam_a7d65_curiosity_freertos_default/components/BSP_SAM_A7D65_Curiosity.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_freertos_default/components/FreeRTOS.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_freertos_default/components/HarmonyCore.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_freertos_default/components/cmsis.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_freertos_default/components/core.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_freertos_default/components/dfp.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_freertos_default/components/drv_spi.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_freertos_default/components/drv_spi_0.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_freertos_default/components/flexcom4.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>sam_a7d65_curiosity_freertos.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
@@ -421,11 +429,11 @@
         <targetPluginBoard/>
         <platformTool>ICD4Tool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.2.47"/>
+        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.8.85"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>

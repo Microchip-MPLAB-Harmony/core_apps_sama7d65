@@ -1,7 +1,7 @@
 /*
  * Component description for TCPC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_TCPC_COMPONENT_H_
 #define _SAMA7D6_TCPC_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                      SOFTWARE API DEFINITION FOR TCPC                      */
@@ -302,40 +304,6 @@
 /* -------- TCPC_CCS : (TCPC Offset: 0x1D) ( R/ 8) CC Status Register -------- */
 #define TCPC_CCS_RESETVALUE                   _UINT8_(0x00)                                        /*  (TCPC_CCS) CC Status Register  Reset Value */
 
-#define TCPC_CCS_CC1_Pos                      _UINT8_(0)                                           /* (TCPC_CCS) CC1 State Position */
-#define TCPC_CCS_CC1_Msk                      (_UINT8_(0x3) << TCPC_CCS_CC1_Pos)                   /* (TCPC_CCS) CC1 State Mask */
-#define TCPC_CCS_CC1(value)                   (TCPC_CCS_CC1_Msk & (_UINT8_(value) << TCPC_CCS_CC1_Pos)) /* Assignment of value for CC1 in the TCPC_CCS register */
-#define   TCPC_CCS_CC1_CC1_SNK_OPEN_Val       _UINT8_(0x0)                                         /* (TCPC_CCS) SNK.Open (Below maximum VRa)  */
-#define   TCPC_CCS_CC1_CC1_SRC_OPEN_Val       _UINT8_(0x0)                                         /* (TCPC_CCS) SRC.Open (Open, Rp)  */
-#define   TCPC_CCS_CC1_CC1_SNK_DEFAULT_Val    _UINT8_(0x1)                                         /* (TCPC_CCS) SNK.Default (Above minimum VRd-Connect)  */
-#define   TCPC_CCS_CC1_CC1_SRC_RA_Val         _UINT8_(0x1)                                         /* (TCPC_CCS) SRC.Ra (below maximum VRa)  */
-#define   TCPC_CCS_CC1_CC1_SNK_1P5A_Val       _UINT8_(0x2)                                         /* (TCPC_CCS) SNK.Power1.5 (Above minimum VRd-Connect) Detects Rp-1.5A  */
-#define   TCPC_CCS_CC1_CC1_SRC_RD_Val         _UINT8_(0x2)                                         /* (TCPC_CCS) SRC.Rd (within the VRd range)  */
-#define   TCPC_CCS_CC1_CC1_SNK_3A_Val         _UINT8_(0x3)                                         /* (TCPC_CCS) SNK.Power3.0 (Above minimum VRd-Connect) Detects Rp-3.0A  */
-#define TCPC_CCS_CC1_CC1_SNK_OPEN             (TCPC_CCS_CC1_CC1_SNK_OPEN_Val << TCPC_CCS_CC1_Pos)  /* (TCPC_CCS) SNK.Open (Below maximum VRa) Position */
-#define TCPC_CCS_CC1_CC1_SRC_OPEN             (TCPC_CCS_CC1_CC1_SRC_OPEN_Val << TCPC_CCS_CC1_Pos)  /* (TCPC_CCS) SRC.Open (Open, Rp) Position */
-#define TCPC_CCS_CC1_CC1_SNK_DEFAULT          (TCPC_CCS_CC1_CC1_SNK_DEFAULT_Val << TCPC_CCS_CC1_Pos) /* (TCPC_CCS) SNK.Default (Above minimum VRd-Connect) Position */
-#define TCPC_CCS_CC1_CC1_SRC_RA               (TCPC_CCS_CC1_CC1_SRC_RA_Val << TCPC_CCS_CC1_Pos)    /* (TCPC_CCS) SRC.Ra (below maximum VRa) Position */
-#define TCPC_CCS_CC1_CC1_SNK_1P5A             (TCPC_CCS_CC1_CC1_SNK_1P5A_Val << TCPC_CCS_CC1_Pos)  /* (TCPC_CCS) SNK.Power1.5 (Above minimum VRd-Connect) Detects Rp-1.5A Position */
-#define TCPC_CCS_CC1_CC1_SRC_RD               (TCPC_CCS_CC1_CC1_SRC_RD_Val << TCPC_CCS_CC1_Pos)    /* (TCPC_CCS) SRC.Rd (within the VRd range) Position */
-#define TCPC_CCS_CC1_CC1_SNK_3A               (TCPC_CCS_CC1_CC1_SNK_3A_Val << TCPC_CCS_CC1_Pos)    /* (TCPC_CCS) SNK.Power3.0 (Above minimum VRd-Connect) Detects Rp-3.0A Position */
-#define TCPC_CCS_CC2_Pos                      _UINT8_(2)                                           /* (TCPC_CCS) CC2 State Position */
-#define TCPC_CCS_CC2_Msk                      (_UINT8_(0x3) << TCPC_CCS_CC2_Pos)                   /* (TCPC_CCS) CC2 State Mask */
-#define TCPC_CCS_CC2(value)                   (TCPC_CCS_CC2_Msk & (_UINT8_(value) << TCPC_CCS_CC2_Pos)) /* Assignment of value for CC2 in the TCPC_CCS register */
-#define   TCPC_CCS_CC2_CC2_SNK_OPEN_Val       _UINT8_(0x0)                                         /* (TCPC_CCS) SNK.Open (Below maximum VRa)  */
-#define   TCPC_CCS_CC2_CC2_SRC_OPEN_Val       _UINT8_(0x0)                                         /* (TCPC_CCS) SRC.Open (Open, Rp)  */
-#define   TCPC_CCS_CC2_CC2_SNK_DEFAULT_Val    _UINT8_(0x1)                                         /* (TCPC_CCS) SNK.Default (Above minimum VRd-Connect)  */
-#define   TCPC_CCS_CC2_CC2_SRC_RA_Val         _UINT8_(0x1)                                         /* (TCPC_CCS) SRC.Ra (below maximum VRa)  */
-#define   TCPC_CCS_CC2_CC2_SNK_1P5A_Val       _UINT8_(0x2)                                         /* (TCPC_CCS) SNK.Power1.5 (Above minimum VRd-Connect) Detects Rp-1.5A  */
-#define   TCPC_CCS_CC2_CC2_SRC_RD_Val         _UINT8_(0x2)                                         /* (TCPC_CCS) SRC.Rd (within the VRd range)  */
-#define   TCPC_CCS_CC2_CC2_SNK_3A_Val         _UINT8_(0x3)                                         /* (TCPC_CCS) SNK.Power3.0 (Above minimum VRd-Connect) Detects Rp-3.0A  */
-#define TCPC_CCS_CC2_CC2_SNK_OPEN             (TCPC_CCS_CC2_CC2_SNK_OPEN_Val << TCPC_CCS_CC2_Pos)  /* (TCPC_CCS) SNK.Open (Below maximum VRa) Position */
-#define TCPC_CCS_CC2_CC2_SRC_OPEN             (TCPC_CCS_CC2_CC2_SRC_OPEN_Val << TCPC_CCS_CC2_Pos)  /* (TCPC_CCS) SRC.Open (Open, Rp) Position */
-#define TCPC_CCS_CC2_CC2_SNK_DEFAULT          (TCPC_CCS_CC2_CC2_SNK_DEFAULT_Val << TCPC_CCS_CC2_Pos) /* (TCPC_CCS) SNK.Default (Above minimum VRd-Connect) Position */
-#define TCPC_CCS_CC2_CC2_SRC_RA               (TCPC_CCS_CC2_CC2_SRC_RA_Val << TCPC_CCS_CC2_Pos)    /* (TCPC_CCS) SRC.Ra (below maximum VRa) Position */
-#define TCPC_CCS_CC2_CC2_SNK_1P5A             (TCPC_CCS_CC2_CC2_SNK_1P5A_Val << TCPC_CCS_CC2_Pos)  /* (TCPC_CCS) SNK.Power1.5 (Above minimum VRd-Connect) Detects Rp-1.5A Position */
-#define TCPC_CCS_CC2_CC2_SRC_RD               (TCPC_CCS_CC2_CC2_SRC_RD_Val << TCPC_CCS_CC2_Pos)    /* (TCPC_CCS) SRC.Rd (within the VRd range) Position */
-#define TCPC_CCS_CC2_CC2_SNK_3A               (TCPC_CCS_CC2_CC2_SNK_3A_Val << TCPC_CCS_CC2_Pos)    /* (TCPC_CCS) SNK.Power3.0 (Above minimum VRd-Connect) Detects Rp-3.0A Position */
 #define TCPC_CCS_CONRES_Pos                   _UINT8_(4)                                           /* (TCPC_CCS) Connect Result Position */
 #define TCPC_CCS_CONRES_Msk                   (_UINT8_(0x1) << TCPC_CCS_CONRES_Pos)                /* (TCPC_CCS) Connect Result Mask */
 #define TCPC_CCS_CONRES(value)                (TCPC_CCS_CONRES_Msk & (_UINT8_(value) << TCPC_CCS_CONRES_Pos)) /* Assignment of value for CONRES in the TCPC_CCS register */
@@ -350,7 +318,53 @@
 #define   TCPC_CCS_LK4CNX_1_Val               _UINT8_(0x1)                                         /* (TCPC_CCS) TCPC is looking for a connection (toggling as a DRP or looking for a connection as sink/source only condition).  */
 #define TCPC_CCS_LK4CNX_0                     (TCPC_CCS_LK4CNX_0_Val << TCPC_CCS_LK4CNX_Pos)       /* (TCPC_CCS) TCPC is not actively looking for a connection. A transition from '1' to '0' indicates a potential connection has been found. Position */
 #define TCPC_CCS_LK4CNX_1                     (TCPC_CCS_LK4CNX_1_Val << TCPC_CCS_LK4CNX_Pos)       /* (TCPC_CCS) TCPC is looking for a connection (toggling as a DRP or looking for a connection as sink/source only condition). Position */
-#define TCPC_CCS_Msk                          _UINT8_(0x3F)                                        /* (TCPC_CCS) Register Mask  */
+#define TCPC_CCS_Msk                          _UINT8_(0x30)                                        /* (TCPC_CCS) Register Mask  */
+
+/* SRC mode */
+#define TCPC_CCS_SRC_CC1_Pos                  _UINT8_(0)                                           /* (TCPC_CCS) CC1 State Position */
+#define TCPC_CCS_SRC_CC1_Msk                  (_UINT8_(0x3) << TCPC_CCS_SRC_CC1_Pos)               /* (TCPC_CCS) CC1 State Mask */
+#define TCPC_CCS_SRC_CC1(value)               (TCPC_CCS_SRC_CC1_Msk & (_UINT8_(value) << TCPC_CCS_SRC_CC1_Pos))
+#define   TCPC_CCS_SRC_CC1_SRC_OPEN_Val       _UINT8_(0x0)                                         /* (TCPC_CCS) SRC.Open (Open, Rp)  */
+#define   TCPC_CCS_SRC_CC1_SRC_RA_Val         _UINT8_(0x1)                                         /* (TCPC_CCS) SRC.Ra (below maximum VRa)  */
+#define   TCPC_CCS_SRC_CC1_SRC_RD_Val         _UINT8_(0x2)                                         /* (TCPC_CCS) SRC.Rd (within the VRd range)  */
+#define TCPC_CCS_SRC_CC1_SRC_OPEN             (TCPC_CCS_SRC_CC1_SRC_OPEN_Val << TCPC_CCS_SRC_CC1_Pos) /* (TCPC_CCS) SRC.Open (Open, Rp) Position */
+#define TCPC_CCS_SRC_CC1_SRC_RA               (TCPC_CCS_SRC_CC1_SRC_RA_Val << TCPC_CCS_SRC_CC1_Pos) /* (TCPC_CCS) SRC.Ra (below maximum VRa) Position */
+#define TCPC_CCS_SRC_CC1_SRC_RD               (TCPC_CCS_SRC_CC1_SRC_RD_Val << TCPC_CCS_SRC_CC1_Pos) /* (TCPC_CCS) SRC.Rd (within the VRd range) Position */
+#define TCPC_CCS_SRC_CC2_Pos                  _UINT8_(2)                                           /* (TCPC_CCS) CC2 State Position */
+#define TCPC_CCS_SRC_CC2_Msk                  (_UINT8_(0x3) << TCPC_CCS_SRC_CC2_Pos)               /* (TCPC_CCS) CC2 State Mask */
+#define TCPC_CCS_SRC_CC2(value)               (TCPC_CCS_SRC_CC2_Msk & (_UINT8_(value) << TCPC_CCS_SRC_CC2_Pos))
+#define   TCPC_CCS_SRC_CC2_SRC_OPEN_Val       _UINT8_(0x0)                                         /* (TCPC_CCS) SRC.Open (Open, Rp)  */
+#define   TCPC_CCS_SRC_CC2_SRC_RA_Val         _UINT8_(0x1)                                         /* (TCPC_CCS) SRC.Ra (below maximum VRa)  */
+#define   TCPC_CCS_SRC_CC2_SRC_RD_Val         _UINT8_(0x2)                                         /* (TCPC_CCS) SRC.Rd (within the VRd range)  */
+#define TCPC_CCS_SRC_CC2_SRC_OPEN             (TCPC_CCS_SRC_CC2_SRC_OPEN_Val << TCPC_CCS_SRC_CC2_Pos) /* (TCPC_CCS) SRC.Open (Open, Rp) Position */
+#define TCPC_CCS_SRC_CC2_SRC_RA               (TCPC_CCS_SRC_CC2_SRC_RA_Val << TCPC_CCS_SRC_CC2_Pos) /* (TCPC_CCS) SRC.Ra (below maximum VRa) Position */
+#define TCPC_CCS_SRC_CC2_SRC_RD               (TCPC_CCS_SRC_CC2_SRC_RD_Val << TCPC_CCS_SRC_CC2_Pos) /* (TCPC_CCS) SRC.Rd (within the VRd range) Position */
+#define TCPC_CCS_SRC_Msk                      _UINT8_(0x0F)                                        /* (TCPC_CCS_SRC) Register Mask  */
+
+/* SNK mode */
+#define TCPC_CCS_SNK_CC1_Pos                  _UINT8_(0)                                           /* (TCPC_CCS) CC1 State Position */
+#define TCPC_CCS_SNK_CC1_Msk                  (_UINT8_(0x3) << TCPC_CCS_SNK_CC1_Pos)               /* (TCPC_CCS) CC1 State Mask */
+#define TCPC_CCS_SNK_CC1(value)               (TCPC_CCS_SNK_CC1_Msk & (_UINT8_(value) << TCPC_CCS_SNK_CC1_Pos))
+#define   TCPC_CCS_SNK_CC1_SNK_OPEN_Val       _UINT8_(0x0)                                         /* (TCPC_CCS) SNK.Open (Below maximum VRa)  */
+#define   TCPC_CCS_SNK_CC1_SNK_DEFAULT_Val    _UINT8_(0x1)                                         /* (TCPC_CCS) SNK.Default (Above minimum VRd-Connect)  */
+#define   TCPC_CCS_SNK_CC1_SNK_1P5A_Val       _UINT8_(0x2)                                         /* (TCPC_CCS) SNK.Power1.5 (Above minimum VRd-Connect) Detects Rp-1.5A  */
+#define   TCPC_CCS_SNK_CC1_SNK_3A_Val         _UINT8_(0x3)                                         /* (TCPC_CCS) SNK.Power3.0 (Above minimum VRd-Connect) Detects Rp-3.0A  */
+#define TCPC_CCS_SNK_CC1_SNK_OPEN             (TCPC_CCS_SNK_CC1_SNK_OPEN_Val << TCPC_CCS_SNK_CC1_Pos) /* (TCPC_CCS) SNK.Open (Below maximum VRa) Position */
+#define TCPC_CCS_SNK_CC1_SNK_DEFAULT          (TCPC_CCS_SNK_CC1_SNK_DEFAULT_Val << TCPC_CCS_SNK_CC1_Pos) /* (TCPC_CCS) SNK.Default (Above minimum VRd-Connect) Position */
+#define TCPC_CCS_SNK_CC1_SNK_1P5A             (TCPC_CCS_SNK_CC1_SNK_1P5A_Val << TCPC_CCS_SNK_CC1_Pos) /* (TCPC_CCS) SNK.Power1.5 (Above minimum VRd-Connect) Detects Rp-1.5A Position */
+#define TCPC_CCS_SNK_CC1_SNK_3A               (TCPC_CCS_SNK_CC1_SNK_3A_Val << TCPC_CCS_SNK_CC1_Pos) /* (TCPC_CCS) SNK.Power3.0 (Above minimum VRd-Connect) Detects Rp-3.0A Position */
+#define TCPC_CCS_SNK_CC2_Pos                  _UINT8_(2)                                           /* (TCPC_CCS) CC2 State Position */
+#define TCPC_CCS_SNK_CC2_Msk                  (_UINT8_(0x3) << TCPC_CCS_SNK_CC2_Pos)               /* (TCPC_CCS) CC2 State Mask */
+#define TCPC_CCS_SNK_CC2(value)               (TCPC_CCS_SNK_CC2_Msk & (_UINT8_(value) << TCPC_CCS_SNK_CC2_Pos))
+#define   TCPC_CCS_SNK_CC2_SNK_OPEN_Val       _UINT8_(0x0)                                         /* (TCPC_CCS) SNK.Open (Below maximum VRa)  */
+#define   TCPC_CCS_SNK_CC2_SNK_DEFAULT_Val    _UINT8_(0x1)                                         /* (TCPC_CCS) SNK.Default (Above minimum VRd-Connect)  */
+#define   TCPC_CCS_SNK_CC2_SNK_1P5A_Val       _UINT8_(0x2)                                         /* (TCPC_CCS) SNK.Power1.5 (Above minimum VRd-Connect) Detects Rp-1.5A  */
+#define   TCPC_CCS_SNK_CC2_SNK_3A_Val         _UINT8_(0x3)                                         /* (TCPC_CCS) SNK.Power3.0 (Above minimum VRd-Connect) Detects Rp-3.0A  */
+#define TCPC_CCS_SNK_CC2_SNK_OPEN             (TCPC_CCS_SNK_CC2_SNK_OPEN_Val << TCPC_CCS_SNK_CC2_Pos) /* (TCPC_CCS) SNK.Open (Below maximum VRa) Position */
+#define TCPC_CCS_SNK_CC2_SNK_DEFAULT          (TCPC_CCS_SNK_CC2_SNK_DEFAULT_Val << TCPC_CCS_SNK_CC2_Pos) /* (TCPC_CCS) SNK.Default (Above minimum VRd-Connect) Position */
+#define TCPC_CCS_SNK_CC2_SNK_1P5A             (TCPC_CCS_SNK_CC2_SNK_1P5A_Val << TCPC_CCS_SNK_CC2_Pos) /* (TCPC_CCS) SNK.Power1.5 (Above minimum VRd-Connect) Detects Rp-1.5A Position */
+#define TCPC_CCS_SNK_CC2_SNK_3A               (TCPC_CCS_SNK_CC2_SNK_3A_Val << TCPC_CCS_SNK_CC2_Pos) /* (TCPC_CCS) SNK.Power3.0 (Above minimum VRd-Connect) Detects Rp-3.0A Position */
+#define TCPC_CCS_SNK_Msk                      _UINT8_(0x0F)                                        /* (TCPC_CCS_SNK) Register Mask  */
 
 
 /* -------- TCPC_PS : (TCPC Offset: 0x1E) ( R/ 8) Power Status Register -------- */

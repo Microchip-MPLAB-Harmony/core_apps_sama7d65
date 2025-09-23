@@ -1,0 +1,1212 @@
+configVersion: 1.0.0
+componentName: core
+coreVersion: 5.8.2
+device: SAMA7D65
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: core
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: FreeRTOS-Kernel
+  type: package
+  version: V11.1.0
+- dependencyPackage: ''
+  name: bsp
+  type: package
+  version: v3.23.0
+- dependencyPackage: ''
+  name: core
+  type: package
+  version: v3.15.5
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: core
+          x: '240'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    DMA_CH_FOR_FLEXCOM4_Receive:
+      attributes:
+        id: DMA_CH_FOR_FLEXCOM4_Receive
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '-1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DMA_CH_FOR_FLEXCOM4_Transmit:
+      attributes:
+        id: DMA_CH_FOR_FLEXCOM4_Transmit
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '-1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DMA_CH_NEEDED_FOR_FLEXCOM4_Receive:
+      attributes:
+        id: DMA_CH_NEEDED_FOR_FLEXCOM4_Receive
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    DMA_CH_NEEDED_FOR_FLEXCOM4_Transmit:
+      attributes:
+        id: DMA_CH_NEEDED_FOR_FLEXCOM4_Transmit
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    DMA_ENABLE:
+      attributes:
+        id: DMA_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    FLEXCOM4_CLOCK_ENABLE:
+      attributes:
+        id: FLEXCOM4_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: flexcom4
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    FLEXCOM4_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM4_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '100000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM4_INTERRUPT_ENABLE:
+      attributes:
+        id: FLEXCOM4_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: flexcom4
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    FLEXCOM4_INTERRUPT_HANDLER:
+      attributes:
+        id: FLEXCOM4_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: flexcom4
+            value: FLEXCOM4_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    GENERIC_TIMER_COMPARE_DELTA:
+      attributes:
+        id: GENERIC_TIMER_COMPARE_DELTA
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '24000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    GENERIC_TIMER_ENABLE:
+      attributes:
+        id: GENERIC_TIMER_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: FreeRTOS
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    GENERIC_TIMER_INTERRUPT:
+      attributes:
+        id: GENERIC_TIMER_INTERRUPT
+      children:
+      - children:
+        - attributes:
+            id: readOnly
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: FreeRTOS
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIN_146_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_146_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: SWITCH_AL
+          type: User
+        type: Values
+      type: String
+    PIN_204_DIR:
+      attributes:
+        id: PIN_204_DIR
+      children:
+      - children:
+        - attributes:
+            value: Out
+          type: User
+        type: Values
+      type: String
+    PIN_204_FUNCTION_NAME:
+      attributes:
+        id: PIN_204_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: APP_EEPROM2_HOLD
+          type: User
+        type: Values
+      type: String
+    PIN_204_FUNCTION_TYPE:
+      attributes:
+        id: PIN_204_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_204_LAT:
+      attributes:
+        id: PIN_204_LAT
+      children:
+      - children:
+        - attributes:
+            value: High
+          type: User
+        type: Values
+      type: String
+    PIN_204_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_204_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_205_DIR:
+      attributes:
+        id: PIN_205_DIR
+      children:
+      - children:
+        - attributes:
+            value: Out
+          type: User
+        type: Values
+      type: String
+    PIN_205_FUNCTION_NAME:
+      attributes:
+        id: PIN_205_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: APP_EEPROM1_HOLD
+          type: User
+        type: Values
+      type: String
+    PIN_205_FUNCTION_TYPE:
+      attributes:
+        id: PIN_205_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_205_LAT:
+      attributes:
+        id: PIN_205_LAT
+      children:
+      - children:
+        - attributes:
+            value: High
+          type: User
+        type: Values
+      type: String
+    PIN_205_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_205_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_214_DIR:
+      attributes:
+        id: PIN_214_DIR
+      children:
+      - children:
+        - attributes:
+            value: Out
+          type: User
+        type: Values
+      type: String
+    PIN_214_FUNCTION_NAME:
+      attributes:
+        id: PIN_214_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: APP_EEPROM1_CS
+          type: User
+        type: Values
+      type: String
+    PIN_214_FUNCTION_TYPE:
+      attributes:
+        id: PIN_214_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_214_LAT:
+      attributes:
+        id: PIN_214_LAT
+      children:
+      - children:
+        - attributes:
+            value: High
+          type: User
+        type: Values
+      type: String
+    PIN_214_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_214_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_250_FUNCTION_TYPE:
+      attributes:
+        id: PIN_250_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: FLEXCOM4_IO1
+          type: User
+        type: Values
+      type: String
+    PIN_250_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_250_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_305_DIR:
+      attributes:
+        id: PIN_305_DIR
+      children:
+      - children:
+        - attributes:
+            value: Out
+          type: User
+        type: Values
+      type: String
+    PIN_305_FUNCTION_NAME:
+      attributes:
+        id: PIN_305_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: APP_EEPROM2_CS
+          type: User
+        type: Values
+      type: String
+    PIN_305_FUNCTION_TYPE:
+      attributes:
+        id: PIN_305_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_305_LAT:
+      attributes:
+        id: PIN_305_LAT
+      children:
+      - children:
+        - attributes:
+            value: High
+          type: User
+        type: Values
+      type: String
+    PIN_305_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_305_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_306_FUNCTION_TYPE:
+      attributes:
+        id: PIN_306_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: FLEXCOM4_IO2
+          type: User
+        type: Values
+      type: String
+    PIN_306_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_306_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_324_FUNCTION_TYPE:
+      attributes:
+        id: PIN_324_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: FLEXCOM4_IO0
+          type: User
+        type: Values
+      type: String
+    PIN_324_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_324_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_327_LAT:
+      attributes:
+        id: PIN_327_LAT
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_327_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_327_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: LED_AH
+          type: User
+        type: Values
+      type: String
+    PORT_A_CFGR_Value14:
+      attributes:
+        id: PORT_A_CFGR_Value14
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_CFGR_Value15:
+      attributes:
+        id: PORT_A_CFGR_Value15
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_CFGR_Value21:
+      attributes:
+        id: PORT_A_CFGR_Value21
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_LATCH:
+      attributes:
+        id: PORT_A_LATCH
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0xc000'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueA:
+      attributes:
+        id: PORT_A_MSKR_ValueA
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x70000'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueB:
+      attributes:
+        id: PORT_A_MSKR_ValueB
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueC:
+      attributes:
+        id: PORT_A_MSKR_ValueC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueD:
+      attributes:
+        id: PORT_A_MSKR_ValueD
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueE:
+      attributes:
+        id: PORT_A_MSKR_ValueE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueF:
+      attributes:
+        id: PORT_A_MSKR_ValueF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueG:
+      attributes:
+        id: PORT_A_MSKR_ValueG
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueGPIO:
+      attributes:
+        id: PORT_A_MSKR_ValueGPIO
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x20c000'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_CFGR_Value15:
+      attributes:
+        id: PORT_B_CFGR_Value15
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_CFGR_Value17:
+      attributes:
+        id: PORT_B_CFGR_Value17
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_LATCH:
+      attributes:
+        id: PORT_B_LATCH
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x28000'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueA:
+      attributes:
+        id: PORT_B_MSKR_ValueA
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueB:
+      attributes:
+        id: PORT_B_MSKR_ValueB
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueC:
+      attributes:
+        id: PORT_B_MSKR_ValueC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueD:
+      attributes:
+        id: PORT_B_MSKR_ValueD
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueE:
+      attributes:
+        id: PORT_B_MSKR_ValueE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueF:
+      attributes:
+        id: PORT_B_MSKR_ValueF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueG:
+      attributes:
+        id: PORT_B_MSKR_ValueG
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueGPIO:
+      attributes:
+        id: PORT_B_MSKR_ValueGPIO
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x28000'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_CFGR_Value10:
+      attributes:
+        id: PORT_C_CFGR_Value10
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x200'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueA:
+      attributes:
+        id: PORT_C_MSKR_ValueA
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueB:
+      attributes:
+        id: PORT_C_MSKR_ValueB
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueC:
+      attributes:
+        id: PORT_C_MSKR_ValueC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueD:
+      attributes:
+        id: PORT_C_MSKR_ValueD
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueE:
+      attributes:
+        id: PORT_C_MSKR_ValueE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueF:
+      attributes:
+        id: PORT_C_MSKR_ValueF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueG:
+      attributes:
+        id: PORT_C_MSKR_ValueG
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueGPIO:
+      attributes:
+        id: PORT_C_MSKR_ValueGPIO
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x400'
+          type: Dynamic
+        type: Values
+      type: String
+    RTOS_INTERRUPT_HANDLER:
+      attributes:
+        id: RTOS_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: FreeRTOS
+            value: GENERIC_TIMER_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    SYSTEM_COUNTER_ENABLE:
+      attributes:
+        id: SYSTEM_COUNTER_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: readOnly
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SYSTEM_COUNTER_FREQUENCY:
+      attributes:
+        id: SYSTEM_COUNTER_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '24000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SecPhysTimer_INTERRUPT_ENABLE:
+      attributes:
+        id: SecPhysTimer_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SecPhysTimer_INTERRUPT_HANDLER:
+      attributes:
+        id: SecPhysTimer_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: GENERIC_TIMER_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    USE_FREERTOS_VECTORS:
+      attributes:
+        id: USE_FREERTOS_VECTORS
+      children:
+      - children:
+        - attributes:
+            id: FreeRTOS
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XDMAC0_CLOCK_ENABLE:
+      attributes:
+        id: XDMAC0_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XDMAC0_INTERRUPT_ENABLE:
+      attributes:
+        id: XDMAC0_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XDMAC0_INTERRUPT_HANDLER:
+      attributes:
+        id: XDMAC0_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: XDMAC0_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    XDMAC_CC0_CSIZE:
+      attributes:
+        id: XDMAC_CC0_CSIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_DAM:
+      attributes:
+        id: XDMAC_CC0_DAM
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_DSYNC:
+      attributes:
+        id: XDMAC_CC0_DSYNC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_DWIDTH:
+      attributes:
+        id: XDMAC_CC0_DWIDTH
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_MBSIZE:
+      attributes:
+        id: XDMAC_CC0_MBSIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_PERID:
+      attributes:
+        id: XDMAC_CC0_PERID
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: Software Trigger
+          type: Dynamic
+        type: Values
+      type: Combo
+    XDMAC_CC0_PERID_LOCK:
+      attributes:
+        id: XDMAC_CC0_PERID_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XDMAC_CC0_PERID_VAL:
+      attributes:
+        id: XDMAC_CC0_PERID_VAL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XDMAC_CC0_SAM:
+      attributes:
+        id: XDMAC_CC0_SAM
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_SWREQ:
+      attributes:
+        id: XDMAC_CC0_SWREQ
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_TYPE:
+      attributes:
+        id: XDMAC_CC0_TYPE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_CSIZE:
+      attributes:
+        id: XDMAC_CC1_CSIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_DAM:
+      attributes:
+        id: XDMAC_CC1_DAM
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_DSYNC:
+      attributes:
+        id: XDMAC_CC1_DSYNC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_DWIDTH:
+      attributes:
+        id: XDMAC_CC1_DWIDTH
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_MBSIZE:
+      attributes:
+        id: XDMAC_CC1_MBSIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_PERID:
+      attributes:
+        id: XDMAC_CC1_PERID
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: Software Trigger
+          type: Dynamic
+        type: Values
+      type: Combo
+    XDMAC_CC1_PERID_LOCK:
+      attributes:
+        id: XDMAC_CC1_PERID_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XDMAC_CC1_PERID_VAL:
+      attributes:
+        id: XDMAC_CC1_PERID_VAL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XDMAC_CC1_SAM:
+      attributes:
+        id: XDMAC_CC1_SAM
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_SWREQ:
+      attributes:
+        id: XDMAC_CC1_SWREQ
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_TYPE:
+      attributes:
+        id: XDMAC_CC1_TYPE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CH0_ENABLE:
+      attributes:
+        id: XDMAC_CH0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XDMAC_CH1_ENABLE:
+      attributes:
+        id: XDMAC_CH1_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+  userData:
+    children:
+    - attributes:
+        canvasHeight: '330'
+        canvasWidth: '453'
+      type: GraphSettings
+    - children:
+      - attributes:
+          id: profile0
+          name: Main
+        type: Profile
+      type: PowerProfiles
+    type: UserData

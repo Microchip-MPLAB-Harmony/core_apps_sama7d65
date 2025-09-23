@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,15 +19,15 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_AES_INSTANCE_
 #define _SAMA7D6_AES_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for AES peripheral ========== */
-#define AES_CLOCK_ID                             (26)       
-#define AES_DMAC_ID_RX                           (2)        
-#define AES_DMAC_ID_TX                           (1)        
+#define AES_CLOCK_ID                             (26)
+#define AES_DMAC_ID_RX                           (2)
+#define AES_DMAC_ID_TX                           (1)
 #define AES_INSTANCE_ID                          (26)       /* Advanced Encryption Standard */
 #define AES_INSTANCE_ID_SINT                     (112)      /* Advanced Encryption Standard, Secure Interrupt */
 
