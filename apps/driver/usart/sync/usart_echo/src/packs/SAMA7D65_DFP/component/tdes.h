@@ -1,7 +1,7 @@
 /*
  * Component description for TDES
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_TDES_COMPONENT_H_
 #define _SAMA7D6_TDES_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                      SOFTWARE API DEFINITION FOR TDES                      */
@@ -66,10 +68,10 @@
 #define TDES_MR_TDESMOD_Msk                   (_UINT32_(0x3) << TDES_MR_TDESMOD_Pos)               /* (TDES_MR) ALGORITHM Mode Mask */
 #define TDES_MR_TDESMOD(value)                (TDES_MR_TDESMOD_Msk & (_UINT32_(value) << TDES_MR_TDESMOD_Pos)) /* Assignment of value for TDESMOD in the TDES_MR register */
 #define   TDES_MR_TDESMOD_SINGLE_DES_Val      _UINT32_(0x0)                                        /* (TDES_MR) Single DES processing using TDES_KEY1WRy.  */
-#define   TDES_MR_TDESMOD_TRIPLE_DES_Val      _UINT32_(0x1)                                        /* (TDES_MR) Triple DES processing using TDES_KEY1WRy, TDES_KEY2WRy and TDES_KEY3WRy.  */
+#define   TDES_MR_TDESMOD_TRIPLE_DES_Val      _UINT32_(0x1)                                        /* (TDES_MR) Triple DES processing using TDES_KEY1WRy, TDES_KEY2WRy and TDES_KEY3WRy if KEYMOD=0  */
 #define   TDES_MR_TDESMOD_XTEA_Val            _UINT32_(0x2)                                        /* (TDES_MR) XTEA processing using TDES_KEY1WRy and TDES_KEY2WRy.  */
 #define TDES_MR_TDESMOD_SINGLE_DES            (TDES_MR_TDESMOD_SINGLE_DES_Val << TDES_MR_TDESMOD_Pos) /* (TDES_MR) Single DES processing using TDES_KEY1WRy. Position */
-#define TDES_MR_TDESMOD_TRIPLE_DES            (TDES_MR_TDESMOD_TRIPLE_DES_Val << TDES_MR_TDESMOD_Pos) /* (TDES_MR) Triple DES processing using TDES_KEY1WRy, TDES_KEY2WRy and TDES_KEY3WRy. Position */
+#define TDES_MR_TDESMOD_TRIPLE_DES            (TDES_MR_TDESMOD_TRIPLE_DES_Val << TDES_MR_TDESMOD_Pos) /* (TDES_MR) Triple DES processing using TDES_KEY1WRy, TDES_KEY2WRy and TDES_KEY3WRy if KEYMOD=0 Position */
 #define TDES_MR_TDESMOD_XTEA                  (TDES_MR_TDESMOD_XTEA_Val << TDES_MR_TDESMOD_Pos)    /* (TDES_MR) XTEA processing using TDES_KEY1WRy and TDES_KEY2WRy. Position */
 #define TDES_MR_KEYMOD_Pos                    _UINT32_(4)                                          /* (TDES_MR) Key Mode Position */
 #define TDES_MR_KEYMOD_Msk                    (_UINT32_(0x1) << TDES_MR_KEYMOD_Pos)                /* (TDES_MR) Key Mode Mask */
@@ -88,10 +90,10 @@
 #define TDES_MR_PKRS_Pos                      _UINT32_(7)                                          /* (TDES_MR) Private Key Internal Register Select Position */
 #define TDES_MR_PKRS_Msk                      (_UINT32_(0x1) << TDES_MR_PKRS_Pos)                  /* (TDES_MR) Private Key Internal Register Select Mask */
 #define TDES_MR_PKRS(value)                   (TDES_MR_PKRS_Msk & (_UINT32_(value) << TDES_MR_PKRS_Pos)) /* Assignment of value for PKRS in the TDES_MR register */
-#define   TDES_MR_PKRS_0_Val                  _UINT32_(0x0)                                        /* (TDES_MR) The keys used by the TDES are in the TDES_KEY1WRy, TDES_KEY2WRy and TDES_KEY3WRy registers.  */
-#define   TDES_MR_PKRS_1_Val                  _UINT32_(0x1)                                        /* (TDES_MR) The keys used by the TDES are the in the Private Key internal registers written through the Private Key bus.  */
-#define TDES_MR_PKRS_0                        (TDES_MR_PKRS_0_Val << TDES_MR_PKRS_Pos)             /* (TDES_MR) The keys used by the TDES are in the TDES_KEY1WRy, TDES_KEY2WRy and TDES_KEY3WRy registers. Position */
-#define TDES_MR_PKRS_1                        (TDES_MR_PKRS_1_Val << TDES_MR_PKRS_Pos)             /* (TDES_MR) The keys used by the TDES are the in the Private Key internal registers written through the Private Key bus. Position */
+#define   TDES_MR_PKRS_0_Val                  _UINT32_(0x0)                                        /* (TDES_MR) The keys used by the TDES are in the internal registers written via TDES_KEY1WRy, TDES_KEY2WRy and TDES_KEY3WRy.  */
+#define   TDES_MR_PKRS_1_Val                  _UINT32_(0x1)                                        /* (TDES_MR) The keys used by the TDES are in the Private Key internal registers written through the Private Key bus.  */
+#define TDES_MR_PKRS_0                        (TDES_MR_PKRS_0_Val << TDES_MR_PKRS_Pos)             /* (TDES_MR) The keys used by the TDES are in the internal registers written via TDES_KEY1WRy, TDES_KEY2WRy and TDES_KEY3WRy. Position */
+#define TDES_MR_PKRS_1                        (TDES_MR_PKRS_1_Val << TDES_MR_PKRS_Pos)             /* (TDES_MR) The keys used by the TDES are in the Private Key internal registers written through the Private Key bus. Position */
 #define TDES_MR_SMOD_Pos                      _UINT32_(8)                                          /* (TDES_MR) Start Mode Position */
 #define TDES_MR_SMOD_Msk                      (_UINT32_(0x3) << TDES_MR_SMOD_Pos)                  /* (TDES_MR) Start Mode Mask */
 #define TDES_MR_SMOD(value)                   (TDES_MR_SMOD_Msk & (_UINT32_(value) << TDES_MR_SMOD_Pos)) /* Assignment of value for SMOD in the TDES_MR register */

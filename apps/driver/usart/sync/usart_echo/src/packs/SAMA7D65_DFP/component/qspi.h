@@ -1,7 +1,7 @@
 /*
  * Component description for QSPI
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_QSPI_COMPONENT_H_
 #define _SAMA7D6_QSPI_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                      SOFTWARE API DEFINITION FOR QSPI                      */
@@ -293,6 +295,9 @@
 #define QSPI_IER_CSR_Pos                      _UINT32_(8)                                          /* (QSPI_IER) Chip Select Rise Interrupt Enable Position */
 #define QSPI_IER_CSR_Msk                      (_UINT32_(0x1) << QSPI_IER_CSR_Pos)                  /* (QSPI_IER) Chip Select Rise Interrupt Enable Mask */
 #define QSPI_IER_CSR(value)                   (QSPI_IER_CSR_Msk & (_UINT32_(value) << QSPI_IER_CSR_Pos)) /* Assignment of value for CSR in the QSPI_IER register */
+#define QSPI_IER_CSF_Pos                      _UINT32_(9)                                          /* (QSPI_IER) Chip Select Fall Interrupt Enable Position */
+#define QSPI_IER_CSF_Msk                      (_UINT32_(0x1) << QSPI_IER_CSF_Pos)                  /* (QSPI_IER) Chip Select Fall Interrupt Enable Mask */
+#define QSPI_IER_CSF(value)                   (QSPI_IER_CSF_Msk & (_UINT32_(value) << QSPI_IER_CSF_Pos)) /* Assignment of value for CSF in the QSPI_IER register */
 #define QSPI_IER_INSTRE_Pos                   _UINT32_(10)                                         /* (QSPI_IER) Instruction End Interrupt Enable Position */
 #define QSPI_IER_INSTRE_Msk                   (_UINT32_(0x1) << QSPI_IER_INSTRE_Pos)               /* (QSPI_IER) Instruction End Interrupt Enable Mask */
 #define QSPI_IER_INSTRE(value)                (QSPI_IER_INSTRE_Msk & (_UINT32_(value) << QSPI_IER_INSTRE_Pos)) /* Assignment of value for INSTRE in the QSPI_IER register */
@@ -317,7 +322,7 @@
 #define QSPI_IER_TOUT_Pos                     _UINT32_(17)                                         /* (QSPI_IER) QSPI Time-out Interrupt Enable Position */
 #define QSPI_IER_TOUT_Msk                     (_UINT32_(0x1) << QSPI_IER_TOUT_Pos)                 /* (QSPI_IER) QSPI Time-out Interrupt Enable Mask */
 #define QSPI_IER_TOUT(value)                  (QSPI_IER_TOUT_Msk & (_UINT32_(value) << QSPI_IER_TOUT_Pos)) /* Assignment of value for TOUT in the QSPI_IER register */
-#define QSPI_IER_Msk                          _UINT32_(0x0003FD0F)                                 /* (QSPI_IER) Register Mask  */
+#define QSPI_IER_Msk                          _UINT32_(0x0003FF0F)                                 /* (QSPI_IER) Register Mask  */
 
 
 /* -------- QSPI_IDR : (QSPI Offset: 0x18) ( /W 32) Interrupt Disable Register -------- */
@@ -336,6 +341,9 @@
 #define QSPI_IDR_CSR_Pos                      _UINT32_(8)                                          /* (QSPI_IDR) Chip Select Rise Interrupt Disable Position */
 #define QSPI_IDR_CSR_Msk                      (_UINT32_(0x1) << QSPI_IDR_CSR_Pos)                  /* (QSPI_IDR) Chip Select Rise Interrupt Disable Mask */
 #define QSPI_IDR_CSR(value)                   (QSPI_IDR_CSR_Msk & (_UINT32_(value) << QSPI_IDR_CSR_Pos)) /* Assignment of value for CSR in the QSPI_IDR register */
+#define QSPI_IDR_CSF_Pos                      _UINT32_(9)                                          /* (QSPI_IDR) Chip Select Fall Interrupt Disable Position */
+#define QSPI_IDR_CSF_Msk                      (_UINT32_(0x1) << QSPI_IDR_CSF_Pos)                  /* (QSPI_IDR) Chip Select Fall Interrupt Disable Mask */
+#define QSPI_IDR_CSF(value)                   (QSPI_IDR_CSF_Msk & (_UINT32_(value) << QSPI_IDR_CSF_Pos)) /* Assignment of value for CSF in the QSPI_IDR register */
 #define QSPI_IDR_INSTRE_Pos                   _UINT32_(10)                                         /* (QSPI_IDR) Instruction End Interrupt Disable Position */
 #define QSPI_IDR_INSTRE_Msk                   (_UINT32_(0x1) << QSPI_IDR_INSTRE_Pos)               /* (QSPI_IDR) Instruction End Interrupt Disable Mask */
 #define QSPI_IDR_INSTRE(value)                (QSPI_IDR_INSTRE_Msk & (_UINT32_(value) << QSPI_IDR_INSTRE_Pos)) /* Assignment of value for INSTRE in the QSPI_IDR register */
@@ -360,7 +368,7 @@
 #define QSPI_IDR_TOUT_Pos                     _UINT32_(17)                                         /* (QSPI_IDR) QSPI Time-out Interrupt Disable Position */
 #define QSPI_IDR_TOUT_Msk                     (_UINT32_(0x1) << QSPI_IDR_TOUT_Pos)                 /* (QSPI_IDR) QSPI Time-out Interrupt Disable Mask */
 #define QSPI_IDR_TOUT(value)                  (QSPI_IDR_TOUT_Msk & (_UINT32_(value) << QSPI_IDR_TOUT_Pos)) /* Assignment of value for TOUT in the QSPI_IDR register */
-#define QSPI_IDR_Msk                          _UINT32_(0x0003FD0F)                                 /* (QSPI_IDR) Register Mask  */
+#define QSPI_IDR_Msk                          _UINT32_(0x0003FF0F)                                 /* (QSPI_IDR) Register Mask  */
 
 
 /* -------- QSPI_IMR : (QSPI Offset: 0x1C) ( R/ 32) Interrupt Mask Register -------- */
@@ -381,6 +389,9 @@
 #define QSPI_IMR_CSR_Pos                      _UINT32_(8)                                          /* (QSPI_IMR) Chip Select Rise Interrupt Mask Position */
 #define QSPI_IMR_CSR_Msk                      (_UINT32_(0x1) << QSPI_IMR_CSR_Pos)                  /* (QSPI_IMR) Chip Select Rise Interrupt Mask Mask */
 #define QSPI_IMR_CSR(value)                   (QSPI_IMR_CSR_Msk & (_UINT32_(value) << QSPI_IMR_CSR_Pos)) /* Assignment of value for CSR in the QSPI_IMR register */
+#define QSPI_IMR_CSF_Pos                      _UINT32_(9)                                          /* (QSPI_IMR) Chip Select Fall Interrupt Mask Position */
+#define QSPI_IMR_CSF_Msk                      (_UINT32_(0x1) << QSPI_IMR_CSF_Pos)                  /* (QSPI_IMR) Chip Select Fall Interrupt Mask Mask */
+#define QSPI_IMR_CSF(value)                   (QSPI_IMR_CSF_Msk & (_UINT32_(value) << QSPI_IMR_CSF_Pos)) /* Assignment of value for CSF in the QSPI_IMR register */
 #define QSPI_IMR_INSTRE_Pos                   _UINT32_(10)                                         /* (QSPI_IMR) Instruction End Interrupt Mask Position */
 #define QSPI_IMR_INSTRE_Msk                   (_UINT32_(0x1) << QSPI_IMR_INSTRE_Pos)               /* (QSPI_IMR) Instruction End Interrupt Mask Mask */
 #define QSPI_IMR_INSTRE(value)                (QSPI_IMR_INSTRE_Msk & (_UINT32_(value) << QSPI_IMR_INSTRE_Pos)) /* Assignment of value for INSTRE in the QSPI_IMR register */
@@ -405,7 +416,7 @@
 #define QSPI_IMR_TOUT_Pos                     _UINT32_(17)                                         /* (QSPI_IMR) QSPI Time-out Interrupt Mask Position */
 #define QSPI_IMR_TOUT_Msk                     (_UINT32_(0x1) << QSPI_IMR_TOUT_Pos)                 /* (QSPI_IMR) QSPI Time-out Interrupt Mask Mask */
 #define QSPI_IMR_TOUT(value)                  (QSPI_IMR_TOUT_Msk & (_UINT32_(value) << QSPI_IMR_TOUT_Pos)) /* Assignment of value for TOUT in the QSPI_IMR register */
-#define QSPI_IMR_Msk                          _UINT32_(0x0003FD0F)                                 /* (QSPI_IMR) Register Mask  */
+#define QSPI_IMR_Msk                          _UINT32_(0x0003FF0F)                                 /* (QSPI_IMR) Register Mask  */
 
 
 /* -------- QSPI_SCR : (QSPI Offset: 0x20) (R/W 32) Serial Clock Register -------- */
@@ -647,11 +658,11 @@
 #define QSPI_IFR_PROTTYP(value)               (QSPI_IFR_PROTTYP_Msk & (_UINT32_(value) << QSPI_IFR_PROTTYP_Pos)) /* Assignment of value for PROTTYP in the QSPI_IFR register */
 #define   QSPI_IFR_PROTTYP_STD_SPI_Val        _UINT32_(0x0)                                        /* (QSPI_IFR) Standard (Q)SPI protocol (to be selected if no other value matches the device)  */
 #define   QSPI_IFR_PROTTYP_TWIN_QUAD_Val      _UINT32_(0x1)                                        /* (QSPI_IFR) Twin-Quad protocol  */
-#define   QSPI_IFR_PROTTYP_OCTAFLASH_Val      _UINT32_(0x2)                                        /* (QSPI_IFR) OctaFlash protocol  */
+#define   QSPI_IFR_PROTTYP_OCTAFLASH_Val      _UINT32_(0x2)                                        /* (QSPI_IFR) OctaFlash protocol or Octal DDR protocol with 16-bit instruction code  */
 #define   QSPI_IFR_PROTTYP_HYPERFLASH_Val     _UINT32_(0x3)                                        /* (QSPI_IFR) HyperFlash protocol  */
 #define QSPI_IFR_PROTTYP_STD_SPI              (QSPI_IFR_PROTTYP_STD_SPI_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) Standard (Q)SPI protocol (to be selected if no other value matches the device) Position */
 #define QSPI_IFR_PROTTYP_TWIN_QUAD            (QSPI_IFR_PROTTYP_TWIN_QUAD_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) Twin-Quad protocol Position */
-#define QSPI_IFR_PROTTYP_OCTAFLASH            (QSPI_IFR_PROTTYP_OCTAFLASH_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) OctaFlash protocol Position */
+#define QSPI_IFR_PROTTYP_OCTAFLASH            (QSPI_IFR_PROTTYP_OCTAFLASH_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) OctaFlash protocol or Octal DDR protocol with 16-bit instruction code Position */
 #define QSPI_IFR_PROTTYP_HYPERFLASH           (QSPI_IFR_PROTTYP_HYPERFLASH_Val << QSPI_IFR_PROTTYP_Pos) /* (QSPI_IFR) HyperFlash protocol Position */
 #define QSPI_IFR_Msk                          _UINT32_(0x7FFFDFFF)                                 /* (QSPI_IFR) Register Mask  */
 
