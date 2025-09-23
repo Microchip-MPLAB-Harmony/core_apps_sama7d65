@@ -1,7 +1,7 @@
 /*
  * Component description for SMC
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_SMC_COMPONENT_H_
 #define _SAMA7D6_SMC_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                      SOFTWARE API DEFINITION FOR SMC                       */
@@ -152,18 +154,7 @@
 #define   HSMC_MODE_TDF_MODE_1_Val            _UINT32_(0x1)                                        /* (HSMC_MODE) TDF optimization enabled  */
 #define HSMC_MODE_TDF_MODE_0                  (HSMC_MODE_TDF_MODE_0_Val << HSMC_MODE_TDF_MODE_Pos) /* (HSMC_MODE) TDF optimization disabled Position */
 #define HSMC_MODE_TDF_MODE_1                  (HSMC_MODE_TDF_MODE_1_Val << HSMC_MODE_TDF_MODE_Pos) /* (HSMC_MODE) TDF optimization enabled Position */
-#define HSMC_MODE_PS_Pos                      _UINT32_(28)                                         /* (HSMC_MODE) Page Size Position */
-#define HSMC_MODE_PS_Msk                      (_UINT32_(0x3) << HSMC_MODE_PS_Pos)                  /* (HSMC_MODE) Page Size Mask */
-#define HSMC_MODE_PS(value)                   (HSMC_MODE_PS_Msk & (_UINT32_(value) << HSMC_MODE_PS_Pos)) /* Assignment of value for PS in the HSMC_MODE register */
-#define   HSMC_MODE_PS_BYTE_4_Val             _UINT32_(0x0)                                        /* (HSMC_MODE) 4-byte page  */
-#define   HSMC_MODE_PS_BYTE_8_Val             _UINT32_(0x1)                                        /* (HSMC_MODE) 8-byte page  */
-#define   HSMC_MODE_PS_BYTE_16_Val            _UINT32_(0x2)                                        /* (HSMC_MODE) 16-byte page  */
-#define   HSMC_MODE_PS_BYTE_32_Val            _UINT32_(0x3)                                        /* (HSMC_MODE) 32-byte page  */
-#define HSMC_MODE_PS_BYTE_4                   (HSMC_MODE_PS_BYTE_4_Val << HSMC_MODE_PS_Pos)        /* (HSMC_MODE) 4-byte page Position */
-#define HSMC_MODE_PS_BYTE_8                   (HSMC_MODE_PS_BYTE_8_Val << HSMC_MODE_PS_Pos)        /* (HSMC_MODE) 8-byte page Position */
-#define HSMC_MODE_PS_BYTE_16                  (HSMC_MODE_PS_BYTE_16_Val << HSMC_MODE_PS_Pos)       /* (HSMC_MODE) 16-byte page Position */
-#define HSMC_MODE_PS_BYTE_32                  (HSMC_MODE_PS_BYTE_32_Val << HSMC_MODE_PS_Pos)       /* (HSMC_MODE) 32-byte page Position */
-#define HSMC_MODE_Msk                         _UINT32_(0x301F1133)                                 /* (HSMC_MODE) Register Mask  */
+#define HSMC_MODE_Msk                         _UINT32_(0x001F1133)                                 /* (HSMC_MODE) Register Mask  */
 
 
 /* -------- HSMC_PMECC : (SMC Offset: 0x00) ( R/ 32) PMECC Redundancy x Register  -------- */
@@ -610,13 +601,9 @@
 #define HSMC_PMECCFG_SPAREEN_Msk              (_UINT32_(0x1) << HSMC_PMECCFG_SPAREEN_Pos)          /* (HSMC_PMECCFG) Spare Enable Mask */
 #define HSMC_PMECCFG_SPAREEN(value)           (HSMC_PMECCFG_SPAREEN_Msk & (_UINT32_(value) << HSMC_PMECCFG_SPAREEN_Pos)) /* Assignment of value for SPAREEN in the HSMC_PMECCFG register */
 #define   HSMC_PMECCFG_SPAREEN_0_Val          _UINT32_(0x0)                                        /* (HSMC_PMECCFG) The spare area is not protected by ECC.  */
-#define   HSMC_PMECCFG_SPAREEN_0_Val          _UINT32_(0x0)                                        /* (HSMC_PMECCFG) The spare area is not protected by ECC.  */
-#define   HSMC_PMECCFG_SPAREEN_1_Val          _UINT32_(0x1)                                        /* (HSMC_PMECCFG) The spare area is protected with the last sector of data.  */
-#define   HSMC_PMECCFG_SPAREEN_1_Val          _UINT32_(0x1)                                        /* (HSMC_PMECCFG) The spare area contains protected data.  */
+#define   HSMC_PMECCFG_SPAREEN_1_Val          _UINT32_(0x1)                                        /* (HSMC_PMECCFG) NAND write access: The spare area is protected with the last sector of data. NAND read access: The spare area contains protected data.  */
 #define HSMC_PMECCFG_SPAREEN_0                (HSMC_PMECCFG_SPAREEN_0_Val << HSMC_PMECCFG_SPAREEN_Pos) /* (HSMC_PMECCFG) The spare area is not protected by ECC. Position */
-#define HSMC_PMECCFG_SPAREEN_0                (HSMC_PMECCFG_SPAREEN_0_Val << HSMC_PMECCFG_SPAREEN_Pos) /* (HSMC_PMECCFG) The spare area is not protected by ECC. Position */
-#define HSMC_PMECCFG_SPAREEN_1                (HSMC_PMECCFG_SPAREEN_1_Val << HSMC_PMECCFG_SPAREEN_Pos) /* (HSMC_PMECCFG) The spare area is protected with the last sector of data. Position */
-#define HSMC_PMECCFG_SPAREEN_1                (HSMC_PMECCFG_SPAREEN_1_Val << HSMC_PMECCFG_SPAREEN_Pos) /* (HSMC_PMECCFG) The spare area contains protected data. Position */
+#define HSMC_PMECCFG_SPAREEN_1                (HSMC_PMECCFG_SPAREEN_1_Val << HSMC_PMECCFG_SPAREEN_Pos) /* (HSMC_PMECCFG) NAND write access: The spare area is protected with the last sector of data. NAND read access: The spare area contains protected data. Position */
 #define HSMC_PMECCFG_AUTO_Pos                 _UINT32_(20)                                         /* (HSMC_PMECCFG) Automatic Mode Enable Position */
 #define HSMC_PMECCFG_AUTO_Msk                 (_UINT32_(0x1) << HSMC_PMECCFG_AUTO_Pos)             /* (HSMC_PMECCFG) Automatic Mode Enable Mask */
 #define HSMC_PMECCFG_AUTO(value)              (HSMC_PMECCFG_AUTO_Msk & (_UINT32_(value) << HSMC_PMECCFG_AUTO_Pos)) /* Assignment of value for AUTO in the HSMC_PMECCFG register */
@@ -683,8 +670,8 @@
 #define   HSMC_PMECCTRL_ENABLE_1_Val          _UINT32_(0x1)                                        /* (HSMC_PMECCTRL) Enable the PMECC controller.  */
 #define HSMC_PMECCTRL_ENABLE_0                (HSMC_PMECCTRL_ENABLE_0_Val << HSMC_PMECCTRL_ENABLE_Pos) /* (HSMC_PMECCTRL) No effect Position */
 #define HSMC_PMECCTRL_ENABLE_1                (HSMC_PMECCTRL_ENABLE_1_Val << HSMC_PMECCTRL_ENABLE_Pos) /* (HSMC_PMECCTRL) Enable the PMECC controller. Position */
-#define HSMC_PMECCTRL_DISABLE_Pos             _UINT32_(5)                                          /* (HSMC_PMECCTRL) PMECC Enable Position */
-#define HSMC_PMECCTRL_DISABLE_Msk             (_UINT32_(0x1) << HSMC_PMECCTRL_DISABLE_Pos)         /* (HSMC_PMECCTRL) PMECC Enable Mask */
+#define HSMC_PMECCTRL_DISABLE_Pos             _UINT32_(5)                                          /* (HSMC_PMECCTRL) PMECC Disable Position */
+#define HSMC_PMECCTRL_DISABLE_Msk             (_UINT32_(0x1) << HSMC_PMECCTRL_DISABLE_Pos)         /* (HSMC_PMECCTRL) PMECC Disable Mask */
 #define HSMC_PMECCTRL_DISABLE(value)          (HSMC_PMECCTRL_DISABLE_Msk & (_UINT32_(value) << HSMC_PMECCTRL_DISABLE_Pos)) /* Assignment of value for DISABLE in the HSMC_PMECCTRL register */
 #define   HSMC_PMECCTRL_DISABLE_0_Val         _UINT32_(0x0)                                        /* (HSMC_PMECCTRL) No effect  */
 #define   HSMC_PMECCTRL_DISABLE_1_Val         _UINT32_(0x1)                                        /* (HSMC_PMECCTRL) Disable the PMECC controller.  */
@@ -872,8 +859,8 @@
 /* -------- HSMC_SIGMA1 : (SMC Offset: 0x52C) (R/W 32) PMECC Error Location SIGMA 1 Register -------- */
 #define HSMC_SIGMA1_RESETVALUE                _UINT32_(0x00)                                       /*  (HSMC_SIGMA1) PMECC Error Location SIGMA 1 Register  Reset Value */
 
-#define HSMC_SIGMA1_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA1) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA1_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA1_SIGMA_Pos)          /* (HSMC_SIGMA1) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA1_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA1) Coefficient of degree 1 in the SIGMA polynomial Position */
+#define HSMC_SIGMA1_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA1_SIGMA_Pos)          /* (HSMC_SIGMA1) Coefficient of degree 1 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA1_SIGMA(value)              (HSMC_SIGMA1_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA1_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA1 register */
 #define HSMC_SIGMA1_Msk                       _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA1) Register Mask  */
 
@@ -881,8 +868,8 @@
 /* -------- HSMC_SIGMA2 : (SMC Offset: 0x530) (R/W 32) PMECC Error Location SIGMA 2 Register -------- */
 #define HSMC_SIGMA2_RESETVALUE                _UINT32_(0x00)                                       /*  (HSMC_SIGMA2) PMECC Error Location SIGMA 2 Register  Reset Value */
 
-#define HSMC_SIGMA2_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA2) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA2_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA2_SIGMA_Pos)          /* (HSMC_SIGMA2) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA2_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA2) Coefficient of degree 2 in the SIGMA polynomial Position */
+#define HSMC_SIGMA2_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA2_SIGMA_Pos)          /* (HSMC_SIGMA2) Coefficient of degree 2 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA2_SIGMA(value)              (HSMC_SIGMA2_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA2_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA2 register */
 #define HSMC_SIGMA2_Msk                       _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA2) Register Mask  */
 
@@ -890,8 +877,8 @@
 /* -------- HSMC_SIGMA3 : (SMC Offset: 0x534) (R/W 32) PMECC Error Location SIGMA 3 Register -------- */
 #define HSMC_SIGMA3_RESETVALUE                _UINT32_(0x00)                                       /*  (HSMC_SIGMA3) PMECC Error Location SIGMA 3 Register  Reset Value */
 
-#define HSMC_SIGMA3_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA3) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA3_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA3_SIGMA_Pos)          /* (HSMC_SIGMA3) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA3_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA3) Coefficient of degree 3 in the SIGMA polynomial Position */
+#define HSMC_SIGMA3_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA3_SIGMA_Pos)          /* (HSMC_SIGMA3) Coefficient of degree 3 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA3_SIGMA(value)              (HSMC_SIGMA3_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA3_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA3 register */
 #define HSMC_SIGMA3_Msk                       _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA3) Register Mask  */
 
@@ -899,8 +886,8 @@
 /* -------- HSMC_SIGMA4 : (SMC Offset: 0x538) (R/W 32) PMECC Error Location SIGMA 4 Register -------- */
 #define HSMC_SIGMA4_RESETVALUE                _UINT32_(0x00)                                       /*  (HSMC_SIGMA4) PMECC Error Location SIGMA 4 Register  Reset Value */
 
-#define HSMC_SIGMA4_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA4) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA4_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA4_SIGMA_Pos)          /* (HSMC_SIGMA4) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA4_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA4) Coefficient of degree 4 in the SIGMA polynomial Position */
+#define HSMC_SIGMA4_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA4_SIGMA_Pos)          /* (HSMC_SIGMA4) Coefficient of degree 4 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA4_SIGMA(value)              (HSMC_SIGMA4_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA4_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA4 register */
 #define HSMC_SIGMA4_Msk                       _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA4) Register Mask  */
 
@@ -908,8 +895,8 @@
 /* -------- HSMC_SIGMA5 : (SMC Offset: 0x53C) (R/W 32) PMECC Error Location SIGMA 5 Register -------- */
 #define HSMC_SIGMA5_RESETVALUE                _UINT32_(0x00)                                       /*  (HSMC_SIGMA5) PMECC Error Location SIGMA 5 Register  Reset Value */
 
-#define HSMC_SIGMA5_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA5) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA5_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA5_SIGMA_Pos)          /* (HSMC_SIGMA5) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA5_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA5) Coefficient of degree 5 in the SIGMA polynomial Position */
+#define HSMC_SIGMA5_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA5_SIGMA_Pos)          /* (HSMC_SIGMA5) Coefficient of degree 5 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA5_SIGMA(value)              (HSMC_SIGMA5_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA5_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA5 register */
 #define HSMC_SIGMA5_Msk                       _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA5) Register Mask  */
 
@@ -917,8 +904,8 @@
 /* -------- HSMC_SIGMA6 : (SMC Offset: 0x540) (R/W 32) PMECC Error Location SIGMA 6 Register -------- */
 #define HSMC_SIGMA6_RESETVALUE                _UINT32_(0x00)                                       /*  (HSMC_SIGMA6) PMECC Error Location SIGMA 6 Register  Reset Value */
 
-#define HSMC_SIGMA6_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA6) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA6_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA6_SIGMA_Pos)          /* (HSMC_SIGMA6) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA6_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA6) Coefficient of degree 6 in the SIGMA polynomial Position */
+#define HSMC_SIGMA6_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA6_SIGMA_Pos)          /* (HSMC_SIGMA6) Coefficient of degree 6 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA6_SIGMA(value)              (HSMC_SIGMA6_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA6_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA6 register */
 #define HSMC_SIGMA6_Msk                       _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA6) Register Mask  */
 
@@ -926,8 +913,8 @@
 /* -------- HSMC_SIGMA7 : (SMC Offset: 0x544) (R/W 32) PMECC Error Location SIGMA 7 Register -------- */
 #define HSMC_SIGMA7_RESETVALUE                _UINT32_(0x00)                                       /*  (HSMC_SIGMA7) PMECC Error Location SIGMA 7 Register  Reset Value */
 
-#define HSMC_SIGMA7_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA7) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA7_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA7_SIGMA_Pos)          /* (HSMC_SIGMA7) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA7_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA7) Coefficient of degree 7 in the SIGMA polynomial Position */
+#define HSMC_SIGMA7_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA7_SIGMA_Pos)          /* (HSMC_SIGMA7) Coefficient of degree 7 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA7_SIGMA(value)              (HSMC_SIGMA7_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA7_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA7 register */
 #define HSMC_SIGMA7_Msk                       _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA7) Register Mask  */
 
@@ -935,8 +922,8 @@
 /* -------- HSMC_SIGMA8 : (SMC Offset: 0x548) (R/W 32) PMECC Error Location SIGMA 8 Register -------- */
 #define HSMC_SIGMA8_RESETVALUE                _UINT32_(0x00)                                       /*  (HSMC_SIGMA8) PMECC Error Location SIGMA 8 Register  Reset Value */
 
-#define HSMC_SIGMA8_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA8) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA8_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA8_SIGMA_Pos)          /* (HSMC_SIGMA8) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA8_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA8) Coefficient of degree 8 in the SIGMA polynomial Position */
+#define HSMC_SIGMA8_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA8_SIGMA_Pos)          /* (HSMC_SIGMA8) Coefficient of degree 8 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA8_SIGMA(value)              (HSMC_SIGMA8_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA8_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA8 register */
 #define HSMC_SIGMA8_Msk                       _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA8) Register Mask  */
 
@@ -944,8 +931,8 @@
 /* -------- HSMC_SIGMA9 : (SMC Offset: 0x54C) (R/W 32) PMECC Error Location SIGMA 9 Register -------- */
 #define HSMC_SIGMA9_RESETVALUE                _UINT32_(0x00)                                       /*  (HSMC_SIGMA9) PMECC Error Location SIGMA 9 Register  Reset Value */
 
-#define HSMC_SIGMA9_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA9) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA9_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA9_SIGMA_Pos)          /* (HSMC_SIGMA9) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA9_SIGMA_Pos                 _UINT32_(0)                                          /* (HSMC_SIGMA9) Coefficient of degree 9 in the SIGMA polynomial Position */
+#define HSMC_SIGMA9_SIGMA_Msk                 (_UINT32_(0x3FFF) << HSMC_SIGMA9_SIGMA_Pos)          /* (HSMC_SIGMA9) Coefficient of degree 9 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA9_SIGMA(value)              (HSMC_SIGMA9_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA9_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA9 register */
 #define HSMC_SIGMA9_Msk                       _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA9) Register Mask  */
 
@@ -953,8 +940,8 @@
 /* -------- HSMC_SIGMA10 : (SMC Offset: 0x550) (R/W 32) PMECC Error Location SIGMA 10 Register -------- */
 #define HSMC_SIGMA10_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA10) PMECC Error Location SIGMA 10 Register  Reset Value */
 
-#define HSMC_SIGMA10_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA10) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA10_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA10_SIGMA_Pos)         /* (HSMC_SIGMA10) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA10_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA10) Coefficient of degree 10 in the SIGMA polynomial Position */
+#define HSMC_SIGMA10_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA10_SIGMA_Pos)         /* (HSMC_SIGMA10) Coefficient of degree 10 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA10_SIGMA(value)             (HSMC_SIGMA10_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA10_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA10 register */
 #define HSMC_SIGMA10_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA10) Register Mask  */
 
@@ -962,8 +949,8 @@
 /* -------- HSMC_SIGMA11 : (SMC Offset: 0x554) (R/W 32) PMECC Error Location SIGMA 11 Register -------- */
 #define HSMC_SIGMA11_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA11) PMECC Error Location SIGMA 11 Register  Reset Value */
 
-#define HSMC_SIGMA11_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA11) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA11_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA11_SIGMA_Pos)         /* (HSMC_SIGMA11) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA11_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA11) Coefficient of degree 11 in the SIGMA polynomial Position */
+#define HSMC_SIGMA11_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA11_SIGMA_Pos)         /* (HSMC_SIGMA11) Coefficient of degree 11 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA11_SIGMA(value)             (HSMC_SIGMA11_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA11_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA11 register */
 #define HSMC_SIGMA11_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA11) Register Mask  */
 
@@ -971,8 +958,8 @@
 /* -------- HSMC_SIGMA12 : (SMC Offset: 0x558) (R/W 32) PMECC Error Location SIGMA 12 Register -------- */
 #define HSMC_SIGMA12_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA12) PMECC Error Location SIGMA 12 Register  Reset Value */
 
-#define HSMC_SIGMA12_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA12) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA12_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA12_SIGMA_Pos)         /* (HSMC_SIGMA12) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA12_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA12) Coefficient of degree 12 in the SIGMA polynomial Position */
+#define HSMC_SIGMA12_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA12_SIGMA_Pos)         /* (HSMC_SIGMA12) Coefficient of degree 12 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA12_SIGMA(value)             (HSMC_SIGMA12_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA12_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA12 register */
 #define HSMC_SIGMA12_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA12) Register Mask  */
 
@@ -980,8 +967,8 @@
 /* -------- HSMC_SIGMA13 : (SMC Offset: 0x55C) (R/W 32) PMECC Error Location SIGMA 13 Register -------- */
 #define HSMC_SIGMA13_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA13) PMECC Error Location SIGMA 13 Register  Reset Value */
 
-#define HSMC_SIGMA13_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA13) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA13_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA13_SIGMA_Pos)         /* (HSMC_SIGMA13) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA13_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA13) Coefficient of degree 13 in the SIGMA polynomial Position */
+#define HSMC_SIGMA13_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA13_SIGMA_Pos)         /* (HSMC_SIGMA13) Coefficient of degree 13 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA13_SIGMA(value)             (HSMC_SIGMA13_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA13_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA13 register */
 #define HSMC_SIGMA13_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA13) Register Mask  */
 
@@ -989,8 +976,8 @@
 /* -------- HSMC_SIGMA14 : (SMC Offset: 0x560) (R/W 32) PMECC Error Location SIGMA 14 Register -------- */
 #define HSMC_SIGMA14_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA14) PMECC Error Location SIGMA 14 Register  Reset Value */
 
-#define HSMC_SIGMA14_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA14) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA14_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA14_SIGMA_Pos)         /* (HSMC_SIGMA14) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA14_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA14) Coefficient of degree 14 in the SIGMA polynomial Position */
+#define HSMC_SIGMA14_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA14_SIGMA_Pos)         /* (HSMC_SIGMA14) Coefficient of degree 14 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA14_SIGMA(value)             (HSMC_SIGMA14_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA14_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA14 register */
 #define HSMC_SIGMA14_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA14) Register Mask  */
 
@@ -998,8 +985,8 @@
 /* -------- HSMC_SIGMA15 : (SMC Offset: 0x564) (R/W 32) PMECC Error Location SIGMA 15 Register -------- */
 #define HSMC_SIGMA15_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA15) PMECC Error Location SIGMA 15 Register  Reset Value */
 
-#define HSMC_SIGMA15_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA15) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA15_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA15_SIGMA_Pos)         /* (HSMC_SIGMA15) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA15_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA15) Coefficient of degree 15 in the SIGMA polynomial Position */
+#define HSMC_SIGMA15_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA15_SIGMA_Pos)         /* (HSMC_SIGMA15) Coefficient of degree 15 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA15_SIGMA(value)             (HSMC_SIGMA15_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA15_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA15 register */
 #define HSMC_SIGMA15_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA15) Register Mask  */
 
@@ -1007,8 +994,8 @@
 /* -------- HSMC_SIGMA16 : (SMC Offset: 0x568) (R/W 32) PMECC Error Location SIGMA 16 Register -------- */
 #define HSMC_SIGMA16_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA16) PMECC Error Location SIGMA 16 Register  Reset Value */
 
-#define HSMC_SIGMA16_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA16) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA16_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA16_SIGMA_Pos)         /* (HSMC_SIGMA16) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA16_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA16) Coefficient of degree 16 in the SIGMA polynomial Position */
+#define HSMC_SIGMA16_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA16_SIGMA_Pos)         /* (HSMC_SIGMA16) Coefficient of degree 16 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA16_SIGMA(value)             (HSMC_SIGMA16_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA16_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA16 register */
 #define HSMC_SIGMA16_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA16) Register Mask  */
 
@@ -1016,8 +1003,8 @@
 /* -------- HSMC_SIGMA17 : (SMC Offset: 0x56C) (R/W 32) PMECC Error Location SIGMA 17 Register -------- */
 #define HSMC_SIGMA17_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA17) PMECC Error Location SIGMA 17 Register  Reset Value */
 
-#define HSMC_SIGMA17_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA17) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA17_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA17_SIGMA_Pos)         /* (HSMC_SIGMA17) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA17_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA17) Coefficient of degree 17 in the SIGMA polynomial Position */
+#define HSMC_SIGMA17_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA17_SIGMA_Pos)         /* (HSMC_SIGMA17) Coefficient of degree 17 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA17_SIGMA(value)             (HSMC_SIGMA17_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA17_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA17 register */
 #define HSMC_SIGMA17_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA17) Register Mask  */
 
@@ -1025,8 +1012,8 @@
 /* -------- HSMC_SIGMA18 : (SMC Offset: 0x570) (R/W 32) PMECC Error Location SIGMA 18 Register -------- */
 #define HSMC_SIGMA18_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA18) PMECC Error Location SIGMA 18 Register  Reset Value */
 
-#define HSMC_SIGMA18_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA18) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA18_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA18_SIGMA_Pos)         /* (HSMC_SIGMA18) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA18_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA18) Coefficient of degree 18 in the SIGMA polynomial Position */
+#define HSMC_SIGMA18_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA18_SIGMA_Pos)         /* (HSMC_SIGMA18) Coefficient of degree 18 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA18_SIGMA(value)             (HSMC_SIGMA18_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA18_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA18 register */
 #define HSMC_SIGMA18_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA18) Register Mask  */
 
@@ -1034,8 +1021,8 @@
 /* -------- HSMC_SIGMA19 : (SMC Offset: 0x574) (R/W 32) PMECC Error Location SIGMA 19 Register -------- */
 #define HSMC_SIGMA19_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA19) PMECC Error Location SIGMA 19 Register  Reset Value */
 
-#define HSMC_SIGMA19_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA19) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA19_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA19_SIGMA_Pos)         /* (HSMC_SIGMA19) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA19_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA19) Coefficient of degree 19 in the SIGMA polynomial Position */
+#define HSMC_SIGMA19_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA19_SIGMA_Pos)         /* (HSMC_SIGMA19) Coefficient of degree 19 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA19_SIGMA(value)             (HSMC_SIGMA19_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA19_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA19 register */
 #define HSMC_SIGMA19_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA19) Register Mask  */
 
@@ -1043,8 +1030,8 @@
 /* -------- HSMC_SIGMA20 : (SMC Offset: 0x578) (R/W 32) PMECC Error Location SIGMA 20 Register -------- */
 #define HSMC_SIGMA20_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA20) PMECC Error Location SIGMA 20 Register  Reset Value */
 
-#define HSMC_SIGMA20_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA20) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA20_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA20_SIGMA_Pos)         /* (HSMC_SIGMA20) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA20_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA20) Coefficient of degree 20 in the SIGMA polynomial Position */
+#define HSMC_SIGMA20_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA20_SIGMA_Pos)         /* (HSMC_SIGMA20) Coefficient of degree 20 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA20_SIGMA(value)             (HSMC_SIGMA20_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA20_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA20 register */
 #define HSMC_SIGMA20_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA20) Register Mask  */
 
@@ -1052,8 +1039,8 @@
 /* -------- HSMC_SIGMA21 : (SMC Offset: 0x57C) (R/W 32) PMECC Error Location SIGMA 21 Register -------- */
 #define HSMC_SIGMA21_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA21) PMECC Error Location SIGMA 21 Register  Reset Value */
 
-#define HSMC_SIGMA21_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA21) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA21_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA21_SIGMA_Pos)         /* (HSMC_SIGMA21) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA21_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA21) Coefficient of degree 21 in the SIGMA polynomial Position */
+#define HSMC_SIGMA21_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA21_SIGMA_Pos)         /* (HSMC_SIGMA21) Coefficient of degree 21 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA21_SIGMA(value)             (HSMC_SIGMA21_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA21_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA21 register */
 #define HSMC_SIGMA21_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA21) Register Mask  */
 
@@ -1061,8 +1048,8 @@
 /* -------- HSMC_SIGMA22 : (SMC Offset: 0x580) (R/W 32) PMECC Error Location SIGMA 22 Register -------- */
 #define HSMC_SIGMA22_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA22) PMECC Error Location SIGMA 22 Register  Reset Value */
 
-#define HSMC_SIGMA22_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA22) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA22_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA22_SIGMA_Pos)         /* (HSMC_SIGMA22) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA22_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA22) Coefficient of degree 22 in the SIGMA polynomial Position */
+#define HSMC_SIGMA22_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA22_SIGMA_Pos)         /* (HSMC_SIGMA22) Coefficient of degree 22 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA22_SIGMA(value)             (HSMC_SIGMA22_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA22_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA22 register */
 #define HSMC_SIGMA22_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA22) Register Mask  */
 
@@ -1070,8 +1057,8 @@
 /* -------- HSMC_SIGMA23 : (SMC Offset: 0x584) (R/W 32) PMECC Error Location SIGMA 23 Register -------- */
 #define HSMC_SIGMA23_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA23) PMECC Error Location SIGMA 23 Register  Reset Value */
 
-#define HSMC_SIGMA23_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA23) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA23_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA23_SIGMA_Pos)         /* (HSMC_SIGMA23) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA23_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA23) Coefficient of degree 23 in the SIGMA polynomial Position */
+#define HSMC_SIGMA23_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA23_SIGMA_Pos)         /* (HSMC_SIGMA23) Coefficient of degree 23 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA23_SIGMA(value)             (HSMC_SIGMA23_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA23_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA23 register */
 #define HSMC_SIGMA23_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA23) Register Mask  */
 
@@ -1079,8 +1066,8 @@
 /* -------- HSMC_SIGMA24 : (SMC Offset: 0x588) (R/W 32) PMECC Error Location SIGMA 24 Register -------- */
 #define HSMC_SIGMA24_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA24) PMECC Error Location SIGMA 24 Register  Reset Value */
 
-#define HSMC_SIGMA24_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA24) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA24_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA24_SIGMA_Pos)         /* (HSMC_SIGMA24) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA24_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA24) Coefficient of degree 24 in the SIGMA polynomial Position */
+#define HSMC_SIGMA24_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA24_SIGMA_Pos)         /* (HSMC_SIGMA24) Coefficient of degree 24 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA24_SIGMA(value)             (HSMC_SIGMA24_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA24_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA24 register */
 #define HSMC_SIGMA24_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA24) Register Mask  */
 
@@ -1088,8 +1075,8 @@
 /* -------- HSMC_SIGMA25 : (SMC Offset: 0x58C) (R/W 32) PMECC Error Location SIGMA 25 Register -------- */
 #define HSMC_SIGMA25_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA25) PMECC Error Location SIGMA 25 Register  Reset Value */
 
-#define HSMC_SIGMA25_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA25) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA25_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA25_SIGMA_Pos)         /* (HSMC_SIGMA25) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA25_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA25) Coefficient of degree 25 in the SIGMA polynomial Position */
+#define HSMC_SIGMA25_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA25_SIGMA_Pos)         /* (HSMC_SIGMA25) Coefficient of degree 25 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA25_SIGMA(value)             (HSMC_SIGMA25_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA25_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA25 register */
 #define HSMC_SIGMA25_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA25) Register Mask  */
 
@@ -1097,8 +1084,8 @@
 /* -------- HSMC_SIGMA26 : (SMC Offset: 0x590) (R/W 32) PMECC Error Location SIGMA 26 Register -------- */
 #define HSMC_SIGMA26_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA26) PMECC Error Location SIGMA 26 Register  Reset Value */
 
-#define HSMC_SIGMA26_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA26) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA26_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA26_SIGMA_Pos)         /* (HSMC_SIGMA26) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA26_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA26) Coefficient of degree 26 in the SIGMA polynomial Position */
+#define HSMC_SIGMA26_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA26_SIGMA_Pos)         /* (HSMC_SIGMA26) Coefficient of degree 26 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA26_SIGMA(value)             (HSMC_SIGMA26_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA26_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA26 register */
 #define HSMC_SIGMA26_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA26) Register Mask  */
 
@@ -1106,8 +1093,8 @@
 /* -------- HSMC_SIGMA27 : (SMC Offset: 0x594) (R/W 32) PMECC Error Location SIGMA 27 Register -------- */
 #define HSMC_SIGMA27_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA27) PMECC Error Location SIGMA 27 Register  Reset Value */
 
-#define HSMC_SIGMA27_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA27) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA27_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA27_SIGMA_Pos)         /* (HSMC_SIGMA27) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA27_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA27) Coefficient of degree 27 in the SIGMA polynomial Position */
+#define HSMC_SIGMA27_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA27_SIGMA_Pos)         /* (HSMC_SIGMA27) Coefficient of degree 27 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA27_SIGMA(value)             (HSMC_SIGMA27_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA27_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA27 register */
 #define HSMC_SIGMA27_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA27) Register Mask  */
 
@@ -1115,8 +1102,8 @@
 /* -------- HSMC_SIGMA28 : (SMC Offset: 0x598) (R/W 32) PMECC Error Location SIGMA 28 Register -------- */
 #define HSMC_SIGMA28_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA28) PMECC Error Location SIGMA 28 Register  Reset Value */
 
-#define HSMC_SIGMA28_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA28) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA28_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA28_SIGMA_Pos)         /* (HSMC_SIGMA28) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA28_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA28) Coefficient of degree 28 in the SIGMA polynomial Position */
+#define HSMC_SIGMA28_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA28_SIGMA_Pos)         /* (HSMC_SIGMA28) Coefficient of degree 28 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA28_SIGMA(value)             (HSMC_SIGMA28_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA28_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA28 register */
 #define HSMC_SIGMA28_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA28) Register Mask  */
 
@@ -1124,8 +1111,8 @@
 /* -------- HSMC_SIGMA29 : (SMC Offset: 0x59C) (R/W 32) PMECC Error Location SIGMA 29 Register -------- */
 #define HSMC_SIGMA29_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA29) PMECC Error Location SIGMA 29 Register  Reset Value */
 
-#define HSMC_SIGMA29_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA29) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA29_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA29_SIGMA_Pos)         /* (HSMC_SIGMA29) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA29_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA29) Coefficient of degree 29 in the SIGMA polynomial Position */
+#define HSMC_SIGMA29_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA29_SIGMA_Pos)         /* (HSMC_SIGMA29) Coefficient of degree 29 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA29_SIGMA(value)             (HSMC_SIGMA29_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA29_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA29 register */
 #define HSMC_SIGMA29_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA29) Register Mask  */
 
@@ -1133,8 +1120,8 @@
 /* -------- HSMC_SIGMA30 : (SMC Offset: 0x5A0) (R/W 32) PMECC Error Location SIGMA 30 Register -------- */
 #define HSMC_SIGMA30_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA30) PMECC Error Location SIGMA 30 Register  Reset Value */
 
-#define HSMC_SIGMA30_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA30) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA30_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA30_SIGMA_Pos)         /* (HSMC_SIGMA30) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA30_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA30) Coefficient of degree 30 in the SIGMA polynomial Position */
+#define HSMC_SIGMA30_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA30_SIGMA_Pos)         /* (HSMC_SIGMA30) Coefficient of degree 30 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA30_SIGMA(value)             (HSMC_SIGMA30_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA30_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA30 register */
 #define HSMC_SIGMA30_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA30) Register Mask  */
 
@@ -1142,8 +1129,8 @@
 /* -------- HSMC_SIGMA31 : (SMC Offset: 0x5A4) (R/W 32) PMECC Error Location SIGMA 31 Register -------- */
 #define HSMC_SIGMA31_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA31) PMECC Error Location SIGMA 31 Register  Reset Value */
 
-#define HSMC_SIGMA31_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA31) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA31_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA31_SIGMA_Pos)         /* (HSMC_SIGMA31) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA31_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA31) Coefficient of degree 31 in the SIGMA polynomial Position */
+#define HSMC_SIGMA31_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA31_SIGMA_Pos)         /* (HSMC_SIGMA31) Coefficient of degree 31 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA31_SIGMA(value)             (HSMC_SIGMA31_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA31_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA31 register */
 #define HSMC_SIGMA31_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA31) Register Mask  */
 
@@ -1151,8 +1138,8 @@
 /* -------- HSMC_SIGMA32 : (SMC Offset: 0x5A8) (R/W 32) PMECC Error Location SIGMA 32 Register -------- */
 #define HSMC_SIGMA32_RESETVALUE               _UINT32_(0x00)                                       /*  (HSMC_SIGMA32) PMECC Error Location SIGMA 32 Register  Reset Value */
 
-#define HSMC_SIGMA32_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA32) Coefficient of degree x in the SIGMA polynomial Position */
-#define HSMC_SIGMA32_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA32_SIGMA_Pos)         /* (HSMC_SIGMA32) Coefficient of degree x in the SIGMA polynomial Mask */
+#define HSMC_SIGMA32_SIGMA_Pos                _UINT32_(0)                                          /* (HSMC_SIGMA32) Coefficient of degree 32 in the SIGMA polynomial Position */
+#define HSMC_SIGMA32_SIGMA_Msk                (_UINT32_(0x3FFF) << HSMC_SIGMA32_SIGMA_Pos)         /* (HSMC_SIGMA32) Coefficient of degree 32 in the SIGMA polynomial Mask */
 #define HSMC_SIGMA32_SIGMA(value)             (HSMC_SIGMA32_SIGMA_Msk & (_UINT32_(value) << HSMC_SIGMA32_SIGMA_Pos)) /* Assignment of value for SIGMA in the HSMC_SIGMA32 register */
 #define HSMC_SIGMA32_Msk                      _UINT32_(0x00003FFF)                                 /* (HSMC_SIGMA32) Register Mask  */
 

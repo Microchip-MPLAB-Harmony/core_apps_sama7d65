@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,13 +19,13 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_PIT64B2_INSTANCE_
 #define _SAMA7D6_PIT64B2_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PIT64B2 peripheral ========== */
-#define PIT64B2_CLOCK_ID                         (68)       
+#define PIT64B2_CLOCK_ID                         (68)
 #define PIT64B2_INSTANCE_ID                      (68)       /* 64-bit Periodic Interval Timer 2 */
 
 #endif /* _SAMA7D6_PIT64B2_INSTANCE_ */

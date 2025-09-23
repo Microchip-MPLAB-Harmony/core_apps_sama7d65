@@ -139,7 +139,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/component/tdes.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/matrix.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/mcan.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/component/pmonc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/lvdsc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/spdiftx.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/shdwc.h</itemPath>
@@ -168,7 +167,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/otpc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/tzc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/trng.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/pmonc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/acc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/tcpcb.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/shdwc.h</itemPath>
@@ -192,7 +190,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/sdmmc0.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/sfrbu.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/spdifrx.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/uhphs_ohci.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pit64b4.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/gpbr.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/matrix.h</itemPath>
@@ -214,7 +211,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/flexcom4.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pit64b2.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pwm.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/tzaesbns.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/i3cc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/hsmc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/gmac0.h</itemPath>
@@ -223,7 +219,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/syscwp.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/flexcom5.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pit64b1.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/uhphs_ehci.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/gpu2dc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/sckc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pdmc1.h</itemPath>
@@ -236,7 +231,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/qspi0.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pdmc0.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/adc.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/tzaesbs.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/eic.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pio.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/mcan1.h</itemPath>
@@ -256,6 +250,7 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pioe.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/tzaesb.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/uhphs.h</itemPath>
+            <itemPath>../src/packs/SAMA7D65_DFP/instance/uhpfs.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAMA7D65_DFP/pio/sama7d65.h</itemPath>
@@ -266,8 +261,19 @@
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+      <logicalFolder name="sam_a7d65_curiosity_default" displayName="sam_a7d65_curiosity_default" projectFiles="true">
+        <itemPath>sam_a7d65_curiosity_default/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>sam_a7d65_curiosity_default/components/BSP_SAM_A7D65_Curiosity.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_default/components/HarmonyCore.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_default/components/cmsis.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_default/components/core.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_default/components/dfp.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_default/components/drv_nand_flash.yml</itemPath>
+          <itemPath>sam_a7d65_curiosity_default/components/hsmc.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>sam_a7d65_curiosity.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
@@ -349,11 +355,11 @@
         <targetPluginBoard/>
         <platformTool>ICD4Tool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.2.47"/>
+        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.8.85"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>

@@ -186,8 +186,8 @@ uint8_t HSMC_ErrorGet(void)
 
 int16_t HSMC_RemainderGet(uint32_t sector, uint32_t remainderIndex)
 {
-    uint8_t lowByte = ((volatile const uint8_t *)HSMC_REGS->SMC_REM[sector].HSMC_REM)[remainderIndex * 2U];
-    uint8_t highByte = ((volatile const uint8_t *)HSMC_REGS->SMC_REM[sector].HSMC_REM)[remainderIndex * 2U + 1U];
+    uint8_t lowByte = ((volatile const uint8_t *)&HSMC_REGS->SMC_REM[sector].HSMC_REM[0])[remainderIndex * 2U];
+    uint8_t highByte = ((volatile const uint8_t *)&HSMC_REGS->SMC_REM[sector].HSMC_REM[0])[remainderIndex * 2U + 1U];
     uint32_t retVal = ((uint32_t)highByte << 8) + (uint32_t)lowByte;
     return (int16_t)retVal;
 }
