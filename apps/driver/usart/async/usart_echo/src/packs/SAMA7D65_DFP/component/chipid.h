@@ -1,7 +1,7 @@
 /*
  * Component description for CHIPID
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_CHIPID_COMPONENT_H_
 #define _SAMA7D6_CHIPID_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                     SOFTWARE API DEFINITION FOR CHIPID                     */
@@ -50,7 +52,7 @@
 
 
 /* -------- CHIPID_EXID : (CHIPID Offset: 0x04) ( R/ 32) Chip ID Extension Register -------- */
-#define CHIPID_EXID_RESETVALUE                _UINT32_(0x20)                                       /*  (CHIPID_EXID) Chip ID Extension Register  Reset Value */
+#define CHIPID_EXID_RESETVALUE                _UINT32_(0x08)                                       /*  (CHIPID_EXID) Chip ID Extension Register  Reset Value */
 
 #define CHIPID_EXID_EXID_Pos                  _UINT32_(0)                                          /* (CHIPID_EXID) Chip ID Extension Position */
 #define CHIPID_EXID_EXID_Msk                  (_UINT32_(0xFFFFFFFF) << CHIPID_EXID_EXID_Pos)       /* (CHIPID_EXID) Chip ID Extension Mask */

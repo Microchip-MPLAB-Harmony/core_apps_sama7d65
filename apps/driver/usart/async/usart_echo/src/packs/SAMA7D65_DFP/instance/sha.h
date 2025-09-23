@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,14 +19,14 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_SHA_INSTANCE_
 #define _SAMA7D6_SHA_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SHA peripheral ========== */
-#define SHA_CLOCK_ID                             (78)       
-#define SHA_DMAC_ID_TX                           (48)       
+#define SHA_CLOCK_ID                             (78)
+#define SHA_DMAC_ID_TX                           (48)
 #define SHA_INSTANCE_ID                          (78)       /* Secure Hash Algorithm */
 #define SHA_INSTANCE_ID_SINT                     (133)      /* Secure Hash Algorithm, Secure Interrupt */
 
