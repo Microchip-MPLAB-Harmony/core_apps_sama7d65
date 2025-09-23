@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7D65D2G
+ * Instance header file for ATSAMA7D65D5M
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,13 +19,13 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_I3CC_INSTANCE_
 #define _SAMA7D6_I3CC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for I3CC peripheral ========== */
-#define I3CC_CLOCK_ID                            (105)      
+#define I3CC_CLOCK_ID                            (105)
 #define I3CC_INSTANCE_ID                         (105)      /* I3C Controller */
 
 #endif /* _SAMA7D6_I3CC_INSTANCE_ */
